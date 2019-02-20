@@ -1,0 +1,50 @@
+body {
+    background-color: black;
+    font-family: 'Montserrat';
+}
+
+h1 {
+    text-align: center;
+    color: lime;
+}
+
+#grupo_header {
+    text-align: center;
+    color: white;
+}
+
+table {
+    margin-top: 70px;
+}
+
+td {
+    color: white;
+}
+
+.avatar {
+    zoom: 30%;
+}
+
+.texto {
+    text-align: center;
+}
+
+#links {
+    text-align: left;
+    padding-left: 100px;
+}
+
+#at_header {
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid blue;
+    transition: color 0.5s ease;
+}
+
+a:hover {
+    color: blue;
+}
