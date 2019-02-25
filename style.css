@@ -30,11 +30,6 @@ section {
     background-color: rgb(207, 207, 207);
 }
 
-td div.person {
-    display: inline;
-    text-align: center;
-}
-
 #grupo {
     align-self: center;
     border-spacing: 0;
@@ -54,27 +49,26 @@ td img {
     margin-right: auto;
 }
 
-.person .avatar {
-    display: block;
-    height: 60%;
-    width: 60%;
+.person {
+    background-image:url(assets/circle_white.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     transition: 300ms;
 }
 
-.person:hover .avatar {
+.person:hover {
     transform: scale(1.2);
-    opacity: 0.2;
 }
 
-.person .circle {
-    background: none;
-    width: inherit;
-    height: inherit;
-    border-radius: 72%;
+.person .avatar {
+    width: 60%;
+    height: 60%;
+    transition: 300ms;
 }
 
-.person:hover .circle {
-    background: white;
+.person:hover .avatar   {
+    opacity: 0.15;
 }
 
 .texto.center {
