@@ -7,8 +7,9 @@
 
 body {
     margin: 1.5vw;
-    background-color: rgb(250, 250, 250);
+    background-color: #444444; 
     font-family: 'LemonMilk';
+    color: #54defd;
 }
 
 a:link, a:visited, a:link:active, a:visited:active {
@@ -38,18 +39,16 @@ section {
     margin-top: calc(1 * (1vw + 1vh));
     margin-bottom: calc(1 * (1vw + 1vh));
     padding: 3.5vh 2.1vw 3.5vh 2.1vw;
-    background-color: rgb(207, 207, 207);
+    background-color: #272727;
 }
 
 #myheader {
-    color: white;
     min-height: calc(7 * (1vw + 1vh))
 }
 
 #grupo {
     align-self: center;
     border-spacing: 0;
-    color: white;
 }
 
 .parent {
@@ -71,10 +70,10 @@ section {
 
 .person .avatar {
     display: block;
-    margin-left: calc(1vw * 10314.2 / 1920);
-    margin-right: calc(1vw * 10314.2 / 1920);
-    height: calc(1vw * 38308.3 / 1920);
-    width: calc(1vw * 38308.3 / 1920);
+    margin-left: calc(1vw * 82 / 15);
+    margin-right: calc(1vw * 82 / 15);
+    height: 20vw;
+    width: 20vw;
 }
 
 .person .hidden {
@@ -97,6 +96,10 @@ section {
 
 .texto {
     text-align: center;
+}
+
+.texto.size0 {
+    font-size: calc(0.70 * (1vh + 1vw));
 }
 
 .texto.size1 {
