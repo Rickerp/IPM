@@ -42,6 +42,23 @@ section {
     background-color: #272727;
 }
 
+ul li {
+   color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li::before {
+    content: "\2022";
+    color: #54defd;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+
 #myheader {
     min-height: calc(7 * (1vw + 1vh))
 }
@@ -152,4 +169,8 @@ section {
     right: 1.5%;
 }
 
+.links-header {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
 
