@@ -9,30 +9,11 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="shortcut icon" href="assets/isticon.ico">
     <title>Página do Grupo</title>
-    <?php
-    / Import server's phpCAS library.
-    requie_once 'CAS.php';
-    // Initialize phpCAS
-    phpCAS::client(CAS_VERSION_3_0,'id.tecnico.ulisboa.pt',443,'/cas');
-    // Set CAS server certificate
-    phpCAS::setCasServerCACert('/etc/ssl/certs/AddTrust_External_Root.pem');
-			      // Set logout handler
-			      phpCAS::handleLogoutRequests(true, array('id.tecnico.ulisboa.pt'));
-			      // Force CAS authentication
-			      phprceAuthentication();
-			      // If the code reaches this step, has already been authenticated by the CAS server
-			      // and the user's IST ID can be read with phpCAS::getUser().
-    ?>
-    <?php
-    $ser = phpCas::getUser();
-    // If all is right e next line will print the users IST ID.
-    echo("Hello " . $user . "!");
-    ?>
 </head>
 <body>
     <section id="myheader" class="parent">
         <h1 class="child"> Interfaces Pessoa Máquina</h1>
-        <h3 class="child bottom right texto normal white">Grupo 40 - Turno IPM17111326L05</h3>
+        <h3 class="child bottom right texto normal white">Grupo 20 - Turno IPM17111326L05</h3>
         <h5 class="child bottom texto normal white">2018-2019</h5>
         <img class="logo child right" src="assets/ist_logo.png">
     </section>
@@ -81,14 +62,20 @@
             </tbody>
         </table>
     </section>
+
+    <section>  
+        <div id="guedes" class="container">
+            
+        </div>
+    </section>
     
     <section>
 	<h5 style="margin-top:1.05vw;">Análise de Tarefas</h5>
             <ul>
-                <li><a href="#" class="texto size1">Questionário para análise de tarefas</a></li>
-                <li><a href="#" class="texto size1">Questionário para análise de tarefas (melhorado)</a></li>
-                <li><a href="#" class="texto size1">Análise de tarefas + Funcionalidades</a></li>
-                <li><a href="#" class="texto size1">Análise de tarefas + Funcionalidades (melhorados)</a></li>
+                <li><a href="assets/iGo_Questionario_Initial.pdf" class="texto size1">Questionário para análise de tarefas</a></li>
+                <li><a href="assets/iGo_Questionario_Final.pdf" class="texto size1">Questionário para análise de tarefas (melhorado)</a></li>
+                <li><a href="assets/iGo_Relatorio_Initial.pdf" class="texto size1">Análise de tarefas + Funcionalidades</a></li>
+                <li><a href="assets/iGo_Relatorio_Final.pdf" class="texto size1">Análise de tarefas + Funcionalidades (melhorados)</a></li>
             </ul>
         <h5 class="links-header">Modelo Conceptual</h5>
             <ul>
