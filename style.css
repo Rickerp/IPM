@@ -49,8 +49,8 @@ section {
 }
 
 ul li {
-   color: white;
-   font-size: 0.9vw;
+    color: white;
+    font-size: 0.9vw;
 }
 
 ul {
@@ -78,6 +78,17 @@ ul li::before {
 #grupo {
     align-self: center;
     border-spacing: 0;
+}
+
+div.hbar {
+    width: 100%;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    border-top: 1px solid white;
+    background-color: #272727; 
+    box-sizing: border-box;
 }
 
 .container {
