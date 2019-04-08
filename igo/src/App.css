@@ -1,20 +1,185 @@
-.clock {
+body {
   font-family: 'Montserrat';
+  overflow-y: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+
+/* The device with borders */
+.smartphone {
+  position: relative;
+  width: 151px;
+  height: 246px;
+  margin-left: -3px;
+  border: 10px black solid;
+  border-top-width: 20px;
+  border-bottom-width: 20px;
+  border-radius: 16px;
+}
+
+/* The horizontal line on the top of the device */
+.smartphone:before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 5px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #333;
+  border-radius: 10px;
+}
+
+/* The circle on the bottom of the device */
+.smartphone:after {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left: 50%;
+  bottom: -65px;
+  transform: translate(-50%, -50%);
+  background: #333;
+  border-radius: 50%;
+}
+
+/* The screen (or content) of the device */
+.smartphone .content {
+  width: 151px;
+  height: 246px;
+  background: white;
+}
+
+#App {
+  height: 100vh;
+}
+
+#page-wrap {
+  overflow: auto;
+}
+
+.teste {
+  margin-top: 100px;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+
+  /* Our sidebar item styling */
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: white;
+  transition: color 0.2s;
+}
+
+/* Change color on hover */
+.bm-item:hover {
+  color: white;
+}
+
+.bm-item:focus {
+  outline: none;
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: absolute;
+  width: 13px;
+  height: 9px;
+  top: 10px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+  zoom: 70%!important;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 4.0em 1.5em 0;
+  font-size: 70%;
+  height: 28%!important;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+  width: 151px!important;
+  height: 246px!important;
+}
+
+.clock-total {
+  margin-left: 10px;
+  margin-top: 4px;
+}
+
+.clock-hours {
+  font-weight: 500;
   font-size: 0.6em;
   text-align: left;
+  margin-left: 5px;
   padding: 0;
 }
 
-.battery {
-  font-family: 'Montserrat';
+.clock {
   font-size: 0.6em;
-  text-align: right;
-  margin-top: -13px;
+  text-align: left;
+  margin-left: 4px;
+  padding: 0;
 }
 
-.pull-down {
-  zoom: 20%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.fa-bars {
+  margin-left: 5px;
+  zoom: 60%;
+}
+
+.battery {
+  font-size: 0.6em;
+  text-align: right;
+  margin-top: -28px;
+}
+
+.avatar {
+  grid-area: avatar;
+}
+
+.name {
+  grid-area: name;
+}
+
+.activity {
+  grid-area: activity;
+}
+
+.timestamp {
+  grid-area: timestamp;
 }

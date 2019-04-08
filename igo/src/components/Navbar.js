@@ -1,17 +1,31 @@
 import React, { Component } from 'react'
 import Clock from 'react-live-clock';
+import {Swipe, Position} from "react-swipe-component"
+import styled from "styled-components"
 
 export default class Navbar extends Component {
   render() {
     return (
-        <div>
-            <img className="pull-down" src="https://img.icons8.com/ios/50/000000/drag-list-down.png"></img>
-            <Clock className="clock" format={'HH:mm ddd, MMM DD'} ticking={true} timezone={'Europe/Portugal'} /> 
+        <Navb>
+            <p className="clock-total">
+              <Clock className="clock-hours" format={'HH:mm'} ticking={true} timezone={'Europe/London'} />
+              <Clock className="clock" format={'ddd, MMM DD'} ticking={true} timezone={'Europe/London'} /> 
+            </p>
             <p className="battery">
                 1% &nbsp; 
-                <i class="fas fa-battery-quarter"></i>
+                <i className="fas fa-battery-quarter"></i>
             </p>
-        </div>
+        </Navb>
     )
   }
 }
+
+const Navb = styled.div`
+  position: fixed;
+  top: 0;
+  background-color: white;
+  margin-top: 20px;
+  height: 30px;
+  width: 7.85%;
+  border-bottom: 1px solid black;
+`
