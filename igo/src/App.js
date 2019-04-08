@@ -15,10 +15,12 @@ class App extends Component {
           <Sidebar disableAutoFocus pageWrapId={"page-wrap"} outerContainerId={"App"} />
           <div className="content" id="page-wrap">
             <Navbar />
-            <Switch>
-              <Route exact={true} path="/ar" component={Ar} />
-              <Route exact={true} path="/" component={Feed} />
-            </Switch>
+            <div id="page-component">
+              <Switch>
+                <Route exact={true} path="/ar" component={Ar} />
+                <Route exact={true} path="/" component={Feed} />
+              </Switch>
+            </div>
           </div>
         </div>
       </div>

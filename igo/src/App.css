@@ -63,6 +63,10 @@ body {
   overflow: auto;
 }
 
+#page-component {
+  margin-top: 40px;
+}
+
 /* Individual item */
 .bm-item {
   display: inline-block;
