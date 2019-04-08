@@ -17,15 +17,15 @@ export default class Menu extends Component {
           <i class="fas fa-map-marked-alt"></i> &nbsp; MAPS
         </Link>
 
-        <a className="menu-item" href="#">
+        <a className="menu-item" href="/">
           DICTIONARY
         </a>
 
-        <a className="menu-item" href="#">
+        <a className="menu-item" href="/">
           SHAROUTE
         </a>
 
-        <a className="menu-item" href="#">
+        <a className="menu-item" href="/">
           FRIENDS
         </a>
       </Slide>
