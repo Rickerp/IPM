@@ -139,7 +139,7 @@ body {
 
 .clock-total {
   margin-left: 10px;
-  margin-top: 4px;
+  margin-top: 3px;
 }
 
 .clock-hours {
@@ -157,6 +157,10 @@ body {
   padding: 0;
 }
 
+.fa-battery-quarter {
+  margin-right: 2px;
+}
+
 .fa-bars {
   margin-left: 5px;
   zoom: 60%;
@@ -165,7 +169,7 @@ body {
 .battery {
   font-size: 0.6em;
   text-align: right;
-  margin-top: -28px;
+  margin-top: -29px;
 }
 
 .avatar {
