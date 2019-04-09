@@ -1,3 +1,3 @@
-const ArData = ["img/Mosteiro.svg", "img/Frame2.svg"]
+const ArData = ["img/Jero.png", "img/Jero.png"]
 
 export default ArData

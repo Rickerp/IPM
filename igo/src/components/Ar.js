@@ -33,11 +33,20 @@ export default class Ar extends Component {
   render() {
     return (
       <div>
-        <img style={{zoom: "100%", overflowX: "visible"}} src={this.state.imgArray[this.state.currentImg]} alt=""></img>
-        <button onClick={this.changeImg}>
+        <img src={this.state.imgArray[this.state.currentImg]} alt=""></img>
+        <NextButton onClick={this.changeImg}>
           <i className="fas fa-arrow-right"></i>
-        </button>
+        </NextButton>
       </div>
     )
   }
 }
+
+const NextButton = styled.button`
+  background: transparent;
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 20px;
+  width: 50px;
+  margin-left: 5px;
+`
