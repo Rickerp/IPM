@@ -7,8 +7,8 @@ export default class Ar extends Component {
   constructor() {
     super();
     this.state = {
-        imgArray: ArData,
-        currentImg: 0
+      imgArray: ArData,
+      currentImg: 0
     }
     this.changeImg = this.changeImg.bind(this)
   }
@@ -33,7 +33,7 @@ export default class Ar extends Component {
   render() {
     return (
       <div>
-        <img style={{zoom: "100%", overflowX: "visible"}} src={this.state.imgArray[this.state.currentImg]} alt=""></img>
+        <img style={{ zoom: "100%", overflowX: "visible" }} src={this.state.imgArray[this.state.currentImg]} alt=""></img>
         <button onClick={this.changeImg}>
           <i className="fas fa-arrow-right"></i>
         </button>
