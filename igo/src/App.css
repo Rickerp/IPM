@@ -183,3 +183,13 @@ body {
 .timestamp {
   grid-area: timestamp;
 }
+
+/* Ar */
+
+.fa-arrow-right {
+  color: black;
+}
+
+button:focus {
+  outline: none;
+}

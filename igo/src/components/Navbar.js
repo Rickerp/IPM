@@ -36,6 +36,6 @@ const Navb = styled.div`
   background-color: white;
   margin-top: 20px;
   height: 30px;
-  width: 8.05%;
+  width: 7.85%;
   border-bottom: 1px solid black;
 `;
