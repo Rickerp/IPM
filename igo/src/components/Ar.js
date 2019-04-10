@@ -61,7 +61,7 @@ export default class Ar extends Component {
           alt=""
         />
         <Image
-          style={{ zoom: "100%", overflowX: "hidden" }}
+          style={{ zoom: "70%", overflowX: "hidden" }}
           src={this.state.imgArray[this.state.currentImg]}
           alt=""
         />

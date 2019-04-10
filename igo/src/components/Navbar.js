@@ -36,10 +36,10 @@ const Navb = styled.div`
   background-color: white;
   margin-top: 20px;
   height: 30px;
-  width: 7.85%;
+  width: 12.1%;
   border-bottom: 1px solid black;
 `;
 
 const Percentage = styled.span`
   margin-right: 3px;
-`
+`;
