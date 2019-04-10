@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import ArData from "../ArData";
-import ArIcon from "../ArData";
-import Draggable from "react-draggable";
 import styled from "styled-components";
 
 export default class Ar extends Component {
@@ -60,6 +58,7 @@ export default class Ar extends Component {
             zoom: "70%"
           }}
           src={this.icon}
+          alt=""
         />
         <Image
           style={{ zoom: "100%", overflowX: "hidden" }}
