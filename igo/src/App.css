@@ -110,6 +110,7 @@ body {
 .bm-cross {
   background: #bdc3c7;
   zoom: 70%!important;
+  margin-left: 10px;
 }
 
 /* General sidebar styles */
@@ -117,6 +118,7 @@ body {
   background: rgba(0, 0, 0, 0.9);
   padding: 4.0em 1.5em 0;
   font-size: 70%;
+  font-weight: 500;
   height: 248px!important;
 }
 
@@ -158,6 +160,7 @@ body {
 }
 
 .fa-battery-quarter {
+  color: #EE4238;
   margin-right: 2px;
 }
 
@@ -170,6 +173,16 @@ body {
   font-size: 0.6em;
   text-align: right;
   margin-top: -29px;
+}
+
+.card-name {
+  grid-area: card-name;
+  margin-left: 10px;
+  margin-top: -5px;
+}
+
+.card-avatar {
+  grid-area: card-avatar;
 }
 
 .avatar {
