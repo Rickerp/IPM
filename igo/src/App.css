@@ -1,5 +1,5 @@
 body {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   overflow-y: hidden;
 }
 
@@ -22,7 +22,7 @@ body {
 
 /* The horizontal line on the top of the device */
 .band:before {
-  content: '';
+  content: "";
   display: block;
   width: 60px;
   height: 5px;
@@ -32,20 +32,6 @@ body {
   transform: translate(-50%, -50%);
   background: #333;
   border-radius: 10px;
-}
-
-/* The circle on the bottom of the device */
-.band:after {
-  content: '';
-  display: block;
-  width: 15px;
-  height: 15px;
-  position: absolute;
-  left: 50%;
-  bottom: -65px;
-  transform: translate(-50%, -50%);
-  background: #333;
-  border-radius: 50%;
 }
 
 /* The screen (or content) of the device */
@@ -109,17 +95,17 @@ body {
 /* Color/shape of close button cross */
 .bm-cross {
   background: #bdc3c7;
-  zoom: 70%!important;
+  zoom: 70% !important;
   margin-left: 10px;
 }
 
 /* General sidebar styles */
 .bm-menu {
   background: rgba(0, 0, 0, 0.9);
-  padding: 4.0em 1.5em 0;
+  padding: 4em 1.5em 0;
   font-size: 70%;
   font-weight: 500;
-  height: 248px!important;
+  height: 248px !important;
 }
 
 /* Morph shape necessary with bubble or elastic */
@@ -135,8 +121,8 @@ body {
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
-  width: 151px!important;
-  height: 246px!important;
+  width: 151px !important;
+  height: 246px !important;
 }
 
 .clock-total {
@@ -160,7 +146,7 @@ body {
 }
 
 .fa-battery-quarter {
-  color: #EE4238;
+  color: #ee4238;
   margin-right: 2px;
 }
 
