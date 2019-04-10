@@ -51,7 +51,7 @@ export default class Ar extends Component {
   render() {
     return (
       <div>
-        <Image style={{ zoom: "100%", overflowX: "visible" }} src={this.state.imgArray[this.state.currentImg]} alt=""></Image>
+        <Image style={{ zoom: "100%", overflowX: "visible", backgroundSize: "fill" }} src={this.state.imgArray[this.state.currentImg]} alt=""></Image>
         <PreviousButton onClick={this.prevImage}>
           <i class="fas fa-arrow-left"></i>
         </PreviousButton>
@@ -65,24 +65,27 @@ export default class Ar extends Component {
 
 const PreviousButton = styled.button`
   position: absolute;
+  top:200px;
   background: white;
   border: 1px solid black;
   border-radius: 10px;
   height: 20px;
   width: 50px;
   margin-left: 5px;
-  margin-top: 165px;
+  margin-top: 5px;
 `
 
 const NextButton = styled.button`
   position: absolute;
+  left: 90px;
+  top: 200px;
   background: white;
   border: 1px solid black;
   border-radius: 10px;
   height: 20px;
   width: 50px;
-  margin-left: 95px;
-  margin-top: 165px;
+  margin-left: 5px;
+  margin-top: 5px;
 `
 
 const Image = styled.img`
