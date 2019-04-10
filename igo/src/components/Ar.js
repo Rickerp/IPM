@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
-import ArData from "../ArData"
-import Draggable from 'react-draggable';
-import styled from "styled-components"
+import React, { Component } from "react";
+import ArData from "../ArData";
+import ArIcon from "../ArData";
+import Draggable from "react-draggable";
+import styled from "styled-components";
 
 export default class Ar extends Component {
   constructor() {
@@ -9,9 +10,10 @@ export default class Ar extends Component {
     this.state = {
       imgArray: ArData,
       currentImg: 0
-    }
-    this.nextImage = this.nextImage.bind(this)
-    this.prevImage = this.prevImage.bind(this)
+    };
+    this.icon = "img/aricon.png";
+    this.nextImage = this.nextImage.bind(this);
+    this.prevImage = this.prevImage.bind(this);
   }
 
   nextImage() {
@@ -19,16 +21,15 @@ export default class Ar extends Component {
       let currentIndex = prevState.currentImg;
 
       if (currentIndex === prevState.imgArray.length - 1) {
-        currentIndex = 0
-      }
-      else {
-        currentIndex++
+        currentIndex = 0;
+      } else {
+        currentIndex++;
       }
       return {
         imgArray: prevState.imgArray,
         currentImg: currentIndex
-      }
-    })
+      };
+    });
   }
 
   prevImage() {
@@ -36,43 +37,56 @@ export default class Ar extends Component {
       let currentIndex = prevState.currentImg;
 
       if (currentIndex === 0) {
-        currentIndex = prevState.imgArray.length - 1
-      }
-      else {
-        currentIndex--
+        currentIndex = prevState.imgArray.length - 1;
+      } else {
+        currentIndex--;
       }
       return {
         imgArray: prevState.imgArray,
         currentImg: currentIndex
-      }
-    })
+      };
+    });
   }
 
   render() {
     return (
       <div>
-        <Image style={{ zoom: "100%", overflowX: "hidden" }} src={this.state.imgArray[this.state.currentImg]} alt=""></Image>
+        <img
+          style={{
+            position: "absolute",
+            float: "right",
+            right: "5px",
+            width: "50px",
+            zoom: "70%"
+          }}
+          src={this.icon}
+        />
+        <Image
+          style={{ zoom: "100%", overflowX: "hidden" }}
+          src={this.state.imgArray[this.state.currentImg]}
+          alt=""
+        />
         <PreviousButton onClick={this.prevImage}>
-          <i class="fas fa-arrow-left"></i>
+          <i class="fas fa-arrow-left" />
         </PreviousButton>
         <NextButton onClick={this.nextImage}>
-          <i className="fas fa-arrow-right"></i>
+          <i className="fas fa-arrow-right" />
         </NextButton>
       </div>
-    )
+    );
   }
 }
 
 const PreviousButton = styled.button`
   position: absolute;
-  top:200px;
-  left:5px;
+  top: 200px;
+  left: 5px;
   background: white;
   border: 1px solid black;
   border-radius: 10px;
   height: 20px;
   width: 50px;
-`
+`;
 
 const NextButton = styled.button`
   position: absolute;
@@ -84,8 +98,8 @@ const NextButton = styled.button`
   border-radius: 10px;
   height: 20px;
   width: 50px;
-`
+`;
 
 const Image = styled.img`
   margin-top: -19px;
-`
+`;
