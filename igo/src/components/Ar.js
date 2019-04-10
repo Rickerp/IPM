@@ -33,7 +33,7 @@ export default class Ar extends Component {
   render() {
     return (
       <div>
-        <Image style={{ zoom: "50%", overflowX: "visible" }} src={this.state.imgArray[this.state.currentImg]} alt=""></Image>
+        <Image style={{ zoom: "100%", overflowX: "visible" }} src={this.state.imgArray[this.state.currentImg]} alt=""></Image>
         <PreviousButton onClick={this.changeImg}>
           <i class="fas fa-arrow-left"></i>
         </PreviousButton>
