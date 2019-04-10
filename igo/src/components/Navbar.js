@@ -21,10 +21,10 @@ export default class Navbar extends Component {
             timezone={"Europe/London"}
           />
         </p>
-        <p className="battery">
-          1% &nbsp;
+        <div className="battery">
+          <Percentage>1%</Percentage>
           <i className="fas fa-battery-quarter" />
-        </p>
+        </div>
       </Navb>
     );
   }
@@ -39,3 +39,7 @@ const Navb = styled.div`
   width: 7.85%;
   border-bottom: 1px solid black;
 `;
+
+const Percentage = styled.span`
+  margin-right: 3px;
+`

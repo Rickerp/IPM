@@ -7,13 +7,14 @@ export default class Ar extends Component {
   constructor() {
     super();
     this.state = {
-        imgArray: ArData,
-        currentImg: 0
+      imgArray: ArData,
+      currentImg: 0
     }
-    this.changeImg = this.changeImg.bind(this)
+    this.nextImage = this.nextImage.bind(this)
+    this.prevImage = this.prevImage.bind(this)
   }
 
-  changeImg() {
+  nextImage() {
     this.setState(prevState => {
       let currentIndex = prevState.currentImg;
 
@@ -30,14 +31,61 @@ export default class Ar extends Component {
     })
   }
 
+  prevImage() {
+    this.setState(prevState => {
+      let currentIndex = prevState.currentImg;
+
+      if (currentIndex === 0) {
+        currentIndex = prevState.imgArray.length - 1
+      }
+      else {
+        currentIndex--
+      }
+      return {
+        imgArray: prevState.imgArray,
+        currentImg: currentIndex
+      }
+    })
+  }
+
   render() {
     return (
       <div>
-        <img style={{zoom: "100%", overflowX: "visible"}} src={this.state.imgArray[this.state.currentImg]} alt=""></img>
-        <button onClick={this.changeImg}>
+        <Image style={{ zoom: "100%", overflowX: "hidden" }} src={this.state.imgArray[this.state.currentImg]} alt=""></Image>
+        <PreviousButton onClick={this.prevImage}>
+          <i class="fas fa-arrow-left"></i>
+        </PreviousButton>
+        <NextButton onClick={this.nextImage}>
           <i className="fas fa-arrow-right"></i>
-        </button>
+        </NextButton>
       </div>
     )
   }
 }
+
+const PreviousButton = styled.button`
+  position: absolute;
+  top:200px;
+  left:5px;
+  background: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 20px;
+  width: 50px;
+`
+
+const NextButton = styled.button`
+  position: absolute;
+  top: 200px;
+  float: right;
+  right: 5px;
+  background: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 20px;
+  width: 50px;
+`
+
+const Image = styled.img`
+  margin-top: -19px;
+`
