@@ -5,8 +5,8 @@ class HomeButton extends Component {
   styles = {
     color: "white",
     position: "absolute",
-    left: "60px",
-    top: "250px",
+    left: "100px",
+    top: "375px",
     fontSize: "14px"
   };
 

@@ -4,7 +4,7 @@ const FeedData = [
     avatar: "img/Malquias.svg",
     name: "Artur",
     activity: "Made a route.",
-    timestamp: "1 hours ago"
+    timestamp: "1 hour ago"
   },
   {
     id: 2,
@@ -22,6 +22,20 @@ const FeedData = [
   },
   {
     id: 4,
+    avatar: "img/Ellipse.svg",
+    name: "Zequinha",
+    activity: "Posted a route.",
+    timestamp: "6 hours ago"
+  },
+  {
+    id: 5,
+    avatar: "img/Ellipse.svg",
+    name: "Zequinha",
+    activity: "Posted a route.",
+    timestamp: "6 hours ago"
+  },
+  {
+    id: 6,
     avatar: "img/Ellipse.svg",
     name: "Zequinha",
     activity: "Posted a route.",

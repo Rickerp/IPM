@@ -11,8 +11,8 @@ body {
 /* The device with borders */
 .band {
   position: relative;
-  width: 151px;
-  height: 246px;
+  width: 230px;
+  height: 371px;
   margin-left: -3px;
   border: 10px black solid;
   border-top-width: 20px;
@@ -36,8 +36,8 @@ body {
 
 /* The screen (or content) of the device */
 .band .content {
-  width: 151px;
-  height: 246px;
+  width: 230px;
+  height: 371px;
   background: white;
 }
 
@@ -78,7 +78,8 @@ body {
   position: absolute;
   width: 13px;
   height: 9px;
-  top: 10px;
+  top: 8px;
+  left: 3px;
 }
 
 /* Color/shape of burger icon bars */
@@ -103,9 +104,9 @@ body {
 .bm-menu {
   background: rgba(0, 0, 0, 0.9);
   padding: 4em 1.5em 0;
-  font-size: 70%;
+  font-size: 90%;
   font-weight: 500;
-  height: 248px !important;
+  height: 371px !important;
 }
 
 /* Morph shape necessary with bubble or elastic */
@@ -121,33 +122,8 @@ body {
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
-  width: 151px !important;
-  height: 246px !important;
-}
-
-.clock-total {
-  margin-left: 10px;
-  margin-top: 3px;
-}
-
-.clock-hours {
-  font-weight: 500;
-  font-size: 0.6em;
-  text-align: left;
-  margin-left: 5px;
-  padding: 0;
-}
-
-.clock {
-  font-size: 0.6em;
-  text-align: left;
-  margin-left: 4px;
-  padding: 0;
-}
-
-.fa-battery-quarter {
-  color: #ee4238;
-  margin-right: 2px;
+  width: 230px !important;
+  height: 371px !important;
 }
 
 .fa-bars {
@@ -155,18 +131,42 @@ body {
   zoom: 60%;
 }
 
-.battery {
-  position: absolute;
+.clock-hours {
+  font-weight: 500;
+  font-size: 70%;
+  margin-left: 5px;
+  padding: 0;
+}
+
+.clock {
   font-size: 0.6em;
+  font-size: 70%;
+  margin-left: 5px;
+  padding: 0;
+}
+
+.clock-div {
+  grid-area: clock-div;
+  margin-left: 15px;
+  margin-top: 2px;
+}
+
+.battery {
+  grid-area: battery;
+  font-size: 70%;
   text-align: right;
-  top: 10px;
-  right: 1px;
+  margin-top: 6px;
+}
+
+.fa-battery-quarter {
+  color: #ee4238;
+  margin-right: 2px;
 }
 
 .card-name {
   grid-area: card-name;
   margin-left: 10px;
-  margin-top: -5px;
+  margin-top: auto;
 }
 
 .card-avatar {

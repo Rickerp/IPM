@@ -78,7 +78,7 @@ export default class Ar extends Component {
 
 const PreviousButton = styled.button`
   position: absolute;
-  top: 200px;
+  top: 330px;
   left: 5px;
   background: white;
   border: 1px solid black;
@@ -89,7 +89,7 @@ const PreviousButton = styled.button`
 
 const NextButton = styled.button`
   position: absolute;
-  top: 200px;
+  top: 330px;
   float: right;
   right: 5px;
   background: white;

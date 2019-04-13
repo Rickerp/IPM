@@ -26,7 +26,7 @@ export default class Menu extends Component {
 
   render() {
     return (
-      <Slide isOpen={this.state.menuOpen} onStateChange={(state) => this.handleStateChange(state)} width={'100px'}>
+      <Slide isOpen={this.state.menuOpen} onStateChange={(state) => this.handleStateChange(state)} width={'180px'}>
         <ProfileCard>
           <p className="card-name">Rita Sousa</p>
           <img className="card-avatar" src={rita} alt="Avatar"></img>
@@ -56,7 +56,7 @@ const ProfileCard = styled.div`
   position: relative!important;
   display: grid!important;
   grid-gap: 5px!important;
-  grid-template-columns: 10px 50px!important;
+  grid-template-columns: 10px 100px!important;
   grid-template-rows: 10px 10px 5px!important;
   grid-template-areas: 
       "card-avatar card-name"

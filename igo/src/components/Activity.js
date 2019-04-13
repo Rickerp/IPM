@@ -43,19 +43,21 @@ const Avatar = styled.div`
 `
 
 const NameText = styled.p`
-    font-size: 75%;
+    font-size: 95%;
     font-weight: 700;
-    margin-top: 5px;
+    margin-top: 3px;
 `
 
 const ActivityText = styled.p`
-    font-size: 60%;
+    font-size: 80%;
     font-weight: 500;
     margin-left: 10px;
     margin-top: auto;
 `
 
 const TimeText = styled.p`
-    font-size: 50%;
+    font-size: 70%;
     margin-top: auto;
+    text-align: right;
+    margin-right: 5px;
 `

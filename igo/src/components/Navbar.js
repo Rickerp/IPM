@@ -7,7 +7,7 @@ export default class Navbar extends Component {
   render() {
     return (
       <Navb>
-        <p className="clock-total">
+        <div className="clock-div">
           <Clock
             className="clock-hours"
             format={"HH:mm"}
@@ -20,7 +20,7 @@ export default class Navbar extends Component {
             ticking={true}
             timezone={"Europe/London"}
           />
-        </p>
+        </div>
         <div className="battery">
           <Percentage>1%</Percentage>
           <i className="fas fa-battery-quarter" />
@@ -31,15 +31,19 @@ export default class Navbar extends Component {
 }
 
 const Navb = styled.div`
-  position: fixed;
-  top: 0;
+  position: absolute;
   background-color: white;
-  margin-top: 20px;
-  height: 30px;
-  width: 12.1%;
+  display: grid;
+  grid-gap: 1px;
+  grid-template-columns: 150px 79px;
+  grid-template-rows: 20px 8px;
+  grid-template-areas: 
+      "clock-div battery"
+      ". .";
   border-bottom: 1px solid black;
 `;
 
 const Percentage = styled.span`
   margin-right: 3px;
+  top: 30px;
 `;
