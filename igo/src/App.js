@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import Sidebar from "./components/Menu";
 import Feed from "./components/Feed";
 import HomeButton from "./components/Homebutton";
+import ActivityDetailed from "./components/ActivityDetailed";
 
 class App extends Component {
   render() {
@@ -24,6 +25,7 @@ class App extends Component {
               <Switch>
                 <Route exact={true} path="/ar" component={Ar} />
                 <Route exact={true} path="/" component={Feed} />
+                <Route path="/:handle" component={ActivityDetailed} />
               </Switch>
             </div>
           </div>

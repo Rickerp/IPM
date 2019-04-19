@@ -190,6 +190,20 @@ body {
   grid-area: timestamp;
 }
 
+.comments {
+  grid-area: comments;
+  margin-top: -5px;
+}
+
+.likes {
+  grid-area: likes;
+  margin-top: -5px;
+}
+
+.heart-filled {
+  color: red;
+}
+
 /* Ar */
 
 .fa-arrow-right {
