@@ -1,55 +1,10 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom"
 import styled from "styled-components"
+import { AppConsumer } from "../context"
+import App from '../App';
 
 export default class Activity extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            avatar: this.props.item.avatar,
-            name: this.props.item.name,
-            activity: this.props.item.activity,
-            timestamp: this.props.item.timestamp,
-            comments: this.props.item.comments,
-            likes: this.props.item.likes,
-            liked: false
-        }
-        this.increaseLikes = this.increaseLikes.bind(this);
-        this.decreaseLikes = this.decreaseLikes.bind(this);
-    }
-
-    increaseLikes () {
-        this.setState(prevState => {
-            let likes = prevState.likes + 1
-
-            return {
-                avatar: prevState.avatar,
-                name: prevState.name,
-                activity: prevState.activity,
-                timestamp: prevState.timestamp,
-                comments: prevState.comments,
-                likes: likes,
-                liked: true
-            };
-        });
-    }
-
-    decreaseLikes () {
-        this.setState(prevState => {
-            let likes = prevState.likes - 1
-
-            return {
-                avatar: prevState.avatar,
-                name: prevState.name,
-                activity: prevState.activity,
-                timestamp: prevState.timestamp,
-                comments: prevState.comments,
-                likes: likes,
-                liked: false
-            };
-        });
-    }
-
   render() {
     return (
       <React.Fragment>
@@ -77,18 +32,22 @@ export default class Activity extends Component {
                 </div>
             </ActivityWrapper>
         </Link>
-        <AddedWrapper>
-            <div className="comments">
-                <Added>
-                    <i className="far fa-comment"></i> {this.state.comments}
-                </Added>
-            </div>
-            <div className="likes">
-                <Added>
-                    {this.state.liked ? <i onClick={this.decreaseLikes} className="fas fa-heart heart-filled"></i> : <i onClick={this.increaseLikes} className="far fa-heart"></i>} {this.state.likes}
-                </Added>
-            </div>
-        </AddedWrapper>
+        <AppConsumer>
+            {value => (
+                <AddedWrapper>
+                    <div className="comments">
+                        <Added>
+                            <i className="far fa-comment"></i> {this.props.item.comments}
+                        </Added>
+                    </div>
+                    <div className="likes">
+                        <Added>
+                            {this.props.item.liked ? <i onClick={() => value.decreaseLikes(this.props.item.id)} className="fas fa-heart heart-filled"></i> : <i onClick={() => value.increaseLikes(this.props.item.id)} className="far fa-heart"></i>} {this.props.item.likes}
+                        </Added>
+                    </div>
+                </AddedWrapper>
+            )}
+        </AppConsumer>
       </React.Fragment>
     )
   }

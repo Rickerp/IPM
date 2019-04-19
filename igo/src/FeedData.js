@@ -15,7 +15,7 @@ const FeedData = [
     activity: "Shared a location.",
     timestamp: "3 hours ago",
     comments: "12",
-    likes: "11"
+    likes: 11
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const FeedData = [
     activity: "Shared a location.",
     timestamp: "4 hours ago",
     comments: "12",
-    likes: "11"
+    likes: 11
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const FeedData = [
     activity: "Posted a route.",
     timestamp: "6 hours ago",
     comments: "12",
-    likes: "11"
+    likes: 11
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ const FeedData = [
     activity: "Posted a route.",
     timestamp: "6 hours ago",
     comments: "12",
-    likes: "11"
+    likes: 11
   },
   {
     id: 6,
@@ -51,7 +51,7 @@ const FeedData = [
     activity: "Posted a route.",
     timestamp: "6 hours ago",
     comments: "12",
-    likes: "11"
+    likes: 11
   }
 ];
 
