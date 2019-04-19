@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom"
 import { slide as Slide } from 'react-burger-menu'
-import rita from "../Rita.svg"
+import rita from "../Rita.png"
 import styled from "styled-components"
 
 export default class Menu extends Component {
@@ -33,19 +33,19 @@ export default class Menu extends Component {
         </ProfileCard>
 
         <Link onClick={() => this.closeMenu()} className="menu-item" to="/ar">
-          {/* <i class="fas fa-map-marked-alt"></i> &nbsp; */} MAPS
+          <i class="fas fa-map-marked-alt"></i> &nbsp; MAPS
         </Link>
 
         <a className="menu-item" href="/">
-          DICTIONARY
+          <i class="fas fa-language"></i> &nbsp; DICTIONARY
         </a>
 
         <a className="menu-item" href="/">
-          SHAROUTE
+          <i class="fas fa-route"></i> &nbsp; SHAROUTE
         </a>
 
         <a className="menu-item" href="/">
-          FRIENDS
+          <i class="fas fa-user-friends"></i> &nbsp; FRIENDS
         </a>
       </Slide>
     )
@@ -56,8 +56,8 @@ const ProfileCard = styled.div`
   position: relative!important;
   display: grid!important;
   grid-gap: 5px!important;
-  grid-template-columns: 10px 100px!important;
-  grid-template-rows: 10px 10px 5px!important;
+  grid-template-columns: 10px 120px!important;
+  grid-template-rows: 30px 10px 5px!important;
   grid-template-areas: 
       "card-avatar card-name"
       ". ."
