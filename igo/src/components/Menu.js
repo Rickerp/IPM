@@ -8,7 +8,8 @@ export default class Menu extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      menuOpen: false
+      menuOpen: false,
+      languagesOpen: false
     };
   }
 
@@ -24,33 +25,126 @@ export default class Menu extends Component {
     this.setState({menuOpen: !this.state.menuOpen})
   }
 
+  toggleLanguages() {
+    this.setState({languagesOpen: !this.state.languagesOpen})
+  }
+
   render() {
     return (
-      <Slide isOpen={this.state.menuOpen} onStateChange={(state) => this.handleStateChange(state)} width={'180px'}>
-        <ProfileCard>
-          <p className="card-name">Rita Sousa</p>
-          <img className="card-avatar" src={rita} alt="Avatar"></img>
-        </ProfileCard>
+      <SlideWrapper isOpen={this.state.menuOpen}>
+        <Slide isOpen={this.state.menuOpen} onStateChange={(state) => this.handleStateChange(state)} width={'180px'}>
+          <ProfileCard>
+            <p className="card-name">Rita Sousa</p>
+            <img className="card-avatar" src={rita} alt="Avatar"></img>
+          </ProfileCard>
 
-        <Link onClick={() => this.closeMenu()} className="menu-item" to="/ar">
-          <i class="fas fa-map-marked-alt"></i> &nbsp; MAPS
-        </Link>
+          <Link onClick={() => this.closeMenu()} className="menu-item" to="/ar">
+            <i class="fas fa-map-marked-alt"></i> &nbsp; MAPS
+          </Link>
 
-        <a className="menu-item" href="/">
-          <i class="fas fa-language"></i> &nbsp; DICTIONARY
-        </a>
+          <a className="menu-item" href="#" onClick={() => this.toggleLanguages()}>
+            <i class="fas fa-language"></i> &nbsp; LANGUAGES {this.state.languagesOpen ? <i class="fas fa-sort-up"></i> : <i class="fas fa-sort-down"></i>}
+          </a>
 
-        <a className="menu-item" href="/">
-          <i class="fas fa-route"></i> &nbsp; SHAROUTE
-        </a>
+          {this.state.languagesOpen ? <a className="menu-item" href="/">
+            <i class="fas fa-book"></i> &nbsp; DICTIONARY
+          </a> : <span></span>}
 
-        <a className="menu-item" href="/">
-          <i class="fas fa-user-friends"></i> &nbsp; FRIENDS
-        </a>
-      </Slide>
+          {this.state.languagesOpen ? <a className="menu-item" href="/">
+            <i class="fas fa-sign-language"></i> &nbsp; TRANSLATOR
+          </a> : <span></span>}
+
+          <a className="menu-item" href="/">
+            <i class="fas fa-route"></i> &nbsp; SHAROUTE
+          </a>
+
+          <a className="menu-item" href="/">
+            <i class="fas fa-user-friends"></i> &nbsp; FRIENDS
+          </a>
+        </Slide>
+      </SlideWrapper>
     )
   }
 }
+
+const SlideWrapper = styled.div`
+  /* Individual item */
+  .bm-item {
+    display: inline-block;
+
+    /* Our sidebar item styling */
+    text-decoration: none;
+    margin-bottom: 15px;
+    color: white;
+    transition: color 0.2s;
+  }
+
+  /* Change color on hover */
+  .bm-item:hover {
+    color: white;
+  }
+
+  .bm-item:focus {
+    outline: none;
+  }
+
+  /* Position and sizing of burger button */
+  .bm-burger-button {
+    position: absolute;
+    width: 13px;
+    height: 9px;
+    top: 8px;
+    left: 3px;
+  }
+
+  /* Color/shape of burger icon bars */
+  .bm-burger-bars {
+    background: #373a47;
+  }
+
+  /* Position and sizing of clickable cross button */
+  .bm-cross-button {
+    height: 24px;
+    width: 24px;
+  }
+
+  /* Color/shape of close button cross */
+  .bm-cross {
+    display: ${props => props.isOpen ? 
+    "flex" : "none"};
+    background: #bdc3c7;
+    zoom: 70% !important;
+    margin-left: 10px;
+  }
+
+  /* General sidebar styles */
+  .bm-menu {
+    display: ${props => props.isOpen ? 
+    "flex" : "none"};
+    background: rgba(0, 0, 0, 0.9);
+    padding: 4em 1.0em 0;
+    font-size: 100%;
+    font-weight: 500;
+    height: 371px !important;
+  }
+
+  /* Morph shape necessary with bubble or elastic */
+  .bm-morph-shape {
+    fill: #373a47;
+  }
+
+  /* Wrapper for item list */
+  .bm-item-list {
+    color: #b8b7ad;
+  }
+
+  /* Styling of overlay */
+  .bm-overlay {
+    background: rgba(0, 0, 0, 0.3);
+    width: 230px !important;
+    height: 371px !important;
+  }
+`
 
 const ProfileCard = styled.div`
   position: relative!important;
