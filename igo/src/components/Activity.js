@@ -2,13 +2,18 @@ import React, { Component } from 'react'
 import { Link } from "react-router-dom"
 import styled from "styled-components"
 import { AppConsumer } from "../context"
-import App from '../App';
+import {Spring} from 'react-spring/renderprops'
 
 export default class Activity extends Component {
   render() {
     return (
-      <React.Fragment>
-        <Link style={{ textDecoration: 'none' }} to={{
+      <Spring 
+        from={{ opacity: 0, marginTop: -20 }}
+        to={{ opacity: 1, marginTop: 20 }}
+        config={{ delay: 100, duration: 900 }}
+      >
+        {props => <div style={props}>
+            <Link style={{ textDecoration: 'none' }} to={{
             pathname: this.props.item.name,
             state: {
                 avatar: this.props.item.avatar,
@@ -16,39 +21,40 @@ export default class Activity extends Component {
                 activity: this.props.item.activity,
                 timestamp: this.props.item.timestamp
             }
-        }}>
-            <ActivityWrapper>
-                <Avatar className="avatar">
-                    <img src={this.props.item.avatar} alt="Person"></img>
-                </Avatar>
-                <div className="name">
-                    <NameText>{this.props.item.name}</NameText>
-                </div>
-                <div className="activity">
-                    <ActivityText>{this.props.item.activity}</ActivityText>
-                </div>
-                <div className="timestamp">
-                    <TimeText>{this.props.item.timestamp}</TimeText>
-                </div>
-            </ActivityWrapper>
-        </Link>
-        <AppConsumer>
-            {value => (
-                <AddedWrapper>
-                    <div className="comments">
-                        <Added>
-                            <i className="far fa-comment"></i> {this.props.item.comments}
-                        </Added>
+            }}>
+                <ActivityWrapper>
+                    <Avatar className="avatar">
+                        <img src={this.props.item.avatar} alt="Person"></img>
+                    </Avatar>
+                    <div className="name">
+                        <NameText>{this.props.item.name}</NameText>
                     </div>
-                    <div className="likes">
-                        <Added>
-                            {this.props.item.liked ? <i onClick={() => value.decreaseLikes(this.props.item.id)} className="fas fa-heart heart-filled"></i> : <i onClick={() => value.increaseLikes(this.props.item.id)} className="far fa-heart"></i>} {this.props.item.likes}
-                        </Added>
+                    <div className="activity">
+                        <ActivityText>{this.props.item.activity}</ActivityText>
                     </div>
-                </AddedWrapper>
-            )}
-        </AppConsumer>
-      </React.Fragment>
+                    <div className="timestamp">
+                        <TimeText>{this.props.item.timestamp}</TimeText>
+                    </div>
+                </ActivityWrapper>
+            </Link>
+            <AppConsumer>
+                {value => (
+                    <AddedWrapper>
+                        <div className="comments">
+                            <Added>
+                                <i className="far fa-comment"></i> {this.props.item.comments}
+                            </Added>
+                        </div>
+                        <div className="likes">
+                            <Added>
+                                {this.props.item.liked ? <i onClick={() => value.decreaseLikes(this.props.item.id)} className="fas fa-heart heart-filled"></i> : <i onClick={() => value.increaseLikes(this.props.item.id)} className="far fa-heart"></i>} {this.props.item.likes}
+                            </Added>
+                        </div>
+                    </AddedWrapper>
+                )}
+            </AppConsumer>
+        </div>}
+      </Spring>
     )
   }
 }

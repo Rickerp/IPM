@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
+import back from "./back-50.png"
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
 import Ar from "./components/Ar";
@@ -9,6 +10,7 @@ import Feed from "./components/Feed";
 import HomeButton from "./components/Homebutton";
 import ActivityDetailed from "./components/ActivityDetailed";
 import { AppProvider } from "./context";
+import Dictionary from "./components/Dictionary";
 
 class App extends Component {
   render() {
@@ -20,12 +22,14 @@ class App extends Component {
               disableAutoFocus
               pageWrapId={"page-wrap"}
               outerContainerId={"App"}
+              customCrossIcon={ <img src={back} /> }
             />
             <div className="content" id="page-wrap">
               <Navbar />
               <div id="page-component">
                 <Switch>
                   <Route exact={true} path="/ar" component={Ar} />
+                  <Route exact={true} path="/dictionary" component={Dictionary} />
                   <Route exact={true} path="/" component={Feed} />
                   <Route path="/:handle" component={ActivityDetailed} />
                 </Switch>

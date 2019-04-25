@@ -43,12 +43,12 @@ export default class Menu extends Component {
           </Link>
 
           <a className="menu-item" href="#" onClick={() => this.toggleLanguages()}>
-            <i class="fas fa-language"></i> &nbsp; LANGUAGES {this.state.languagesOpen ? <i class="fas fa-sort-up"></i> : <i class="fas fa-sort-down"></i>}
+            <i class="fas fa-language"></i> &nbsp; LANGUAGES {this.state.languagesOpen ? <i className="fas fa-sort-up menu-up"></i> : <i className="fas fa-sort-down menu-down"></i>}
           </a>
 
-          {this.state.languagesOpen ? <a className="menu-item" href="/">
+          {this.state.languagesOpen ? <Link onClick={() => this.closeMenu()} className="menu-item" to="/dictionary">
             <i class="fas fa-book"></i> &nbsp; DICTIONARY
-          </a> : <span></span>}
+          </Link> : <span></span>}
 
           {this.state.languagesOpen ? <a className="menu-item" href="/">
             <i class="fas fa-sign-language"></i> &nbsp; TRANSLATOR
@@ -112,9 +112,9 @@ const SlideWrapper = styled.div`
   .bm-cross {
     display: ${props => props.isOpen ? 
     "flex" : "none"};
-    background: #bdc3c7;
-    zoom: 70% !important;
-    margin-left: 10px;
+    background: white;
+    zoom: 90% !important;
+    margin-left: 5px;
   }
 
   /* General sidebar styles */

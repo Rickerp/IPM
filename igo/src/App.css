@@ -54,14 +54,14 @@ body {
   margin-top: 40px;
 }
 
-.fa-sort-down {
+.menu-down {
   position: absolute;
   zoom: 70%;
   top: 240px;
   left: 225px;
 }
 
-.fa-sort-up {
+.menu-up {
   position: absolute;
   zoom: 70%;
   top: 245px;
@@ -154,4 +154,30 @@ body {
 
 button:focus {
   outline: none;
+}
+
+/* Dictionary */
+
+.main-header {
+  grid-area: main-header;
+}
+
+.language-input {
+  grid-area: language-input;
+}
+
+.word-input {
+  grid-area: word-input;
+}
+
+.line-left {
+  grid-area: line-left;
+}
+
+.side-header {
+  grid-area: side-header;
+}
+
+.line-right {
+  grid-area: line-right;
 }
