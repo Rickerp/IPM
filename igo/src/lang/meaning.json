@@ -1,0 +1,40 @@
+{
+  "exit": {
+    "1": "A way out of a building, room, or passenger vehicle.",
+    "2": "An act of leaving a place."
+  },
+  "danger": {
+    "1": "The possibility of suffering harm or injury."
+  },
+  "help": {
+    "1": "Make it easier or possible for (someone) to do something by offering them one's services or resources.",
+    "2": "(help oneself) Serve someone with (food or drink)",
+    "3": "(can/could not help oneself)Cannot or could not avoid."
+  },
+  "price": {
+    "1": "The amount of money expected, required, or given in payment for something.",
+    "2": "An unwelcome experience or action undergone or done as a condition of achieving an objective."
+  },
+  "thanks": {
+    "1": "An expression of gratitude."
+  },
+  "far": {
+    "1": "At, to, or by a great distance (used to indicate the extent to which one thing is distant from another)",
+    "2": "Over a large expanse of space or time.",
+    "3": "By a great deal."
+  },
+  "close": {
+    "1": "Only a short distance away or apart in space or time.",
+    "2": "Denoting a family member who is part of a person's immediate family, typically a parent or sibling.",
+    "3": "(of observation, examination, etc.) done in a careful and thorough way.",
+    "4": "Uncomfortably humid or airless."
+  },
+  "store": {
+    "1": "A quantity or supply of something kept for use as needed.",
+    "2": "A shop of any size or kind.",
+    "3": "A sheep, steer, cow, or pig acquired or kept for fattening."
+  },
+  "supermarket": {
+    "1": "A large self-service shop selling foods and household goods."
+  }
+}
