@@ -122,7 +122,7 @@ const Line = styled.hr`
 
 const Box = styled.div`
   border: 1px solid ${props => props.invalidInput ? 
-  "red" : "black"};
+  "var(--mainRed)" : "var(--mainBlack)"};
   border-radius: 10px;
   height: 22px;
   width: 200px;

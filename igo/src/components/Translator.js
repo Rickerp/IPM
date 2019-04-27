@@ -9,12 +9,12 @@ export default class Translator extends Component {
                     <MainHeader>Translator</MainHeader>
                 </div>
                 <div className="in-language-input">
-                    <LanguageInput>Portuguese <i class="fas fa-sort-down"></i></LanguageInput>
+                    <LanguageInput>Portuguese &nbsp; <i class="fas fa-arrow-circle-right"></i> &nbsp; English</LanguageInput>
                 </div>
-                <ExtraButtons className="extra-buttons">
+{/*                 <ExtraButtons className="extra-buttons">
                     <i class="fas fa-camera"></i> &nbsp;
                     <i class="fas fa-microphone"></i>
-                </ExtraButtons>
+                </ExtraButtons> */}
                 <div className="word-tr-input">
                     <Box>
                         <form>
@@ -27,9 +27,9 @@ export default class Translator extends Component {
                         </form>
                     </Box>
                 </div>
-                <div className="out-language-input">
+{/*                 <div className="out-language-input">
                     <LanguageInput>English <i class="fas fa-sort-down"></i></LanguageInput>
-                </div>
+                </div> */}
 {/*                 <div className="word-tr-output">
                     <Box>
                         <form>
@@ -48,14 +48,13 @@ const TranslatorWrapper = styled.div`
     display: grid;
     grid-gap: 5px;
     grid-template-columns: 10px 45px 1fr 45px;
-    grid-template-rows: 30px 10px 30px 5px 100px 30px;
+    grid-template-rows: 30px 10px 30px 5px 100px;
     grid-template-areas:
         "main-tr-header main-tr-header main-tr-header main-tr-header" 
         ". . . ."
-        ". in-language-input in-language-input extra-buttons"
+        ". in-language-input in-language-input in-language-input"
         ". . . ."
-        ". word-tr-input word-tr-input word-tr-input"
-        ". out-language-input out-language-input out-language-input";
+        ". word-tr-input word-tr-input word-tr-input";
 `
 
 const MainHeader = styled.p`
@@ -72,7 +71,7 @@ const Line = styled.hr`
 
 const LanguageInput = styled.p`
   text-align: left;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
 `
 
@@ -99,7 +98,7 @@ const SearchButton = styled.button`
   background-color: transparent;
   border: 1px solid black;
   border-radius: 10px;
-  top: 170px;
+  top: 130px;
   left: 40px;
   width: 115px;
   height: 27px;
