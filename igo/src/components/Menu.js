@@ -50,9 +50,9 @@ export default class Menu extends Component {
             <i class="fas fa-book"></i> &nbsp; DICTIONARY
           </Link> : <span></span>}
 
-          {this.state.languagesOpen ? <a className="menu-item" href="/">
+          {this.state.languagesOpen ? <Link onClick={() => this.closeMenu()} className="menu-item" to="/translator">
             <i class="fas fa-sign-language"></i> &nbsp; TRANSLATOR
-          </a> : <span></span>}
+          </Link> : <span></span>}
 
           <a className="menu-item" href="/">
             <i class="fas fa-route"></i> &nbsp; SHAROUTE

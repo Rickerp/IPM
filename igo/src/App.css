@@ -181,3 +181,29 @@ button:focus {
 .line-right {
   grid-area: line-right;
 }
+
+/* Translator */
+
+.main-tr-header {
+  grid-area: main-tr-header;
+}
+
+.in-language-input {
+  grid-area: in-language-input;
+}
+
+.extra-buttons {
+  grid-area: extra-buttons;
+}
+
+.word-tr-input {
+  grid-area: word-tr-input;
+}
+
+.out-language-input {
+  grid-area: out-language-input;
+}
+
+.word-tr-output {
+  grid-area: word-tr-output;
+}
