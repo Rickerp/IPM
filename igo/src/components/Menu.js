@@ -50,9 +50,9 @@ export default class Menu extends Component {
             <i class="fas fa-book"></i> &nbsp; DICTIONARY
           </Link> : <span></span>}
 
-          {this.state.languagesOpen ? <a className="menu-item" href="/">
+          {this.state.languagesOpen ? <Link onClick={() => this.closeMenu()} className="menu-item" to="/translator">
             <i class="fas fa-sign-language"></i> &nbsp; TRANSLATOR
-          </a> : <span></span>}
+          </Link> : <span></span>}
 
           <a className="menu-item" href="/">
             <i class="fas fa-route"></i> &nbsp; SHAROUTE
@@ -75,13 +75,13 @@ const SlideWrapper = styled.div`
     /* Our sidebar item styling */
     text-decoration: none;
     margin-bottom: 15px;
-    color: white;
+    color: var(--mainWhite);
     transition: color 0.2s;
   }
 
   /* Change color on hover */
   .bm-item:hover {
-    color: white;
+    color: var(--mainWhite);
   }
 
   .bm-item:focus {
@@ -112,7 +112,7 @@ const SlideWrapper = styled.div`
   .bm-cross {
     display: ${props => props.isOpen ? 
     "flex" : "none"};
-    background: white;
+    background: var(--mainWhite);
     zoom: 90% !important;
     margin-left: 5px;
   }
@@ -157,5 +157,5 @@ const ProfileCard = styled.div`
       ". ."
       ". ."!important;
   top: -10px;
-  border-bottom: 0.1px solid white;
+  border-bottom: 0.1px solid var(--mainWhite);
 `

@@ -1,3 +1,9 @@
+:root {
+  --mainBlack: #000000;
+  --mainWhite: #ffffff;
+  --mainRed: #ee4238;
+}
+
 body {
   font-family: "Montserrat";
   overflow-y: hidden;
@@ -15,7 +21,7 @@ body {
   height: 371px;
   margin-left: auto; /* -3px */
   margin-right: auto;
-  border: 10px black solid;
+  border: 10px var(--mainBlack) solid;
   border-top-width: 20px;
   border-bottom-width: 20px;
   border-radius: 16px;
@@ -39,7 +45,7 @@ body {
 .band .content {
   width: 230px;
   height: 371px;
-  background: white;
+  background: var(--mainWhite);
 }
 
 #App {
@@ -149,7 +155,7 @@ body {
 /* Ar */
 
 .fa-arrow-right {
-  color: black;
+  color: var(--mainBlack);
 }
 
 button:focus {
@@ -180,4 +186,30 @@ button:focus {
 
 .line-right {
   grid-area: line-right;
+}
+
+/* Translator */
+
+.main-tr-header {
+  grid-area: main-tr-header;
+}
+
+.in-language-input {
+  grid-area: in-language-input;
+}
+
+.extra-buttons {
+  grid-area: extra-buttons;
+}
+
+.word-tr-input {
+  grid-area: word-tr-input;
+}
+
+.out-language-input {
+  grid-area: out-language-input;
+}
+
+.word-tr-output {
+  grid-area: word-tr-output;
 }

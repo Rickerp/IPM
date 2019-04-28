@@ -11,6 +11,7 @@ import HomeButton from "./components/Homebutton";
 import ActivityDetailed from "./components/ActivityDetailed";
 import { AppProvider } from "./context";
 import Dictionary from "./components/Dictionary";
+import Translator from "./components/Translator";
 
 class App extends Component {
   render() {
@@ -30,6 +31,7 @@ class App extends Component {
                 <Switch>
                   <Route exact={true} path="/ar" component={Ar} />
                   <Route exact={true} path="/dictionary" component={Dictionary} />
+                  <Route exact={true} path="/translator" component={Translator} />
                   <Route exact={true} path="/" component={Feed} />
                   <Route path="/:handle" component={ActivityDetailed} />
                 </Switch>
