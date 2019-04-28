@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import codes from "./../lang/codes.json";
 import langs from "./../lang/langs.json";
+import Popup from 'reactjs-popup'
 
 export default class Translator extends Component {
   constructor(props) {
@@ -14,7 +15,6 @@ export default class Translator extends Component {
     };
 
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
     this.onFocus = this.onFocus.bind(this);
     this.onBlur = this.onBlur.bind(this);
     this.changeFromLang = this.changeFromLang.bind(this);
@@ -22,23 +22,30 @@ export default class Translator extends Component {
   }
 
   handleChange(event) {
-    if (/^[a-zA-Z]+$/.test(event.target.value) || event.target.value === "") {
-      this.setState({
-        value: event.target.value,
-        invalidInput: false
-      });
+    const code = Object.keys(langs[this.state.fromLang]).find(key => langs[this.state.fromLang][key] === event.target.value);
+
+    if (/^[a-zA-Z\u00C0-\u00ff]+$/.test(event.target.value) || event.target.value === "") {
+      if (code != null) {
+        this.setState({
+          value: event.target.value,
+          result: langs[this.state.toLang][code],
+          invalidInput: false
+        });
+      }
+      else {
+        this.setState({
+          value: event.target.value,
+          result: event.target.value,
+          invalidInput: false
+        });
+      }
     } else {
       this.setState({
         value: event.target.value,
+        result: "Invalid input",
         invalidInput: true
       });
     }
-  }
-
-  handleSubmit(event) {
-    event.preventDefault();
-    const code = Object.keys(langs[this.state.fromLang]).find(key => langs[this.state.fromLang][key] === this.state.value);
-    this.setState({result: langs[this.state.toLang][code]});
   }
 
   onFocus(event) {
@@ -74,41 +81,49 @@ export default class Translator extends Component {
           <MainHeader>Translator</MainHeader>
         </div>
         <div className="in-language-input">
-          <LanguageInput>
-            {codes[this.state.fromLang]} &nbsp;{" "}
-            <i class="fas fa-arrow-circle-right" /> &nbsp;
-            {codes[this.state.toLang]}
-          </LanguageInput>
+          <Popup
+              trigger={<InputLanguage> {codes[this.state.fromLang]} </InputLanguage>}
+              position="bottom left"
+              on="click"
+              closeOnDocumentClick
+              mouseLeaveDelay={300}
+              mouseEnterDelay={0}
+              contentStyle={{ padding: '0px', border: '1px solid black' }}
+              arrow={true}>
+            <div className="in-language-item" onClick={() => this.changeFromLang("nl")}> Dutch</div>
+            <div className="in-language-item" onClick={() => this.changeFromLang("pt")}> Portuguese</div>
+            <div className="in-language-item" onClick={() => this.changeFromLang("en")}> English</div>
+          </Popup>
         </div>
-        {/*                 <ExtraButtons className="extra-buttons">
-                    <i class="fas fa-camera"></i> &nbsp;
-                    <i class="fas fa-microphone"></i>
-                </ExtraButtons> */}
+        <div className="arrow">
+          <i class="fas fa-arrow-circle-right" />
+        </div>
+        <div className="out-language-input">
+          <Popup
+              trigger={<InputLanguage> {codes[this.state.toLang]} </InputLanguage>}
+              position="bottom right"
+              on="click"
+              closeOnDocumentClick
+              mouseLeaveDelay={300}
+              mouseEnterDelay={0}
+              contentStyle={{ padding: '0px', border: '1px solid black' }}
+              arrow={true}>
+            <div className="in-language-item" onClick={() => this.changeToLang("nl")}> Dutch</div>
+            <div className="in-language-item" onClick={() => this.changeToLang("pt")}> Portuguese</div>
+            <div className="in-language-item" onClick={() => this.changeToLang("en")}> English</div>
+          </Popup>
+        </div>
         <div className="word-tr-input">
-          <Box>
-            <form onSubmit={this.handleSubmit}>
-              <TextInput type="text" value={this.state.value} onChange={this.handleChange} onFocus={this.onFocus} onBlur={this.onBlur}/>
-              <SearchButton type="submit" value="Submit">
-                Translate
-              </SearchButton>
-            </form>
+          <Box invalidInput={this.state.invalidInput}>
+            <TextInput type="text" value={this.state.value} onChange={this.handleChange} onFocus={this.onFocus} onBlur={this.onBlur}/>
             <Line />
-            <form>
-              <TextInput type="text" value={this.state.result}/>
-            </form>
+            <TextInput type="text" value={this.state.result}/>
           </Box>
         </div>
-        {/*                 <div className="out-language-input">
-                    <LanguageInput>English <i class="fas fa-sort-down"></i></LanguageInput>
-                </div> */}
-        {/*                 <div className="word-tr-output">
-                    <Box>
-                        <form>
-                            <TextInput type="text" />
-                            <SearchButton type="submit" value="Submit"><i class="fas fa-search"></i></SearchButton>
-                        </form>
-                    </Box>
-                </div> */}
+        <ExtraButtons className="extra-buttons">
+            <i class="fas fa-camera"></i> 
+            <i class="fas fa-microphone"></i> <br/>
+        </ExtraButtons>
       </TranslatorWrapper>
     );
   }
@@ -118,14 +133,16 @@ const TranslatorWrapper = styled.div`
   margin-top: -10px;
   display: grid;
   grid-gap: 5px;
-  grid-template-columns: 10px 45px 1fr 45px;
-  grid-template-rows: 30px 10px 30px 5px 100px;
+  grid-template-columns: 10px 1fr 50px 1fr 10px;
+  grid-template-rows: 30px 20px 30px 5px 100px 20px 30px;
   grid-template-areas:
-    "main-tr-header main-tr-header main-tr-header main-tr-header"
-    ". . . ."
-    ". in-language-input in-language-input in-language-input"
-    ". . . ."
-    ". word-tr-input word-tr-input word-tr-input";
+    "main-tr-header main-tr-header main-tr-header main-tr-header main-tr-header"
+    ". . . . ."
+    ". in-language-input arrow out-language-input ."
+    ". . . . ."
+    ". word-tr-input word-tr-input word-tr-input ."
+    ". . . . ."
+    ". extra-buttons extra-buttons extra-buttons .";
 `;
 
 const MainHeader = styled.p`
@@ -137,18 +154,26 @@ const MainHeader = styled.p`
 const Line = styled.hr`
   height: 1px;
   background-color: grey;
-  margin-top: -0.5px;
+  margin-top: 30px;
+  margin-bottom: 10px;
 `;
 
-const LanguageInput = styled.p`
-  text-align: left;
-  font-size: 14px;
-  font-weight: 500;
-`;
+const InputLanguage = styled.button`
+  font-family: "Montserrat";
+  font-size: 12px;
+  background: transparent;
+  border: 1px solid black;
+  border-radius: 10px;
+`
 
 const ExtraButtons = styled.div`
   margin-top: 15px;
-  font-size: 14px;
+  font-size: 18px;
+  text-align: center;
+
+  .fa-camera {
+    margin-right: 40px;
+  }
 `;
 
 const TextInput = styled.input`
@@ -178,6 +203,8 @@ const SearchButton = styled.button`
 
 const Box = styled.div`
   border-radius: 5px;
+  border: ${props => props.invalidInput ?
+  "1px solid red" : "none"};
   height: 100px;
   width: 200px;
   box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.3);

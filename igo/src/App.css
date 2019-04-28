@@ -202,6 +202,17 @@ button:focus {
   grid-area: extra-buttons;
 }
 
+.arrow {
+  grid-area: arrow;
+}
+
+.fa-arrow-circle-right {
+  position: absolute;
+  display: block;
+  text-align: center;
+  margin-left: 15px;
+}
+
 .word-tr-input {
   grid-area: word-tr-input;
 }
@@ -212,4 +223,20 @@ button:focus {
 
 .word-tr-output {
   grid-area: word-tr-output;
+}
+
+.menu {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+}
+.in-language-item {
+  cursor: pointer;
+  padding: 5px;
+  height: 28px;
+  border-bottom: 1px solid rgb(187, 187, 187);
+}
+.in-language-item:hover {
+  color: #2980b9;
 }
