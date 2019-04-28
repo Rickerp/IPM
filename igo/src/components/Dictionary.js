@@ -55,44 +55,46 @@ export default class Dictionary extends Component {
 
   render() {
     return (
-      <DictionaryWrapper>
-        <div className="main-header">
-          <MainHeader>Dictionary</MainHeader>
-        </div>
-        <div className="language-input">
-          <LanguageInput>
-            {codes[this.state.lang]} <i class="fas fa-sort-down" />
-          </LanguageInput>
-        </div>
-        <div className="word-input">
-          <Box invalidInput={this.state.invalidInput}>
-            <form onSubmit={this.handleSubmit}>
-              <TextInput
-                type="text"
-                value={this.state.value}
-                onChange={this.handleChange}
-                onFocus={this.onFocus}
-                onBlur={this.onBlur}
-              />
-              <SearchButton type="submit" value="Submit">
-                <i class="fas fa-search" />
-              </SearchButton>
-            </form>
-          </Box>
-          <TextAlert invalidInput={this.state.invalidInput}>
-            Change input
-          </TextAlert>
-        </div>
-        <div className="line-left">
-          <Line />
-        </div>
-        <div className="side-header">
-          <SideHeader>Top Words</SideHeader>
-        </div>
-        <div className="line-right">
-          <Line />
-        </div>
-      </DictionaryWrapper>
+      <React.Fragment>
+        <DictionaryWrapper>
+          <div className="main-header">
+            <MainHeader>Dictionary</MainHeader>
+          </div>
+          <div className="language-input">
+            <LanguageInput>
+              {codes[this.state.lang]} <i class="fas fa-sort-down" />
+            </LanguageInput>
+          </div>
+          <div className="word-input">
+            <Box invalidInput={this.state.invalidInput}>
+              <form onSubmit={this.handleSubmit}>
+                <TextInput
+                  type="text"
+                  value={this.state.value}
+                  onChange={this.handleChange}
+                  onFocus={this.onFocus}
+                  onBlur={this.onBlur}
+                />
+                <SearchButton type="submit" value="Submit">
+                  <i class="fas fa-search" />
+                </SearchButton>
+              </form>
+            </Box>
+            <TextAlert invalidInput={this.state.invalidInput}>
+              Invalid input
+            </TextAlert>
+          </div>
+          <div className="line-left">
+            <Line />
+          </div>
+          <div className="side-header">
+            <SideHeader>Top Words</SideHeader>
+          </div>
+          <div className="line-right">
+            <Line />
+          </div>
+        </DictionaryWrapper>
+      </React.Fragment>
     );
   }
 }

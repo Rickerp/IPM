@@ -18,7 +18,10 @@ export default class Menu extends Component {
   }
 
   closeMenu () {
-    this.setState({menuOpen: false})
+    this.setState({
+      menuOpen: false,
+      languagesOpen: false
+    })
   }
 
   toggleMenu () {

@@ -10,6 +10,7 @@ export default class Translator extends Component {
     this.state = {
       value: "Type something",
       result: "",
+      success: false,
       fromLang: "pt",
       toLang: "en"
     };
@@ -29,6 +30,7 @@ export default class Translator extends Component {
         this.setState({
           value: event.target.value,
           result: langs[this.state.toLang][code],
+          success: true,
           invalidInput: false
         });
       }
@@ -36,6 +38,7 @@ export default class Translator extends Component {
         this.setState({
           value: event.target.value,
           result: event.target.value,
+          success: false,
           invalidInput: false
         });
       }
@@ -43,6 +46,7 @@ export default class Translator extends Component {
       this.setState({
         value: event.target.value,
         result: "Invalid input",
+        success: false,
         invalidInput: true
       });
     }
@@ -90,9 +94,15 @@ export default class Translator extends Component {
               mouseEnterDelay={0}
               contentStyle={{ padding: '0px', border: '1px solid black' }}
               arrow={true}>
+            <div className="in-language-item" onClick={() => this.changeFromLang("af")}> Afrikaans</div>
+            <div className="in-language-item" onClick={() => this.changeFromLang("bg")}> Bulgarian</div>
+            <div className="in-language-item" onClick={() => this.changeFromLang("hr")}> Croatian</div>
             <div className="in-language-item" onClick={() => this.changeFromLang("nl")}> Dutch</div>
-            <div className="in-language-item" onClick={() => this.changeFromLang("pt")}> Portuguese</div>
             <div className="in-language-item" onClick={() => this.changeFromLang("en")}> English</div>
+            <div className="in-language-item" onClick={() => this.changeFromLang("fr")}> French</div>
+            <div className="in-language-item" onClick={() => this.changeFromLang("de")}> German</div>              
+            <div className="in-language-item" onClick={() => this.changeFromLang("it")}> Italian</div>
+            <div className="in-language-item" onClick={() => this.changeFromLang("pt")}> Portuguese</div>
           </Popup>
         </div>
         <div className="arrow">
@@ -108,13 +118,19 @@ export default class Translator extends Component {
               mouseEnterDelay={0}
               contentStyle={{ padding: '0px', border: '1px solid black' }}
               arrow={true}>
+            <div className="in-language-item" onClick={() => this.changeToLang("af")}> Afrikaans</div>
+            <div className="in-language-item" onClick={() => this.changeToLang("bg")}> Bulgarian</div>
+            <div className="in-language-item" onClick={() => this.changeToLang("hr")}> Croatian</div>
             <div className="in-language-item" onClick={() => this.changeToLang("nl")}> Dutch</div>
-            <div className="in-language-item" onClick={() => this.changeToLang("pt")}> Portuguese</div>
             <div className="in-language-item" onClick={() => this.changeToLang("en")}> English</div>
+            <div className="in-language-item" onClick={() => this.changeToLang("fr")}> French</div>
+            <div className="in-language-item" onClick={() => this.changeToLang("de")}> German</div>  
+            <div className="in-language-item" onClick={() => this.changeToLang("it")}> Italian</div>
+            <div className="in-language-item" onClick={() => this.changeToLang("pt")}> Portuguese</div>
           </Popup>
         </div>
         <div className="word-tr-input">
-          <Box invalidInput={this.state.invalidInput}>
+          <Box invalidInput={this.state.invalidInput} success={this.state.success}>
             <TextInput type="text" value={this.state.value} onChange={this.handleChange} onFocus={this.onFocus} onBlur={this.onBlur}/>
             <Line />
             <TextInput type="text" value={this.state.result}/>
@@ -204,7 +220,7 @@ const SearchButton = styled.button`
 const Box = styled.div`
   border-radius: 5px;
   border: ${props => props.invalidInput ?
-  "1px solid red" : "none"};
+  "1px solid var(--mainRed)" : props.success ? "1px solid var(--mainGreen)" : "none"};
   height: 100px;
   width: 200px;
   box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.3);
