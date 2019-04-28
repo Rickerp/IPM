@@ -1,31 +1,70 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import codes from "./../lang/codes.json";
+import langs from "./../lang/langs.json";
 
 export default class Translator extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      value: "Type something",
+      result: "",
       fromLang: "pt",
       toLang: "en"
     };
 
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.onFocus = this.onFocus.bind(this);
+    this.onBlur = this.onBlur.bind(this);
     this.changeFromLang = this.changeFromLang.bind(this);
     this.changeToLang = this.changeToLang.bind(this);
   }
 
+  handleChange(event) {
+    if (/^[a-zA-Z]+$/.test(event.target.value) || event.target.value === "") {
+      this.setState({
+        value: event.target.value,
+        invalidInput: false
+      });
+    } else {
+      this.setState({
+        value: event.target.value,
+        invalidInput: true
+      });
+    }
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    const code = Object.keys(langs[this.state.fromLang]).find(key => langs[this.state.fromLang][key] === this.state.value);
+    this.setState({result: langs[this.state.toLang][code]});
+  }
+
+  onFocus(event) {
+    if (event.target.value === "Type something") {
+      this.setState({
+        value: "",
+        invalidInput: false
+      });
+    }
+  }
+
+  onBlur(event) {
+    if (event.target.value === "") {
+      this.setState({
+        value: "Type something",
+        invalidInput: false
+      });
+    }
+  }
+
   changeFromLang(newLang) {
-    this.setState({
-      fromLang: newLang,
-      toLang: this.state.toLang
-    });
+    this.setState({fromLang: newLang});
   }
 
   changeToLang(newLang) {
-    this.setState({
-      fromLang: this.state.fromLang,
-      toLang: newLang
-    });
+    this.setState({toLang: newLang});
   }
 
   render() {
@@ -47,15 +86,15 @@ export default class Translator extends Component {
                 </ExtraButtons> */}
         <div className="word-tr-input">
           <Box>
-            <form>
-              <TextInput type="text" />
+            <form onSubmit={this.handleSubmit}>
+              <TextInput type="text" value={this.state.value} onChange={this.handleChange} onFocus={this.onFocus} onBlur={this.onBlur}/>
               <SearchButton type="submit" value="Submit">
                 Translate
               </SearchButton>
             </form>
             <Line />
             <form>
-              <TextInput type="text" />
+              <TextInput type="text" value={this.state.result}/>
             </form>
           </Box>
         </div>
@@ -115,8 +154,9 @@ const ExtraButtons = styled.div`
 const TextInput = styled.input`
   font-family: "Montserrat";
   background-color: transparent;
-  width: 150px;
+  width: 190px;
   border: none;
+  margin-left: 5px;
 
   &:focus {
     outline: none;
