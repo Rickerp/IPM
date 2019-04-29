@@ -38,9 +38,7 @@ export default class Translator extends Component {
   }
 
   renderFromLangs() {
-    Object.keys(codes).forEach(key => {
-      this.renderFromLang(key, codes[key]);
-    });
+    return Object.keys(codes).map(key => this.renderFromLang(key, codes[key]));
   }
 
   handleChange(event) {
