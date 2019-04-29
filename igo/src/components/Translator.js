@@ -20,25 +20,40 @@ export default class Translator extends Component {
     this.onBlur = this.onBlur.bind(this);
     this.changeFromLang = this.changeFromLang.bind(this);
     this.changeToLang = this.changeToLang.bind(this);
-    this.renderFromLangs = this.renderFromLangs.bind(this);
-    this.renderFromLang = this.renderFromLang.bind(this);
   }
 
   renderFromLang(code, language) {
-    console.log(code);
-    console.log(language);
-    return (
-      <div
-        className="in-language-item"
-        onClick={() => this.changeToLang({ code })}
-      >
-        {language}
-      </div>
-    );
+    if (code != "0") {
+      return (
+        <div
+          className="in-language-item"
+          onClick={() => this.changeFromLang(code)}
+        >
+          {language}
+        </div>
+      );
+    }
   }
 
   renderFromLangs() {
     return Object.keys(codes).map(key => this.renderFromLang(key, codes[key]));
+  }
+
+  renderToLang(code, language) {
+    if (code != "0") {
+      return (
+        <div
+          className="in-language-item"
+          onClick={() => this.changeToLang(code)}
+        >
+          {language}
+        </div>
+      );
+    }
+  }
+
+  renderToLangs() {
+    return Object.keys(codes).map(key => this.renderToLang(key, codes[key]));
   }
 
   handleChange(event) {
@@ -117,7 +132,7 @@ export default class Translator extends Component {
             closeOnDocumentClick
             mouseLeaveDelay={300}
             mouseEnterDelay={0}
-            contentStyle={{ padding: "0px", border: "1px solid black" }}
+            contentStyle={{ padding: "0px", maxHeight: "60%", overflowY: "auto", border: "1px solid black" }}
             arrow={true}
           >
             {this.renderFromLangs()}
@@ -136,72 +151,10 @@ export default class Translator extends Component {
             closeOnDocumentClick
             mouseLeaveDelay={300}
             mouseEnterDelay={0}
-            contentStyle={{ padding: "0px", border: "1px solid black" }}
+            contentStyle={{ padding: "0px", maxHeight: "60%", overflowY: "auto", border: "1px solid black" }}
             arrow={true}
           >
-            <div
-              className="in-language-item"
-              onClick={() => this.changeToLang("af")}
-            >
-              {" "}
-              Afrikaans
-            </div>
-            <div
-              className="in-language-item"
-              onClick={() => this.changeToLang("bg")}
-            >
-              {" "}
-              Bulgarian
-            </div>
-            <div
-              className="in-language-item"
-              onClick={() => this.changeToLang("hr")}
-            >
-              {" "}
-              Croatian
-            </div>
-            <div
-              className="in-language-item"
-              onClick={() => this.changeToLang("nl")}
-            >
-              {" "}
-              Dutch
-            </div>
-            <div
-              className="in-language-item"
-              onClick={() => this.changeToLang("en")}
-            >
-              {" "}
-              English
-            </div>
-            <div
-              className="in-language-item"
-              onClick={() => this.changeToLang("fr")}
-            >
-              {" "}
-              French
-            </div>
-            <div
-              className="in-language-item"
-              onClick={() => this.changeToLang("de")}
-            >
-              {" "}
-              German
-            </div>
-            <div
-              className="in-language-item"
-              onClick={() => this.changeToLang("it")}
-            >
-              {" "}
-              Italian
-            </div>
-            <div
-              className="in-language-item"
-              onClick={() => this.changeToLang("pt")}
-            >
-              {" "}
-              Portuguese
-            </div>
+            {this.renderToLangs()}
           </Popup>
         </div>
         <div className="word-tr-input">
