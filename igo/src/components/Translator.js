@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import codes from "./../lang/codes.json";
-import invertedCodes from "./../lang/inverted_codes.json";
 import langs from "./../lang/langs.json";
 import Popup from "reactjs-popup";
 
