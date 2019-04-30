@@ -72,7 +72,7 @@ export default class Ar extends Component {
             alt=""
           />
           <PreviousButton onClick={this.prevImage}>
-            <i class="fas fa-arrow-left" />
+            <i className="fas fa-arrow-left" />
           </PreviousButton>
           <NextButton onClick={this.nextImage}>
             <i className="fas fa-arrow-right" />

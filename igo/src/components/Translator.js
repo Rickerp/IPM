@@ -106,7 +106,7 @@ export default class Translator extends Component {
           </Popup>
         </div>
         <div className="arrow">
-          <i class="fas fa-arrow-circle-right" />
+          <i className="fas fa-arrow-circle-right" />
         </div>
         <div className="out-language-input">
           <Popup
@@ -137,8 +137,8 @@ export default class Translator extends Component {
           </Box>
         </div>
         <ExtraButtons className="extra-buttons">
-            <i class="fas fa-camera"></i> 
-            <i class="fas fa-microphone"></i> <br/>
+            <i className="fas fa-camera"></i> 
+            <i className="fas fa-microphone"></i> <br/>
         </ExtraButtons>
       </TranslatorWrapper>
     );
