@@ -46,11 +46,7 @@ export default class Menu extends Component {
                     </ProfileCard>
 
                     <Link
-                        onClick={() => {
-                            this.closeMenu();
-                            this.props.onEnter("/ar");
-                            console.log("onClick: /ar");
-                        }}
+                        onClick={() => this.closeMenu()}
                         className="menu-item"
                         to="/ar"
                     >
