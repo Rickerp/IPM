@@ -9,7 +9,7 @@ export default class Word extends Component {
             <Spring 
             from={{ opacity: 0, marginTop: -20 }}
             to={{ opacity: 1, marginTop: 20 }}
-            config={{ delay: 100, duration: 900 }}
+            config={{ delay: 100, duration: 300 }}
             >
                 {props => <div style={props}>
                     <WordWrapper>

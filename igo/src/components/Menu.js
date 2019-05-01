@@ -50,7 +50,9 @@ export default class Menu extends Component {
                         className="menu-item"
                         to="/ar"
                     >
-                        <i className="fas fa-map-marked-alt" /> &nbsp; MAPS
+                        <MapsItem currentPath={window.location.pathname}>
+                            <i className="fas fa-map-marked-alt" /> &nbsp; MAPS
+                        </MapsItem>
                     </Link>
 
                     <a
@@ -58,12 +60,14 @@ export default class Menu extends Component {
                         href="#"
                         onClick={() => this.toggleLanguages()}
                     >
-                        <i className="fas fa-language" /> &nbsp; LANGUAGES{" "}
-                        {this.state.languagesOpen ? (
-                            <i className="fas fa-sort-up menu-up" />
-                        ) : (
-                            <i className="fas fa-sort-down menu-down" />
-                        )}
+                        <LanguagesItem currentPath={window.location.pathname}>
+                            <i className="fas fa-language" /> &nbsp; LANGUAGES{" "}
+                            {this.state.languagesOpen ? (
+                                <i className="fas fa-sort-up menu-up" />
+                            ) : (
+                                <i className="fas fa-sort-down menu-down" />
+                            )}
+                        </LanguagesItem>
                     </a>
 
                     {this.state.languagesOpen ? (
@@ -72,7 +76,9 @@ export default class Menu extends Component {
                             className="menu-item"
                             to="/dictionary"
                         >
-                            <i className="fas fa-book" /> &nbsp; DICTIONARY
+                            <DictionaryItem currentPath={window.location.pathname}>
+                                <i className="fas fa-book" /> &nbsp; DICTIONARY
+                            </DictionaryItem>
                         </Link>
                     ) : (
                         <span />
@@ -84,8 +90,10 @@ export default class Menu extends Component {
                             className="menu-item"
                             to="/translator"
                         >
-                            <i className="fas fa-sign-language" /> &nbsp;
-                            TRANSLATOR
+                            <TranslatorItem currentPath={window.location.pathname}>
+                                <i className="fas fa-sign-language" /> &nbsp;
+                                TRANSLATOR
+                            </TranslatorItem>
                         </Link>
                     ) : (
                         <span />
@@ -112,7 +120,7 @@ const SlideWrapper = styled.div`
         /* Our sidebar item styling */
         text-decoration: none;
         margin-bottom: 15px;
-        color: var(--mainWhite);
+        color: #C4BFC8;
         transition: color 0.2s;
     }
 
@@ -194,3 +202,36 @@ const ProfileCard = styled.div`
     top: -10px;
     border-bottom: 0.1px solid var(--mainWhite);
 `;
+
+const MapsItem = styled.span`
+    color: ${props => props.currentPath === "/ar" ? "var(--mainWhite)" : "#C4BFC8"};
+
+    &:hover {
+        color: var(--mainWhite);
+    }
+`
+
+const LanguagesItem = styled.span`
+    color: ${props => (props.currentPath === "/dictionary" || props.currentPath === "/translator") ? 
+    "var(--mainWhite)" : "#C4BFC8"};
+
+    &:hover {
+        color: var(--mainWhite);
+    }
+`
+
+const DictionaryItem = styled.span`
+    color: ${props => props.currentPath === "/dictionary" ? "var(--mainWhite)" : "#C4BFC8"};
+
+    &:hover {
+        color: var(--mainWhite);
+    }
+`
+
+const TranslatorItem = styled.span`
+    color: ${props => props.currentPath === "/translator" ? "var(--mainWhite)" : "#C4BFC8"};
+
+    &:hover {
+        color: var(--mainWhite);
+    }
+`

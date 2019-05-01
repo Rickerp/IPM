@@ -113,6 +113,7 @@ body {
 }
 
 .card-name {
+  color: var(--mainWhite);
   grid-area: card-name;
   margin-left: 30px;
   margin-top: 10px;

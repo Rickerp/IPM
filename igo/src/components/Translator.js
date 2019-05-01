@@ -3,6 +3,7 @@ import styled from "styled-components";
 import codes from "./../lang/codes.json";
 import langs from "./../lang/langs.json";
 import Popup from "reactjs-popup";
+import { Spring } from 'react-spring/renderprops';
 
 export default class Translator extends Component {
   constructor(props) {
@@ -138,7 +139,14 @@ export default class Translator extends Component {
             }}
             arrow={true}
           >
-            {this.renderFromLangs()}
+            <Spring 
+              from={{ opacity: 0, marginTop: -20 }}
+              to={{ opacity: 1, marginTop: 5 }}
+            >
+              {props => <div style={props}>
+                {this.renderFromLangs()}
+              </div>}
+            </Spring>
           </Popup>
         </div>
         <div className="arrow">
@@ -162,7 +170,14 @@ export default class Translator extends Component {
             }}
             arrow={true}
           >
-            {this.renderToLangs()}
+            <Spring 
+              from={{ opacity: 0, marginTop: -20 }}
+              to={{ opacity: 1, marginTop: 5 }}
+            >
+              {props => <div style={props}>
+                {this.renderToLangs()}
+              </div>}
+            </Spring>
           </Popup>
         </div>
         <div className="word-tr-input">
