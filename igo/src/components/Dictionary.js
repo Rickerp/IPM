@@ -12,11 +12,13 @@ export default class Dictionary extends Component {
     this.state = {
       value: "Search a word",
       invalidInput: false,
+      success: false,
+      meanings: [],
+      languageMenu: false,
       lang: "0"
     };
 
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
     this.onFocus = this.onFocus.bind(this);
     this.onBlur = this.onBlur.bind(this);
   }
@@ -40,30 +42,36 @@ export default class Dictionary extends Component {
       }
     });
 
-    console.log("code = " + code);
-    console.log("meaning codes = " + meaning_codes);
-
-    if (/^[a-zA-Z]+$/.test(event.target.value) || event.target.value === "") {
-      this.setState({
-        value: event.target.value,
-        invalidInput: false
-      });
+    if (/^[a-zA-Z\u00C0-\u00ff]+$/.test(event.target.value) || event.target.value === "") {
+      if (meaning_codes.length > 0) {
+        this.setState({
+          value: event.target.value,
+          success: true,
+          meanings: meaning_codes,
+          invalidInput: false
+        });
+      }
+      else {
+        this.setState({
+          value: event.target.value,
+          success: false,
+          invalidInput: false
+        });
+      }
     } else {
       this.setState({
         value: event.target.value,
+        success: false,
         invalidInput: true
       });
     }
-  }
-
-  handleSubmit(event) {
-    event.preventDefault();
   }
 
   onFocus(event) {
     if (event.target.value === "Search a word") {
       this.setState({
         value: "",
+        success: false,
         invalidInput: false
       });
     }
@@ -73,14 +81,20 @@ export default class Dictionary extends Component {
     if (event.target.value === "") {
       this.setState({
         value: "Search a word",
+        success: false,
         invalidInput: false
       });
     }
   }
 
-  changeLang(newLang) {
-    this.setState({ lang: newLang });
+  toggleSortArrow() {
+    this.setState({
+      languageMenu: !this.state.languageMenu
+    });
   }
+
+  changeLang(newLang) {this.setState({ lang: newLang });}
+
   renderLang(code, language) {
     return (
       <div className="in-language-item" onClick={() => this.changeLang(code)}>
@@ -101,31 +115,33 @@ export default class Dictionary extends Component {
             <MainHeader>Dictionary</MainHeader>
           </div>
           <div className="language-input">
-            <LanguageInput>
-              {codes[this.state.lang]}{" "}
-              <Popup
-                trigger={<i className="fas fa-sort-down" />}
-                position="bottom right"
-                on="click"
-                closeOnDocumentClick
-                mouseLeaveDelay={300}
-                mouseEnterDelay={0}
-                contentStyle={{
-                  padding: "0px",
-                  maxHeight: "60%",
-                  overflowY: "auto",
-                  overflowX: "hidden",
-                  border: "1px solid black"
-                }}
-                arrow={true}
-              >
-                {this.renderLangs()}
-              </Popup>
-            </LanguageInput>
+            <Popup
+              trigger={<LanguageInput>
+                          {codes[this.state.lang] === "Use current location" ? "based on your current location" : codes[this.state.lang]}{" "}
+                          {this.state.languageMenu ? <i className="fas fa-sort-up" /> : <i className="fas fa-sort-down" />}
+                        </LanguageInput>}
+              position="bottom center"
+              on="click"
+              closeOnDocumentClick
+              mouseLeaveDelay={300}
+              mouseEnterDelay={0}
+              contentStyle={{
+                padding: "0px",
+                maxHeight: "60%",
+                overflowY: "auto",
+                overflowX: "hidden",
+                border: "1px solid black"
+              }}
+              arrow={true}
+              onOpen={() => this.toggleSortArrow()}
+              onClose={() => this.toggleSortArrow()}
+            >
+              {this.renderLangs()}
+            </Popup>
           </div>
           <div className="word-input">
-            <Box invalidInput={this.state.invalidInput}>
-              <form onSubmit={this.handleSubmit}>
+            <Box invalidInput={this.state.invalidInput} success={this.state.success}>
+              <form>
                 <TextInput
                   type="text"
                   value={this.state.value}
@@ -146,14 +162,14 @@ export default class Dictionary extends Component {
             <Line />
           </div>
           <div className="side-header">
-            <SideHeader>Top Words</SideHeader>
+            <SideHeader>{this.state.success ? "Results" : "Top Words"}</SideHeader>
           </div>
           <div className="line-right">
             <Line />
           </div>
           <div className="word-results">
-            {Object.keys(meaning).map(key => (
-              <Word word={key} meanings={meaning[key]} />
+            {this.state.success ? <Word word={this.state.value} meanings={this.state.meanings} code={this.state.lang} /> : Object.keys(meaning).map(key => (
+              <Word word={key} meanings={meaning[key]} code={null} />
             ))}
           </div>
         </DictionaryWrapper>
@@ -200,8 +216,12 @@ const Line = styled.hr`
 `;
 
 const Box = styled.div`
-  border: 1px solid
-    ${props => (props.invalidInput ? "var(--mainRed)" : "var(--mainBlack)")};
+  border: ${props =>
+    props.invalidInput
+      ? "1px solid var(--mainRed)"
+      : props.success
+      ? "1px solid var(--mainGreen)"
+      : "1px solid var(--mainBlack)"};
   border-radius: 10px;
   height: 22px;
   width: 200px;

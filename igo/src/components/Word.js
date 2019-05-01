@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import styled from "styled-components"
+import langs from "./../lang/langs.json"
 
 export default class Word extends Component {
-
     render() {
         return (
             <WordWrapper>
@@ -10,7 +10,8 @@ export default class Word extends Component {
                     <WordP>{this.props.word}: </WordP>
                 </div>
                 <div className="meaning">
-        {Object.keys(this.props.meanings).map(key => <Meaning>(<b>{key}</b>) {this.props.meanings[key]}</Meaning>)}
+                    {this.props.code != null ? this.props.meanings.map(element => <Meaning>{langs[this.props.code === "0" ? "pt" : this.props.code][element]}</Meaning>) 
+                    : Object.keys(this.props.meanings).map(key => <Meaning>(<b>{key}</b>) {this.props.meanings[key]}</Meaning>)}
                 </div>
             </WordWrapper>
         )

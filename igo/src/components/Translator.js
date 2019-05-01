@@ -61,10 +61,7 @@ export default class Translator extends Component {
       key => langs[this.state.fromLang][key] === event.target.value
     );
 
-    if (
-      /^[a-zA-Z\u00C0-\u00ff]+$/.test(event.target.value) ||
-      event.target.value === ""
-    ) {
+    if (/^[a-zA-Z\u00C0-\u00ff]+$/.test(event.target.value) || event.target.value === "") {
       if (code != null) {
         this.setState({
           value: event.target.value,
