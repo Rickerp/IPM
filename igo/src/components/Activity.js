@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from "react-router-dom"
 import styled from "styled-components"
 import { AppConsumer } from "../context"
-import {Spring} from 'react-spring/renderprops'
+import { Spring } from 'react-spring/renderprops'
 
 export default class Activity extends Component {
   render() {

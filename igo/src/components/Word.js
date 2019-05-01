@@ -1,19 +1,28 @@
 import React, { Component } from 'react'
 import styled from "styled-components"
 import langs from "./../lang/langs.json"
+import { Spring } from 'react-spring/renderprops'
 
 export default class Word extends Component {
     render() {
         return (
-            <WordWrapper>
-                <div className="word">
-                    <WordP>{this.props.word}: </WordP>
-                </div>
-                <div className="meaning">
-                    {this.props.code != null ? this.props.meanings.map(element => <Meaning>{langs[this.props.code === "0" ? "pt" : this.props.code][element]}</Meaning>) 
-                    : Object.keys(this.props.meanings).map(key => <Meaning>(<b>{key}</b>) {this.props.meanings[key]}</Meaning>)}
-                </div>
-            </WordWrapper>
+            <Spring 
+            from={{ opacity: 0, marginTop: -20 }}
+            to={{ opacity: 1, marginTop: 20 }}
+            config={{ delay: 100, duration: 900 }}
+            >
+                {props => <div style={props}>
+                    <WordWrapper>
+                        <div className="word">
+                            <WordP>{this.props.word}: </WordP>
+                        </div>
+                        <div className="meaning">
+                            {this.props.code != null ? this.props.meanings.map(element => <Meaning>{langs[this.props.code === "0" ? "pt" : this.props.code][element]}</Meaning>) 
+                            : Object.keys(this.props.meanings).map(key => <Meaning>(<b>{key}</b>) {this.props.meanings[key]}</Meaning>)}
+                        </div>
+                    </WordWrapper>
+                </div>}
+            </Spring>
         )
     }
 }

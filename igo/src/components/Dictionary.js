@@ -5,6 +5,7 @@ import langs from "./../lang/langs.json";
 import Word from "./Word";
 import meaning from "./../lang/meaning.json";
 import Popup from "reactjs-popup";
+import { Spring } from 'react-spring/renderprops';
 
 export default class Dictionary extends Component {
   constructor(props) {
@@ -115,29 +116,36 @@ export default class Dictionary extends Component {
             <MainHeader>Dictionary</MainHeader>
           </div>
           <div className="language-input">
-            <Popup
-              trigger={<LanguageInput>
-                          {codes[this.state.lang] === "Use current location" ? "based on your current location" : codes[this.state.lang]}{" "}
-                          {this.state.languageMenu ? <i className="fas fa-sort-up" /> : <i className="fas fa-sort-down" />}
-                        </LanguageInput>}
-              position="bottom center"
-              on="click"
-              closeOnDocumentClick
-              mouseLeaveDelay={300}
-              mouseEnterDelay={0}
-              contentStyle={{
-                padding: "0px",
-                maxHeight: "60%",
-                overflowY: "auto",
-                overflowX: "hidden",
-                border: "1px solid black"
-              }}
-              arrow={true}
-              onOpen={() => this.toggleSortArrow()}
-              onClose={() => this.toggleSortArrow()}
+            <Spring 
+              from={{ opacity: 0, marginTop: -20 }}
+              to={{ opacity: 1, marginTop: 20 }}
             >
-              {this.renderLangs()}
-            </Popup>
+              {props => <div style={props}>
+                <Popup
+                  trigger={<LanguageInput>
+                              {codes[this.state.lang] === "Use current location" ? "based on your current location" : codes[this.state.lang]}{" "}
+                              {this.state.languageMenu ? <i className="fas fa-sort-up" /> : <i className="fas fa-sort-down" />}
+                            </LanguageInput>}
+                  position="bottom center"
+                  on="click"
+                  closeOnDocumentClick
+                  mouseLeaveDelay={300}
+                  mouseEnterDelay={0}
+                  contentStyle={{
+                    padding: "0px",
+                    maxHeight: "60%",
+                    overflowY: "auto",
+                    overflowX: "hidden",
+                    border: "1px solid black"
+                  }}
+                  arrow={true}
+                  onOpen={() => this.toggleSortArrow()}
+                  onClose={() => this.toggleSortArrow()}
+                >
+                  {this.renderLangs()}
+                </Popup>
+              </div>}
+            </Spring>
           </div>
           <div className="word-input">
             <Box invalidInput={this.state.invalidInput} success={this.state.success}>
