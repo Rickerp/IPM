@@ -132,7 +132,13 @@ export default class Translator extends Component {
             closeOnDocumentClick
             mouseLeaveDelay={300}
             mouseEnterDelay={0}
-            contentStyle={{ padding: "0px", maxHeight: "60%", overflowY: "auto", border: "1px solid black" }}
+            contentStyle={{
+              padding: "0px",
+              maxHeight: "60%",
+              overflowY: "auto",
+              overflowX: "hidden",
+              border: "1px solid black"
+            }}
             arrow={true}
           >
             {this.renderFromLangs()}
@@ -151,7 +157,12 @@ export default class Translator extends Component {
             closeOnDocumentClick
             mouseLeaveDelay={300}
             mouseEnterDelay={0}
-            contentStyle={{ padding: "0px", maxHeight: "60%", overflowY: "auto", border: "1px solid black" }}
+            contentStyle={{
+              padding: "0px",
+              maxHeight: "60%",
+              overflowY: "auto",
+              border: "1px solid black"
+            }}
             arrow={true}
           >
             {this.renderToLangs()}
@@ -174,8 +185,8 @@ export default class Translator extends Component {
           </Box>
         </div>
         <ExtraButtons className="extra-buttons">
-            <i className="fas fa-camera"></i> 
-            <i className="fas fa-microphone"></i> <br/>
+          <i className="fas fa-camera" />
+          <i className="fas fa-microphone" /> <br />
         </ExtraButtons>
       </TranslatorWrapper>
     );
