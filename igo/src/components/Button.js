@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
+var whereto = "/";
+
 class Button extends Component {
     styles = {
         left: {
@@ -8,14 +10,20 @@ class Button extends Component {
             position: "absolute",
             left: "40px",
             top: "375px",
-            fontSize: "14px"
+            fontSize: "14px",
+            width: "30px",
+            height: "30px",
+            cursor: "pointer"
         },
         middle: {
             color: "white",
             position: "absolute",
             left: "100px",
             top: "375px",
-            fontSize: "14px"
+            fontSize: "14px",
+            width: "30px",
+            height: "30px",
+            cursor: "pointer"
         }
     };
 
@@ -64,32 +72,26 @@ class Button extends Component {
 
     render() {
         return (
-            <Link to="/">
-                <div style={this.getPosition(this.props.profile)}>
-                    <svg
-                        style={{
-                            position: "absolute",
-                            zIndex: "0",
-                            left: "0",
-                            top: "0"
-                        }}
-                        height="30"
-                        width="30"
-                    >
-                        <circle
-                            cx="15"
-                            cy="15"
-                            r="13"
-                            stroke="white"
-                            strokeWidth="2"
-                        />
-                    </svg>
-                    <i
-                        style={this.getIconStyle(this.props.profile)}
-                        className={this.getIcon(this.props.profile)}
+            <div>
+                <svg
+                    style={{
+                        zIndex: "0",
+                        left: "0",
+                        top: "0"
+                    }}
+                    height="30"
+                    width="30"
+                >
+                    <circle
+                        cx="15"
+                        cy="15"
+                        r="13"
+                        stroke="white"
+                        strokeWidth="2"
                     />
-                </div>
-            </Link>
+                </svg>
+                <i style={this.props.iconStyle} className={this.props.icon} />
+            </div>
         );
     }
 }

@@ -7,38 +7,31 @@ import Ar from "./components/Ar";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Menu";
 import Feed from "./components/Feed";
-import Button from "./components/Button";
+import { ButtonBack, ButtonHome } from "./components/Buttons";
 import ActivityDetailed from "./components/ActivityDetailed";
 import { AppProvider } from "./context";
 import Dictionary from "./components/Dictionary";
 import Translator from "./components/Translator";
+import { createBrowserHistory } from "history";
+
+var history;
 
 class App extends Component {
-    state = {
-        history: ["/"]
-    };
-
-    pushHistory = link => {
-        var history = this.state.history;
-        history.push(link);
-        this.setState({ history });
-        console.log(this.state.history);
-    };
-
-    popHistory = () => {
-        var history = this.state.history;
-        const last = history.pop();
-        this.setState({ history });
-        return last;
-    };
+    constructor() {
+        super();
+        history = createBrowserHistory();
+        console.log("CONSTRUCTOR: ", history);
+    }
 
     clearHistory() {
-        this.setState({ history: ["/"] });
+        history = createBrowserHistory();
+        console.log("CLEAR: ", history);
     }
 
     render() {
         return (
             <AppProvider>
+                {console.log("BEGIN: ", history)}
                 <div className="band">
                     <div id="App">
                         <Sidebar
@@ -46,10 +39,7 @@ class App extends Component {
                             pageWrapId={"page-wrap"}
                             outerContainerId={"App"}
                             customCrossIcon={<img src={back} />}
-                            onEnter={link => {
-                                this.clearHistory();
-                                this.pushHistory(link);
-                            }}
+                            history={history}
                         />
                         <div className="content" id="page-wrap">
                             <Navbar />
@@ -83,17 +73,15 @@ class App extends Component {
                             </div>
                         </div>
                     </div>
-                    <Button
-                        whereto="/"
-                        profile="home"
-                        icon="fas fa-home"
-                        pos="middle"
+                    <ButtonHome
+                        clear={() => this.clearHistory()}
+                        history={history}
                     />
-                    <Button whereto={this.popHistory} profile="back" />
+                    <ButtonBack history={history} />
                 </div>
             </AppProvider>
         );
     }
 }
-
+//<Button history={history} profile="home" />
 export default App;
