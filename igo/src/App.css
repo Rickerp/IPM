@@ -2,7 +2,7 @@
   --mainBlack: #000000;
   --mainWhite: #ffffff;
   --mainRed: #ee4238;
-  --mainGreen: #76FF03;
+  --mainGreen: #76ff03;
 }
 
 body {
@@ -187,6 +187,20 @@ button:focus {
 
 .line-right {
   grid-area: line-right;
+}
+
+.word-results {
+  grid-area: word-results;
+}
+
+/* Word */
+
+.word {
+  grid-area: word;
+}
+
+.meaning {
+  grid-area: meaning;
 }
 
 /* Translator */
