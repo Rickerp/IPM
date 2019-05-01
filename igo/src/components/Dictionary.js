@@ -191,7 +191,7 @@ const DictionaryWrapper = styled.div`
   display: grid;
   grid-gap: 3px;
   grid-template-columns: 45px 1fr 45px;
-  grid-template-rows: 30px 50px 70px 50px 1fr;
+  grid-template-rows: 30px 50px 60px 30px 1fr;
   grid-template-areas:
     ". main-header ."
     "language-input language-input language-input"
