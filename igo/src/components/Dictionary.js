@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import codes from "./../lang/codes.json";
+import Word from "./Word";
+import meaning from "./../lang/meaning.json";
 
 export default class Dictionary extends Component {
     constructor(props) {
@@ -97,6 +99,9 @@ export default class Dictionary extends Component {
                     <div className="line-right">
                         <Line />
                     </div>
+                    <div className="word-results">
+                        {Object.keys(meaning).map(key => <Word word={key} meanings={meaning[key]} />)}
+                    </div>
                 </DictionaryWrapper>
             </React.Fragment>
         );
@@ -108,12 +113,13 @@ const DictionaryWrapper = styled.div`
     display: grid;
     grid-gap: 3px;
     grid-template-columns: 45px 1fr 45px;
-    grid-template-rows: 30px 50px 70px 50px;
+    grid-template-rows: 30px 50px 70px 50px 1fr;
     grid-template-areas:
         ". main-header ."
         "language-input language-input language-input"
         "word-input word-input word-input"
-        "line-left side-header line-right";
+        "line-left side-header line-right"
+        "word-results word-results word-results";
 `;
 
 const MainHeader = styled.p`

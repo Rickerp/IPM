@@ -189,6 +189,20 @@ button:focus {
   grid-area: line-right;
 }
 
+.word-results {
+  grid-area: word-results;
+}
+
+/* Word */
+
+.word {
+  grid-area: word;
+}
+
+.meaning {
+  grid-area: meaning;
+}
+
 /* Translator */
 
 .main-tr-header {
