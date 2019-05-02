@@ -164,6 +164,7 @@ export default class Translator extends Component {
     }
 
     render() {
+        console.log(langs["pt"]["_infotranslator"]);
         return (
             <TranslatorWrapper>
                 <div className="main-tr-header">

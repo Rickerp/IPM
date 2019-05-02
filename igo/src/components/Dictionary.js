@@ -89,6 +89,7 @@ export default class Dictionary extends Component {
     }
 
     render() {
+        console.log(langs["pt"]["_infodictionary"]);
         return (
             <React.Fragment>
                 <DictionaryWrapper>

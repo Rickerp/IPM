@@ -37,7 +37,9 @@
         "_store1": "'n hoeveelheid of voorraad van iets wat vir gebruik gehou word soos benodig.",
         "_store2": "'n winkel van enige grootte of soort.",
         "_store3": "'n skape, steier, koei of vark wat verkry of gehou word vir vet.",
-        "_supermarket1": "'n groot selfdienswinkel wat kos en huishoudelike goedere verkoop."
+        "_supermarket1": "'n groot selfdienswinkel wat kos en huishoudelike goedere verkoop.",
+        "_infodictionary": "in hierdie menu kan u die betekenis van hierdie woorde raadpleeg: uitgang, gevaar, hulp, prys, dankie, ver, naby, winkel en supermark in enige taal. u kan die taal vir klik op die pyltjie kies.",
+        "_infotranslator": "in hierdie spyskaart kan u die vertaling van hierdie woorde raadpleeg: uitgang, gevaar, hulp, prys, hallo, dankie, ver, naby, nee, ja, gister, more, winkel, mark, supermark, polisie, hospitaal en restaurant in enige taal . u kan die taal kies deur op die taalknoppie van elke kant van die spyskaart te klik."
     },
     "sq": {
         "exit": "dalje",
@@ -77,7 +79,9 @@
         "_store1": "nje sasi ose furnizim i dickaje te mbajtur per perdorim sipas nevojes.",
         "_store2": "dyqan me cdo madhesi ose lloj.",
         "_store3": "nje dele, rri, lope ose derr te fituar ose te mbajtur per majmeri.",
-        "_supermarket1": "nje dyqan i madh vete-sherbimi i shitjes se ushqimeve dhe mallrave shtepiake."
+        "_supermarket1": "nje dyqan i madh vete-sherbimi i shitjes se ushqimeve dhe mallrave shtepiake.",
+        "_infodictionary": "ne kete meny ju mund te konsultohet kuptimi i ketyre fjaleve: dalja, rreziku, ndihma, cmimi, fale, larg, afer, dyqan dhe supermarket ne cdo gjuhe. ju mund te zgjidhni gjuhen duke klikuar ne shigjeten.",
+        "_infotranslator": "ne kete meny mund te konsultohet perkthimi i ketyre fjaleve: dalja, rreziku, ndihma, cmimi, pershendetjet, falenderimet, larg, afer, jo, po, dje, neser, dyqan, treg, supermarket, polici, spital dhe restorant ne cdo gjuhe . ju mund te zgjidhni gjuhen duke klikuar ne butonin e gjuhes nga secila ane e menyse."
     },
     "am": {
         "exit": "ውጣ",
@@ -117,7 +121,9 @@
         "_store1": "እንደአስፈላጊነቱ አንድ ነገር ወይም አቅርቦት ይይዛል.",
         "_store2": "ማንኛውም ዓይነት መጠን ወይም ደግነት ሱቅ.",
         "_store3": "በጎች, እርባታ, ላም, ወይም የአሳማ እቃ የመነጠቁ ወይም የተጠበቁ ናቸው.",
-        "_supermarket1": "ምግብን እና የቤት እቃዎችን የሚሸጡ ትልቅ የራስ አገልግሎት ሱቅ."
+        "_supermarket1": "ምግብን እና የቤት እቃዎችን የሚሸጡ ትልቅ የራስ አገልግሎት ሱቅ.",
+        "_infodictionary": "በዚህ ዝርዝር ላይ የእነዚህን ቃላት ትርጉም ማማከር ይችላሉ-መውጣት, አደጋ, እገዛ, ዋጋ, ምስጋና, ሩቅ, ቅርብ, መደብር እና ሱፐርማርኬት በማንኛውም ቋንቋ. ቀስቱን ጠቅ በማድረግ ቋንቋውን መምረጥ ይችላሉ.",
+        "_infotranslator": "በዚህ ምናሌ ውስጥ የእነዚህ ቃላት ትርጓሜ ማማከር ይችላሉ: መውጣት, አደጋ, እገዛ, ዋጋ, ሰላም, ምስጋና, ሩቅ, የለም, አዎ, ትላንትና, ነገ, ሱቅ, የገበያ ቦታ, ሱፐርማርኬት, ፖሊስ, ሆስፒታል እና ምግብ ቤት በማንኛውም ቋንቋ . በእያንዳንዱ ጠርዝ በኩል የቋንቋ አዝራሩን ጠቅ በማድረግ ቋንቋውን መምረጥ ይችላሉ."
     },
     "ar": {
         "exit": "ىخرج",
@@ -157,7 +163,9 @@
         "_store1": "كمية أو إمدادات من شيء أبقى للاستخدام حسب الحاجة.",
         "_store2": "متجر من أي حجم أو نوع.",
         "_store3": "خروف أو انزلاق أو بقرة أو خنزير مكتسبة أو محفوظة للتسمين.",
-        "_supermarket1": "متجر كبير للخدمة الذاتية يبيع الأطعمة والسلع المنزلية."
+        "_supermarket1": "متجر كبير للخدمة الذاتية يبيع الأطعمة والسلع المنزلية.",
+        "_infodictionary": "في هذه القائمة ، يمكنك الرجوع إلى معنى هذه الكلمات: الخروج ، الخطر ، المساعدة ، السعر ، شكرًا ، بعيد ، قريب ، متجر وسوبر ماركت بأي لغة. يمكنك اختيار اللغة عن طريق النقر على السهم.",
+        "_infotranslator": "في هذه القائمة ، يمكنك الرجوع إلى ترجمة هذه الكلمات: الخروج ، الخطر ، المساعدة ، السعر ، الترحيب ، شكرًا ، بعيد ، قريب ، لا ، نعم ، أمس ، غدًا ، متجر ، سوق ، سوبر ماركت ، شرطة ، مستشفى ومطعم بأي لغة . يمكنك تحديد اللغة من خلال النقر على زر اللغة من كل جانب من جوانب القائمة."
     },
     "hy": {
         "exit": "ելք",
@@ -197,7 +205,9 @@
         "_store1": "անհրաժեշտության դեպքում օգտագործվում է օգտագործման համար պահվող քանակի կամ մատակարարման քանակ:",
         "_store2": "ցանկացած չափի կամ տեսակի խանութ:",
         "_store3": "ոչխար, գոլորշի, կով կամ խոզ, ձեռք բերված կամ պահածոներ պահելու համար:",
-        "_supermarket1": "սննդամթերք եւ կենցաղային ապրանքներ վաճառող մեծ ինքնասպասարկող խանութ:"
+        "_supermarket1": "սննդամթերք եւ կենցաղային ապրանքներ վաճառող մեծ ինքնասպասարկող խանութ:",
+        "_infodictionary": "այս ընտրացանկում կարող եք խորհրդակցել այս բառերի իմաստը. ելք, վտանգ, օգնություն, գին, շնորհակալություն, հեռու, փակ, խանութ եւ սուպերմարկետ ցանկացած լեզվով: դուք կարող եք ընտրել լեզուն, սեղմեք սլաքին:",
+        "_infotranslator": "այս ընտրացանկում կարող եք խորհրդակցել այս բառերի թարգմանության մասին `ելք, վտանգ, օգնություն, գին, բարեւ, շնորհակալություն, հեռու, փակ, ոչ, այո, երեկ, վաղը, խանութ, շուկա, սուպերմարկետ, ոստիկանություն, հիվանդանոց եւ ռեստորան ցանկացած լեզվով . դուք կարող եք ընտրել լեզուն, սեղմելով լեզուի կոճակը մենյուի յուրաքանչյուր կողմում:"
     },
     "az": {
         "exit": "cixin",
@@ -237,7 +247,9 @@
         "_store1": "lazim olduqda istifadə ucun saxlanilan bir seyin miqdari və ya təchizati.",
         "_store2": "hər hansi bir olculu və ya cur bir dukan.",
         "_store3": "bir qoyun, sukan, inək və ya donuz bəslənmə ucun əldə və ya saxlanilir.",
-        "_supermarket1": "qidalar və ev əsyalarini satan boyuk ozunuidarə magazasi."
+        "_supermarket1": "qidalar və ev əsyalarini satan boyuk ozunuidarə magazasi.",
+        "_infodictionary": "bu menyuda bu sozlərin mənasina muraciət edə bilərsiniz: cixis, təhlukə, komək, qiymət, təsəkkur, uzaq, yaxin, magaza və supermarket hər hansi bir dildə. oku tiklayarak dili secə bilərsiniz.",
+        "_infotranslator": "bu menyuda bu sozlərin tərcuməsinə muraciət edə bilərsiniz: exit, təhlukə, yardim, qiymət, salam, təsəkkur, uzaq, yaxin, yox, evet, dun, sabah, magaza, bazar, supermarket, polis, xəstəxana və restoran hər hansi bir dildə . menyunun hər tərəfindəki dil duyməsini basaraq dili secə bilərsiniz."
     },
     "eu": {
         "exit": "irten",
@@ -277,7 +289,9 @@
         "_store1": "beharrezkoak diren zerbait mantentzen den zerbait edo hornidura.",
         "_store2": "edozein tamainako edo motako denda.",
         "_store3": "ardi, behi edo txerria lortzen edo mantentzen da.",
-        "_supermarket1": "janari eta etxeko gauzak saltzen dituen auto-denda handi bat."
+        "_supermarket1": "janari eta etxeko gauzak saltzen dituen auto-denda handi bat.",
+        "_infodictionary": "menu honetan hitz horien esanahia kontsultatu dezakezu: irteera, arriskua, laguntza, prezioa, eskerrak, urrun, itxi, denda eta supermerkatua edozein hizkuntzatan. hizkuntza hauta dezakezu gezian.",
+        "_infotranslator": "menu honetan hitz hauen itzulpena kontsultatu dezakezu: irteera, arriskua, laguntza, prezioa, kaixo, eskerrak, urrun, hurbil, ez, bai, atzo, bihar, denda, merkatua, supermerkatua, polizia, ospitalea eta jatetxe edozein hizkuntzatan . hizkuntza hauta dezakezu menuaren alde bakoitzean hizkuntza botoian klik eginez."
     },
     "be": {
         "exit": "выхад",
@@ -317,7 +331,9 @@
         "_store1": "некаторы колькасць або прапанову чагосьці захоўваецца для выкарыстання па меры неабходнасці.",
         "_store2": "крама любога памеру або віду.",
         "_store3": "авечкі, кіраваць, каровы, свінні або набыты або захоўвацца на працягу адкорму.",
-        "_supermarket1": "вялікая крама самаабслугоўвання па продажы прадуктаў харчавання і тавараў для дома."
+        "_supermarket1": "вялікая крама самаабслугоўвання па продажы прадуктаў харчавання і тавараў для дома.",
+        "_infodictionary": "у гэтым меню вы можаце звярнуцца сэнс гэтых слоў: выхад, небяспека, дапамогу, цана, дзякуй, далёка, блізка, крама і супермаркет на любой мове. вы можаце выбраць мову, націснуўшы на стрэлку.",
+        "_infotranslator": "у гэтым меню вы можаце пракансультавацца перакладам гэтых слоў: выхад, небяспека, дапамогу, цана, прывітаньне, дзякуй, далёка, блізка, не, ды, учора, заўтра, крама, рынак, супермаркет, паліцыя, бальніца і рэстаран на любой мове , вы можаце выбраць мову, націснуўшы на кнопку мовы з кожнага боку меню."
     },
     "bn": {
         "exit": "বাহির",
@@ -357,7 +373,9 @@
         "_store1": "প্রয়োজন হিসাবে ব্যবহারের জন্য রাখা কিছু পরিমাণ বা সরবরাহ।",
         "_store2": "কোন আকার বা ধরনের একটি দোকান।",
         "_store3": "একটি ভেড়া, চালক, গরু, বা শূকর অর্জিত বা fattening জন্য রাখা।",
-        "_supermarket1": "খাদ্য এবং পরিবারের পণ্য বিক্রয় একটি বড় স্ব-সেবা দোকান।"
+        "_supermarket1": "খাদ্য এবং পরিবারের পণ্য বিক্রয় একটি বড় স্ব-সেবা দোকান।",
+        "_infodictionary": "এই মেনুতে আপনি এই শব্দগুলির অর্থের সাথে পরামর্শ করতে পারেন: প্রস্থান, বিপদ, সাহায্য, মূল্য, ধন্যবাদ, দূরে, বন্ধ, দোকান এবং কোনও ভাষায় সুপারমার্কেট। আপনি তীর উপর ক্লিক করে ভাষা নির্বাচন করতে পারেন।",
+        "_infotranslator": "এই মেনুতে আপনি এই শব্দগুলির অনুবাদটির সাথে পরামর্শ করতে পারেন: প্রস্থান, বিপদ, সাহায্য, মূল্য, হ্যালো, ধন্যবাদ, দূরে, বন্ধ, না, হ্যাঁ, গতকাল, আগামীকাল, দোকান, বাজার, সুপারমার্কেট, পুলিশ, হাসপাতাল এবং রেস্টুরেন্ট কোন ভাষাতে । আপনি মেনুর প্রতিটি পাশ থেকে ভাষা বোতামে ক্লিক করে ভাষা নির্বাচন করতে পারেন।"
     },
     "bs": {
         "exit": "izlaz",
@@ -397,7 +415,9 @@
         "_store1": "kolicina ili zaliha necega sto se cuva za upotrebu po potrebi.",
         "_store2": "prodavnica bilo koje velicine ili vrste.",
         "_store3": "ovce, krave, svinje ili stecene za tov.",
-        "_supermarket1": "velika samoposluga koja prodaje hranu i predmete za domacinstvo."
+        "_supermarket1": "velika samoposluga koja prodaje hranu i predmete za domacinstvo.",
+        "_infodictionary": "u ovom meniju mozete pogledati znacenje ovih rijeci: izlaz, opasnost, pomoc, cijena, hvala, daleko, zatvorite, spremite i supermarket na bilo kojem jeziku. mozete odabrati jezik klikom na strelicu.",
+        "_infotranslator": "u ovom meniju mozete pogledati prijevod ovih rijeci: izlaz, opasnost, pomoc, cijena, zdravo, hvala, daleko, blizu, ne, da, jucer, sutra, trgovina, trznica, supermarket, policija, bolnica i restoran na bilo kojem jeziku . mozete odabrati jezik klikom na gumb za jezik sa svake strane izbornika."
     },
     "bg": {
         "exit": "изход",
@@ -437,7 +457,9 @@
         "_store1": "количество или доставка на нещо, което се съхранява за употреба, ако е необходимо.",
         "_store2": "магазин от всякакъв размер или вид.",
         "_store3": "придобита или отглеждана за угояване овца, биче, крава или прасе.",
-        "_supermarket1": "голям магазин за самообслужване, който продава храни и домакински стоки."
+        "_supermarket1": "голям магазин за самообслужване, който продава храни и домакински стоки.",
+        "_infodictionary": "в това меню можете да разгледате значението на тези думи: изход, опасност, помощ, цена, благодарност, далеч, затваряне, магазин и супермаркет на всеки език. можете да изберете езика, като кликнете върху стрелката.",
+        "_infotranslator": "в това меню можете да видите превода на тези думи: изход, опасност, помощ, цена, здравей, благодаря, далеч, близо, не, да, вчера, утре, магазин, пазар, супермаркет, полиция, болница и ресторант на всеки език , можете да изберете езика, като кликнете върху бутона за език от всяка страна на менюто."
     },
     "ca": {
         "exit": "sortir",
@@ -477,7 +499,9 @@
         "_store1": "una quantitat o subministrament d'alguna cosa que es conserva per al seu us.",
         "_store2": "una botiga de qualsevol mida o tipus.",
         "_store3": "una ovella, bestia, vaca o porc adquirida o conservada per engreix.",
-        "_supermarket1": "una gran botiga d'autoservei que comercialitza aliments i articles per a la llar."
+        "_supermarket1": "una gran botiga d'autoservei que comercialitza aliments i articles per a la llar.",
+        "_infodictionary": "en aquest menu podeu consultar el significat d’aquestes paraules: sortida, perill, ajuda, preu, gracies, lluny, tancar, emmagatzemar i supermercat en qualsevol idioma. podeu seleccionar l’idioma fent clic a la fletxa.",
+        "_infotranslator": "en aquest menu podeu consultar la traduccio d’aquestes paraules: sortida, perill, ajuda, preu, hola, gracies, lluny, tancat, no, si, ahir, dema, botiga, mercat, supermercat, policia, hospital i restaurant en qualsevol idioma . podeu seleccionar l’idioma fent clic al boto d’idioma de cada costat del menu."
     },
     "ceb": {
         "exit": "paggawas",
@@ -517,7 +541,9 @@
         "_store1": "usa ka gidaghanon o suplay sa usa ka butang nga gitipigan nga gamiton ingon nga gikinahanglan.",
         "_store2": "usa ka tindahan sa bisan unsa nga gidak-on o matang.",
         "_store3": "ang usa ka karnero, tigtultol, baka, o baboy nga nakuha o gitipigan alang sa pagpatambok.",
-        "_supermarket1": "usa ka dako nga self-service shop nga nagbaligya sa mga pagkaon ug mga gamit sa panimalay."
+        "_supermarket1": "usa ka dako nga self-service shop nga nagbaligya sa mga pagkaon ug mga gamit sa panimalay.",
+        "_infodictionary": "niini nga menu mahimo nimong konsultahon ang kahulogan niining mga pulong: exit, peligro, tabang, presyo, salamat, layo, suod, tindahan ug supermarket sa bisan unsang pinulongan. makapili ka sa pinulongan pinaagi sa pag-klik sa arrow.",
+        "_infotranslator": "sa kini nga menu mahimo nimong konsultahon ang paghubad niining mga pulong: exit, danger, help, price, hello, thanks, far, close, no, yes, kagahapon, ugma, shop, market, supermarket, police, hospital ug restaurant sa bisan unsang pinulongan . makapili ka sa pinulongan pinaagi sa pag-klik sa button sa pinulongan gikan sa matag kilid sa menu."
     },
     "ny": {
         "exit": "potulukira",
@@ -557,7 +583,9 @@
         "_store1": "zambiri kapena zopereka zina zomwe zimagwiritsidwa ntchito ngati momwe ziliri zofunika.",
         "_store2": "sitolo la kukula kapena mtundu uliwonse.",
         "_store3": "nkhosa, ng'ombe, ng'ombe, kapena nkhumba zomwe zimagulidwa kapena kupatsidwa mafuta.",
-        "_supermarket1": "golo lalikulu lodzipereka logulitsa chakudya ndi katundu wa pakhomo."
+        "_supermarket1": "golo lalikulu lodzipereka logulitsa chakudya ndi katundu wa pakhomo.",
+        "_infodictionary": "mmenemo mungathe kudziwa tanthauzo la mawu awa: kuchoka, ngozi, thandizo, mtengo, zikomo, kutali, pafupi, sitolo ndi masitolo mu chinenero chilichonse. mukhoza kusankha chinenero podutsa pavi.",
+        "_infotranslator": "mmenemo mungathe kuwona kumasulira kwa mawu awa: kuchoka, ngozi, thandizo, mtengo, hello, zikomo, patali, pafupi, ayi, inde, dzulo, mawa, masitolo, msika, masitolo, apolisi, chipatala ndi malo odyera muchinenero chilichonse . mukhoza kusankha chinenero podutsa pakanema la chinenero kuchokera kumbali iliyonse ya menyu."
     },
     "zh-cn": {
         "exit": "出口",
@@ -597,7 +625,9 @@
         "_store1": "根据需要保留的数量或供应的东西。",
         "_store2": "任何规模或种类的商店。",
         "_store3": "获得或饲养的绵羊，阉牛，牛或猪。",
-        "_supermarket1": "一家大型自助商店，出售食品和家居用品。"
+        "_supermarket1": "一家大型自助商店，出售食品和家居用品。",
+        "_infodictionary": "在这个菜单中，您可以查阅这些单词的含义：退出，危险，帮助，价格，谢谢，远，关闭，商店和超市的任何语言。您可以通过单击箭头选择语言。",
+        "_infotranslator": "在这个菜单中，您可以查阅这些单词的翻译：退出，危险，帮助，价格，你好，谢谢，远，关闭，不，是，昨天，明天，商店，市场，超市，警察，医院和餐馆用任何语言。您可以通过单击菜单两侧的语言按钮来选择语言。"
     },
     "zh-tw": {
         "exit": "出口",
@@ -637,7 +667,9 @@
         "_store1": "根據需要保留的數量或供應的東西。",
         "_store2": "任何規模或種類的商店。",
         "_store3": "獲得或飼養的綿羊，閹牛，牛或豬。",
-        "_supermarket1": "一家大型自助商店，出售食品和家居用品。"
+        "_supermarket1": "一家大型自助商店，出售食品和家居用品。",
+        "_infodictionary": "在這個菜單中，您可以查閱這些單詞的含義：退出，危險，幫助，價格，謝謝，遠，關閉，商店和超市的任何語言。您可以通過單擊箭頭選擇語言。",
+        "_infotranslator": "在這個菜單中，你可以查閱這些單詞的翻譯：退出，危險，幫助，價格，你好，謝謝，遠，關閉，不，是，昨天，明天，商店，市場，超市，警察，醫院和餐館用任何語言。您可以通過單擊菜單兩側的語言按鈕來選擇語言。"
     },
     "co": {
         "exit": "uscite",
@@ -677,7 +709,9 @@
         "_store1": "a quantita o l'alimentu di qualcosa tenutu per l'usu se he necessariu.",
         "_store2": "un negoziu di qualsiasi taglia o tippu.",
         "_store3": "a pecora, be, mucca, o porcu acquistata o tenuta per l'ingrici.",
-        "_supermarket1": "un grande negoziu di self-service in a vendita di alimenti e beni di casa."
+        "_supermarket1": "un grande negoziu di self-service in a vendita di alimenti e beni di casa.",
+        "_infodictionary": "in stu menu pudete consulta u significatu di sti paroli: uscita, periculu, aiutu, prezzu, ringraziaghje, assai, vicinu, apri u supermercatu in qualunque lingua. pudete selezziuna a lingua cliccendu nantu a a freccia.",
+        "_infotranslator": "in questo menu pudete consulta a traduzione di sti paroli: uscita, periculu, aiutu, prezzo, ciao, ringrazia, lontu, vicinu, no, si, ieri, duminiu, cumpagnu, mercato, supermercatu, polizia, ospedale e ristorante in qualsiasi lingua . pudete selezziuna a lingua cliccendu nantu a u pulsante di lingua da ogni latu di u menu."
     },
     "hr": {
         "exit": "izlaz",
@@ -717,7 +751,9 @@
         "_store1": "kolicina ili zaliha necega sto se cuva za uporabu prema potrebi.",
         "_store2": "trgovina bilo koje velicine ili vrste.",
         "_store3": "ovce, krave, svinje ili stecene za tov.",
-        "_supermarket1": "velika samoposluzna trgovina koja prodaje hranu i predmete za kucanstvo."
+        "_supermarket1": "velika samoposluzna trgovina koja prodaje hranu i predmete za kucanstvo.",
+        "_infodictionary": "u ovom izborniku mozete pogledati znacenje ovih rijeci: izlaz, opasnost, pomoc, cijena, hvala, daleko, zatvorite, spremite i supermarket na bilo kojem jeziku. jezik mozete odabrati klikom na strelicu.",
+        "_infotranslator": "u ovom izborniku mozete pogledati prijevod ovih rijeci: izlaz, opasnost, pomoc, cijena, halo, hvala, daleko, blizu, ne, da, jucer, sutra, trgovina, trznica, supermarket, policija, bolnica i restoran na bilo kojem jeziku , mozete odabrati jezik klikom na gumb za jezik na svakoj strani izbornika."
     },
     "cs": {
         "exit": "vystup",
@@ -757,7 +793,9 @@
         "_store1": "mnozstvi nebo zasoba neceho, co je treba pouzit podle potreby.",
         "_store2": "obchod jakekoliv velikosti nebo druhu.",
         "_store3": "ovce, voly, kravy nebo prase ziskane nebo chovane pro vykrm.",
-        "_supermarket1": "velky samoobsluzny obchod s potravinami a potrebami pro domacnost."
+        "_supermarket1": "velky samoobsluzny obchod s potravinami a potrebami pro domacnost.",
+        "_infodictionary": "v tomto menu muzete konzultovat vyznam techto slov: exit, nebezpeci, pomoc, cena, diky, daleko, zavrit, ulozit a supermarket v jakemkoli jazyce. jazyk muzete vybrat kliknutim na sipku.",
+        "_infotranslator": "v tomto menu muzete konzultovat preklad techto slov: exit, nebezpeci, pomoc, cena, ahoj, diky, daleko, zavrit, ne, ano, vcera, zitra, obchod, trh, supermarket, policie, nemocnice a restaurace v jakemkoli jazyce . jazyk muzete vybrat kliknutim na jazykove tlacitko na kazde strane nabidky."
     },
     "da": {
         "exit": "afslut",
@@ -797,7 +835,9 @@
         "_store1": "en maengde eller levering af noget, der holdes til brug efter behov.",
         "_store2": "en butik af enhver storrelse eller art.",
         "_store3": "et far, styre, ko eller svin, der er erhvervet eller opbevaret til opfedning.",
-        "_supermarket1": "en stor selvbetjeningsbutik, der saelger mad og husholdningsvarer."
+        "_supermarket1": "en stor selvbetjeningsbutik, der saelger mad og husholdningsvarer.",
+        "_infodictionary": "i denne menu kan du hore betydningen af ​​disse ord: exit, fare, hjaelp, pris, tak, langt, taet, butik og supermarked pa ethvert sprog. du kan vaelge sprog ved klik pa pilen.",
+        "_infotranslator": "i denne menu kan du hore oversaettelsen af ​​disse ord: exit, fare, hjaelp, pris, hej, tak, langt, nej, ja, i gar, i morgen, butik, marked, supermarked, politi, hospital og restaurant pa ethvert sprog . du kan vaelge sprog ved at klikke pa sprogknappen fra hver side af menuen."
     },
     "nl": {
         "exit": "uitgang",
@@ -837,7 +877,9 @@
         "_store1": "een hoeveelheid of voorraad van iets dat voor gebruik wordt bewaard als dat nodig is.",
         "_store2": "een winkel van elke grootte of soort.",
         "_store3": "een schaap, os, koe of varken dat is verkregen of wordt gehouden voor het vetmesten.",
-        "_supermarket1": "een grote zelfbedieningswinkel die levensmiddelen en huishoudelijke artikelen verkoopt."
+        "_supermarket1": "een grote zelfbedieningswinkel die levensmiddelen en huishoudelijke artikelen verkoopt.",
+        "_infodictionary": "in dit menu kunt u de betekenis van deze woorden raadplegen: exit, gevaar, hulp, prijs, bedankt, ver, dichtbij, winkel en supermarkt in elke taal. u kunt de taal selecteren door op de pijl te klikken.",
+        "_infotranslator": "in dit menu kunt u de vertaling van deze woorden raadplegen: afsluiten, gevaar, hulp, prijs, hallo, bedankt, ver, dichtbij, nee, ja, gisteren, morgen, winkel, markt, supermarkt, politie, ziekenhuis en restaurant in elke taal . u kunt de taal selecteren door op de taalknop aan elke kant van het menu te klikken."
     },
     "en": {
         "exit": "exit",
@@ -877,7 +919,9 @@
         "_store1": "a quantity or supply of something kept for use as needed.",
         "_store2": "a shop of any size or kind.",
         "_store3": "a sheep, steer, cow, or pig acquired or kept for fattening.",
-        "_supermarket1": "a large self-service shop selling foods and household goods."
+        "_supermarket1": "a large self-service shop selling foods and household goods.",
+        "_infodictionary": "in this menu you can consult the meaning of these words: exit, danger, help, price, thanks, far, close, store and supermarket in any language. you can select the language by click on the arrow.",
+        "_infotranslator": "in this menu you can consult the translation of these words: exit, danger, help, price, hello, thanks, far, close, no, yes, yesterday, tomorrow, shop, market, supermarket, police, hospital and restaurant in any language. you can select the language by clicking on the language button from each side of the menu."
     },
     "eo": {
         "exit": "eliri",
@@ -917,7 +961,9 @@
         "_store1": "kvanto au provizo de io konservita por uzo laubezone.",
         "_store2": "butiko de ajna grandeco au bonkoreco.",
         "_store3": "safo, bovino, au porko akirita au tenata por grasoj.",
-        "_supermarket1": "granda mem-serva butiko vendanta mangajojn kaj varojn."
+        "_supermarket1": "granda mem-serva butiko vendanta mangajojn kaj varojn.",
+        "_infodictionary": "en ci tiu menuo vi povas konsulti la signifon de ci tiuj vortoj: eliro, dangero, helpo, prezo, dankon, malproksime, proksima, vendejo kaj superbazaro en iu ajn lingvo. vi povas elekti la lingvon per alklako sur la sago.",
+        "_infotranslator": "en ci tiu menuo vi povas konsulti la tradukon de ci tiuj vortoj: eliro, dangero, helpo, prezo, saluton, dankon, malproksime, proksima, ne, jes, hierau, morgau, butiko, merkato, superbazaro, polico, hospitalo kaj restoracio en iu ajn lingvo . vi povas elekti la lingvon per alklako sur la butonan lingvon de ciu flanko de la menuo."
     },
     "et": {
         "exit": "valju",
@@ -957,7 +1003,9 @@
         "_store1": "vajadusel kasutatava koguse voi koguse kogus.",
         "_store2": "igasuguse suurusega kauplus.",
         "_store3": "lammaste, lammaste, lehmade voi nuumamiseks omandatud voi peetavate sigade puhul.",
-        "_supermarket1": "suur iseteeninduskoda, mis muub toitu ja majapidamistarbeid."
+        "_supermarket1": "suur iseteeninduskoda, mis muub toitu ja majapidamistarbeid.",
+        "_infodictionary": "selles menuus saate tutvuda nende sonade tahendusega: valjumise, ohu, abi, hinna, tanu, kaugele, lahedale, kauplusele ja supermarketile igas keeles. saate valida keele klopsuga noolele.",
+        "_infotranslator": "selles menuus saate vaadata nende sonade tolget: valjumine, oht, abi, hind, tere, tanu, kaugele, lahedale, ei, jah, eile, homme, kauplus, turg, supermarket, politsei, haigla ja restoran igas keeles . saate valida keele, klopsates keele nupul menuu molemal kuljel."
     },
     "tl": {
         "exit": "lumabas",
@@ -997,7 +1045,9 @@
         "_store1": "ang isang dami o supply ng isang bagay na pinananatiling para sa paggamit kung kinakailangan.",
         "_store2": "ang isang tindahan ng anumang laki o uri.",
         "_store3": "ang isang tupa, patnubapan, baka, o baboy na nakuha o itinago para sa nakakataba.",
-        "_supermarket1": "isang malaking self-service shop na nagbebenta ng mga pagkain at mga gamit sa bahay."
+        "_supermarket1": "isang malaking self-service shop na nagbebenta ng mga pagkain at mga gamit sa bahay.",
+        "_infodictionary": "sa menu na ito maaari mong konsultahin ang kahulugan ng mga salitang ito: exit, panganib, tulong, presyo, salamat, malayo, malapit, tindahan at supermarket sa anumang wika. maaari mong piliin ang wika sa pamamagitan ng pag-click sa arrow.",
+        "_infotranslator": "sa menu na ito maaari mong konsultahin ang pagsasalin ng mga salitang ito: exit, panganib, tulong, presyo, halo, salamat, malayo, malapit, hindi, oo, kahapon, bukas, shop, market, supermarket, pulis, ospital at restaurant sa anumang wika . maaari mong piliin ang wika sa pamamagitan ng pag-click sa pindutan ng wika mula sa bawat panig ng menu."
     },
     "fi": {
         "exit": "poistuminen",
@@ -1037,7 +1087,9 @@
         "_store1": "maara tai tarjonta jotain, jota pidetaan kaytettavaksi tarpeen mukaan.",
         "_store2": "minka tahansa kokoinen kauppa.",
         "_store3": "lampaan, lihan, lehman tai sian, joka on hankittu tai jota pidetaan lihotettavana.",
-        "_supermarket1": "suuri itsepalvelu, joka myy elintarvikkeita ja kotitaloustavaroita."
+        "_supermarket1": "suuri itsepalvelu, joka myy elintarvikkeita ja kotitaloustavaroita.",
+        "_infodictionary": "tassa valikossa voit tarkastella naiden sanojen merkitysta: poistuminen, vaara, apu, hinta, kiitos, kaukana, lahella, myymala ja supermarket milla tahansa kielella. voit valita kielen napsauttamalla nuolta.",
+        "_infotranslator": "tassa valikossa voit tarkastella naiden sanojen kaannosta: poistuminen, vaara, apu, hinta, hei, kiitos, kaukana, lahella, ei, kylla, eilen, huomenna, kauppa, markkinat, supermarket, poliisi, sairaala ja ravintola milla tahansa kielella . voit valita kielen napsauttamalla kielen painiketta valikon kummallakin puolella."
     },
     "fr": {
         "exit": "sortie",
@@ -1077,7 +1129,9 @@
         "_store1": "une quantite ou une fourniture de quelque chose garde pour etre utilise au besoin.",
         "_store2": "un magasin de toute taille ou genre.",
         "_store3": "un mouton, un boeuf, une vache ou un porc acquis ou eleves pour l'engraissement.",
-        "_supermarket1": "un grand magasin libre-service vendant des aliments et des articles menagers."
+        "_supermarket1": "un grand magasin libre-service vendant des aliments et des articles menagers.",
+        "_infodictionary": "dans ce menu, vous pouvez consulter la signification de ces mots: sortie, danger, aide, prix, merci, loin, proche, magasin et supermarche dans toutes les langues. vous pouvez selectionner la langue en cliquant sur la fleche.",
+        "_infotranslator": "dans ce menu, vous pouvez consulter la traduction de ces mots: sortie, danger, aide, prix, bonjour, merci, loin, tout pres, non, oui, hier, demain, magasin, marche, supermarche, police, hopital et restaurant dans toutes les langues . vous pouvez selectionner la langue en cliquant sur le bouton de langue de chaque cote du menu."
     },
     "fy": {
         "exit": "utgong",
@@ -1117,7 +1171,9 @@
         "_store1": "in kwantiteit of oanbod fan wat bewarre bleau foar gebruk as nedich.",
         "_store2": "in winkel fan elke grutte of aard.",
         "_store3": "in skiep, lokaasje, ko, of suk is oernommen of bewarre foar middens.",
-        "_supermarket1": "in grut sels-tsjinst-winkel ferkocht iten en hushaldingsguod."
+        "_supermarket1": "in grut sels-tsjinst-winkel ferkocht iten en hushaldingsguod.",
+        "_infodictionary": "yn dit menu kinne jo de betsjutting fan dizze wurden besykje: utfiere, gefaar, help, priis, tank, fier, ticht, winkelje en supermerk yn elke taal. jo kinne de taal selektearje troch te klikken op 'e pylk.",
+        "_infotranslator": "yn dit menu kinne jo de oersetting fan dizze wurden kontrolearje: utgong, gefaar, help, priis, hallo, dank, fier, ticht, no, ja, juster, moarn, winkel, merk, supermerk, plysje, sikehus en restaurant yn elke taal . jo kinne de taal selektearje troch te klikken op de taalknop fan elke kant fan it menu."
     },
     "gl": {
         "exit": "sair",
@@ -1157,7 +1213,9 @@
         "_store1": "unha cantidade ou subministracion de algo gardado para o seu uso.",
         "_store2": "unha tenda de calquera tamano ou tipo.",
         "_store3": "unha ovella, dirixida, vaca ou porco adquirida ou gardada para engordar.",
-        "_supermarket1": "unha gran tenda de autoservizo que vende alimentos e utensilios domesticos."
+        "_supermarket1": "unha gran tenda de autoservizo que vende alimentos e utensilios domesticos.",
+        "_infodictionary": "neste menu podes consultar o significado destas palabras: saida, perigo, axuda, prezo, grazas, lonxe, pechar, almacenar e supermercado en calquera idioma. pode seleccionar a lingua premendo na frecha.",
+        "_infotranslator": "neste menu podes consultar a traducion destas palabras: saida, perigo, axuda, prezo, ola, grazas, lonxe, pechado, non, si, onte, mana, tenda, mercado, supermercado, policia, hospital e restaurante en calquera lingua . pode seleccionar a lingua premendo no boton de idioma de cada lado do menu."
     },
     "ka": {
         "exit": "გასვლა",
@@ -1197,7 +1255,9 @@
         "_store1": "საჭიროებისამებრ გამოყენებული რაღაცის რაოდენობა ან მიწოდება.",
         "_store2": "ნებისმიერი ზომის ან სახის მაღაზია.",
         "_store3": "ცხვარი, steer, ძროხა, ან ღორის შეძენილი ან ინახება fattening.",
-        "_supermarket1": "დიდი თვითმომსახურების მაღაზია საკვები და საყოფაცხოვრებო საქონელი."
+        "_supermarket1": "დიდი თვითმომსახურების მაღაზია საკვები და საყოფაცხოვრებო საქონელი.",
+        "_infodictionary": "ამ მენიუში შეგიძლიათ მიმართოთ ამ სიტყვების მნიშვნელობას: გასასვლელი, საფრთხე, დახმარება, ფასი, მადლობა, შორს, ახლოს, მაღაზიაში და სუპერმარკეტში ნებისმიერ ენაზე. ენის შესარჩევად შეგიძლიათ აირჩიოთ ისარი.",
+        "_infotranslator": "ამ მენიუში შეგიძლიათ მიმართოთ ამ სიტყვების თარგმნა: გასასვლელი, საფრთხე, დახმარება, ფასი, გამარჯობა, მადლობა, შორს, ახლოს, არა, დიახ, გუშინ, ხვალ, მაღაზიაში, ბაზარზე, სუპერმარკეტში, პოლიციაში, საავადმყოფოში და რესტორანში ნებისმიერ ენაზე . თქვენ შეგიძლიათ აირჩიოთ ენა მენიუს თითოეული მხრიდან ენის ღილაკზე დაჭერით."
     },
     "de": {
         "exit": "ausgang",
@@ -1237,7 +1297,9 @@
         "_store1": "eine menge oder lieferung von etwas, das zur verwendung nach bedarf aufbewahrt wird.",
         "_store2": "ein geschaft jeder grose und art.",
         "_store3": "ein schaf, ein ochse, eine kuh oder ein schwein, die zum masten erworben oder gehalten werden.",
-        "_supermarket1": "ein groser sb-shop mit lebensmitteln und haushaltswaren."
+        "_supermarket1": "ein groser sb-shop mit lebensmitteln und haushaltswaren.",
+        "_infodictionary": "in diesem menu konnen sie die bedeutung dieser worter nachlesen: ausfahrt, gefahr, hilfe, preis, dank, weit, schliesen, laden und supermarkt in jeder sprache. sie konnen die sprache auswahlen, indem sie auf den pfeil klicken.",
+        "_infotranslator": "in diesem menu konnen sie die ubersetzung dieser worter konsultieren: ausfahrt, gefahr, hilfe, preis, hallo, danke, weit, nah, nein, ja, gestern, morgen, geschaft, markt, supermarkt, polizei, krankenhaus und restaurant in jeder sprache . sie konnen die sprache auswahlen, indem sie von jeder seite des menus auf die schaltflache sprache klicken."
     },
     "el": {
         "exit": "εξοδος",
@@ -1277,7 +1339,9 @@
         "_store1": "μια ποσότητα ή προμήθεια κάτι που διατηρείται για χρήση όπως απαιτείται.",
         "_store2": "ένα κατάστημα οποιουδήποτε μεγέθους ή είδους.",
         "_store3": "πρόβατο, βόδι, αγελάδα ή χοίρος που αποκτήθηκε ή διατηρήθηκε για πάχυνση.",
-        "_supermarket1": "ένα μεγάλο κατάστημα αυτοεξυπηρέτησης που πωλεί τρόφιμα και είδη οικιακής χρήσης."
+        "_supermarket1": "ένα μεγάλο κατάστημα αυτοεξυπηρέτησης που πωλεί τρόφιμα και είδη οικιακής χρήσης.",
+        "_infodictionary": "σε αυτό το μενού μπορείτε να συμβουλευτείτε τη σημασία αυτών των λέξεων: έξοδος, κίνδυνος, βοήθεια, τιμή, χάρη, μακριά, κοντά, κατάστημα και σούπερ μάρκετ σε οποιαδήποτε γλώσσα. μπορείτε να επιλέξετε τη γλώσσα κάνοντας κλικ στο βέλος.",
+        "_infotranslator": "σε αυτό το μενού μπορείτε να συμβουλευτείτε τη μετάφραση αυτών των λέξεων: έξοδος, κίνδυνος, βοήθεια, τιμή, γεια, ευχαριστώ, μακριά, κοντά, όχι, ναι, χθες, αύριο, κατάστημα, αγορά, σούπερ μάρκετ, αστυνομία, νοσοκομείο και εστιατόριο σε οποιαδήποτε γλώσσα . μπορείτε να επιλέξετε τη γλώσσα κάνοντας κλικ στο κουμπί γλώσσας από κάθε πλευρά του μενού."
     },
     "gu": {
         "exit": "બહાર નીકળો",
@@ -1317,7 +1381,9 @@
         "_store1": "જરૂરિયાત માટે ઉપયોગમાં લેવાયેલી વસ્તુની જથ્થો અથવા પુરવઠો.",
         "_store2": "કોઈપણ કદ અથવા પ્રકારની દુકાન.",
         "_store3": "એક ઘેટું, વાછરડું, ગાય, અથવા ડુક્કર પ્રાપ્ત અથવા fattening માટે રાખવામાં.",
-        "_supermarket1": "મોટી સ્વ-સેવાની દુકાન ખોરાક અને ઘરગથ્થુ ચીજો વેચતી."
+        "_supermarket1": "મોટી સ્વ-સેવાની દુકાન ખોરાક અને ઘરગથ્થુ ચીજો વેચતી.",
+        "_infodictionary": "આ મેનૂમાં તમે આ શબ્દોના અર્થનો સંપર્ક કરી શકો છો: કોઈપણ ભાષામાં બહાર નીકળો, ભય, મદદ, ભાવ, આભાર, દૂર, બંધ, સ્ટોર અને સુપરમાર્કેટ. તમે તીર પર ક્લિક કરીને ભાષા પસંદ કરી શકો છો.",
+        "_infotranslator": "આ મેનુમાં તમે આ શબ્દોના અનુવાદની સલાહ લઈ શકો છો: બહાર નીકળો, ભય, સહાય, કિંમત, હેલ્લો, આભાર, દૂર, બંધ, ના, હા, ગઈકાલે, કાલે, દુકાન, બજાર, સુપરમાર્કેટ, પોલીસ, હોસ્પિટલ અને રેસ્ટોરન્ટ કોઈપણ ભાષામાં . તમે મેનુની દરેક બાજુથી ભાષા બટન પર ક્લિક કરીને ભાષા પસંદ કરી શકો છો."
     },
     "ht": {
         "exit": "soti",
@@ -1357,7 +1423,9 @@
         "_store1": "yon kantite oswa ekipman pou de yon bagay kenbe pou itilize jan sa nesese.",
         "_store2": "yon magazen nenpot gwose oswa kalite.",
         "_store3": "yon mouton, trennen, bef, oswa kochon akeri oswa kenbe pou angrese.",
-        "_supermarket1": "yon gwo boutik endepandan ki vann manje ak machandiz nan kay la."
+        "_supermarket1": "yon gwo boutik endepandan ki vann manje ak machandiz nan kay la.",
+        "_infodictionary": "nan meni sa a ou ka konsilte siyifikasyon an nan mo sa yo: soti, danje, ed, pri, mesi, byen lwen, femen, magazen ak maket nan nenpot lang. ou ka chwazi lang lan pa klike sou flech la.",
+        "_infotranslator": "nan meni sa a ou ka konsilte tradiksyon mo sa yo: soti, danje, ed, pri, bonjou, mesi, lwen, femen, pa gen, wi, ye, demen, magazen, mache, maket, lapolis, lopital ak restoran nan nenpot lang. . ou ka chwazi lang lan klike sou bouton lang lan ki soti nan chak bo meni an."
     },
     "ha": {
         "exit": "fita",
@@ -1397,7 +1465,9 @@
         "_store1": "da yawa ko samar da wani abu da aka ajiye don amfani idan an bukata.",
         "_store2": "kasuwanci na kowane girman ko irin.",
         "_store3": "a tumaki, kora, saniya, ko alade da aka samu ko a ajiye su don fattening.",
-        "_supermarket1": "babban babban kantin sayar da kai wanda ke sayar da abinci da kayayyaki na gida."
+        "_supermarket1": "babban babban kantin sayar da kai wanda ke sayar da abinci da kayayyaki na gida.",
+        "_infodictionary": "a cikin wannan menu zaka iya tuntubar ma'anar wadannan kalmomi: fita, hatsari, taimako, farashi, godiya, nisa, kusa, kantin sayar da kantin sayar da kaya a kowane harshe. zaka iya zabar harshen ta danna kan arrow.",
+        "_infotranslator": "a cikin wannan menu zaka iya tuntubar fassarar wadannan kalmomi: fita, hatsari, taimako, farashi, gaisuwa, godiya, nisa, kusa, babu, yes, jiya, gobe, shagon, kasuwa, babban kanti, 'yan sanda, asibiti da kuma gidan cin abinci a kowace harshe . za ka iya zabar harshen ta danna kan maballin harshe daga kowane gefen menu."
     },
     "haw": {
         "exit": "hoʻalo",
@@ -1437,7 +1507,9 @@
         "_store1": "ʻo kahi nui a hoʻolako paha i kekahi mea i malamaʻia no ka hoʻohanaʻana.",
         "_store2": "ʻo kahi kalepa o ka nui a me keʻano.",
         "_store3": "he hipa, hanai, bipi, a puaʻa i loaʻa ai malamaʻia no ka momona.",
-        "_supermarket1": "he kaihanaʻoihana aloha nui e kuʻai ana i na meaʻai a me na ukana hale."
+        "_supermarket1": "he kaihanaʻoihana aloha nui e kuʻai ana i na meaʻai a me na ukana hale.",
+        "_infodictionary": "ma keia papahana e hiki iaʻoe keʻike i keʻano o keia mau hua'olelo: puka, pilikia, kokua, kuʻai, mahalo, loʻihi, kokoke, hale kuʻai a me ke supermarket ma na'olelo. hiki iaʻoe ke koho i ka'olelo ma ka paʻana i ka pua.",
+        "_infotranslator": "i keia papahana, hiki iaʻoe ke lele i ka unuhiʻana o keia mau'olelo: puka, pilikia, kokua, uku, aloha, hoʻomaikaʻi, loʻihi, kokoke,ʻaʻole,ʻae, i nehinei, lapopo, kalepa, kalepa, supermarket, . hiki iaʻoe ke koho i ka'olelo ma ke kaomiʻana i ke pihi'olelo mai kelaʻaoʻao keiaʻaoʻao o ka papa inoa."
     },
     "iw": {
         "exit": "צא",
@@ -1477,7 +1549,9 @@
         "_store1": "כמות או אספקה ​​של משהו שנשמר לשימוש לפי הצורך.",
         "_store2": "חנות בכל גודל או סוג.",
         "_store3": "כבשים, מנווט, פרה או חזיר רכשו או שמרו על פיטום.",
-        "_supermarket1": "חנות גדולה בשירות עצמי המוכרת מזונות ומוצרי בית."
+        "_supermarket1": "חנות גדולה בשירות עצמי המוכרת מזונות ומוצרי בית.",
+        "_infodictionary": "בתפריט זה ניתן להתייעץ עם המשמעות של מילים אלה: יציאה, סכנה, עזרה, מחיר, תודה, רחוק, סגור, חנות סופרמרקט בכל שפה. אתה יכול לבחור את השפה על ידי לחיצה על החץ.",
+        "_infotranslator": "בתפריט זה ניתן לעיין בתרגום המילים: יציאה, סכנה, עזרה, מחיר, שלום, תודה, רחוק, סגור, לא, כן, אתמול, מחר, חנות, שוק, סופרמרקט, משטרה, בית חולים ומסעדה בכל שפה . אתה יכול לבחור את השפה על ידי לחיצה על כפתור השפה מכל צד של התפריט."
     },
     "hi": {
         "exit": "बाहर जाएं",
@@ -1517,7 +1591,9 @@
         "_store1": "आवश्यकतानुसार उपयोग के लिए रखी हुई किसी वस्तु की मात्रा या आपूर्ति।",
         "_store2": "किसी आकार या प्रकार की एक दुकान।",
         "_store3": "भेड़, चरवाहे, गाय, या सुअर का अधिग्रहण किया गया या उसे फेटने के लिए रखा गया।",
-        "_supermarket1": "खाद्य और घरेलू सामान बेचने वाली एक बड़ी स्व-सेवा की दुकान।"
+        "_supermarket1": "खाद्य और घरेलू सामान बेचने वाली एक बड़ी स्व-सेवा की दुकान।",
+        "_infodictionary": "इस मेनू में आप इन शब्दों के अर्थ से परामर्श कर सकते हैं: किसी भी भाषा में निकास, खतरे, मदद, मूल्य, धन्यवाद, दूर, करीबी, स्टोर और सुपरमार्केट। आप तीर पर क्लिक करके भाषा का चयन कर सकते हैं।",
+        "_infotranslator": "इस मेनू में आप इन शब्दों के अनुवाद से परामर्श कर सकते हैं: बाहर निकलें, खतरे, मदद, कीमत, हैलो, धन्यवाद, दूर, पास, नहीं, हाँ, कल, दुकान, बाज़ार, सुपरमार्केट, पुलिस, अस्पताल और रेस्तरां । आप मेनू के प्रत्येक तरफ से भाषा बटन पर क्लिक करके भाषा का चयन कर सकते हैं।"
     },
     "hmn": {
         "exit": "tawm",
@@ -1557,7 +1633,9 @@
         "_store1": "ib tug ntau los yog khoom ntawm ib yam khoom cia rau kev siv raws li xav tau.",
         "_store2": "lub khw ntawm txhua tus me me los yog siab zoo.",
         "_store3": "ib tug yaj, khij, nyuj, los yog npua uas tau txais los yog khaws cia rau cov rog.",
-        "_supermarket1": "muaj ib lub khw muag khoom noj loj thiab muag khoom hauv tsev."
+        "_supermarket1": "muaj ib lub khw muag khoom noj loj thiab muag khoom hauv tsev.",
+        "_infodictionary": "nyob rau hauv cov ntawv qhia no koj tuaj yeem sab laj lub ntsiab lus ntawm cov lus no: tawm, txaus ntshai, pab, nqi, ua tsaug, nyob deb, kaw, khw thiab khw hauv txhua hom lus. koj tuaj yeem xaiv cov lus ntawm nyem rau ntawm xub.",
+        "_infotranslator": "nyob rau hauv cov ntawv qhia zaub mov koj tuaj yeem sab laj rau cov lus ntawm cov lus no: tawm, txaus ntshai, pab, nqe, nyob zoo, tsaug, deb, ze, tsis, muaj, nag hmo, tag kis, khw, khw muag khoom, tub ceev xwm, tsev kho mob thiab tsev noj mov hauv txhua hom lus . koj tuaj yeem xaiv hom lus los ntawm txhaj khawm lus ntawm txhua sab ntawm lub tshuab raj."
     },
     "hu": {
         "exit": "kijarat",
@@ -1597,7 +1675,9 @@
         "_store1": "szukseges mennyisegu vagy mennyisegu felhasznalas.",
         "_store2": "barmilyen meretu vagy uzletuzlet.",
         "_store3": "a juh, juh, tehen, vagy hizlalasra szant sertes.",
-        "_supermarket1": "egy nagy onkiszolgalo bolt, amely elelmiszereket es haztartasi cikkeket ertekesit."
+        "_supermarket1": "egy nagy onkiszolgalo bolt, amely elelmiszereket es haztartasi cikkeket ertekesit.",
+        "_infodictionary": "ebben a menuben megtekintheti ezeknek a szavaknak a jelenteset: kilepes, veszely, segitseg, ar, koszonet, messze, kozel, tarolas es szupermarket barmely nyelven. a nyilra kattintva kivalaszthatja a nyelvet.",
+        "_infotranslator": "ebben a menuben megtekintheti ezeket a szavakat: kilepes, veszely, segitseg, ar, hello, koszonom, messze, kozel, nem, igen, tegnap, holnap, bolt, piac, szupermarket, rendorseg, korhaz es etterem barmely nyelven . a nyelvet a menu mindket oldalan talalhato nyelvgombra kattintva valaszthatja ki."
     },
     "is": {
         "exit": "haetta",
@@ -1637,7 +1717,9 @@
         "_store1": "magn eða framboð af einhverjum sem haldið er til notkunar eftir þorfum.",
         "_store2": "verslun af hvaða staerð eða tegund sem er.",
         "_store3": "sauðfe, styri, kyr eða svin sem er keypt eða geymd til eldis.",
-        "_supermarket1": "stor sjalfsþjonustustofa sem selur matvaeli og heimilisvorur."
+        "_supermarket1": "stor sjalfsþjonustustofa sem selur matvaeli og heimilisvorur.",
+        "_infodictionary": "i þessari valmynd er haegt að hafa samrað við merkingu þessara orða: haetta, haetta, hjalp, verð, takk, langt, loka, geyma og matvorubuð a hvaða tungumali sem er. þu getur valið tungumalið með þvi að smella a orina.",
+        "_infotranslator": "i þessari valmynd er haegt að hafa samrað við þessi orð: haetta, haetta, hjalp, verð, hallo, takk, langt, loka, nei, ja, gaer, a morgun, verslun, markaður, matvorubuð, logregla, sjukrahus og veitingastaður a hvaða tungumali sem er . þu getur valið tungumalið með þvi að smella a tungumalahnappinn fra hvorri hlið valmyndarinnar."
     },
     "ig": {
         "exit": "uzo opupu",
@@ -1677,7 +1759,9 @@
         "_store1": "azu ma o bu ntinye ihe echere maka ojiji dika o choro.",
         "_store2": "ulo ahia o bula ma o bu udi.",
         "_store3": "a na-azu aturu ma o bu na-azu aturu, ma o bu na-azu aturu.",
-        "_supermarket1": "otu nnukwu ulo ahia na-ere ihe oriri na ngwaahia ulo."
+        "_supermarket1": "otu nnukwu ulo ahia na-ere ihe oriri na ngwaahia ulo.",
+        "_infodictionary": "na nchikota nhoro a, i nwere ike ichoputa ihe okwu ndi a putara: opupu, ihe ize ndu, enyemaka, onuahia, ekele, oke, nso, ulo ahia na nnukwu ulo ahia na asusu o bula. i nwere ike ihoro asusu site na ipi aku.",
+        "_infotranslator": "n'akwukwo a, i nwere ike iju nsughari nke okwu ndi a: puo, ihe egwu, enyemaka, onuahia, ekele, ekele, oke, nso, ee, ee, unyaahu, echi, ulo ahia, ahia, ulo ahia, ndi uweojii, ulo ogwu na ulo oriri na onunu n'asusu o bula . i nwere ike ihoro asusu site na ipi botinu asusu nke o bula n'akuku menu."
     },
     "id": {
         "exit": "keluar",
@@ -1717,7 +1801,9 @@
         "_store1": "sejumlah atau persediaan sesuatu disimpan untuk digunakan sesuai kebutuhan.",
         "_store2": "toko ukuran atau jenis apa pun.",
         "_store3": "seekor domba, sapi jantan, sapi, atau babi diperoleh atau disimpan untuk digemukkan.",
-        "_supermarket1": "toko swalayan besar yang menjual makanan dan barang-barang rumah tangga."
+        "_supermarket1": "toko swalayan besar yang menjual makanan dan barang-barang rumah tangga.",
+        "_infodictionary": "dalam menu ini anda dapat berkonsultasi arti kata-kata ini: keluar, bahaya, bantuan, harga, terima kasih, jauh, tutup, toko dan supermarket dalam bahasa apa pun. anda dapat memilih bahasa dengan mengklik panah.",
+        "_infotranslator": "dalam menu ini anda dapat berkonsultasi terjemahan dari kata-kata ini: keluar, bahaya, bantuan, harga, halo, terima kasih, jauh, tutup, tidak, ya, kemarin, besok, toko, pasar, supermarket, polisi, rumah sakit dan restoran dalam bahasa apa pun . anda dapat memilih bahasa dengan mengklik tombol bahasa dari setiap sisi menu."
     },
     "ga": {
         "exit": "an sli amach",
@@ -1757,7 +1843,9 @@
         "_store1": "cainniocht no solathar ruda a choimeadtar le husaid de reir mar is ga.",
         "_store2": "siopa de mheid no de chineal ar bith.",
         "_store3": "caoirigh, stiuradh, bo, no muc a fuarthas no a choinnitear le haghaidh ramhraithe.",
-        "_supermarket1": "siopa morseirbhise mor a dhiolann bianna agus earrai ti."
+        "_supermarket1": "siopa morseirbhise mor a dhiolann bianna agus earrai ti.",
+        "_infodictionary": "sa roghchlar seo is feidir leat bri na bhfocal seo a cheadu: imeacht, contuirt, cabhair, praghas, buiochas, i bhfad, gar, siopa agus ollmhargadh in aon teanga. is feidir leat an teanga a roghnu tri chliceail ar an tsaighead.",
+        "_infotranslator": "sa roghchlar seo is feidir leat aistriuchan a dheanamh ar na focail seo: imeacht, contuirt, cabhair, praghas, hello, buiochas, i bhfad, gar, gan, ta, inne, amarach, siopa, margadh, ollmhargadh, poilini, ospideal agus bialann in aon teanga . is feidir leat an teanga a roghnu tri chliceail ar an gcnaipe teanga o gach taobh den roghchlar."
     },
     "it": {
         "exit": "uscita",
@@ -1797,7 +1885,9 @@
         "_store1": "una quantita o fornitura di qualcosa conservato per l'uso secondo necessita.",
         "_store2": "un negozio di qualsiasi dimensione o tipo.",
         "_store3": "una pecora, un manzo, una mucca o un maiale acquistati o tenuti all'ingrasso.",
-        "_supermarket1": "un grande negozio self-service che vende alimenti e articoli per la casa."
+        "_supermarket1": "un grande negozio self-service che vende alimenti e articoli per la casa.",
+        "_infodictionary": "in questo menu e possibile consultare il significato di queste parole: uscita, pericolo, aiuto, prezzo, grazie, lontano, vicino, negozio e supermercato in qualsiasi lingua. e possibile selezionare la lingua facendo clic sulla freccia.",
+        "_infotranslator": "in questo menu puoi consultare la traduzione di queste parole: uscita, pericolo, aiuto, prezzo, ciao, grazie, lontano, vicino, no, si, ieri, domani, negozio, mercato, supermercato, polizia, ospedale e ristorante in qualsiasi lingua . e possibile selezionare la lingua facendo clic sul pulsante della lingua da ciascun lato del menu."
     },
     "ja": {
         "exit": "出口",
@@ -1837,7 +1927,9 @@
         "_store1": "必要に応じて使用するために保管されているものの量または供給量。",
         "_store2": "あらゆる規模や種類のお店。",
         "_store3": "羊、去勢牛、牛、または豚が肥育用に取得または飼育されました。",
-        "_supermarket1": "食料品や家庭用品を販売する大規模セルフサービス店。"
+        "_supermarket1": "食料品や家庭用品を販売する大規模セルフサービス店。",
+        "_infodictionary": "このメニューでは、あなたはこれらの単語の意味を調べることができます。矢印をクリックして言語を選択できます。",
+        "_infotranslator": "このメニューでは、あなたはこれらの単語の翻訳を調べることができます。 。メニューの両側から言語ボタンをクリックして言語を選択できます。"
     },
     "jw": {
         "exit": "metu",
@@ -1877,7 +1969,9 @@
         "_store1": "a jumlah utawa sumber soko sing ditrapake minangka perlu.",
         "_store2": "a toko apa wae ukuran utawa jinis.",
         "_store3": "wedhus, sapi, sapi, utawa babi sing dituku utawa dituku kanggo fattening.",
-        "_supermarket1": "toko swalayan gedhe sing nyedhiyakake panganan lan barang rumah tangga."
+        "_supermarket1": "toko swalayan gedhe sing nyedhiyakake panganan lan barang rumah tangga.",
+        "_infodictionary": "ing menu iki sampeyan bisa nemokake arti tembung kasebut: metu, bebaya, bantuan, rega, terima, adoh, cedhak, nyimpen lan supermarket ing sembarang basa. sampeyan bisa milih basa kanthi klik ing panah.",
+        "_infotranslator": "ing menu iki sampeyan bisa nemokake terjemahan saka tembung kasebut: metu, bebaya, bantuan, rega, salam, thanks, adoh, cedhak, ora, ya, kemarin, esuk, toko, pasar, supermarket, polisi, rumah sakit lan restoran ing sembarang basa . sampeyan bisa milih basa kanthi ngeklik tombol basa saka saben sisih pinggir menu."
     },
     "kn": {
         "exit": "ನಿರ್ಗಮನ",
@@ -1917,7 +2011,9 @@
         "_store1": "ಅಗತ್ಯವಿರುವಂತೆ ಬಳಸಬೇಕಾದ ಏನಾದರೂ ಪ್ರಮಾಣ ಅಥವಾ ಸರಬರಾಜು.",
         "_store2": "ಯಾವುದೇ ಗಾತ್ರ ಅಥವಾ ರೀತಿಯ ಅಂಗಡಿ.",
         "_store3": "ಒಂದು ಕುರಿ, ಉಗುರು, ಹಸು, ಅಥವಾ ಹಂದಿಗಳು ಕೊಬ್ಬಿನಂಶಕ್ಕಾಗಿ ಸ್ವಾಧೀನಪಡಿಸಿಕೊಂಡಿವೆ ಅಥವಾ ಇರಿಸಲಾಗುತ್ತದೆ.",
-        "_supermarket1": "ದೊಡ್ಡ ಸ್ವಯಂ ಸೇವಾ ಅಂಗಡಿಗಳು ಆಹಾರ ಮತ್ತು ಮನೆಯ ಸರಕುಗಳನ್ನು ಮಾರಾಟ ಮಾಡುತ್ತವೆ."
+        "_supermarket1": "ದೊಡ್ಡ ಸ್ವಯಂ ಸೇವಾ ಅಂಗಡಿಗಳು ಆಹಾರ ಮತ್ತು ಮನೆಯ ಸರಕುಗಳನ್ನು ಮಾರಾಟ ಮಾಡುತ್ತವೆ.",
+        "_infodictionary": "ಈ ಮೆನುವಿನಲ್ಲಿ ನೀವು ಈ ಪದಗಳ ಅರ್ಥವನ್ನು ಚರ್ಚಿಸಬಹುದು: ನಿರ್ಗಮನ, ಅಪಾಯ, ಸಹಾಯ, ಬೆಲೆ, ಧನ್ಯವಾದಗಳು, ದೂರದ, ಮುಚ್ಚಿ, ಅಂಗಡಿ ಮತ್ತು ಯಾವುದೇ ಭಾಷೆಯಲ್ಲಿ ಸೂಪರ್ಮಾರ್ಕೆಟ್. ಬಾಣದ ಮೇಲೆ ಕ್ಲಿಕ್ ಮಾಡುವ ಮೂಲಕ ನೀವು ಭಾಷೆಯನ್ನು ಆಯ್ಕೆ ಮಾಡಬಹುದು.",
+        "_infotranslator": "ಈ ಮೆನುವಿನಲ್ಲಿ ನೀವು ಈ ಪದಗಳ ಅನುವಾದವನ್ನು ಚರ್ಚಿಸಬಹುದು: ನಿರ್ಗಮನ, ಅಪಾಯ, ಸಹಾಯ, ಬೆಲೆ, ಹಲೋ, ಧನ್ಯವಾದಗಳು, ದೂರದ, ಮುಚ್ಚಿ, ಇಲ್ಲ, ಹೌದು, ನಿನ್ನೆ, ನಾಳೆ, ಅಂಗಡಿ, ಮಾರುಕಟ್ಟೆ, ಸೂಪರ್ಮಾರ್ಕೆಟ್, ಪೊಲೀಸ್, ಆಸ್ಪತ್ರೆ ಮತ್ತು ಯಾವುದೇ ಭಾಷೆಯಲ್ಲಿ ರೆಸ್ಟೋರೆಂಟ್ . ಮೆನುವಿನ ಪ್ರತಿಯೊಂದು ಬದಿಯ ಭಾಷೆಯ ಗುಂಡಿಯನ್ನು ಕ್ಲಿಕ್ಕಿಸಿ ನೀವು ಭಾಷೆಯನ್ನು ಆಯ್ಕೆ ಮಾಡಬಹುದು."
     },
     "kk": {
         "exit": "шығу",
@@ -1957,7 +2053,9 @@
         "_store1": "қажет болған жағдайда пайдалануға болатын заттардың саны немесе жеткізілуі.",
         "_store2": "кез-келген мөлшерде немесе түрдегі дүкен.",
         "_store3": "қой, баған, сиыр немесе шошқа бордақылау үшін сатып алынған немесе сақталған.",
-        "_supermarket1": "азық-түлік және тұрмыстық тауарларды сататын ірі дүкен."
+        "_supermarket1": "азық-түлік және тұрмыстық тауарларды сататын ірі дүкен.",
+        "_infodictionary": "бұл мәзірде осы сөздердің мағынасын білуге ​​болады: шығу, қауіп, көмек, баға, алғыс, алыста, жақын, сақтау және супермаркет кез келген тілде. тілді таңдап, көрсеткіні нұқу арқылы таңдай аласыз.",
+        "_infotranslator": "бұл мәзірде келесі сөздердің аудармасын білуге ​​болады: шығу, қауіп, көмек, баға, сәлем, рахмет, алыс, жақын, жоқ, иә, кеше, ертең, дүкен, нарық, супермаркет, полиция, аурухана және мейрамхана кез келген тілде . мәзірдің әр жағынан тіл түймесін басу арқылы тілді таңдауға болады."
     },
     "km": {
         "exit": "ចេញ",
@@ -1997,7 +2095,9 @@
         "_store1": "បរិមាណឬការផ្គត់ផ្គង់អ្វីមួយដែលត្រូវបានរក្សាទុកសម្រាប់ការប្រើប្រាស់តាមតម្រូវការ។",
         "_store2": "ហាងមានទំហំឬប្រភេទ។",
         "_store3": "ចៀមឃ្វាលគោឬជ្រូកដែលបានទទួលឬរក្សាទុកសម្រាប់ការនុយច្រមុះ។",
-        "_supermarket1": "ហាងលក់ទំនិញដោយខ្លួនឯងធំមួយដែលលក់អាហារនិងទំនិញគ្រួសារ។"
+        "_supermarket1": "ហាងលក់ទំនិញដោយខ្លួនឯងធំមួយដែលលក់អាហារនិងទំនិញគ្រួសារ។",
+        "_infodictionary": "នៅក្នុងម៉ឺនុយនេះអ្នកអាចមើលពីអត្ថន័យនៃពាក្យទាំងនេះ: ការចាកចេញគ្រោះថ្នាក់គ្រោះថ្នាក់ជំនួយតម្លៃអរគុណឆ្ងាយនៅជិតឃ្លាំងនិងផ្សារទំនើបជាភាសាណាមួយ។ អ្នកអាចជ្រើសរើសភាសាដោយចុចលើសញ្ញាព្រួញ។",
+        "_infotranslator": "នៅក្នុងម៉ឺនុយនេះអ្នកអាចពិគ្រោះជាមួយការបកស្រាយពាក្យទាំងនេះ: ការចេញ, គ្រោះថ្នាក់, ជំនួយ, តម្លៃ, ជំរាបសួរ, អរគុណ, ឆ្ងាយ, បិទ, ទេ, ថ្ងៃស្អែក, ថ្ងៃស្អែក, ហាង, ទីផ្សារ, ផ្សារទំនើប, ប៉ូលីស, មន្ទីរពេទ្យនិងភោជនីយដ្ឋាននៅក្នុងភាសាណាមួយ។ ។ អ្នកអាចជ្រើសរើសភាសាដោយចុចលើប៊ូតុងភាសានៅផ្នែកម្ខាងនៃម៉ឺនុយ។"
     },
     "ko": {
         "exit": "출구",
@@ -2037,7 +2137,9 @@
         "_store1": "필요에 따라 사용하기 위해 보관 된 수량 또는 공급.",
         "_store2": "어떤 규모 또는 종류의 상점.",
         "_store3": "비만을 위해 획득하거나 보유한 양, 조종아지, 소 또는 돼지.",
-        "_supermarket1": "음식과 생활 용품을 판매하는 대형 셀프 서비스 상점."
+        "_supermarket1": "음식과 생활 용품을 판매하는 대형 셀프 서비스 상점.",
+        "_infodictionary": "이 메뉴에서는 출구, 위험, 도움, 가격, 감사, 멀리, 가까운, 상점 및 어떤 언어로든 슈퍼마켓과 같은 단어의 의미를 알아볼 수 있습니다. 화살표를 클릭하여 언어를 선택할 수 있습니다.",
+        "_infotranslator": "이 메뉴에서 다음 단어의 번역을 참조하십시오 : 출구, 위험, 도움, 가격, 안녕하세요, 감사합니다, 가까운, 가까운, 아니요, 예, 내일, 상점, 시장, 슈퍼마켓, 경찰, 병원 및 레스토랑 . 메뉴의 각면에서 언어 버튼을 클릭하여 언어를 선택할 수 있습니다."
     },
     "ku": {
         "exit": "deri",
@@ -2077,7 +2179,9 @@
         "_store1": "hin an tistek danustendina tiste ku ji bo bikaranina pedivi ye.",
         "_store2": "bazirgani an her cure an cure.",
         "_store3": "mi, hilwesin, ku, sor anin an ji ji bo fattening.",
-        "_supermarket1": "di kirana xweserek mezin a xwarin u malen male difirose."
+        "_supermarket1": "di kirana xweserek mezin a xwarin u malen male difirose.",
+        "_infodictionary": "di ve menue de hun wateya van peyvan bistinin: xetere, xetere, alikari, buhaye, spas, dur, nezik, firotin u supermarkete di her zimani de. hun dikarin bi zimane zike li ser darike hilbijerin.",
+        "_infotranslator": "di ve menue de hun dikarin peyven van peyvan re bisekinin: ji derveyi, xetere, alikari, bihaye, dilsoz, dur, ne, ere, ere, hej, sibe, firotane, bazare, supermarket, polis, nexwesxaneye u xwarine di ziman . hun dikarin ji aliye her ali ya menue ve biskojka ziman biskojk bike."
     },
     "ky": {
         "exit": "чыгуу",
@@ -2117,7 +2221,9 @@
         "_store1": "зарылдыгына жараша пайдалануу үчүн бир нерсе бир саны же сунуш берген.",
         "_store2": "ар кандай өлчөмдө жана кандай бир дүкөн.",
         "_store3": "бир кой, уй же чочко алынган же бордоонун сакталат качат.",
-        "_supermarket1": "көп өзүн-өзү тейлөө, тамак-аш жана тиричилик буюмдарын сатуу дүкөнү."
+        "_supermarket1": "көп өзүн-өзү тейлөө, тамак-аш жана тиричилик буюмдарын сатуу дүкөнү.",
+        "_infodictionary": "бул менюда сиз бул аяттагы сөздөрдүн маанисин кайрылышса болот: чыгуу, коркунуч, жардам, баасын, кудайга ыраазычылык билдирди да, алыс, жакын, ар кандай тилде дүкөнүн жана супермаркетке. сиз жебени чыкылдатуу менен тилди тандап алса болот.",
+        "_infotranslator": "бул менюда сиз бул сөздөрдүн котормосун кайрылышса болот: чыгуу, коркунуч, жардам, баасын, жазып, кудайга ыраазычылык билдирди да, алыс, жакын, жок, ооба, кечээ, бүрсүгүнү, дүкөн, базар, супермаркет, укук коргоо органдарын, ар кандай тилде оорукана жана ресторан . менюдан ар тараптан тил баскычын басуу менен тилди тандап алса болот."
     },
     "lo": {
         "exit": "ອອກຈາກ",
@@ -2157,7 +2263,9 @@
         "_store1": "ຈໍານວນຫຼືການສະຫນອງບາງສິ່ງບາງຢ່າງທີ່ເກັບຮັກສາໄວ້ສໍາລັບການນໍາໃຊ້ຕາມຄວາມຕ້ອງການ.",
         "_store2": "ຮ້ານຄ້າທີ່ມີຂະຫນາດຫລືປະເພດໃດ.",
         "_store3": "ແກະ, ຜູ້ຊີ້ນໍາ, ງົວ, ຫຼືຫມູທີ່ໄດ້ມາຫລືເກັບໄວ້ສໍາລັບການກ້າ.",
-        "_supermarket1": "ຮ້ານຂາຍເຄື່ອງທີ່ຕົນເອງບໍລິການຂະຫນາດໃຫຍ່ຂາຍອາຫານແລະສິນຄ້າໃນຄົວເຮືອນ."
+        "_supermarket1": "ຮ້ານຂາຍເຄື່ອງທີ່ຕົນເອງບໍລິການຂະຫນາດໃຫຍ່ຂາຍອາຫານແລະສິນຄ້າໃນຄົວເຮືອນ.",
+        "_infodictionary": "ໃນເມນູນີ້ທ່ານສາມາດປຶກສາຄວາມຫມາຍຂອງຄໍາເຫຼົ່ານີ້: ການທ່ອງທ່ຽວ, ຄວາມອັນຕະລາຍ, ການຊ່ວຍເຫຼືອ, ລາຄາ, ຂອບໃຈ, ໄກ, ປິດ, ຮ້ານແລະສັບພະສິນຄ້າໃນພາສາໃດ. ທ່ານສາມາດເລືອກພາສາໄດ້ໂດຍການຄລິກໃສ່ລູກສອນ.",
+        "_infotranslator": "ໃນເມນູນີ້ທ່ານສາມາດປຶກສາຄໍາສັບເຫຼົ່ານີ້: ການທ່ອງທ່ຽວ, ອັນຕະລາຍ, ຊ່ວຍເຫຼືອ, ລາຄາ, ສະບາຍດີ, ຂອບໃຈ, ໄກ, ປິດ, ບໍ່ມີ, ແມ່ນແລ້ວ, ມື້ວານນີ້, ມື້ອື່ນ, ຮ້ານ, ຕະຫຼາດ, ສັບພະສິນຄ້າ, ຕໍາຫຼວດ, ໂຮງຫມໍແລະຮ້ານອາຫານໃນທຸກພາສາ ທີ່ຢູ່ ທ່ານສາມາດເລືອກພາສາໄດ້ໂດຍການຄລິກໃສ່ປຸ່ມພາສາຈາກແຕ່ລະເມນູ."
     },
     "la": {
         "exit": "exitus",
@@ -2197,7 +2305,9 @@
         "_store1": "a copia quantitas aut aliquid pro usu servanda est necessitas.",
         "_store2": "ipsam tabernam alicuius quantitatis.",
         "_store3": "a ovium: vacant, bos, vel acquiritur, vel sus tenentur pinguescere campos.",
-        "_supermarket1": "a large tabernam vendere auto-muneris fideliter et supellectilis."
+        "_supermarket1": "a large tabernam vendere auto-muneris fideliter et supellectilis.",
+        "_infodictionary": "in hoc menu vos can consuleret significatione horum verborum: exitus, periculum auxilio, pretium, gratias agens procul, prope, in forum copia, et omnis lingua. vos can click eligere de sagitta a lingua.",
+        "_infotranslator": "in hoc menu vos can consule translationem horum verborum: exitus, periculum auxilio, pretium: salve, gratiam procul, prope nihil, quod sic, heri, cras, tabernam, forum, forum, magistratus, nosocomiis et popina in lingua . te potest eligere lingua strepitando in parte unaquaque lingua button ex menu."
     },
     "lv": {
         "exit": "izeja",
@@ -2237,7 +2347,9 @@
         "_store1": "daudzums vai vajadziba, kas tiek tureta lietosanai pec vajadzibas.",
         "_store2": "jebkura izmera vai veida veikals.",
         "_store3": "aitas, govs, govs vai cukas, kas iegutas vai turetas nobarosanai.",
-        "_supermarket1": "liels pasapkalposanas veikals, kas pardod partikas produktus un majsaimniecibas preces."
+        "_supermarket1": "liels pasapkalposanas veikals, kas pardod partikas produktus un majsaimniecibas preces.",
+        "_infodictionary": "saja izvelne varat iepazities ar so vardu nozimi: izejas, briesmas, palidziba, cena, paldies, talu, tuvu, veikalu un lielveikalu jebkura valoda. jus varat izveleties valodu, noklikskinot uz bultinas.",
+        "_infotranslator": "saja izvelne varat iepazities ar so vardu tulkojumu: izeju, briesmam, palidzibu, cenu, sveicienu, pateicibu, talu, tuvu, ne, ja, vakar, rit, veikalu, tirgu, lielveikalu, policiju, slimnicu un restoranu jebkura valoda . valodu var izveleties, noklikskinot uz valodas pogas katra izvelnes puse."
     },
     "lt": {
         "exit": "iseiti",
@@ -2277,7 +2389,9 @@
         "_store1": "kiek reikia arba tiekiama, kaip reikia.",
         "_store2": "parduotuve bet kokio dydzio ar rusies.",
         "_store3": "avys, vairuotojai, karves arba kiaules, isigytos arba laikomos penejimui.",
-        "_supermarket1": "didele savitarnos parduotuve, parduodanti maisto produktus ir namu ukio prekes."
+        "_supermarket1": "didele savitarnos parduotuve, parduodanti maisto produktus ir namu ukio prekes.",
+        "_infodictionary": "siame meniu galite suzinoti siu zodziu reiksme: iseiti, pavojus, pagalba, kaina, aciu, toli, arti, parduotuve ir prekybos centrai bet kuria kalba. galite pasirinkti kalba spusteleje rodykle.",
+        "_infotranslator": "siame meniu galite suzinoti siu zodziu vertima: iseiti, pavojus, pagalba, kaina, sveiki, aciu, toli, arti, ne, taip, vakar, rytoj, parduotuve, rinka, prekybos centras, policija, ligonine ir restoranas bet kuria kalba . galite pasirinkti kalba, spusteleje kalbos mygtuka kiekvienoje meniu puseje."
     },
     "lb": {
         "exit": "ausfahrt",
@@ -2317,7 +2431,9 @@
         "_store1": "eng quantiteit oder zousatz vun eppes dat gegebene benotze wei neideg.",
         "_store2": "a shop vun enger greisst oder zort.",
         "_store3": "ee schof, leier, kuh, oder pig erakommen oder gehal ginn.",
-        "_supermarket1": "ee grousse self-service-geschaft verkaafen liewensmettel a haushaltsgare."
+        "_supermarket1": "ee grousse self-service-geschaft verkaafen liewensmettel a haushaltsgare.",
+        "_infodictionary": "an desem menu kennt dir d'bedeitung vun dese waerter konsulteieren: ausgruewung, gefaassung, hellef, prais, merci, wait, no zou, geschaft an supermarche an all sprooch. dir kennt d'sprooch wielen andeems dir op de pfeil klickt.",
+        "_infotranslator": "an desem menu kennt dir d'iwwersetzung vun dese wierder konsulteieren: ausfahrt, gefaassung, hellef, prais, hallo, merci, wait, no, nee, jo, geschter, muer, shop, maart, supermarche, polizei, spidol a restaurant an all sprooch . dir kennt d'sprooch wielen andeems dir op de sprooche-knappchen vun all sait vum menu klickt."
     },
     "mk": {
         "exit": "излез",
@@ -2357,7 +2473,9 @@
         "_store1": "количина или понуда на нешто што се чува за употреба по потреба.",
         "_store2": "продавница од било која големина или вид.",
         "_store3": "овци, кормила, крава или свиња стекнати или чувани за гоење.",
-        "_supermarket1": "голем самопослужување продавница за продажба на храна и предмети за домаќинството."
+        "_supermarket1": "голем самопослужување продавница за продажба на храна и предмети за домаќинството.",
+        "_infodictionary": "во ова мени можете да се консултирате со значењето на овие зборови: излез, опасност, помош, цена, благодарност, далеку, блиски, продавница и супермаркет на било кој јазик. можете да го изберете јазикот со кликнување на стрелката.",
+        "_infotranslator": "во ова мени можете да го консултирате преводот на овие зборови: излез, опасност, помош, цена, здраво, благодарност, далеку, блиску, не, да, вчера, утре, продавница, пазар, супермаркет, полиција, болница и ресторан на било кој јазик . можете да го изберете јазикот со кликнување на копчето за јазик од секоја страна од менито."
     },
     "mg": {
         "exit": "fivoahana",
@@ -2397,7 +2515,9 @@
         "_store1": "ny habetsahana na famatsiana zavatra voatazona ho ampiasaina raha ilaina.",
         "_store2": "fivarotana amin'ny habeny na hatsaram-panahy.",
         "_store3": "ny ondry, ny mpitarika, ny ombivavy, na ny kisoa no nahazoana na nitazonana ny fatin-kena.",
-        "_supermarket1": "fivarotana lehibe ho an'ny orinasam-pivarotana fivarotana sakafo sy ny entana an-tokantrano"
+        "_supermarket1": "fivarotana lehibe ho an'ny orinasam-pivarotana fivarotana sakafo sy ny entana an-tokantrano",
+        "_infodictionary": "ao amin'ity sakafo ity dia afaka manontany ny dikan'ireto teny ireto ianao: fialana, loza, fanampiana, vidin'ny, fisaorana, lavitra, akaiky, ary fivarotana lehibe amin'ny fiteny rehetra. azonao atao ny mifidy ny fiteny amin'ny tsindrio ny zana-tsipika.",
+        "_infotranslator": "ao anatin'ity sakafo ity dia afaka manontany ny fandikana ireto teny ireto ianao: fialana, loza, fanampiana, vidim-bola, ala, misaotra, lavitra, akaiky, tsia, eny, omaly, rahampitso, fivarotana, tsena, supermarket, polisy, hopitaly sy trano fisakafoanana amin'ny fiteny hafa . azonao atao ny misafidy ny fiteny amin'ny alalan'ny tsindry amin'ny bokotra avy any amin'ny faritra tsirairay amin'ny sakafo."
     },
     "ms": {
         "exit": "keluar",
@@ -2437,7 +2557,9 @@
         "_store1": "kuantiti atau bekalan sesuatu yang disimpan untuk kegunaan seperti yang diperlukan.",
         "_store2": "sebuah kedai apa-apa saiz atau jenis.",
         "_store3": "domba, kambing, lembu, atau babi yang diperoleh atau disimpan untuk penggemukan.",
-        "_supermarket1": "sebuah kedai layan diri yang besar menjual makanan dan barangan rumah."
+        "_supermarket1": "sebuah kedai layan diri yang besar menjual makanan dan barangan rumah.",
+        "_infodictionary": "dalam menu ini anda boleh merujuk makna kata-kata ini: keluar, bahaya, bantuan, harga, terima kasih, jauh, dekat, kedai dan pasar raya dalam bahasa apa pun. anda boleh memilih bahasa dengan klik pada anak panah.",
+        "_infotranslator": "dalam menu ini anda boleh merujuk terjemahan perkataan ini: keluar, bahaya, bantuan, harga, hello, terima kasih, jauh, dekat, tidak, ya, semalam, esok, kedai, pasar, pasaraya, polis, hospital dan restoran dalam bahasa apa pun . anda boleh memilih bahasa dengan mengklik butang bahasa dari setiap sisi menu."
     },
     "ml": {
         "exit": "പുറത്ത്",
@@ -2477,7 +2599,9 @@
         "_store1": "ആവശ്യത്തിന് ഉപയോഗിച്ചിട്ടുള്ള ഒരു അളവിലുള്ള അല്ലെങ്കിൽ അളവ്.",
         "_store2": "ഏത് തരത്തിലുള്ള ഒരു തരത്തിലുള്ള ഷോപ്പ്.",
         "_store3": "ഒരു ആടുകളെ, പാവക്കൂർ, പശു, അല്ലെങ്കിൽ പന്നി കൈവെച്ചു അല്ലെങ്കിൽ fattening വേണ്ടി സൂക്ഷിച്ചിരിക്കുന്നു.",
-        "_supermarket1": "ഒരു വലിയ സ്വയം സേവന ഷോപ്പ് വിൽക്കുന്ന ഭക്ഷണങ്ങളും ഗൃഹോപകരണങ്ങളും."
+        "_supermarket1": "ഒരു വലിയ സ്വയം സേവന ഷോപ്പ് വിൽക്കുന്ന ഭക്ഷണങ്ങളും ഗൃഹോപകരണങ്ങളും.",
+        "_infodictionary": "ഈ മെയിലിൽ നിങ്ങൾക്ക് ഈ വാക്കുകളുടെ അർത്ഥം പരിശോധിക്കാം: എക്സിറ്റ്, അപകടം, സഹായം, വില, നന്ദി, ദൂരം, അടുത്തത്, സ്റ്റോർ, സൂപ്പർമാർക്കറ്റ് എന്നിവ ഏത് ഭാഷയിലും. അമ്പ് ക്ലിക്ക് ചെയ്ത് നിങ്ങൾക്ക് ഭാഷ തിരഞ്ഞെടുക്കാം.",
+        "_infotranslator": "ഈ മെയിലിൽ നിങ്ങൾക്ക് ഈ പദങ്ങളുടെ വിവർത്തനം നോക്കാം: പുറത്തുകടക്കുക, അപകടം, സഹായം, വില, ഹലോ, സ്തോത്രം, വളരെ സമീപം, ഇല്ല, അതെ, ഇന്നലെ, നാളെ, ഷോപ്പ്, മാർക്കറ്റ്, സൂപ്പർമാർക്കറ്റ്, പോലീസ്, ആശുപത്രി, ഭക്ഷണശാല എന്നിവ ഏത് ഭാഷയിലും . മെനുവിന്റെ ഓരോ വശത്തുമുള്ള ഭാഷാ ബട്ടണിൽ ക്ലിക്കുചെയ്യുന്നതിലൂടെ നിങ്ങൾക്ക് ഭാഷ തിരഞ്ഞെടുക്കാം."
     },
     "mt": {
         "exit": "hrug",
@@ -2517,7 +2641,9 @@
         "_store1": "kwantita jew provvista ta 'xi haga mizmuma ghall-uzu kif mehtieg.",
         "_store2": "hanut ta 'kull daqs jew tip.",
         "_store3": "naghag, gverta, baqra, jew majjal akkwistat jew mizmum ghat-tismin.",
-        "_supermarket1": "hanut kbir ta 'self-service li jbigh ikel u oggetti tad-dar."
+        "_supermarket1": "hanut kbir ta 'self-service li jbigh ikel u oggetti tad-dar.",
+        "_infodictionary": "f'dan il-menu tista 'tikkonsulta t-tifsira ta' dawn il-kliem: hrug, periklu, ghajnuna, prezz, grazzi, boghod, vicin, ahzen u supermarket fi kwalunkwe lingwa. tista 'taghzel il-lingwa billi tikklikkja fuq il-vlegga.",
+        "_infotranslator": "f'dan il-menu tista 'tikkonsulta t-traduzzjoni ta' dawn il-kliem: hrug, periklu, ghajnuna, prezz, bonjour, grazzi, boghod, vicin, le, iva, bierah, ghada, hanut, suq, supermarket, pulizija, sptar u restorant bi kwalunkwe lingwa . tista 'taghzel il-lingwa billi tikklikkja fuq il-buttuna tal-lingwa minn kull naha tal-menu."
     },
     "mi": {
         "exit": "puta mai",
@@ -2557,7 +2683,9 @@
         "_store1": "he nui, he taonga ranei o te mea i puritia mo te whakamahinga.",
         "_store2": "he toa o tetahi rahi, he momo ranei.",
         "_store3": "he hipi, he kaitohu, he kau, he poaka ranei kua riro, kua tiakina ranei mo te momona.",
-        "_supermarket1": "he kaihokohoko whaiaro nui e hoko ana i nga kai me nga rawa o te whare."
+        "_supermarket1": "he kaihokohoko whaiaro nui e hoko ana i nga kai me nga rawa o te whare.",
+        "_infodictionary": "i roto i tenei tahua ka taea e koe te korero i te tikanga o enei kupu: te puta, te raruraru, te awhina, te utu, te whakawhetai, te tawhiti, te tata, te toa me te maakete i tetahi reo. ka taea e koe te tohu i te reo ma te panui i te pere.",
+        "_infotranslator": "i roto i tenei tahua ka taea e koe te korero ki te whakamaoritanga o enei kupu: te puta, te raruraru, te awhina, te utu, te aroha, te whakawhetai, te tawhiti, te tata, kore, ae, oanahi, apopo, toa, maketi, supermarket, pirihimana, whare hauora me te wharekai i tetahi reo . ka taea e koe te whiriwhiri i te reo ma te panui i te paerewa reo i ia taha o te tahua."
     },
     "mr": {
         "exit": "बाहेर पडा",
@@ -2597,7 +2725,9 @@
         "_store1": "आवश्यकतेनुसार वापरल्या जाणार्या वस्तुची मात्रा किंवा पुरवठा.",
         "_store2": "कोणत्याही आकाराची किंवा प्रकारची एक दुकान.",
         "_store3": "एक मेंढी, स्टीअर, गाय किंवा डुक्कर मिळवले किंवा फॅटनिंगसाठी ठेवले.",
-        "_supermarket1": "अन्न आणि घरगुती वस्तू विकण्याचे एक मोठे स्वयंसेवा दुकान."
+        "_supermarket1": "अन्न आणि घरगुती वस्तू विकण्याचे एक मोठे स्वयंसेवा दुकान.",
+        "_infodictionary": "कोणत्याही भाषेत निर्गमन, धोका, मदत, किंमत, धन्यवाद, दूर, बंद, स्टोअर आणि सुपरमार्केट या मेनूमधील आपण या शब्दांच्या अर्थाचा सल्ला घेऊ शकता. आपण बाणावर क्लिक करून भाषा निवडू शकता.",
+        "_infotranslator": "कोणत्याही भाषेत निर्गमन, धोका, मदत, किंमत, हॅलो, धन्यवाद, दूर, बंद, नाही, होय, काल, उद्या, दुकान, बाजार, सुपरमार्केट, पोलिस, हॉस्पिटल आणि रेस्टॉरंट या मेनूमध्ये आपण या शब्दांचे भाषांतर करू शकता. . आपण मेनूच्या प्रत्येक बाजूला भाषा बटणावर क्लिक करून भाषा निवडू शकता."
     },
     "mn": {
         "exit": "гарах",
@@ -2637,7 +2767,9 @@
         "_store1": "шаардлагатай үед хэрэглэх зориулалтын тоо хэмжээ буюу нийлүүлэлт.",
         "_store2": "ямар ч хэмжээ, төрлийн дэлгүүр.",
         "_store3": "хоньчин, жолооч, үнээ, гахай худалдан авах буюу хадгалдаг.",
-        "_supermarket1": "хоол хүнс, гэр ахуйн барааг зарж борлуулдаг томоохон бие даасан дэлгүүр."
+        "_supermarket1": "хоол хүнс, гэр ахуйн барааг зарж борлуулдаг томоохон бие даасан дэлгүүр.",
+        "_infodictionary": "энэ цэсэнд та эдгээр үгсийн утгын талаар зөвлөлдөж болно: exit, danger, help, price, thanks, far, close, store and supermarket in any language. та сумаар дарж хэлийг сонгож болно.",
+        "_infotranslator": "энэ цэсэнд та үг хэллэгийн орчуулгын талаар зөвлөгөө авч болно: гарах, аюул, тусламж, үнэ, сайн уу, талархал, хол, ойр, өчигдөр, өчигдөр, маргааш, дэлгүүр, зах зээл, супермаркет, цагдаа, эмнэлэг, ресторан . цэсний талаас хэлний товч дээр дарж хэлийг сонгож болно."
     },
     "my": {
         "exit": "ထွက်ပေါက်",
@@ -2677,7 +2809,9 @@
         "_store1": "လိုအပ်အဖြစ်တစ်ခုခုတစ်အရေအတွက်သို့မဟုတ်ထောက်ပံ့ရေးအသုံးပြုရန်ထားရှိမည်။",
         "_store2": "မည်သည့်အရွယ်အစားသို့မဟုတ်ကြင်နာတဲ့ဆိုင်။",
         "_store3": "တစ်ဦးကသိုး, ခုတ်မောင်း, နွားမ, ဒါမှမဟုတ်ဝက်ဝယ်ယူသို့မဟုတ်ဆူအောင်ကျွေးသောအဘို့သိုထား၏။",
-        "_supermarket1": "အစားအစာနှင့်အိမ်ထောင်စုကုန်ပစ္စည်းများရောင်းတစ်ဦးကကြီးမားသော self-ဝန်ဆောင်မှုဆိုင်။"
+        "_supermarket1": "အစားအစာနှင့်အိမ်ထောင်စုကုန်ပစ္စည်းများရောင်းတစ်ဦးကကြီးမားသော self-ဝန်ဆောင်မှုဆိုင်။",
+        "_infodictionary": "မည်သည့်ဘာသာစကားမှာထွက်ပေါက်, စိုးရိမ်ရေမှတ်အကူအညီ, စျေးနှုန်း, ကျေးဇူးတင်စကား, ဝေး, နီးကပ်, စတိုးဆိုင်နှင့်စူပါမားကတ်: ဤ menu ထဲမှာသင်တို့သည်ဤစကားလုံးများ၏အဓိပ္ပာယ်ကိုတိုင်ပင်ဆွေးနွေးနိုင်ပါတယ်။ သင်ကမြှားအပေါ်ကလစ်နှိပ်ခြင်းဖြင့်ဘာသာစကားကိုရွေးနိုင်သည်။",
+        "_infotranslator": "ဒီ menu ထဲမှာသင်တို့သည်ဤစကား၌ပါဘာသာပြန်ချက်နှင့်တိုင်ပင်နိုင်သည်ဆိုဘာသာစကားမှာထွက်ပေါက်, စိုးရိမ်ရေမှတ်အကူအညီ, စျေးနှုန်း, ဟဲလို, ကျေးဇူးတင်စကား, ဝေး, အနီးကပ်မရှိ, ဟုတ်တယ်, မနေ့က, မနက်ဖြန်, ဆိုင်, စျေးကွက်, စူပါမားကတ်, ရဲ, ဆေးရုံနှင့်စားသောက်ဆိုင် ။ သင်ကမီနူးအသီးအသီးအခြမ်းကနေဘာသာစကားခလုတ်ကိုနှိပ်ခြင်းဖြင့်ဘာသာစကားကိုရွေးနိုင်သည်။"
     },
     "ne": {
         "exit": "बाहिर निस्कनुहोस्",
@@ -2717,7 +2851,9 @@
         "_store1": "आवश्यक को लागी प्रयोग को लागी केहि चीज वा आपूर्ति।",
         "_store2": "कुनै आकार वा दयाको पसल।",
         "_store3": "एक भेडा, भित्ता, गाई, वा सुँगुर प्राप्त भयो वा फफनका लागि राखिएको छ।",
-        "_supermarket1": "एक ठूलो आत्म सेवा पसल खाद्य पदार्थ र घरको सामान बेचेर।"
+        "_supermarket1": "एक ठूलो आत्म सेवा पसल खाद्य पदार्थ र घरको सामान बेचेर।",
+        "_infodictionary": "यस मेनुमा तपाई यी शब्दहरूको अर्थलाई सल्लाह गर्न सक्नुहुन्छ: बाहिर निस्कनुहोस्, खतरा, मद्दत, मूल्य, धन्यवाद, टाढा, बन्द, स्टोर, र सुपरमार्केट कुनै पनि भाषामा। तपाईं तीरमा क्लिक गरेर भाषा चयन गर्न सक्नुहुन्छ।",
+        "_infotranslator": "यस मेनुमा तपाई यी शब्दहरूको अनुवादलाई सल्लाह गर्न सक्नुहुन्छ: बाहिर निस्कनुहोस्, खतरा, मद्दत, मूल्य, हेलो, धन्यवाद, टाढा, नजिक, होइन, हाँ, कल, कल, पसल, बजार, सुपरमार्केट, प्रहरी, अस्पताल र रेस्टुरेन्ट कुनै पनि भाषामा । तपाईंले मेनुको प्रत्येक पक्षबाट भाषा बटनमा क्लिक गरेर भाषा चयन गर्न सक्नुहुनेछ।"
     },
     "no": {
         "exit": "exit",
@@ -2757,7 +2893,9 @@
         "_store1": "en mengde eller forsyning av noe som holdes til bruk etter behov.",
         "_store2": "en butikk av enhver storrelse eller slag.",
         "_store3": "et sau, styre, ku eller gris oppkjopt eller oppbevart til fete.",
-        "_supermarket1": "en stor selvbetjeningsbutikk som selger mat og husholdningsvarer."
+        "_supermarket1": "en stor selvbetjeningsbutikk som selger mat og husholdningsvarer.",
+        "_infodictionary": "i denne menyen kan du hore meningen med disse ordene: utgang, fare, hjelp, pris, takk, langt, naer, butikk og supermarked pa alle sprak. du kan velge spraket for klikk pa pilen.",
+        "_infotranslator": "i denne menyen kan du hore oversettelsen av disse ordene: utgang, fare, hjelp, pris, hei, takk, langt, nei, ja, i gar, i morgen, butikk, marked, supermarked, politi, sykehus og restaurant pa hvilket som helst sprak . du kan velge spraket ved a klikke pa sprakknappen fra hver side av menyen."
     },
     "ps": {
         "exit": "وتون",
@@ -2797,7 +2935,9 @@
         "_store1": "د اړتیا وړ اړتیاوو لپاره ساتل شوي مقدار یا مقدار.",
         "_store2": "د هر ډول اندازې یا مهربانۍ هټۍ.",
         "_store3": "یو پسونه، چټک، غوا، یا سور چې حاصل شوي وي یا د ونې لپاره ساتل کیږي.",
-        "_supermarket1": "د لوی ځان خدمت خدمت دوکان د خواړو او کورني توکو خرڅول."
+        "_supermarket1": "د لوی ځان خدمت خدمت دوکان د خواړو او کورني توکو خرڅول.",
+        "_infodictionary": "په دې مینو کې تاسو کولی شئ د دغو کلمو معنی وپوښتئ: بهرنی، خطر، مرسته، بیه، مننه، لرې، نزدې، نزدې، پلورنځي او په بازار کې سترو بازار موندنه. تاسو کولی شئ د تیر په کلیک کولو سره ژبه غوره کړئ.",
+        "_infotranslator": "په دې مینو کې تاسو کولی شئ د دغو کلمو ژباړې سره مشوره وکړئ: بهرنی، خطر، مرسته، بیه، هیلو، مننه، لرې، نږدې، نه، هو، پرون، سبا، هټۍ، مارکيټ، سپر مارکیٹ، پولیس، روغتون او رستوران په هره ژبه . تاسو د مینو د هرې برخې څخه د ژبې بکس په کلیک کولو سره ژبه غوره کولی شئ."
     },
     "fa": {
         "exit": "خروج",
@@ -2837,7 +2977,9 @@
         "_store1": "مقدار یا عرضه چیزی که برای استفاده مورد نیاز است.",
         "_store2": "مغازه ای از هر اندازه یا نوع.",
         "_store3": "یک گوسفند، سرنشین، گاو، یا خوک به دست آوردن یا نگه داشتن برای چاقی.",
-        "_supermarket1": "فروشگاه بزرگ خودکفائی فروش مواد غذایی و کالاهای خانگی."
+        "_supermarket1": "فروشگاه بزرگ خودکفائی فروش مواد غذایی و کالاهای خانگی.",
+        "_infodictionary": "در این منو می توانید معنی این کلمات را بیابید: خروج، خطر، کمک، قیمت، لطف، دور، نزدیک، فروشگاه و سوپر مارکت در هر زبان. شما می توانید زبان را با کلیک بر روی فلش انتخاب کنید.",
+        "_infotranslator": "در این منو شما می توانید از ترجمه این کلمات استفاده کنید: خروج، خطر، کمک، قیمت، سلام، به لطف، دور، نزدیک، نه، بله، دیروز، فردا، فروشگاه، بازار، سوپرمارکت، پلیس، بیمارستان و رستوران در هر زبان . شما می توانید زبان را با کلیک بر روی دکمه زبان در هر طرف منو انتخاب کنید."
     },
     "pl": {
         "exit": "wyjscie",
@@ -2877,7 +3019,9 @@
         "_store1": "ilosc lub dostawa czegos przechowywanego do wykorzystania w razie potrzeby.",
         "_store2": "sklep o dowolnej wielkosci lub rodzaju.",
         "_store3": "owca, wol, krowa lub swinia nabyte lub trzymane do tuczenia.",
-        "_supermarket1": "duzy sklep samoobslugowy sprzedajacy zywnosc i artykuly gospodarstwa domowego."
+        "_supermarket1": "duzy sklep samoobslugowy sprzedajacy zywnosc i artykuly gospodarstwa domowego.",
+        "_infodictionary": "w tym menu mozesz sprawdzic znaczenie tych slow: wyjscie, niebezpieczenstwo, pomoc, cena, dzieki, daleko, zamknij, zapisz i supermarket w dowolnym jezyku. mozesz wybrac jezyk, klikajac strzalke.",
+        "_infotranslator": "w tym menu mozesz sprawdzic tlumaczenie nastepujacych slow: wyjscie, niebezpieczenstwo, pomoc, cena, czesc, dziekuje, daleko, blisko, nie, tak, wczoraj, jutro, sklep, rynek, supermarket, policja, szpital i restauracja w dowolnym jezyku . mozesz wybrac jezyk, klikajac przycisk jezyka z kazdej strony menu."
     },
     "pt": {
         "exit": "saida",
@@ -2917,7 +3061,9 @@
         "_store1": "uma quantidade ou oferta de algo mantido para uso conforme necessario.",
         "_store2": "uma loja de qualquer tamanho ou tipo.",
         "_store3": "um carneiro, boi, vaca ou porco adquirido ou mantido para engorda.",
-        "_supermarket1": "uma grande loja de self-service vendendo alimentos e utensilios domesticos."
+        "_supermarket1": "uma grande loja de self-service vendendo alimentos e utensilios domesticos.",
+        "_infodictionary": "neste menu voce pode consultar o significado destas palavras: saida, perigo, ajuda, preco, obrigado, longe, perto, loja e supermercado em qualquer idioma. voce pode selecionar o idioma clicando na seta.",
+        "_infotranslator": "neste menu voce pode consultar a traducao das seguintes palavras: saida, perigo, ajuda, preco, ola, obrigado, longe, fechar, nao, sim, ontem, amanha, loja, mercado, supermercado, policia, hospital e restaurante em qualquer idioma . voce pode selecionar o idioma clicando no botao de idioma de cada lado do menu."
     },
     "ro": {
         "exit": "iesire",
@@ -2957,7 +3103,9 @@
         "_store1": "o cantitate sau o cantitate de ceva pastrat pentru utilizare dupa cum este necesar.",
         "_store2": "un magazin de orice dimensiune sau natura.",
         "_store3": "oaie, bovina, vaca sau porcine dobandite sau tinute pentru ingrasare.",
-        "_supermarket1": "un mare magazin de autoservire care vand produse alimentare si bunuri de uz casnic."
+        "_supermarket1": "un mare magazin de autoservire care vand produse alimentare si bunuri de uz casnic.",
+        "_infodictionary": "in acest meniu puteti consulta semnificatia acestor cuvinte: iesire, pericol, ajutor, pret, multumesc, departe, aproape, magazin si supermarket in orice limba. puteti selecta limba facand clic pe sageata.",
+        "_infotranslator": "in acest meniu puteti consulta traducerea acestor cuvinte: iesire, pericol, ajutor, pret, salut, multumesc, departe, aproape, nu, da, ieri, maine, magazin, piata, supermarket, politie, spital si restaurant in orice limba . puteti selecta limba facand clic pe butonul de limba din fiecare parte a meniului."
     },
     "ru": {
         "exit": "выход",
@@ -2997,7 +3145,9 @@
         "_store1": "количество или запас чего-либо, оставленного для использования по мере необходимости.",
         "_store2": "магазин любого размера или вида.",
         "_store3": "овца, бык, корова или свинья, добываемые или хранящиеся для откорма.",
-        "_supermarket1": "большой магазин самообслуживания по продаже продуктов питания и товаров для дома."
+        "_supermarket1": "большой магазин самообслуживания по продаже продуктов питания и товаров для дома.",
+        "_infodictionary": "в этом меню вы можете узнать значение этих слов: выход, опасность, помощь, цена, спасибо, далеко, близко, магазин и супермаркет на любом языке. вы можете выбрать язык, нажав на стрелку.",
+        "_infotranslator": "в этом меню вы можете просмотреть перевод этих слов: выход, опасность, помощь, цена, привет, спасибо, далеко, близко, нет, да, вчера, завтра, магазин, рынок, супермаркет, полиция, больница и ресторан на любом языке , вы можете выбрать язык, нажав на кнопку языка с каждой стороны меню."
     },
     "sm": {
         "exit": "tuʻua",
@@ -3037,7 +3187,9 @@
         "_store1": "se aofaiga po o se mea e tuʻuina atu mo le faʻaaoga pe a manaʻomia.",
         "_store2": "o se faleoloa soʻo se tele poʻo se ituaiga.",
         "_store3": "se mamoe, nofoa, povi po o se puaa na maua pe tausia mo le gaʻo.",
-        "_supermarket1": "o se kamupani telefoni feaveaʻi e faʻatau atu meaʻai ma meafale."
+        "_supermarket1": "o se kamupani telefoni feaveaʻi e faʻatau atu meaʻai ma meafale.",
+        "_infodictionary": "i lenei lisi, e mafai ona e faʻatalanoaina le uiga o nei upu: alu ese, lamatia, fesoasoani, tau, faafetai, mamao, latalata, faleoloa ma supermarket i soo se gagana. e mafai ona e filifilia le gagana e ala i le kiliki i le au.",
+        "_infotranslator": "i lenei lisi, e mafai ona e faʻatalanoaina le faaliliuga o nei upu: alu ese, faʻalavelave, fesoasoani, tau, alofa, faafetai, mamao, latalata, leai, ioe, ananafi, taeao, faleoloa, maketi, supermarket, leoleo, falemaʻi ma faleaiga i soo se gagana . e mafai ona e filifilia le gagana i le kilikiina o le kuluma le gagana mai itu taʻitasi o le lisi."
     },
     "gd": {
         "exit": "fag",
@@ -3077,7 +3229,9 @@
         "_store1": "meud no solar de rud a thathar a ’cumail airson a chleachdadh mar as iomchaidh.",
         "_store2": "buth de gach meud no seorsa.",
         "_store3": "a chaora, stiubhard, mart, no muc a gheibhear no a tha iad air an cumail airson reamhrachadh.",
-        "_supermarket1": "buth mhor fein-sheirbheis a tha a ’reic biadh agus stuth taighe."
+        "_supermarket1": "buth mhor fein-sheirbheis a tha a ’reic biadh agus stuth taighe.",
+        "_infodictionary": "sa chlar-taice seo faodaidh tu brigh nam faclan seo a leughadh: fagail, cunnart, cuideachadh, pris, taing, fada, dluth, stor agus mor-bhuth ann an canan sam bith. faodaidh tu an canan a thaghadh le bhith a ’briogadh air an t-saighead.",
+        "_infotranslator": "anns a ’chlar-taice seo, faodaidh tu coimhead ris an eadar-theangachadh de na faclan seo: fagail, cunnart, cuideachadh, pris, hello, taing, fada, faisg, gun, tha, an-de, amaireach, buth, margaidh, mor-bhuth, poileis, ospadal agus taigh-bidh ann an canan sam bith . faodaidh tu an canan a thaghadh le bhith a ’briogadh air a’ phutan canain bho gach taobh den chlar-taice."
     },
     "sr": {
         "exit": "излаз",
@@ -3117,7 +3271,9 @@
         "_store1": "количина или залиха нечега што се чува за употребу по потреби.",
         "_store2": "продавница било које величине или врсте.",
         "_store3": "овце, краве, свиње или стечене за тов.",
-        "_supermarket1": "велика самопослужна продавница која продаје храну и предмете за домаћинство."
+        "_supermarket1": "велика самопослужна продавница која продаје храну и предмете за домаћинство.",
+        "_infodictionary": "у овом менију можете погледати значење ових речи: излаз, опасност, помоћ, цена, хвала, далеко, близу, продавница и супермаркет на било ком језику. језик можете одабрати кликом на стрелицу.",
+        "_infotranslator": "у овом менију можете погледати превод ових речи: излаз, опасност, помоћ, цена, здраво, хвала, далеко, близу, не, да, јуче, сутра, продавница, тржница, супермаркет, полиција, болница и ресторан на било ком језику . можете изабрати језик кликом на дугме за језик са сваке стране менија."
     },
     "st": {
         "exit": "etsoa",
@@ -3157,7 +3313,9 @@
         "_store1": "ho hongata kapa ho fana ka ntho e 'ngoe e bolokiloeng ho sebelisoa ha ho hlokahala.",
         "_store2": "lebenkele la boholo kapa mofuta ofe kapa ofe.",
         "_store3": "konyana, mohope, khomo kapa kolobe e fumanoeng kapa e bolokiloe bakeng sa mafura.",
-        "_supermarket1": "lebenkele le leholo la ho iphelisa le rekisa lijo le thepa ea ntlo."
+        "_supermarket1": "lebenkele le leholo la ho iphelisa le rekisa lijo le thepa ea ntlo.",
+        "_infodictionary": "lenaneng lena o ka sheba se boleloang ke mantsoe ana: tsoa, ​​kotsi, thuso, theko, leboha, hole, haufi, lebenkele le supermarket ka puo leha e le efe. o ka khetha puo ka ho tobetsa motsu.",
+        "_infotranslator": "lihloohong tsena u ka botsa phetolelo ea mantsoe ana: ho tsoa, ​​kotsi, thuso, theko, bonang, leboha, hole, haufi, che, e, maobane, hosasane, mabenkeleng, marakeng, supermarket, mapolesa, sepetlele le reschorenteng ka puo leha e le efe . u ka khetha puo ka ho tobetsa konopo ea puo ho tloha ka lehlakoreng le leng la menu."
     },
     "sn": {
         "exit": "buda",
@@ -3197,7 +3355,9 @@
         "_store1": "chizhinji kana kupa chimwe chinhu chakachengeterwa kushandiswa sezvinodiwa.",
         "_store2": "ichitoro cheshamba chero ipi zvayo kana mutsa.",
         "_store3": "gwai, steer, cow, kana yenguruve yakawana kana yakachengeterwa mafuta.",
-        "_supermarket1": "basa guru rekuzvitengera rinotengesa zvokudya uye zvinhu zveimba."
+        "_supermarket1": "basa guru rekuzvitengera rinotengesa zvokudya uye zvinhu zveimba.",
+        "_infodictionary": "mune menyu unogona kutarisisa zvinorehwa nemashoko aya: kubuda, njodzi, rubatsiro, mutengo, thanks, kure, pedo, dare uye mushambadziro mumutauro chero upi zvake. iwe unogona kusarudza mutauro kuburikidza nechomwe museve.",
+        "_infotranslator": "munyaya iyi unogona kutarisa kushandurwa kwemashoko aya: kubuda, njodzi, rubatsiro, mutengo, tenzi, thanks, kure, pedo, kwete, hongu, zuro, mangwana, chitoro, mushamba, supermarketete, mapurisa, chipatara uye resitorendi mumutauro upi zvawo . iwe unogona kusarudza mutauro kuburikidza nechokuita pane bhidhiyo kubva kune rumwe rutivi rwemenyu."
     },
     "sd": {
         "exit": "ٻاھر",
@@ -3237,7 +3397,9 @@
         "_store1": "ضرورت جي طور تي استعمال لاء رکيل شيء جي مقدار يا مقدار.",
         "_store2": "ڪنهن به سائيز يا قسم جو هڪ دڪان.",
         "_store3": "ھڪڙو ٻڪرين، اسٽير، ڳئون يا سور ساڍا حاصل ڪرڻ يا رکيو ويندو آھي.",
-        "_supermarket1": "هڪ وڏو خود سروس سروس جو دڪان خوراڪ ۽ گھر جي سامان وڪرو ڪري ٿو."
+        "_supermarket1": "هڪ وڏو خود سروس سروس جو دڪان خوراڪ ۽ گھر جي سامان وڪرو ڪري ٿو.",
+        "_infodictionary": "هن مينيو ۾ توهان انهن لفظن جي معني سان صلاح ڪري سگهو ٿا: ڪنهن به زبان ۾ نڪرڻ کان ٻاهر، خطري، مدد، قيمت، شڪر، پري، بند، اسٽوريج ۽ سپر مارڪيٽ. توهان تير تي ڪلڪ ڪري ٻولي چونڊجي سگھو ٿا.",
+        "_infotranslator": "هن مينسٽ ۾ توهان انهن لفظن جي ترجمي تي صلاح ڪري سگهو ٿا: ٻاهر نڪري، خطري، مدد، قيمت، هيلو، شڪر، پري، قريب، نه، هو، ڪال، کل، دڪان، مارڪيٽ، سپر مارڪيٽ، پوليس، اسپتال ۽ رستوران ۾ ڪنهن به ٻوليء ۾ . مينيو جي هر پاسي کان زبان جي بٽڻ تي ڪلڪ ڪندي توهان ٻولي منتخب ڪري سگھو ٿا."
     },
     "si": {
         "exit": "පිටවීම",
@@ -3277,7 +3439,9 @@
         "_store1": "අවශ්ය පරිදි භාවිතා කරන යමක් හෝ ප්රමාණයක ප්රමාණය හෝ සැපයුම.",
         "_store2": "ඕනෑම ප්රමාණයක හෝ වර්ගයක වෙළඳ සැලක්.",
         "_store3": "බැටළුවන්, සත්වයින්, ගවයන් හෝ ඌරු මස් හෝ තම්බා ගැනීම සඳහා තබා ඇත.",
-        "_supermarket1": "ආහාර සහ ගෘහ භාන්ඩ අලෙවි කරන විශාල ස්වයං සේවා සාප්පුවක්."
+        "_supermarket1": "ආහාර සහ ගෘහ භාන්ඩ අලෙවි කරන විශාල ස්වයං සේවා සාප්පුවක්.",
+        "_infodictionary": "මෙම මෙනුවෙහි ඔබට මෙම වචනවල අර්ථය: පිටවීම, අනතුර, උපකාරය, මිළ, ස්තුති, දුර, සමීප, ගබඩා සහ සුපිරි වෙළඳසැල්වලින් ඕනෑම භාෂාවක් භාවිතා කරන්න. ඊතලය ක්ලික් කිරීමෙන් ඔබට භාෂාව තෝරා ගත හැකිය.",
+        "_infotranslator": "මෙම මෙනුවෙහි ඔබට මෙම වචන පරිවර්ථනය කළ හැකිය: පිටවීම, අනතුර, උපකාරය, මිල, හලෝ, ස්තුති, දුර, සමීප, නැත, ඔව්, ඊයේ, හෙටත්, වෙළඳසල, වෙළඳපොළ, සුපිරි වෙළඳසැල්, පොලීසිය, . මෙනුවේ එක් පැත්තකින් භාෂා බොත්තම මත ක්ලික් කිරීමෙන් ඔබට භාෂාව තේරිය හැකිය."
     },
     "sk": {
         "exit": "vychod",
@@ -3317,7 +3481,9 @@
         "_store1": "mnozstvo alebo dodavka niecoho, co je potrebne na pouzitie podla potreby.",
         "_store2": "obchod akejkolvek velkosti alebo druhu.",
         "_store3": "ovce, voly, kravy alebo osipane ziskane alebo drzane na vykrm.",
-        "_supermarket1": "velky samoobsluzny obchod s potravinami a tovarom pre domacnost."
+        "_supermarket1": "velky samoobsluzny obchod s potravinami a tovarom pre domacnost.",
+        "_infodictionary": "v tomto menu si mozete prezriet vyznam tychto slov: exit, nebezpecenstvo, pomoc, cena, vdaka, daleko, blizko, obchod a supermarket v akomkolvek jazyku. jazyk mozete vybrat kliknutim na sipku.",
+        "_infotranslator": "v tomto menu mozete konzultovat preklad tychto slov: exit, nebezpecenstvo, pomoc, cena, ahoj, vdaka, daleko, zavriet, nie, ano, vcera, zajtra, obchod, trh, supermarket, policia, nemocnica a restauracia v akomkolvek jazyku , jazyk si mozete vybrat kliknutim na jazykove tlacidlo na kazdej strane menu."
     },
     "sl": {
         "exit": "izhod",
@@ -3357,7 +3523,9 @@
         "_store1": "kolicina ali dobava necesa, kar se uporablja, kot je potrebno.",
         "_store2": "trgovina vseh velikosti ali vrste.",
         "_store3": "ovce, vol, kravo ali prasic, pridobljene ali gojene za pitanje.",
-        "_supermarket1": "velika samopostrezna trgovina, ki prodaja zivila in gospodinjske izdelke."
+        "_supermarket1": "velika samopostrezna trgovina, ki prodaja zivila in gospodinjske izdelke.",
+        "_infodictionary": "v tem meniju si lahko ogledate pomen teh besed: izhod, nevarnost, pomoc, cena, hvala, dalec, blizu, trgovina in supermarket v katerem koli jeziku. jezik lahko izberete s klikom na puscico.",
+        "_infotranslator": "v tem meniju si lahko ogledate prevod teh besed: izhod, nevarnost, pomoc, cena, zdravo, hvala, dalec, blizu, ne, da, vceraj, jutri, trgovina, trg, supermarket, policija, bolnisnica in restavracija v katerem koli jeziku . jezik lahko izberete s klikom na gumb za jezik na vsaki strani menija."
     },
     "so": {
         "exit": "ka bax",
@@ -3397,7 +3565,9 @@
         "_store1": "tirada ama bixinta wax loo hayo sida loo baahan yahay.",
         "_store2": "dukaanka cabbirka ama nooc kasta.",
         "_store3": "lo'da, lafaha, lo'da, ama doofaarka la iibsaday ama lagu hayo naas nuujin.",
-        "_supermarket1": "dukaamo badan oo iibiya cuntooyinka iyo alaab guri."
+        "_supermarket1": "dukaamo badan oo iibiya cuntooyinka iyo alaab guri.",
+        "_infodictionary": "qormadan waxaad kaala tashan kartaa macnaha ereyadan: ka bixitaanka, khatarta, caawimaadda, qiimaha, mahad, fog, dhow, dukaanka iyo dukaanka oo luqad kasta. waxaad dooran kartaa luqadda adigoo riixaya fallaadhaha.",
+        "_infotranslator": "qormadan waxaad kaala tashan kartaa tarjumaadda ereyadan: ka bixitaanka, khatarta, caawimaadda, qiimaha, hello, mahad, fog, dhow, maya, haa, shalay, berrito, dukaanka, suuqa, dukaanka, booliska, isbitaalka iyo makhaayadaha luqad kasta . waxaad dooran kartaa luqadda adiga oo gujinaya badhanka luqadda ee dhinac kasta ee menu."
     },
     "es": {
         "exit": "salida",
@@ -3437,7 +3607,9 @@
         "_store1": "una cantidad o suministro de algo guardado para su uso segun sea necesario.",
         "_store2": "una tienda de cualquier tamano o clase.",
         "_store3": "una oveja, novillo, vaca o cerdo adquirida o criada para engorde.",
-        "_supermarket1": "una gran tienda de autoservicio que vende alimentos y articulos para el hogar."
+        "_supermarket1": "una gran tienda de autoservicio que vende alimentos y articulos para el hogar.",
+        "_infodictionary": "en este menu puede consultar el significado de estas palabras: salida, peligro, ayuda, precio, gracias, lejos, cerca, tienda y supermercado en cualquier idioma. puede seleccionar el idioma haciendo clic en la flecha.",
+        "_infotranslator": "en este menu puede consultar la traduccion de estas palabras: salir, peligro, ayuda, precio, hola, gracias, lejos, cerca, no, si, ayer, manana, tienda, mercado, supermercado, policia, hospital y restaurante en cualquier idioma. . puede seleccionar el idioma haciendo clic en el boton de idioma de cada lado del menu."
     },
     "su": {
         "exit": "kaluar",
@@ -3477,7 +3649,9 @@
         "_store1": "a kuantitas atawa supply hal diteundeun pikeun pamakean sakumaha diperlukeun.",
         "_store2": "a warung of sagala ukuran atawa jenis.",
         "_store3": "hiji domba, sapi jalu, sapi, atawa babi kaala atawa diteundeun pikeun fattening.",
-        "_supermarket1": "a warung timer jasa ageung ngajual pangan jeung barang rumah tangga."
+        "_supermarket1": "a warung timer jasa ageung ngajual pangan jeung barang rumah tangga.",
+        "_infodictionary": "dina menu ieu bisa konsultasi harti kecap ieu: kaluar, bahaya, pitulung, harga, hatur nuhun, jauh, nutup, nyimpen sareng supermarket dina basa nanaon. anjeun tiasa milih bahasa ku klik dina panah.",
+        "_infotranslator": "dina menu ieu bisa konsultasi ka tarjamah tina kecap ieu: kaluar, bahaya, pitulung, harga, pantun, hatur nuhun, jauh, nutup, teu, enya, kamari, isukan, warung, pasar, supermarket, pulisi, rumah sakit jeung restoran dina basa mana wae . anjeun tiasa milih basa nu ku ngaklik on tombol basa ti unggal sisi menu nu."
     },
     "sw": {
         "exit": "utgang",
@@ -3517,7 +3691,9 @@
         "_store1": "kiasi au ugavi wa kitu kilichowekwa kwa matumizi kama inahitajika.",
         "_store2": "duka la ukubwa au aina yoyote.",
         "_store3": "kondoo, ng'ombe, ng'ombe, au nguruwe inayopatikana au kuhifadhiwa kwa mafuta.",
-        "_supermarket1": "duka kubwa la kujitegemea la kuuza vyakula na bidhaa za nyumbani."
+        "_supermarket1": "duka kubwa la kujitegemea la kuuza vyakula na bidhaa za nyumbani.",
+        "_infodictionary": "katika orodha hii unaweza kushauriana na maana ya maneno haya: kuondoka, hatari, msaada, bei, shukrani, mbali, karibu, duka na maduka makubwa katika lugha yoyote. unaweza kuchagua lugha kwa kubonyeza mshale.",
+        "_infotranslator": "katika orodha hii unaweza kushauriana na tafsiri ya maneno haya: kuondoka, hatari, msaada, bei, hello, shukrani, mbali, karibu, hapana, ndiyo, jana, kesho, duka, soko, maduka makubwa, polisi, hospitali na mgahawa kwa lugha yoyote . unaweza kuchagua lugha kwa kubonyeza kifungo cha lugha kutoka kila upande wa menyu."
     },
     "sv": {
         "exit": "utgang",
@@ -3557,7 +3733,9 @@
         "_store1": "en kvantitet eller tillforsel av nagot halls for anvandning efter behov.",
         "_store2": "en butik av alla storlekar eller slag.",
         "_store3": "ett far, styra, ko eller gris som forvarvas eller halls for godning.",
-        "_supermarket1": "en stor sjalvbetjaningsbutik som saljer mat och hushallsartiklar."
+        "_supermarket1": "en stor sjalvbetjaningsbutik som saljer mat och hushallsartiklar.",
+        "_infodictionary": "i den har menyn kan du fa veta betydelsen av dessa ord: utgang, fara, hjalp, pris, tack, langt, nara, butik och stormarknad pa vilket sprak som helst. du kan valja sprak for att klicka pa pilen.",
+        "_infotranslator": "i denna meny kan du hora oversattningen av dessa ord: utgang, fara, hjalp, pris, hej, tack, langt, nara, nej, ja, igar, imorgon, butik, marknad, stormarknad, polis, sjukhus och restaurang pa vilket sprak som helst . du kan valja sprak genom att klicka pa sprakknappen fran varje sida av menyn."
     },
     "tg": {
         "exit": "баромадгоҳ",
@@ -3597,7 +3775,9 @@
         "_store1": "миқдор ё пешниҳоди чизе, ки барои истифодаи зарурӣ нигоҳ дошта мешавад.",
         "_store2": "рӯйхати ҳаҷм ё намуди он.",
         "_store3": "рӯй, роҳ, гов, ё хук ба даст меоварад ё барои ширеше нигоҳ дошта мешавад.",
-        "_supermarket1": "дӯкони калонхоҳии худхизматрасонии фурӯш ва маҳсулоти маишӣ."
+        "_supermarket1": "дӯкони калонхоҳии худхизматрасонии фурӯш ва маҳсулоти маишӣ.",
+        "_infodictionary": "дар ин меню шумо метавонед мафҳуми ин калимаҳоро дар бар гиред: баромадан, хатар, кӯмак, нарх, шукргузорӣ, дур, наздик, мағоза ва мағозаи ҳама гуна забон. шумо метавонед забони интихобшударо бо пахш кунед.",
+        "_infotranslator": "дар ин меню шумо метавонед тарҷумаи ин калимаҳоро дар бар гиред: тарҷума, таҳдид, кӯмак, нархи, тӯҳфаҳо, шукргузорӣ, дур, наздик, не, ҳа, дирӯз, фардо, мағозаҳо, бозор, супермаркет, полис, беморхона ва тарабхона дар ҳар забон . шумо метавонед забони дилхоҳро бо пахш кардани тугмаи забон аз ҳар як тарафи меню интихоб кунед."
     },
     "ta": {
         "exit": "வெளியேறு",
@@ -3637,7 +3817,9 @@
         "_store1": "தேவையான அளவு தேவைப்படும் ஒரு அளவு அல்லது சப்ளை.",
         "_store2": "எந்த அளவு அல்லது வகையான ஒரு கடை.",
         "_store3": "ஒரு செம்மறியாடு, மாடு, மாடு, அல்லது பன்றி வாங்குவது அல்லது உண்ணுவதற்கு வைக்கப்படுகிறது.",
-        "_supermarket1": "ஒரு பெரிய சுய சேவை கடை உணவுகள் மற்றும் வீட்டு பொருட்கள் விற்பனை."
+        "_supermarket1": "ஒரு பெரிய சுய சேவை கடை உணவுகள் மற்றும் வீட்டு பொருட்கள் விற்பனை.",
+        "_infodictionary": "இந்த மெனுவில் நீங்கள் இந்த வார்த்தைகளின் அர்த்தத்தை ஆராயலாம்: வெளியேறு, ஆபத்து, உதவி, விலை, நன்றி, இதுவரை, நெருக்கமாக, கடை மற்றும் பல்பொருள் அங்காடி எந்த மொழியிலும். அம்புக்குறியைக் கிளிக் செய்வதன் மூலம் மொழியைத் தேர்ந்தெடுக்கலாம்.",
+        "_infotranslator": "இந்த மெனுவில் நீங்கள் இந்த வார்த்தைகளின் மொழிபெயர்ப்பைத் தெரிந்து கொள்ளலாம்: வெளியேறு, ஆபத்து, உதவி, விலை, ஹலோ, நன்றி, இதுவரை, நெருக்கமான, இல்லை, ஆம், நேற்று, நாளை, கடை, சந்தை, பல்பொருள் அங்காடி, போலீஸ், மருத்துவமனை மற்றும் உணவகம் எந்த மொழியிலும் . மெனுவின் ஒவ்வொரு பக்கத்திலும் உள்ள மொழி பொத்தானைக் கிளிக் செய்வதன் மூலம் மொழியைத் தேர்ந்தெடுக்கவும்."
     },
     "te": {
         "exit": "నిష్క్రమించు",
@@ -3677,7 +3859,9 @@
         "_store1": "అవసరానికి ఉపయోగపడే విధంగా ఏదో ఒక పరిమాణం లేదా సరఫరా.",
         "_store2": "ఏ పరిమాణం లేదా రకమైన దుకాణం.",
         "_store3": "ఒక గొర్రె, స్టీర్, ఆవు, లేదా పంది కొనుగోలు లేదా fattening కోసం ఉంచింది.",
-        "_supermarket1": "ఒక పెద్ద స్వయంసేవ దుకాణం అమ్మే ఆహారాలు మరియు గృహోపకరణాలు."
+        "_supermarket1": "ఒక పెద్ద స్వయంసేవ దుకాణం అమ్మే ఆహారాలు మరియు గృహోపకరణాలు.",
+        "_infodictionary": "నిష్క్రమణ, ప్రమాదం, సహాయం, ధర, కృతజ్ఞతలు, చాలా దగ్గరగా, దుకాణం మరియు సూపర్మార్కెట్లు ఏ భాషలో అయినా ఈ మెనూలో మీరు ఈ పదాల యొక్క అర్ధాన్ని పరిశీలించవచ్చు. మీరు బాణం మీద క్లిక్ చేసి భాషను ఎంచుకోవచ్చు.",
+        "_infotranslator": "ఈ మెనూలో మీరు ఈ పదాల అనువాదాన్ని సంప్రదించవచ్చు: నిష్క్రమణ, అపాయం, సహాయం, ధర, హలో, కృతజ్ఞతలు, చాలా దగ్గరగా, నో, అవును, నిన్న, రేపు, దుకాణం, మార్కెట్, సూపర్మార్కెట్, పోలీసు, హాస్పిటల్ మరియు రెస్టారెంట్ భాష . మీరు మెను ప్రతి వైపు నుండి భాష బటన్ పై క్లిక్ చేసి భాషను ఎంచుకోవచ్చు."
     },
     "th": {
         "exit": "ทางออก",
@@ -3717,7 +3901,9 @@
         "_store1": "ปริมาณหรืออุปทานของสิ่งที่เก็บไว้เพื่อการใช้งานตามต้องการ",
         "_store2": "ร้านค้าทุกขนาดหรือทุกประเภท",
         "_store3": "แกะขุนนางวัวหรือหมูที่ได้มาหรือเก็บไว้เพื่อขุน",
-        "_supermarket1": "ร้านค้าแบบบริการตนเองขนาดใหญ่ขายอาหารและของใช้ในครัวเรือน"
+        "_supermarket1": "ร้านค้าแบบบริการตนเองขนาดใหญ่ขายอาหารและของใช้ในครัวเรือน",
+        "_infodictionary": "ในเมนูนี้คุณสามารถปรึกษาความหมายของคำเหล่านี้: ออก, อันตราย, ช่วยเหลือ, ราคา, ขอบคุณ, ห่างไกล, ปิด, ร้านค้าและซูเปอร์มาร์เก็ตในภาษาใด ๆ คุณสามารถเลือกภาษาได้โดยคลิกที่ลูกศร",
+        "_infotranslator": "ในเมนูนี้คุณสามารถปรึกษาการแปลของคำเหล่านี้: ทางออก, อันตราย, ช่วยเหลือ, ราคา, สวัสดี, ขอบคุณ, ไกล, ใกล้, ไม่, ใช่, เมื่อวาน, พรุ่งนี้, ร้านค้า, ตลาด, ซุปเปอร์มาร์เก็ต, ตำรวจ, โรงพยาบาลและร้านอาหารในภาษาใด ๆ . คุณสามารถเลือกภาษาได้โดยคลิกที่ปุ่มภาษาจากแต่ละด้านของเมนู"
     },
     "tr": {
         "exit": "cikis",
@@ -3757,7 +3943,9 @@
         "_store1": "gerektiginde kullanmak uzere tutulan bir seyin miktari veya arzi.",
         "_store2": "her boyutta veya cesitte bir dukkan.",
         "_store3": "bir koyun, yonlendirmek, inek veya domuz besiye alinmis veya besi icin saklanmis.",
-        "_supermarket1": "yiyecek ve ev esyalari satan buyuk bir self-servis dukkani."
+        "_supermarket1": "yiyecek ve ev esyalari satan buyuk bir self-servis dukkani.",
+        "_infodictionary": "bu menude su kelimelerin anlamlarini ogrenebilirsiniz: cikis, tehlike, yardim, fiyat, tesekkurler, uzak, yakin, magaza ve supermarket herhangi bir dilde. dili oka tiklayarak secebilirsiniz.",
+        "_infotranslator": "bu menude su kelimelerin cevirisine bakabilirsiniz: cikis, tehlike, yardim, fiyat, merhaba, tesekkurler, uzak, kapat, hayir, evet, dun, yarin, dukkan, market, supermarket, polis, hastane ve restoran herhangi bir dilde . menunun her bir tarafindaki dil dugmesine tiklayarak dili secebilirsiniz."
     },
     "uk": {
         "exit": "вхід",
@@ -3797,7 +3985,9 @@
         "_store1": "кількість або запас чогось, що зберігається для використання, якщо це необхідно.",
         "_store2": "магазин будь-якого розміру або виду.",
         "_store3": "овець, що направляє, корова, або свиня, придбані або утримуються для відгодівлі.",
-        "_supermarket1": "великий магазин самообслуговування, що торгує продуктами харчування та побутовими товарами."
+        "_supermarket1": "великий магазин самообслуговування, що торгує продуктами харчування та побутовими товарами.",
+        "_infodictionary": "у цьому меню можна ознайомитися зі змістом цих слів: вихід, небезпека, допомога, ціна, спасибі, далеко, закрити, зберігати і супермаркет на будь-якій мові. можна вибрати мову натисканням стрілки.",
+        "_infotranslator": "у цьому меню ви можете ознайомитися з перекладом цих слів: вихід, небезпека, допомога, ціна, привіт, спасибі, далеко, закрити, ні, так, вчора, завтра, магазин, ринок, супермаркет, поліція, лікарня і ресторан будь-якою мовою . ви можете вибрати мову, натиснувши кнопку мови з кожної сторони меню."
     },
     "ur": {
         "exit": "باہر نکلیں",
@@ -3837,7 +4027,9 @@
         "_store1": "ضرورت کے طور پر استعمال کے لۓ کسی چیز کی مقدار یا فراہمی.",
         "_store2": "کسی بھی سائز یا قسم کی ایک دکان.",
         "_store3": "ایک بھیڑ، چراغ، گائے، یا سور کو حاصل کرنے کے لئے یا بھوک لگی ہے.",
-        "_supermarket1": "ایک بڑی سیل سروس کی دکان کھانے اور گھروں کی مالیت کی فروخت کرتی ہے."
+        "_supermarket1": "ایک بڑی سیل سروس کی دکان کھانے اور گھروں کی مالیت کی فروخت کرتی ہے.",
+        "_infodictionary": "اس مینو میں آپ ان الفاظ کے معنی سے مشورہ کرسکتے ہیں: باہر نکلیں، خطرے، مدد، قیمت، شکریہ، دور، قریبی، اسٹور اور سپر مارکیٹ. آپ تیر پر کلک کرکے زبان منتخب کرسکتے ہیں.",
+        "_infotranslator": "اس مینو میں آپ ان الفاظ کے ترجمہ سے مشورہ کرسکتے ہیں: باہر نکلیں، خطرے، مدد، قیمت، ہیلو، شکریہ، دور، قریبی، نہیں، ہاں، کل، کل، دکان، مارکیٹ، سپر مارکیٹ، پولیس، اسپتال اور ریستوران کسی بھی زبان میں . آپ مینو کے ہر طرف سے زبان کے بٹن پر کلک کرکے زبان منتخب کرسکتے ہیں."
     },
     "uz": {
         "exit": "chiqish",
@@ -3877,7 +4069,9 @@
         "_store1": "zarur hollarda foydalanish uchun saqlanadigan narsa miqdori yoki ta'minoti.",
         "_store2": "har qanday hajmdagi yoki turdagi do'kon.",
         "_store3": "qo'y, qo'ziqorin, sigir yoki cho'chqani boqish uchun sotib olishi yoki saqlanishi mumkin.",
-        "_supermarket1": "oziq-ovqatlar va uy-ro'zg'or buyumlarini sotadigan katta self-xizmat do'koni."
+        "_supermarket1": "oziq-ovqatlar va uy-ro'zg'or buyumlarini sotadigan katta self-xizmat do'koni.",
+        "_infodictionary": "ushbu menyuda siz ushbu so'zlarning ma'nosiga murojaat qilishingiz mumkin: chiqish, xavf, yordam, narx, rahmat, uzoq, yaqin, do'kon va supermarket har qanday tilda. okni bosish orqali tilni tanlashingiz mumkin.",
+        "_infotranslator": "ushbu menyuda siz ushbu so'zlarning tarjimasiga murojaat qilishingiz mumkin: chiqish, xavf, yordam, narx, salom, rahmat, uzoq, yaqin, yo'q, kecha, ertaga, do'kon, market, supermarket, politsiya, shifoxona va restoran har qanday tilda . menyuning har bir tomonidagi tilni tanlash tugmasini bosib tilni tanlashingiz mumkin."
     },
     "vi": {
         "exit": "loi thoat hiem",
@@ -3917,7 +4111,9 @@
         "_store1": "mot so luong hoac cung cap mot cai gi do giu cho su dung khi can thiet.",
         "_store2": "mot cua hang co kich thuoc hoac loai.",
         "_store3": "mot con cuu, chi dao, bo, hoac lon co duoc hoac giu lai de vo beo.",
-        "_supermarket1": "mot cua hang tu phuc vu lon ban thuc pham va do gia dung."
+        "_supermarket1": "mot cua hang tu phuc vu lon ban thuc pham va do gia dung.",
+        "_infodictionary": "trong menu nay, ban co the tham khao y nghia cua cac tu nay: loi ra, nguy hiem, tro giup, gia ca, cam on, xa, dong cua, cua hang va sieu thi bang bat ky ngon ngu nao. ban co the chon ngon ngu bang cach nhap vao mui ten.",
+        "_infotranslator": "trong menu nay, ban co the tham khao ban dich cua cac tu nay: loi ra, nguy hiem, giup do, gia ca, xin chao, cam on, xa, gan, khong, co, ngay hom qua, ngay mai, cua hang, cho, sieu thi, canh sat, benh vien va nha hang . ban co the chon ngon ngu bang cach nhap vao nut ngon ngu tu moi ben cua menu."
     },
     "cy": {
         "exit": "ymadael",
@@ -3957,7 +4153,9 @@
         "_store1": "nifer neu gyflenwad o rywbeth a gedwir i'w ddefnyddio yn ol yr angen.",
         "_store2": "siop o unrhyw faint neu fath.",
         "_store3": "defaid, llyw, buwch, neu fochyn a gaffaelwyd neu a gedwir ar gyfer pesgi.",
-        "_supermarket1": "siop hunanwasanaeth fawr sy'n gwerthu bwydydd a nwyddau cartref."
+        "_supermarket1": "siop hunanwasanaeth fawr sy'n gwerthu bwydydd a nwyddau cartref.",
+        "_infodictionary": "yn y ddewislen hon gallwch edrych ar ystyr y geiriau hyn: allanfa, perygl, help, pris, diolch, pell, agos, storfa ac archfarchnad mewn unrhyw iaith. gallwch ddewis yr iaith trwy glicio ar y saeth.",
+        "_infotranslator": "yn y ddewislen hon gallwch edrych ar gyfieithu'r geiriau hyn: allanfa, perygl, help, pris, helo, diolch, bell, agos, na, ie, ddoe, yfory, siop, marchnad, archfarchnad, heddlu, ysbyty a bwyty mewn unrhyw iaith . gallwch ddewis yr iaith drwy glicio ar y botwm iaith o bob ochr i'r fwydlen."
     },
     "xh": {
         "exit": "phuma",
@@ -3997,7 +4195,9 @@
         "_store1": "ubungakanani okanye ukunikezelwa kwento egcinwe ukusetyenziswa njengoko kuyimfuneko.",
         "_store2": "ivenkile nayiphi na ubukhulu okanye ububele.",
         "_store3": "iigusha, i-steer, inkomo, okanye ihagu efunyenwe okanye igcinwe ukuthotywa.",
-        "_supermarket1": "inkonzo enkulu yokuzithengisa ukutya kunye neempahla zendlu."
+        "_supermarket1": "inkonzo enkulu yokuzithengisa ukutya kunye neempahla zendlu.",
+        "_infodictionary": "kule menu ungabonisana nentsingiselo yamagama: ukuphuma, ingozi, uncedo, intengo, bulela, kude, kusondele, kugcinwe kunye nevenkile kunoma yiluphi ulwimi. unokhetha ulwimi ngokuchofoza kwisitya.",
+        "_infotranslator": "kule menu ungabonisana nokuguqulwa kwamagama: ukuphuma, ingozi, uncedo, intengo, siyabonga, siyabonga, kude, sondele, hayi, ewe, izolo, ngomso, ivenkile, ivenkile, ivenkile, amapolisa, isibhedlele kunye nendawo yokudlela nayiphi na ulwimi . ungakhetha ulwimi ngokuchofoza iqhosha lolimi ukusuka kwicala ngalinye lemenyu."
     },
     "yi": {
         "exit": "exit",
@@ -4037,7 +4237,9 @@
         "_store1": "א קוואַנטיטי אָדער צושטעלן פון עפּעס געהאלטן פֿאַר נוצן ווי דארף.",
         "_store2": "א קראָם פון קיין גרייס אָדער מין.",
         "_store3": "א שעפּס, סטיר, קו, אָדער חזיר קונה אָדער געהאלטן פֿאַר פאַטנינג.",
-        "_supermarket1": "א גרויס זיך-דינסט קראָם סעלינג פודז און הויזגעזינד סכוירע."
+        "_supermarket1": "א גרויס זיך-דינסט קראָם סעלינג פודז און הויזגעזינד סכוירע.",
+        "_infodictionary": "אין דעם מעניו איר קענען באַראַטנ די טייַטש פון די ווערטער: אַרויסגאַנג, געפאַר, הילף, פּרייַז, דאַנק, ווייַט, נאָענט, קראָם און סופּערמאַרק אין קיין שפּראַך. איר קענען אויסקלייַבן די שפּראַך דורך גיט אויף די פייַל.",
+        "_infotranslator": "אין דעם מעניו איר קענען באַראַטנ די איבערזעצונג פון די ווערטער: אַרויסגאַנג, געפאַר, הילף, פּרייַז, העלא, דאַנק, ווייַט, נאָענט, ניט, יאָ, נעכטן, מאָרגן, קראָם, מאַרק, סופּערמאַרק, פּאָליצייַ, שפּיטאָל און רעסטאָראַן אין קיין שפּראַך . איר קענען אויסקלייַבן די שפּראַך דורך געבן אַ קליק אויף די שפּראַך קנעפּל פון יעדער זייַט פון די מעניו."
     },
     "yo": {
         "exit": "jade",
@@ -4077,7 +4279,9 @@
         "_store1": "apo tabi ipese ti nkan ti a pa fun lilo bi o ti nilo.",
         "_store2": "ile itaja ti eyikeyi iwon tabi iru.",
         "_store3": "a agutan, abo, abo, tabi elede ti a ti fipamo tabi ti a fi pamo fun ora.",
-        "_supermarket1": "ile itaja ti ara eni nla ta awon ounje ati awon ebun ile."
+        "_supermarket1": "ile itaja ti ara eni nla ta awon ounje ati awon ebun ile.",
+        "_infodictionary": "ninu akojo asayan yii o le safihan awon itumo oro wonyi: jade, ewu, iranlowo, owo, ope, jina, sunmo, itaja ati fifuye ni eyikeyi ede. o le yan ede nipa te lori itoka.",
+        "_infotranslator": "ninu akojo asayan yii o le seduro si iyipada oro wonyi: jade, ewu, iranlowo, owo, alaafia, ope, jina, sunmo, rara, beeni, lana, ola, ile itaja, oja, fifuye, olopa, ile iwosan ati ounje ni eyikeyi ede . o le yan ede nipa tite lori botini botini lati egbe kookan ti akojo."
     },
     "zu": {
         "exit": "phuma",
@@ -4117,6 +4321,8 @@
         "_store1": "inani noma ukunikezwa okuthile okugcinwe ukusetshenziswa njengoba kudingeka.",
         "_store2": "isitolo nanoma yisiphi isayizi noma uhlobo.",
         "_store3": "imvu, i-steer, inkomo, noma ingulube etholakalayo noma igcinwe ukuze igcobe.",
-        "_supermarket1": "isitolo esikhulu sokuzithengisa ukudla nokudayiswa kwempahla yasendlini."
+        "_supermarket1": "isitolo esikhulu sokuzithengisa ukudla nokudayiswa kwempahla yasendlini.",
+        "_infodictionary": "kulo menyu ungabonisana nalokho okushiwo la magama: ukuphuma, ingozi, usizo, intengo, sibonga, kude, eduze, esitolo kanye nesitolo kunoma yiluphi ulimi. ungakhetha ulimi ngokuchofoza kumcibisholo.",
+        "_infotranslator": "kulo menyu ungabheka ukuhunyushwa kwala magama: ukuphuma, ingozi, usizo, intengo, siyabonga, sibonga, kude, sondele, cha, cha, yebo, izolo, kusasa, esitolo, emakethe, esitolo esikhulu, amaphoyisa, esibhedlela kanye nendawo yokudlela kunoma yiluphi ulimi . ungakhetha ulimi ngokuchofoza inkinobho yolimi ohlangothini ngalunye lwemenyu."
     }
 }
