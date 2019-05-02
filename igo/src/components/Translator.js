@@ -229,21 +229,20 @@ export default class Translator extends Component {
                             onClick={this.props.keyboardToggle}
                             placeholder="Type something..."
                         />
+                        <i
+                            onClick={() => this.speechInput()}
+                            className="fas fa-volume-up"
+                        />
                         <Line />
+                        <i
+                            onClick={() => this.speechOutput()}
+                            className="fas fa-volume-up"
+                        />
                         <TextInput type="text" value={this.state.result} />
                     </Box>
                 </div>
                 <ExtraButtons className="extra-buttons">
-                    <i className="fas fa-camera" />
-                    <i
-                        onClick={() => this.speechInput()}
-                        className="fas fa-volume-up"
-                    />
-                    <i
-                        onClick={() => this.speechOutput()}
-                        className="fas fa-volume-up"
-                    />{" "}
-                    <br />
+                    <i className="fas fa-camera" /> <br />
                 </ExtraButtons>
             </TranslatorWrapper>
         );
