@@ -3,8 +3,7 @@ import styled from "styled-components";
 import codes from "./../lang/codes.json";
 import langs from "./../lang/langs.json";
 import Popup from "reactjs-popup";
-import Keyboard from "react-simple-keyboard";
-import "react-simple-keyboard/build/css/index.css";
+import Speech from "speak-tts";
 
 export default class Translator extends Component {
     constructor(props) {
@@ -101,6 +100,60 @@ export default class Translator extends Component {
         this.setState({ toLang: newLang });
     }
 
+    speechInput() {
+        const speech = new Speech();
+        if (speech.hasBrowserSupport()) {
+            // returns a boolean
+            console.log("speech synthesis supported");
+        }
+        speech
+            .init()
+            .then(data => {
+                // The "data" object contains the list of available voices and the voice synthesis params
+                console.log("Speech is ready, voices are available", data);
+            })
+            .catch(e => {
+                console.error("An error occured while initializing : ", e);
+            });
+        speech
+            .speak({
+                text: this.props.keyboardInput
+            })
+            .then(() => {
+                console.log("Success !");
+            })
+            .catch(e => {
+                console.error("An error occurred :", e);
+            });
+    }
+
+    speechOutput() {
+        const speech = new Speech();
+        if (speech.hasBrowserSupport()) {
+            // returns a boolean
+            console.log("speech synthesis supported");
+        }
+        speech
+            .init()
+            .then(data => {
+                // The "data" object contains the list of available voices and the voice synthesis params
+                console.log("Speech is ready, voices are available", data);
+            })
+            .catch(e => {
+                console.error("An error occured while initializing : ", e);
+            });
+        speech
+            .speak({
+                text: this.state.result
+            })
+            .then(() => {
+                console.log("Success !");
+            })
+            .catch(e => {
+                console.error("An error occurred :", e);
+            });
+    }
+
     render() {
         return (
             <TranslatorWrapper>
@@ -182,7 +235,15 @@ export default class Translator extends Component {
                 </div>
                 <ExtraButtons className="extra-buttons">
                     <i className="fas fa-camera" />
-                    <i className="fas fa-microphone" /> <br />
+                    <i
+                        onClick={() => this.speechInput()}
+                        className="fas fa-volume-up"
+                    />
+                    <i
+                        onClick={() => this.speechOutput()}
+                        className="fas fa-volume-up"
+                    />{" "}
+                    <br />
                 </ExtraButtons>
             </TranslatorWrapper>
         );

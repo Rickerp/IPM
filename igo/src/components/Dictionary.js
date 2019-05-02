@@ -95,7 +95,10 @@ export default class Dictionary extends Component {
                     <div className="main-header">
                         <MainHeader>Dictionary</MainHeader>
                     </div>
-                    <div className="language-input">
+                    <div
+                        className="language-input"
+                        onClick={() => this.props.keyboardToggle(false)}
+                    >
                         <Popup
                             trigger={
                                 <LanguageInput>
