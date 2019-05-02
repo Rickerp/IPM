@@ -14,7 +14,7 @@ import Dictionary from "./components/Dictionary";
 import Translator from "./components/Translator";
 import { createBrowserHistory } from "history";
 import Keyboard from "react-simple-keyboard";
-import "react-simple-keyboard/build/css/index.css";
+import "./keyboard.css";
 
 var history;
 var backAction;

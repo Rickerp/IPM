@@ -20,6 +20,15 @@ export default class Translator extends Component {
         this.changeToLang = this.changeToLang.bind(this);
     }
 
+    styles = {
+        audioButton: {
+            position: "relative",
+            float: "right",
+            right: 10,
+            top: 0
+        }
+    };
+
     componentWillUpdate(nextState) {
         if (this.props.keyboardInput !== nextState.keyboardInput) {
             this.handleChange(nextState.keyboardInput.toLowerCase());
@@ -232,11 +241,13 @@ export default class Translator extends Component {
                         <i
                             onClick={() => this.speechInput()}
                             className="fas fa-volume-up"
+                            style={this.styles.audioButton}
                         />
                         <Line />
                         <i
                             onClick={() => this.speechOutput()}
                             className="fas fa-volume-up"
+                            style={this.styles.audioButton}
                         />
                         <TextInput type="text" value={this.state.result} />
                     </Box>
