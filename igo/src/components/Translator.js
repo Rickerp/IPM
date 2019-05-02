@@ -304,18 +304,18 @@ export default class Translator extends Component {
                             style={this.styles.audioButton}
                         />
                         <Line />
+                        <TextInput type="text" value={this.state.result} />
                         <i
                             onClick={() => this.speechOutput()}
                             className="fas fa-volume-up"
                             style={this.styles.audioButton}
                         />
-                        <TextInput type="text" value={this.state.result} />
                     </Box>}
                   </Spring>
                 </div>
                 <ExtraButtons className="extra-buttons">
                     <Link to={"/translatorar"}>
-                      <i className="fas fa-camera" /> <br />
+                      <i className="fas fa-camera" />
                     </Link>
                 </ExtraButtons>
             </TranslatorWrapper>

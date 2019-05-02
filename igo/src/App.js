@@ -168,7 +168,8 @@ class App extends Component {
                                     default: [
                                         "Q W E R T Y U I O P {bksp}",
                                         "A S D F G H J K L",
-                                        "Z X C V {space} B N M"
+                                        "Z X C V B N M",
+                                        "{space}"
                                     ]
                                 }}
                                 display={{
