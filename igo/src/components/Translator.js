@@ -4,6 +4,8 @@ import codes from "./../lang/codes.json";
 import langs from "./../lang/langs.json";
 import Popup from "reactjs-popup";
 import Speech from "speak-tts";
+import { Link } from "react-router-dom";
+import { Spring } from 'react-spring/renderprops';
 
 export default class Translator extends Component {
     constructor(props) {
@@ -233,7 +235,14 @@ export default class Translator extends Component {
                         }}
                         arrow={true}
                     >
-                        {this.renderFromLangs()}
+                      <Spring 
+                        from={{ opacity: 0, marginTop: -20 }}
+                        to={{ opacity: 1, marginTop: 5 }}
+                      >
+                        {props => <div style={props}>
+                          {this.renderFromLangs()}
+                        </div>}
+                      </Spring>
                     </Popup>
                 </div>
                 <div className="arrow">
@@ -263,7 +272,14 @@ export default class Translator extends Component {
                         }}
                         arrow={true}
                     >
+                      <Spring 
+                        from={{ opacity: 0, marginTop: -20 }}
+                        to={{ opacity: 1, marginTop: 5 }}
+                      >
+                        {props => <div style={props}>
                         {this.renderToLangs()}
+                        </div>}
+                      </Spring>
                     </Popup>
                 </div>
                 <div className="word-tr-input">
@@ -292,7 +308,9 @@ export default class Translator extends Component {
                     </Box>
                 </div>
                 <ExtraButtons className="extra-buttons">
-                    <i className="fas fa-camera" /> <br />
+                    <Link to={"/translatorar"}>
+                      <i className="fas fa-camera" /> <br />
+                    </Link>
                 </ExtraButtons>
             </TranslatorWrapper>
         );

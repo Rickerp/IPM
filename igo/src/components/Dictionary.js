@@ -171,7 +171,14 @@ export default class Dictionary extends Component {
                             onOpen={() => this.toggleSortArrow()}
                             onClose={() => this.toggleSortArrow()}
                         >
+                          <Spring 
+                            from={{ opacity: 0, marginTop: -20 }}
+                            to={{ opacity: 1, marginTop: 5 }}
+                          >
+                            {props => <div style={props}>
                             {this.renderLangs()}
+                            </div>}
+                          </Spring>
                         </Popup>
                     </div>
                     <div className="word-input">
