@@ -5,7 +5,9 @@ const AppContext = React.createContext();
 
 class AppProvider extends Component {
     state = {
-        feedData: FeedData
+        feedData: FeedData,
+        valueDictionary: "Search a word",
+        langDictionary: "0"
     }
 
     increaseLikes = (idSearch) => {
@@ -32,12 +34,26 @@ class AppProvider extends Component {
         })
     }
 
+    updateValueDictionary = (newValue) => {
+        this.setState({
+            valueDictionary: newValue
+        })
+    }
+
+    changeLangDictionary = (newLang) => {
+        this.setState({
+            langDictionary: newLang
+        })
+    }
+
     render() {
         return (
             <AppContext.Provider value={{
                 state: this.state,
                 increaseLikes: this.increaseLikes,
-                decreaseLikes: this.decreaseLikes
+                decreaseLikes: this.decreaseLikes,
+                updateValueDictionary: this.updateValueDictionary,
+                changeLangDictionary: this.changeLangDictionary
             }}>
                 {this.props.children}
             </AppContext.Provider>

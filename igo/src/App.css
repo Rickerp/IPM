@@ -229,6 +229,10 @@ button:focus {
   margin-left: 15px;
 }
 
+.fa-camera {
+  color: black;
+}
+
 .word-tr-input {
   grid-area: word-tr-input;
 }

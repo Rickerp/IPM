@@ -4,6 +4,7 @@ import codes from "./../lang/codes.json";
 import langs from "./../lang/langs.json";
 import Popup from "reactjs-popup";
 import { Spring } from 'react-spring/renderprops';
+import { Link } from "react-router-dom";
 
 export default class Translator extends Component {
   constructor(props) {
@@ -181,23 +182,32 @@ export default class Translator extends Component {
           </Popup>
         </div>
         <div className="word-tr-input">
-          <Box
-            invalidInput={this.state.invalidInput}
-            success={this.state.success}
+          <Spring 
+              from={{ opacity: 0}}
+              to={{ opacity: 1}}
+              config={{ delay: 50, duration: 500 }}
           >
-            <TextInput
-              type="text"
-              value={this.state.value}
-              onChange={this.handleChange}
-              onFocus={this.onFocus}
-              onBlur={this.onBlur}
-            />
-            <Line />
-            <TextInput type="text" value={this.state.result} />
-          </Box>
+            {props => <Box
+              style={props}
+              invalidInput={this.state.invalidInput}
+              success={this.state.success}
+            >
+              <TextInput
+                type="text"
+                value={this.state.value}
+                onChange={this.handleChange}
+                onFocus={this.onFocus}
+                onBlur={this.onBlur}
+              />
+              <Line />
+              <TextInput type="text" value={this.state.result} />
+            </Box>}
+          </Spring>
         </div>
         <ExtraButtons className="extra-buttons">
-          <i className="fas fa-camera" />
+          <Link to="/translatorar">
+            <i className="fas fa-camera" />
+          </Link>
           <i className="fas fa-microphone" /> <br />
         </ExtraButtons>
       </TranslatorWrapper>

@@ -212,7 +212,7 @@ const MapsItem = styled.span`
 `
 
 const LanguagesItem = styled.span`
-    color: ${props => (props.currentPath === "/dictionary" || props.currentPath === "/translator") ? 
+    color: ${props => (props.currentPath === "/dictionary" || props.currentPath === "/translator" || props.currentPath === "/translatorar") ? 
     "var(--mainWhite)" : "#C4BFC8"};
 
     &:hover {
@@ -229,7 +229,7 @@ const DictionaryItem = styled.span`
 `
 
 const TranslatorItem = styled.span`
-    color: ${props => props.currentPath === "/translator" ? "var(--mainWhite)" : "#C4BFC8"};
+    color: ${props => (props.currentPath === "/translator" || props.currentPath === "/translatorar") ? "var(--mainWhite)" : "#C4BFC8"};
 
     &:hover {
         color: var(--mainWhite);

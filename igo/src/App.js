@@ -12,6 +12,7 @@ import ActivityDetailed from "./components/ActivityDetailed";
 import { AppProvider } from "./context";
 import Dictionary from "./components/Dictionary";
 import Translator from "./components/Translator";
+import TranslatorAr from "./components/TranslatorAr";
 import { createBrowserHistory } from "history";
 
 var history;
@@ -59,6 +60,11 @@ class App extends Component {
                                         exact={true}
                                         path="/translator"
                                         component={Translator}
+                                    />
+                                    <Route
+                                        exact={true}
+                                        path="/translatorar"
+                                        component={TranslatorAr}
                                     />
                                     <Route
                                         exact={true}
