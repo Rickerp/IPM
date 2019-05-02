@@ -46,7 +46,10 @@ export default class Menu extends Component {
                     </ProfileCard>
 
                     <Link
-                        onClick={() => this.closeMenu()}
+                        onClick={() => {
+                            this.closeMenu();
+                            this.props.keyboardToggle(false);
+                        }}
                         className="menu-item"
                         to="/ar"
                     >
@@ -72,7 +75,10 @@ export default class Menu extends Component {
 
                     {this.state.languagesOpen ? (
                         <Link
-                            onClick={() => this.closeMenu()}
+                            onClick={() => {
+                                this.closeMenu();
+                                this.props.keyboardToggle(false);
+                            }}
                             className="menu-item"
                             to="/dictionary"
                         >
@@ -86,7 +92,10 @@ export default class Menu extends Component {
 
                     {this.state.languagesOpen ? (
                         <Link
-                            onClick={() => this.closeMenu()}
+                            onClick={() => {
+                                this.closeMenu();
+                                this.props.keyboardToggle(false);
+                            }}
                             className="menu-item"
                             to="/translator"
                         >
