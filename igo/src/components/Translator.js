@@ -283,7 +283,12 @@ export default class Translator extends Component {
                     </Popup>
                 </div>
                 <div className="word-tr-input">
-                    <Box
+                  <Spring 
+                    from={{ opacity: 0}}
+                    to={{ opacity: 1}}
+                  >
+                    {props => <Box
+                        style={props}
                         invalidInput={this.state.invalidInput}
                         success={this.state.success}
                     >
@@ -305,7 +310,8 @@ export default class Translator extends Component {
                             style={this.styles.audioButton}
                         />
                         <TextInput type="text" value={this.state.result} />
-                    </Box>
+                    </Box>}
+                  </Spring>
                 </div>
                 <ExtraButtons className="extra-buttons">
                     <Link to={"/translatorar"}>
@@ -330,7 +336,7 @@ const TranslatorWrapper = styled.div`
         ". . . . ."
         ". word-tr-input word-tr-input word-tr-input ."
         ". . . . ."
-        ". extra-buttons extra-buttons extra-buttons .";
+        "extra-buttons extra-buttons extra-buttons extra-buttons extra-buttons";
 `;
 
 const MainHeader = styled.p`
@@ -358,10 +364,6 @@ const ExtraButtons = styled.div`
     margin-top: 15px;
     font-size: 18px;
     text-align: center;
-
-    .fa-camera {
-        margin-right: 40px;
-    }
 `;
 
 const TextInput = styled.input`
