@@ -13,25 +13,86 @@ import { AppProvider } from "./context";
 import Dictionary from "./components/Dictionary";
 import Translator from "./components/Translator";
 import { createBrowserHistory } from "history";
+import Keyboard from "react-simple-keyboard";
+import "react-simple-keyboard/build/css/index.css";
 
 var history;
+var backAction;
 
 class App extends Component {
     constructor() {
         super();
         history = createBrowserHistory();
-        console.log("CONSTRUCTOR: ", history);
+        backAction = null;
     }
 
-    clearHistory() {
-        history = createBrowserHistory();
-        console.log("CLEAR: ", history);
+    state = {
+        keyboard: false,
+        keyboardInput: ""
+    };
+
+    styles = {
+        keyboardOn: {
+            width: "auto",
+            height: "auto",
+            position: "absolute",
+            zIndex: "11",
+            bottom: -5,
+            left: -11,
+            transform: "scale(0.915)",
+            backgroundColor: "#eeeeee"
+        },
+        keyboardOff: {
+            width: "auto",
+            height: "auto",
+            transform: "scale(0)"
+        }
+    };
+
+    handleBack() {
+        if (backAction === null) {
+            this.setInput("");
+            history.goBack();
+        } else {
+            backAction();
+            backAction = null;
+        }
+    }
+
+    handleHome() {
+        this.toggleKeyboard(false);
+        this.setInput("");
+        history.push("/");
+        history.push("/");
+        history.goBack();
+    }
+
+    toggleKeyboard(state) {
+        if (state === undefined) state = !this.state.keyboard;
+        if (state !== this.state.keyboard) {
+            if (!this.state.keyboard) {
+                backAction = () => this.toggleKeyboard(false);
+                this.setState({ keyboard: true });
+            } else {
+                backAction = null;
+                this.setState({ keyboard: false });
+            }
+        }
+    }
+
+    getKeyboardStyle() {
+        return this.state.keyboard
+            ? this.styles.keyboardOn
+            : this.styles.keyboardOff;
+    }
+
+    setInput(input) {
+        this.setState({ keyboardInput: input });
     }
 
     render() {
         return (
             <AppProvider>
-                {console.log("BEGIN: ", history)}
                 <div className="band">
                     <div id="App">
                         <Sidebar
@@ -39,7 +100,7 @@ class App extends Component {
                             pageWrapId={"page-wrap"}
                             outerContainerId={"App"}
                             customCrossIcon={<img src={back} />}
-                            history={history}
+                            keyboardToggle={state => this.toggleKeyboard(state)}
                         />
                         <div className="content" id="page-wrap">
                             <Navbar />
@@ -53,12 +114,32 @@ class App extends Component {
                                     <Route
                                         exact={true}
                                         path="/dictionary"
-                                        component={Dictionary}
+                                        render={props => (
+                                            <Dictionary
+                                                keyboardInput={
+                                                    this.state.keyboardInput
+                                                }
+                                                keyboardToggle={state =>
+                                                    this.toggleKeyboard(state)
+                                                }
+                                                {...props}
+                                            />
+                                        )}
                                     />
                                     <Route
                                         exact={true}
                                         path="/translator"
-                                        component={Translator}
+                                        render={props => (
+                                            <Translator
+                                                keyboardInput={
+                                                    this.state.keyboardInput
+                                                }
+                                                keyboardToggle={state =>
+                                                    this.toggleKeyboard(state)
+                                                }
+                                                {...props}
+                                            />
+                                        )}
                                     />
                                     <Route
                                         exact={true}
@@ -72,12 +153,32 @@ class App extends Component {
                                 </Switch>
                             </div>
                         </div>
+                        <div style={this.getKeyboardStyle()}>
+                            <Keyboard
+                                onChange={input => this.setInput(input)}
+                                layout={{
+                                    default: [
+                                        "Q W E R T Y U I O P {bksp}",
+                                        "A S D F G H J K L",
+                                        "Z X C V {space} B N M"
+                                    ]
+                                }}
+                                display={{
+                                    "{bksp}": "⬅",
+                                    "{enter}": "↵",
+                                    "{space}": "______"
+                                }}
+                            />
+                        </div>
                     </div>
                     <ButtonHome
-                        clear={() => this.clearHistory()}
+                        onClick={() => this.handleHome()}
                         history={history}
                     />
-                    <ButtonBack history={history} />
+                    <ButtonBack
+                        onClick={() => this.handleBack()}
+                        history={history}
+                    />
                 </div>
             </AppProvider>
         );

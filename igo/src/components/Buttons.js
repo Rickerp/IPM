@@ -51,7 +51,7 @@ class ButtonBack extends Component {
         return (
             <Button
                 buttonStyle={this.styles.button}
-                onClick={() => this.props.history.goBack()}
+                onClick={() => this.props.onClick()}
                 icon="fas fa-chevron-left"
                 iconStyle={this.styles.icon}
             />
@@ -85,11 +85,7 @@ class ButtonHome extends Component {
         return (
             <Button
                 buttonStyle={this.styles.button}
-                onClick={() => {
-                    this.props.history.push("/");
-                    this.props.history.push("/");
-                    this.props.history.goBack();
-                }}
+                onClick={() => this.props.onClick()}
                 icon="fas fa-home"
                 iconStyle={this.styles.icon}
             />
