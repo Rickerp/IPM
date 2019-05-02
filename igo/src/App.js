@@ -28,7 +28,8 @@ class App extends Component {
 
     state = {
         keyboard: false,
-        keyboardInput: ""
+        keyboardInput: "",
+        infoPopup: null
     };
 
     styles = {
@@ -95,6 +96,7 @@ class App extends Component {
             <AppProvider>
                 <div className="band">
                     <div id="App">
+                        {this.state.infoPopup}
                         <Sidebar
                             disableAutoFocus
                             pageWrapId={"page-wrap"}
@@ -103,7 +105,7 @@ class App extends Component {
                             keyboardToggle={state => this.toggleKeyboard(state)}
                         />
                         <div className="content" id="page-wrap">
-                            <Navbar />
+                            <Navbar history={history} />
                             <div id="page-component">
                                 <Switch>
                                     <Route
