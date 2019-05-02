@@ -26,6 +26,11 @@ export default class Translator extends Component {
             float: "right",
             right: 10,
             top: 0
+        },
+        info: {
+            position: "absolute",
+            right: "40px",
+            top: "5px"
         }
     };
 
@@ -163,10 +168,43 @@ export default class Translator extends Component {
             });
     }
 
+    readInfo() {
+        return (
+            langs["pt"]["_infotranslator"].charAt(0).toUpperCase() +
+            langs["pt"]["_infotranslator"].slice(1)
+        );
+    }
+
     render() {
-        console.log(langs["pt"]["_infotranslator"]);
         return (
             <TranslatorWrapper>
+                <Popup
+                    trigger={
+                        <div
+                            style={this.styles.info}
+                            onClick={this.props.showInfo}
+                        >
+                            <i class="fas fa-info-circle" />
+                        </div>
+                    }
+                    position="bottom right"
+                    on="click"
+                    closeOnDocumentClick
+                    mouseLeaveDelay={300}
+                    mouseEnterDelay={0}
+                    contentStyle={{
+                        padding: "2px",
+                        maxHeight: "300px",
+                        overflowY: "auto",
+                        overflowX: "hidden",
+                        maxWidth: "150px",
+                        fontSize: "13px",
+                        border: "1px solid black"
+                    }}
+                    arrow={true}
+                >
+                    {this.readInfo()}
+                </Popup>
                 <div className="main-tr-header">
                     <MainHeader>Translator</MainHeader>
                 </div>

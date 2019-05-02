@@ -3,6 +3,7 @@ import Clock from "react-live-clock";
 import { Swipe, Position } from "react-swipe-component";
 import styled from "styled-components";
 import Popup from "reactjs-popup";
+import langs from "./../lang/langs.json";
 
 export default class Navbar extends Component {
     styles = {
@@ -12,10 +13,6 @@ export default class Navbar extends Component {
             top: "5px"
         }
     };
-
-    readInfo() {
-        //ANLISAR: this.props.history.location.pathname
-    }
 
     render() {
         return (
@@ -34,33 +31,13 @@ export default class Navbar extends Component {
                         timezone={"Europe/London"}
                     />
                 </div>
-                <Popup
-                    trigger={
-                        <div
-                            style={this.styles.info}
-                            onClick={this.props.showInfo}
-                        >
-                            <i class="fas fa-info-circle" />
-                        </div>
-                    }
-                    position="bottom right"
-                    on="click"
-                    closeOnDocumentClick
-                    mouseLeaveDelay={300}
-                    mouseEnterDelay={0}
-                    contentStyle={{
-                        padding: "0px",
-                        maxHeight: "100%",
-                        overflowY: "auto",
-                        overflowX: "hidden",
-                        maxWidth: "150px",
-                        fontSize: "15px",
-                        border: "1px solid black"
+                <div
+                    onClick={() => {
+                        console.log(
+                            this.props.history.location.pathname.slice(1)
+                        );
                     }}
-                    arrow={true}
-                >
-                    {this.readInfo()}
-                </Popup>
+                />
 
                 <div className="battery">
                     <Percentage>1%</Percentage>
