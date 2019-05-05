@@ -15,6 +15,28 @@ body {
   background: transparent; /* make scrollbar transparent */
 }
 
+.simple-keyboard {
+  font-family: "Montserrat"!important;
+}
+
+.simple-keyboard .hg-button {
+  min-width: 21px;
+  max-width: 21px;
+}
+
+.simple-keyboard .hg-button-whitesp {
+  min-width: 21px;
+  max-width: 21px;
+  cursor: default!important;
+  background: transparent!important;
+  border: none!important;
+  box-shadow: none!important;
+}
+
+.simple-keyboard .hg-button-space {
+  max-width: none;
+}
+
 /* The device with borders */
 .band {
   position: relative;

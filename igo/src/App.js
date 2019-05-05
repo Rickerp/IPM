@@ -170,14 +170,15 @@ class App extends Component {
                                 layout={{
                                     default: [
                                         "Q W E R T Y U I O P {bksp}",
-                                        "A S D F G H J K L",
-                                        "Z X C V B N M",
+                                        "{whitesp} A S D F G H J K L {whitesp}",
+                                        "{whitesp} {whitesp} Z X C V B N M {whitesp} {whitesp}",
                                         "{space}"
                                     ]
                                 }}
                                 display={{
                                     "{bksp}": "⬅",
                                     "{enter}": "↵",
+                                    "{whitesp}": " ",
                                     "{space}": "______"
                                 }}
                             />
