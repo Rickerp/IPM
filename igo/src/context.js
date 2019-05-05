@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import FeedData from "./FeedData"
+import UsersData from "./UsersData"
 
 const AppContext = React.createContext();
 
@@ -7,7 +8,8 @@ class AppProvider extends Component {
     state = {
         feedData: FeedData,
         valueDictionary: "Search a word",
-        langDictionary: "0"
+        langDictionary: "0",
+        usersData: UsersData
     }
 
     increaseLikes = (idSearch) => {

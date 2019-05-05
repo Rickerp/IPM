@@ -260,3 +260,17 @@ button:focus {
 .in-language-item:hover {
   color: #2980b9;
 }
+
+/* User */
+
+.user-avatar {
+  grid-area: user-avatar;
+}
+
+.user-name {
+  grid-area: user-name;
+}
+
+.user-description {
+  grid-area: user-description;
+}

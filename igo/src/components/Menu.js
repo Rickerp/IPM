@@ -112,9 +112,18 @@ export default class Menu extends Component {
                         <i className="fas fa-route" /> &nbsp; SHAROUTE
                     </a>
 
-                    <a className="menu-item" href="/">
-                        <i className="fas fa-user-friends" /> &nbsp; FRIENDS
-                    </a>
+                    <Link
+                        onClick={() => {
+                            this.closeMenu();
+                            this.props.keyboardToggle(false);
+                        }}
+                        className="menu-item"
+                        to="/friends"
+                    >
+                        <FriendsItem currentPath={window.location.pathname}>
+                            <i className="fas fa-user-friends" /> &nbsp; FRIENDS
+                        </FriendsItem>
+                    </Link>
                 </Slide>
             </SlideWrapper>
         );
@@ -220,27 +229,19 @@ const MapsItem = styled.span`
     }
 `
 
-const LanguagesItem = styled.span`
+const LanguagesItem = styled(MapsItem)`
     color: ${props => (props.currentPath === "/dictionary" || props.currentPath === "/translator" || props.currentPath === "/translatorar") ? 
     "var(--mainWhite)" : "#C4BFC8"};
-
-    &:hover {
-        color: var(--mainWhite);
-    }
 `
 
-const DictionaryItem = styled.span`
+const DictionaryItem = styled(MapsItem)`
     color: ${props => props.currentPath === "/dictionary" ? "var(--mainWhite)" : "#C4BFC8"};
-
-    &:hover {
-        color: var(--mainWhite);
-    }
 `
 
-const TranslatorItem = styled.span`
+const TranslatorItem = styled(MapsItem)`
     color: ${props => (props.currentPath === "/translator" || props.currentPath === "/translatorar") ? "var(--mainWhite)" : "#C4BFC8"};
+`
 
-    &:hover {
-        color: var(--mainWhite);
-    }
+const FriendsItem = styled(MapsItem)`
+    color: ${props => (props.currentPath === "/friends") ? "var(--mainWhite)" : "#C4BFC8"};
 `

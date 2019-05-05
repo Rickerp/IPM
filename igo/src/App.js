@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
-import back from "./back-50.png";
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
 import Ar from "./components/Ar";
@@ -16,6 +14,7 @@ import TranslatorAr from "./components/TranslatorAr";
 import { createBrowserHistory } from "history";
 import Keyboard from "react-simple-keyboard";
 import "./keyboard.css";
+import FriendsList from "./components/FriendsList";
 
 var history;
 var backAction;
@@ -102,7 +101,6 @@ class App extends Component {
                             disableAutoFocus
                             pageWrapId={"page-wrap"}
                             outerContainerId={"App"}
-                            customCrossIcon={<img src={back} />}
                             keyboardToggle={state => this.toggleKeyboard(state)}
                         />
                         <div className="content" id="page-wrap">
@@ -148,6 +146,11 @@ class App extends Component {
                                         exact={true}
                                         path="/translatorar"
                                         component={TranslatorAr}
+                                    />
+                                    <Route
+                                        exact={true}
+                                        path="/friends"
+                                        component={FriendsList}
                                     />
                                     <Route
                                         exact={true}
