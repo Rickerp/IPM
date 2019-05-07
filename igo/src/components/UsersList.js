@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { AppContext } from "../context"
+import User from "./User"
 
 export default function UsersLists() {
     const value = useContext(AppContext);

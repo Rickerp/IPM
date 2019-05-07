@@ -15,6 +15,7 @@ import { createBrowserHistory } from "history";
 import Keyboard from "react-simple-keyboard";
 import "./keyboard.css";
 import FriendsList from "./components/FriendsList";
+import UsersList from "./components/UsersList";
 
 var history;
 var backAction;
@@ -151,6 +152,11 @@ class App extends Component {
                                         exact={true}
                                         path="/friends"
                                         component={FriendsList}
+                                    />
+                                    <Route
+                                        exact={true}
+                                        path="/users"
+                                        component={UsersList}
                                     />
                                     <Route
                                         exact={true}

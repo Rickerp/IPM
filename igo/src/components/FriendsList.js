@@ -14,6 +14,7 @@ export default function FriendsList(props) {
                     return <User key={item.id} item={item} />   
                 }
             })}
+            {/* <AddButton>Add new friend</AddButton> */}
         </>
     )
 }
@@ -21,4 +22,14 @@ export default function FriendsList(props) {
 const FriendsHeader = styled.h3`
     text-align: center;
     margin-bottom: 10px;
+`
+
+const AddButton = styled.button`
+    font-family: "Montserrat"; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 100px;
 `
