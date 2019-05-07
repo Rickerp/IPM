@@ -36,6 +36,17 @@ class AppProvider extends Component {
         })
     }
 
+    removeFriend = (idSearch) => {
+        let usersData = this.state.usersData;
+        let user = this.state.usersData.find(item => item.id === idSearch);
+        user.added = false;
+        
+        usersData[idSearch - 1] = user;
+        this.setState({
+            usersData: usersData
+        })
+    }
+
     updateValueDictionary = (newValue) => {
         this.setState({
             valueDictionary: newValue
@@ -54,6 +65,7 @@ class AppProvider extends Component {
                 state: this.state,
                 increaseLikes: this.increaseLikes,
                 decreaseLikes: this.decreaseLikes,
+                removeFriend: this.removeFriend,
                 updateValueDictionary: this.updateValueDictionary,
                 changeLangDictionary: this.changeLangDictionary
             }}>
@@ -65,4 +77,4 @@ class AppProvider extends Component {
 
 const AppConsumer = AppContext.Consumer;
 
-export { AppProvider, AppConsumer }
+export { AppProvider, AppConsumer, AppContext }

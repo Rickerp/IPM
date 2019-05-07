@@ -26,6 +26,13 @@ const UsersData = [
       name: "Zequinha",
       description: "Avô",
       added: true
+    },
+    {
+      id: 5,
+      avatar: "img/Artur.png",
+      name: "Zequinha",
+      description: "Avô 2",
+      added: false
     }
   ];
   

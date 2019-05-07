@@ -296,3 +296,7 @@ button:focus {
 .user-description {
   grid-area: user-description;
 }
+
+.user-options {
+  grid-area: user-options;
+}
