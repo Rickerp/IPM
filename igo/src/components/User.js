@@ -1,25 +1,33 @@
 import React, { useContext } from 'react'
 import { AppContext } from "../context"
 import styled from "styled-components"
+import { Spring } from 'react-spring/renderprops'
 
 export default function User(props) {
     const value = useContext(AppContext);
 
     return (
-        <UserWrapper>
-            <Avatar className="user-avatar">
-                <img src={props.item.avatar} alt="User"></img>
-            </Avatar>
-            <div className="user-name">
-                <NameText>{props.item.name}</NameText>
-            </div>
-            <div className="user-description">
-                <DescriptionText>{props.item.description}</DescriptionText>
-            </div>
-            <UserOptions className="user-options" onClick={() => value.removeFriend(props.item.id)}>
-                {props.item.added ? <i class="fas fa-minus"></i> : <i class="fas fa-user-plus"></i>}
-            </UserOptions>
-        </UserWrapper>
+        <Spring 
+            from={{ opacity: 0, marginTop: -20 }}
+            to={{ opacity: 1, marginTop: 0 }}
+        >
+            {springProps => <div style={springProps}>
+                <UserWrapper>
+                    <Avatar className="user-avatar">
+                        <img src={props.item.avatar} alt="User"></img>
+                    </Avatar>
+                    <div className="user-name">
+                        <NameText>{props.item.name}</NameText>
+                    </div>
+                    <div className="user-description">
+                        <DescriptionText>{props.item.description}</DescriptionText>
+                    </div>
+                    <UserOptions className="user-options">
+                        {props.item.added ? <i className="fas fa-minus" onClick={() => value.removeFriend(props.item.id)}></i> : <i className="fas fa-plus" onClick={() => value.addFriend(props.item.id)}></i>}
+                    </UserOptions>
+                </UserWrapper>
+            </div>}
+        </Spring>
     )
 }
 
