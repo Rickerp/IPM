@@ -1,6 +1,7 @@
 const FeedData = [
   {
     id: 1,
+    userId: 1,
     avatar: "img/Zequinha.png",
     name: "Artur Dias",
     activity: "Made a route.",
@@ -10,6 +11,7 @@ const FeedData = [
   },
   {
     id: 2,
+    userId: 2,
     avatar: "img/Sandra.png",
     name: "Maria dos Santos",
     activity: "Shared a location.",
@@ -19,6 +21,7 @@ const FeedData = [
   },
   {
     id: 3,
+    userId: 3,
     avatar: "img/Susana.png",
     name: "Susana Sá",
     activity: "Shared a location.",
@@ -28,6 +31,7 @@ const FeedData = [
   },
   {
     id: 4,
+    userId: 4,
     avatar: "img/Artur.png",
     name: "Zequinha",
     activity: "Posted a route.",
@@ -37,6 +41,7 @@ const FeedData = [
   },
   {
     id: 5,
+    userId: 4,
     avatar: "img/Artur.png",
     name: "Zequinha",
     activity: "Tried Ar mode for the first time.",

@@ -23,7 +23,8 @@ export default function User(props) {
                         <DescriptionText>{props.item.description}</DescriptionText>
                     </div>
                     <UserOptions className="user-options">
-                        {props.item.added ? <i className="fas fa-minus" onClick={() => value.removeFriend(props.item.id)}></i> : <i className="fas fa-plus" onClick={() => value.addFriend(props.item.id)}></i>}
+                        {props.item.added ? <i className="fas fa-minus" onClick={() => value.removeFriend(props.item.id)}></i> : 
+                        <i className="fas fa-plus" onClick={() => value.addFriend(props.item.id)}></i>}
                     </UserOptions>
                 </UserWrapper>
             </div>}

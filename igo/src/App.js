@@ -40,7 +40,7 @@ class App extends Component {
             position: "absolute",
             zIndex: "11",
             bottom: -5,
-            left: -11,
+            left: -9,
             transform: "scale(0.915)",
             backgroundColor: "#eeeeee"
         },
