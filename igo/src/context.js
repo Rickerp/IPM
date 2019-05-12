@@ -36,24 +36,34 @@ class AppProvider extends Component {
         })
     }
 
-    removeFriend = (idSearch) => {
+    removeFriend = (idSearch, userId) => {
         let usersData = this.state.usersData;
-        let user = this.state.usersData.find(item => item.id === idSearch);
+        let feedData = this.state.feedData;
+        let user = this.state.usersData.find(user => user.id === idSearch);
+        let activity = this.state.feedData.find(activity => activity.userId === userId);
         user.added = false;
+        activity.display = false;
         
         usersData[idSearch - 1] = user;
+        feedData[activity.id - 1] = activity;
         this.setState({
+            feedData: feedData,
             usersData: usersData
         })
     }
 
-    addFriend = (idSearch) => {
+    addFriend = (idSearch, userId) => {
         let usersData = this.state.usersData;
+        let feedData = this.state.feedData;
         let user = this.state.usersData.find(item => item.id === idSearch);
+        let activity = this.state.feedData.find(activity => activity.userId === userId);
         user.added = true;
+        activity.display = true;
         
         usersData[idSearch - 1] = user;
+        feedData[activity.id - 1] = activity;
         this.setState({
+            feedData: feedData,
             usersData: usersData
         })
     }
