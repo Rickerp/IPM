@@ -40,12 +40,16 @@ class AppProvider extends Component {
         let usersData = this.state.usersData;
         let feedData = this.state.feedData;
         let user = this.state.usersData.find(user => user.id === idSearch);
-        let activity = this.state.feedData.find(activity => activity.userId === userId);
+        let activities = this.state.feedData.filter(activity => activity.userId === userId);
+        let newActivity;
         user.added = false;
-        activity.display = false;
         
         usersData[idSearch - 1] = user;
-        feedData[activity.id - 1] = activity;
+        activities.forEach(activity => {
+            newActivity = activity;
+            newActivity.display = false;
+            feedData[newActivity.id - 1] = newActivity;
+        });
         this.setState({
             feedData: feedData,
             usersData: usersData
@@ -56,12 +60,16 @@ class AppProvider extends Component {
         let usersData = this.state.usersData;
         let feedData = this.state.feedData;
         let user = this.state.usersData.find(item => item.id === idSearch);
-        let activity = this.state.feedData.find(activity => activity.userId === userId);
+        let activities = this.state.feedData.filter(activity => activity.userId === userId);
+        let newActivity;
         user.added = true;
-        activity.display = true;
         
         usersData[idSearch - 1] = user;
-        feedData[activity.id - 1] = activity;
+        activities.forEach(activity => {
+            newActivity = activity;
+            newActivity.display = true;
+            feedData[newActivity.id - 1] = newActivity;
+        });
         this.setState({
             feedData: feedData,
             usersData: usersData

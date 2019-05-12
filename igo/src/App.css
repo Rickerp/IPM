@@ -283,6 +283,32 @@ button:focus {
   color: #2980b9;
 }
 
+/* Profile */
+
+.profile-avatar {
+  grid-area: profile-avatar;
+}
+
+.profile-name {
+  grid-area: profile-name;
+}
+
+.profile-status {
+  grid-area: profile-status;
+}
+
+.profile-routes {
+  grid-area: profile-routes;
+}
+
+.profile-posts {
+  grid-area: profile-posts;
+}
+
+.profile-remove {
+  grid-area: profile-remove;
+}
+
 /* User */
 
 .user-avatar {

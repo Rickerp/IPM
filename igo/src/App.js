@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar";
 import Sidebar from "./components/Menu";
 import Feed from "./components/Feed";
 import { ButtonBack, ButtonHome } from "./components/Buttons";
-import ActivityDetailed from "./components/ActivityDetailed";
+import Profile from "./components/Profile";
 import { AppProvider } from "./context";
 import Dictionary from "./components/Dictionary";
 import Translator from "./components/Translator";
@@ -165,7 +165,7 @@ class App extends Component {
                                     />
                                     <Route
                                         path="/:handle"
-                                        component={ActivityDetailed}
+                                        component={Profile}
                                     />
                                 </Switch>
                             </div>
