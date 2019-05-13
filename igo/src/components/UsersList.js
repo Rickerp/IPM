@@ -1,32 +1,46 @@
-import React, { useContext } from "react";
-import { AppContext } from "../context";
+import React, { Component } from "react";
 import User from "./User";
 import styled from "styled-components";
+import users from "../UsersData";
 
-export default function UsersLists() {
-    const value = useContext(AppContext);
+export default class UsersLists extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {};
+    }
 
-    return (
-        <>
-            <UsersHeader>All Users</UsersHeader>
-            <div className="word-input">
-                <Box>
-                    <form>
-                        <TextInput type="text" placeholder="Find an user" />
-                        <SearchButton type="submit" value="Submit">
-                            <i className="fas fa-search" />
-                        </SearchButton>
-                    </form>
-                </Box>
-                <TextAlert>Invalid input</TextAlert>
-            </div>
-            {value.state.usersData.map(item => {
-                if (!item.added && item.name.includes(KEYBOARDINPUT AQUI)) {
-                    return <User key={item.id} item={item} />;
-                }
-            })}
-        </>
-    );
+    render() {
+        return (
+            <React.Fragment>
+                <UsersHeader>All Users</UsersHeader>
+                <div className="word-input">
+                    <Box>
+                        <form>
+                            <TextInput
+                                type="text"
+                                value={this.props.keyboardInput}
+                                onClick={this.props.keyboardToggle}
+                                placeholder="Search a word"
+                            />
+                            <SearchButton type="submit" value="Submit">
+                                <i className="fas fa-search" />
+                            </SearchButton>
+                        </form>
+                    </Box>
+                </div>
+                {users.map(item => {
+                    if (
+                        !item.added &&
+                        item.name
+                            .toUpperCase()
+                            .includes(this.props.keyboardInput)
+                    ) {
+                        return <User key={item.id} item={item} />;
+                    }
+                })}
+            </React.Fragment>
+        );
+    }
 }
 
 const UsersHeader = styled.h3`
