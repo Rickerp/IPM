@@ -326,3 +326,29 @@ button:focus {
 .user-options {
   grid-area: user-options;
 }
+
+/* Sharoute */
+
+.sharoute-header {
+  grid-area: sharoute-header;
+}
+
+.sharoute-popular {
+  grid-area: sharoute-popular;
+}
+
+.sharoute-build {
+  grid-area: sharoute-build;
+}
+
+.sharoute-mine {
+  grid-area: sharoute-mine;
+}
+
+.sharoute-friends {
+  grid-area: sharoute-friends;
+}
+
+.location {
+  grid-area: location;
+}

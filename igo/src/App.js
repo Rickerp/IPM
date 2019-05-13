@@ -16,6 +16,8 @@ import Keyboard from "react-simple-keyboard";
 import "./keyboard.css";
 import FriendsList from "./components/FriendsList";
 import UsersList from "./components/UsersList";
+import Sharoute from "./components/Sharoute";
+import LocationList from "./components/LocationList";
 
 var history;
 var backAction;
@@ -147,6 +149,16 @@ class App extends Component {
                                         exact={true}
                                         path="/translatorar"
                                         component={TranslatorAr}
+                                    />
+                                    <Route
+                                        exact={true}
+                                        path="/sharoute"
+                                        component={Sharoute}
+                                    />
+                                    <Route
+                                        exact={true}
+                                        path="/sharoute/location"
+                                        component={LocationList}
                                     />
                                     <Route
                                         exact={true}

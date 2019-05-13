@@ -108,9 +108,18 @@ export default class Menu extends Component {
                         <span />
                     )}
 
-                    <a className="menu-item" href="/">
-                        <i className="fas fa-route" /> &nbsp; SHAROUTE
-                    </a>
+                    <Link
+                        onClick={() => {
+                            this.closeMenu();
+                            this.props.keyboardToggle(false);
+                        }}
+                        className="menu-item"
+                        to="/sharoute"
+                    >
+                        <SharouteItem currentPath={window.location.pathname}>
+                            <i className="fas fa-route" /> &nbsp; SHAROUTE
+                        </SharouteItem>
+                    </Link>
 
                     <Link
                         onClick={() => {
@@ -240,6 +249,10 @@ const DictionaryItem = styled(MapsItem)`
 
 const TranslatorItem = styled(MapsItem)`
     color: ${props => (props.currentPath === "/translator" || props.currentPath === "/translatorar") ? "var(--mainWhite)" : "#C4BFC8"};
+`
+
+const SharouteItem = styled(MapsItem)`
+    color: ${props => (props.currentPath === "/sharoute") ? "var(--mainWhite)" : "#C4BFC8"};
 `
 
 const FriendsItem = styled(MapsItem)`
