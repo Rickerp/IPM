@@ -1,15 +1,17 @@
 import React, { Component } from 'react'
 import FeedData from "./FeedData"
 import UsersData from "./UsersData"
+import LocationsData from "./LocationsData"
 
 const AppContext = React.createContext();
 
 class AppProvider extends Component {
     state = {
         feedData: FeedData,
+        usersData: UsersData,
+        locationsData: LocationsData,
         valueDictionary: "Search a word",
-        langDictionary: "0",
-        usersData: UsersData
+        langDictionary: "0"
     }
 
     increaseLikes = (idSearch) => {

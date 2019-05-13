@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom"
 import styled from "styled-components"
 
 export default function Sharoute() {
@@ -8,9 +9,11 @@ export default function Sharoute() {
                 <SharouteHeader>Sharoute</SharouteHeader>
             </div>
             <div className="sharoute-popular">
-                <Box>
-                    <AddButton><i class="far fa-star"></i> Popular Routes</AddButton>
-                </Box>
+                <Link to="/popularroutes">
+                    <Box>
+                        <AddButton><i class="far fa-star"></i> Popular Routes</AddButton>
+                    </Box>
+                </Link>
             </div>
             <div className="sharoute-build">
                 <Box>
