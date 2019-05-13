@@ -1,13 +1,11 @@
 import React from 'react'
 import styled from "styled-components"
-import rome from "../Rome.png"
 
-export default function Location() {
+export default function Location(props) {
     return (
         <LocationWrapper>
             <div className="location">
-                <img src={rome} alt="Rome"></img>
-                <p>Rome</p>
+                <img src={props.item.image} alt={props.item.name}></img>
             </div>
         </LocationWrapper>
     )
@@ -20,14 +18,5 @@ const LocationWrapper = styled.div`
     grid-template-rows: 70px;
     grid-template-areas: 
         "location";
-
-    p {
-        text-align: center;
-        font-weight: 500;
-        color: var(--mainWhite);
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
 `
 

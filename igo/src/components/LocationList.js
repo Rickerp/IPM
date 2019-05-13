@@ -9,12 +9,14 @@ export default function LocationList(props) {
     return (
         <>
             <LocationHeader>Select a Location</LocationHeader>
-            <Location></Location>
+            {value.state.locationsData.map(item => {
+                return <Location key={item.id} item={item} />   
+            })}
         </>
     )
 }
 
 const LocationHeader = styled.h3`
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 `

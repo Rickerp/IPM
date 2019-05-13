@@ -352,3 +352,29 @@ button:focus {
 .location {
   grid-area: location;
 }
+
+/* Route Card */
+
+.route-avatar {
+  grid-area: route-avatar;
+}
+
+.route-inside {
+  grid-area: route-inside;
+}
+
+.route-author {
+  grid-area: route-author;
+}
+
+.route-rating {
+  grid-area: route-rating;
+}
+
+.route-name {
+  grid-area: route-name;
+}
+
+.route-length {
+  grid-area: route-length;
+}
