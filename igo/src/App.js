@@ -174,7 +174,17 @@ class App extends Component {
                                     <Route
                                         exact={true}
                                         path="/users"
-                                        component={UsersList}
+                                        render={props => (
+                                            <UsersList
+                                                keyboardInput={
+                                                    this.state.keyboardInput
+                                                }
+                                                keyboardToggle={state =>
+                                                    this.toggleKeyboard(state)
+                                                }
+                                                {...props}
+                                            />
+                                        )}
                                     />
                                     <Route
                                         exact={true}
