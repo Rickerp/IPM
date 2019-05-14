@@ -16,10 +16,8 @@ export default class Activity extends Component {
             <Link style={{ textDecoration: 'none' }} to={{
             pathname: this.props.item.name,
             state: {
-                avatar: this.props.item.avatar,
-                name: this.props.item.name,
-                activity: this.props.item.activity,
-                timestamp: this.props.item.timestamp
+                userId: this.props.item.userId,
+                name: this.props.item.name
             }
             }}>
                 <ActivityWrapper>

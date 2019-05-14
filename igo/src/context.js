@@ -90,6 +90,12 @@ class AppProvider extends Component {
         })
     }
 
+    getProfileBg = (userId) => {
+        let user = this.state.usersData.find(item => item.userId === userId)
+
+        return user.profileBg
+    }
+
     render() {
         return (
             <AppContext.Provider value={{
@@ -99,7 +105,8 @@ class AppProvider extends Component {
                 removeFriend: this.removeFriend,
                 addFriend: this.addFriend,
                 updateValueDictionary: this.updateValueDictionary,
-                changeLangDictionary: this.changeLangDictionary
+                changeLangDictionary: this.changeLangDictionary,
+                getProfileBg: this.getProfileBg
             }}>
                 {this.props.children}
             </AppContext.Provider>

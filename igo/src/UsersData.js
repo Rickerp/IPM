@@ -13,6 +13,7 @@ const UsersData = [
         avatar: "img/Sandra.png",
         name: "Maria dos Santos",
         description: "BFF 🥰🥰",
+        profileBg: "img/SandraProfile.png",
         added: true
     },
     {

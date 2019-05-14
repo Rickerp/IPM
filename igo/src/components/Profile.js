@@ -1,15 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { AppContext } from "../context";
 import styled from "styled-components"
-import sandra from "../SandraProfile.png"
 
 export default function Profile(props) {
+    const value = useContext(AppContext);
+    const profileBg = value.getProfileBg(props.location.state.userId);
+
     return (
         <ProfileWrapper>
             <div className="profile-avatar">
-                <img src={sandra} alt="Person"></img>
+                <img src={profileBg} alt="Person"></img>
             </div>
             <div className="profile-name">
-                <NameText>Sandra Adams</NameText>
+                <NameText>{props.location.state.name}</NameText>
             </div>
             <div className="profile-status">
                 <StatusText>Online <i class="fas fa-circle"></i></StatusText>
