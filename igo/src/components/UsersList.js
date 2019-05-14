@@ -20,7 +20,7 @@ export default class UsersLists extends Component {
                                 type="text"
                                 value={this.props.keyboardInput}
                                 onClick={this.props.keyboardToggle}
-                                placeholder="Search a word"
+                                placeholder="Search a user"
                             />
                             <SearchButton type="submit" value="Submit">
                                 <i className="fas fa-search" />

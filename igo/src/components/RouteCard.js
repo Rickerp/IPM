@@ -17,11 +17,8 @@ export default function RouteCard() {
                         <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
                     </RouteRating>
                 </div>
-                <div className="route-name">
-                    <RouteName>Artur</RouteName>
-                </div>
-                <div className="route-length">
-                    <RouteLength>Artur</RouteLength>
+                <div className="route-details">
+                    <RouteName>Porto Tour &nbsp;<i class="fas fa-circle"></i>&nbsp; 5KM</RouteName>
                 </div>
             </InsideWrapper>
         </RouteCardWrapper>
@@ -44,7 +41,7 @@ const InsideWrapper = styled.div`
     grid-template-rows: repeat(2, 35px);
     grid-template-areas: 
         ". route-author route-rating"
-        ". route-name route-length";
+        ". route-details route-details";
     box-shadow: 2px 3px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
 `
@@ -59,17 +56,23 @@ const Avatar = styled.div`
 const RouteAuthor = styled.p`
     font-size: 95%;
     font-weight: 700;
+    margin-top: -1px;
 `
 
 const RouteRating = styled.p`
     font-size: 45%;
-    margin-top: 20px;
+    margin-top: 5px;
+    text-align: right;
+    margin-right: 4px;
 `
 
 const RouteName = styled.p`
     font-size: 80%;
-`
+    margin-top: -1px;
 
-const RouteLength = styled.span`
-    font-size: 80%;
+    i {
+        position: relative;
+        top: -1px;
+        font-size: 5%;
+    }
 `

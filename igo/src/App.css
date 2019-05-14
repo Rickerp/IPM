@@ -371,10 +371,6 @@ button:focus {
   grid-area: route-rating;
 }
 
-.route-name {
-  grid-area: route-name;
-}
-
-.route-length {
-  grid-area: route-length;
+.route-details {
+  grid-area: route-details;
 }

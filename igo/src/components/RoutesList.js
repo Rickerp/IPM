@@ -2,7 +2,6 @@ import React from 'react'
 import styled from "styled-components"
 import RouteCard from './RouteCard';
 
-
 export default function RoutesList(props) {
     return (
         <>
@@ -14,5 +13,5 @@ export default function RoutesList(props) {
 
 const RoutesListHeader = styled.h3`
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 `
