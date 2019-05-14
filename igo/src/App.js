@@ -19,6 +19,7 @@ import UsersList from "./components/UsersList";
 import Sharoute from "./components/Sharoute";
 import LocationList from "./components/LocationList";
 import PopularRoutes from "./components/PopularRoutes";
+import Maps from "./components/Maps";
 
 var history;
 var backAction;
@@ -165,6 +166,11 @@ class App extends Component {
 										exact={true}
 										path="/location"
 										component={LocationList}
+									/>
+									<Route
+										exact={true}
+										path="/maps"
+										component={Maps}
 									/>
 									<Route
 										exact={true}

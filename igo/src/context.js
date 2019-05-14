@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import FeedData from "./FeedData"
 import UsersData from "./UsersData"
 import LocationsData from "./LocationsData"
+import RoutesInfo from './RoutesInfo'
 
 const AppContext = React.createContext();
 
@@ -10,6 +11,7 @@ class AppProvider extends Component {
         feedData: FeedData,
         usersData: UsersData,
         locationsData: LocationsData,
+        routesData: RoutesInfo,
         valueDictionary: "Search a word",
         langDictionary: "0"
     }
