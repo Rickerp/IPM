@@ -4,10 +4,10 @@ import styled from "styled-components";
 import { AppConsumer } from "../context"
 
 export default class UsersLists extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {};
-    }
+	constructor(props) {
+		super(props);
+		this.state = {};
+	}
 
     render() {
         return (
@@ -46,33 +46,33 @@ export default class UsersLists extends Component {
 }
 
 const UsersHeader = styled.h3`
-    text-align: center;
-    margin-bottom: 10px;
+	text-align: center;
+	margin-bottom: 10px;
 `;
 
-const TextAlert = styled.p`
-    display: ${props => (props.invalidInput ? "block" : "none")};
-    font-size: 14px;
-    text-align: left;
-    margin-left: 18px;
-`;
+/*const TextAlert = styled.p`
+	display: ${props => (props.invalidInput ? "block" : "none")};
+	font-size: 14px;
+	text-align: left;
+	margin-left: 18px;
+`;*/
 
 const TextInput = styled.input`
-    font-family: "Montserrat";
-    background-color: transparent;
-    width: 150px;
-    margin-left: 10px;
-    border: none;
+	font-family: "Montserrat";
+	background-color: transparent;
+	width: 150px;
+	margin-left: 10px;
+	border: none;
 
-    &:focus {
-        outline: none;
-    }
+	&:focus {
+		outline: none;
+	}
 `;
 
 const SearchButton = styled.button`
-    background-color: transparent;
-    border: none;
-    margin-left: 10px;
+	background-color: transparent;
+	border: none;
+	margin-left: 10px;
 `;
 
 const Box = styled.div`
@@ -88,7 +88,7 @@ const Box = styled.div`
     margin-left: 15px;
     margin-bottom: 10px;
 
-    .fa-search {
-        color: ${props => (props.invalidInput ? "grey" : "black")};
-    }
+	.fa-search {
+		color: ${props => (props.invalidInput ? "grey" : "black")};
+	}
 `;
