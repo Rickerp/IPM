@@ -1,10 +1,11 @@
 import React, { useContext } from 'react'
-import { AppContext } from "../context";
+import { AppContext } from "../context"
 import styled from "styled-components"
 
 export default function Profile(props) {
     const value = useContext(AppContext);
     const profileBg = value.getProfileBg(props.location.state.userId);
+    const status = value.getStatus(props.location.state.userId);
 
     return (
         <ProfileWrapper>
@@ -15,7 +16,7 @@ export default function Profile(props) {
                 <NameText>{props.location.state.name}</NameText>
             </div>
             <div className="profile-status">
-                <StatusText>Online <i class="fas fa-circle"></i></StatusText>
+                <StatusText status={status}>{status ? "Online" : "Offline"} <i class="fas fa-circle"></i></StatusText>
             </div>
             <div className="profile-routes">
                 <RoutesText>Routes <i class="fas fa-route"></i></RoutesText>
@@ -73,7 +74,7 @@ const StatusText = styled.p`
         position: relative;
         top: -1px;
         font-size: 50%;
-        color: var(--mainGreen);
+        color: ${props => (props.status ? "var(--mainGreen)" : "var(--mainRed)")};
     }
 `
 

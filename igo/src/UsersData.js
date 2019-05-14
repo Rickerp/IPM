@@ -5,6 +5,8 @@ const UsersData = [
         avatar: "img/Zequinha.png",
         name: "Artur Dias",
         description: "Vizinho do 6º C",
+        profileBg: "img/ZequinhaProfile.png",
+        online: true,
         added: true
     },
     {
@@ -14,6 +16,7 @@ const UsersData = [
         name: "Maria dos Santos",
         description: "BFF 🥰🥰",
         profileBg: "img/SandraProfile.png",
+        online: false,
         added: true
     },
     {
@@ -22,6 +25,8 @@ const UsersData = [
         avatar: "img/Susana.png",
         name: "Susana Sá",
         description: "Colega de Bioquímica",
+        profileBg: "img/SusanaProfile.png",
+        online: false,
         added: true
     },
     {
@@ -30,6 +35,8 @@ const UsersData = [
         avatar: "img/Artur.png",
         name: "Zequinha",
         description: "Avô",
+        profileBg: "img/ArturProfile.png",
+        online: true,
         added: true
     },
     {
