@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import User from "./User";
 import styled from "styled-components";
-import users from "../UsersData";
+import { AppConsumer } from "../context"
 
 export default class UsersLists extends Component {
     constructor(props) {
@@ -11,7 +11,7 @@ export default class UsersLists extends Component {
 
     render() {
         return (
-            <React.Fragment>
+            <>
                 <UsersHeader>All Users</UsersHeader>
                 <div className="word-input">
                     <Box>
@@ -28,17 +28,19 @@ export default class UsersLists extends Component {
                         </form>
                     </Box>
                 </div>
-                {users.map(item => {
-                    if (
-                        !item.added &&
-                        item.name
-                            .toUpperCase()
-                            .includes(this.props.keyboardInput)
-                    ) {
-                        return <User key={item.id} item={item} />;
-                    }
-                })}
-            </React.Fragment>
+                <AppConsumer>                 
+                    {value => { return value.state.usersData.map(item => {
+                        if (
+                            !item.added &&
+                            item.name
+                                .toUpperCase()
+                                .includes(this.props.keyboardInput)
+                        ) {
+                            return <User key={item.id} item={item} />;
+                        }
+                    })}}
+                </AppConsumer>
+            </>
         );
     }
 }
@@ -84,6 +86,7 @@ const Box = styled.div`
     height: 22px;
     width: 200px;
     margin-left: 15px;
+    margin-bottom: 10px;
 
     .fa-search {
         color: ${props => (props.invalidInput ? "grey" : "black")};
