@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import User from "./User";
 import styled from "styled-components";
-import users from "../UsersData";
+import { AppConsumer } from "../context"
 
 export default class UsersLists extends Component {
 	constructor(props) {
@@ -9,37 +9,40 @@ export default class UsersLists extends Component {
 		this.state = {};
 	}
 
-	render() {
-		return (
-			<React.Fragment>
-				<UsersHeader>All Users</UsersHeader>
-				<div className="word-input">
-					<Box>
-						<form>
-							<TextInput
-								type="text"
-								value={this.props.keyboardInput}
-								onClick={this.props.keyboardToggle}
-								placeholder="Search a word"
-							/>
-							<SearchButton type="submit" value="Submit">
-								<i className="fas fa-search" />
-							</SearchButton>
-						</form>
-					</Box>
-				</div>
-				{users.map(item => {
-					if (
-						!item.added &&
-						item.name
-							.toUpperCase()
-							.includes(this.props.keyboardInput)
-					)
-						return <User key={item.id} item={item} />;
-				})}
-			</React.Fragment>
-		);
-	}
+    render() {
+        return (
+            <>
+                <UsersHeader>All Users</UsersHeader>
+                <div className="word-input">
+                    <Box>
+                        <form>
+                            <TextInput
+                                type="text"
+                                value={this.props.keyboardInput}
+                                onClick={this.props.keyboardToggle}
+                                placeholder="Search a word"
+                            />
+                            <SearchButton type="submit" value="Submit">
+                                <i className="fas fa-search" />
+                            </SearchButton>
+                        </form>
+                    </Box>
+                </div>
+                <AppConsumer>                 
+                    {value => { return value.state.usersData.map(item => {
+                        if (
+                            !item.added &&
+                            item.name
+                                .toUpperCase()
+                                .includes(this.props.keyboardInput)
+                        ) {
+                            return <User key={item.id} item={item} />;
+                        }
+                    })}}
+                </AppConsumer>
+            </>
+        );
+    }
 }
 
 const UsersHeader = styled.h3`
@@ -73,17 +76,17 @@ const SearchButton = styled.button`
 `;
 
 const Box = styled.div`
-	border: ${props =>
-		props.invalidInput
-			? "1px solid var(--mainRed)"
-			: props.success
-			? "1px solid var(--mainGreen)"
-			: "1px solid var(--mainBlack)"};
-	border-radius: 10px;
-	height: 22px;
-	width: 200px;
-	margin-left: 15px;
-	margin-bottom: 10px;
+    border: ${props =>
+        props.invalidInput
+            ? "1px solid var(--mainRed)"
+            : props.success
+            ? "1px solid var(--mainGreen)"
+            : "1px solid var(--mainBlack)"};
+    border-radius: 10px;
+    height: 22px;
+    width: 200px;
+    margin-left: 15px;
+    margin-bottom: 10px;
 
 	.fa-search {
 		color: ${props => (props.invalidInput ? "grey" : "black")};
