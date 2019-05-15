@@ -5,7 +5,8 @@ import { AppConsumer } from "../context";
 
 export default class Profile extends Component {
 	state = {
-		openRemove: false
+		openRemove: false,
+		write: false
 	};
 
 	styles = {
@@ -26,6 +27,15 @@ export default class Profile extends Component {
 			zIndex: 30
 		}
 	};
+
+	openDescription() {
+		this.setState({ write: true });
+	}
+
+	closeDescription() {
+		this.props.keyboardToggle(false);
+		this.setState({ write: false });
+	}
 
 	openRemove() {
 		this.setState({ openRemove: true });
@@ -98,7 +108,9 @@ export default class Profile extends Component {
 								</div>
 								<div className="profile-description">
 									<DescriptionText>
-										{this.props.item.description}
+										{value.getDescription(
+											this.props.item.userId
+										)}
 									</DescriptionText>
 								</div>
 								<div className="profile-routes">
@@ -140,7 +152,9 @@ export default class Profile extends Component {
 												maxWidth: "130px",
 												fontSize: "13px",
 												border: "1px solid black",
-												textAlign: "center"
+												textAlign: "center",
+												padding: "15px",
+												borderRadius: "20px"
 											}}
 										>
 											Are you sure you want to remove this
@@ -167,9 +181,77 @@ export default class Profile extends Component {
 								<div className="profile-edit">
 									<EditText>
 										<i
+											onClick={() => {
+												this.openDescription();
+											}}
 											style={{ cursor: "pointer" }}
 											class="fas fa-pencil-alt"
 										/>
+										<Popup
+											open={this.state.write}
+											position="top center"
+											overlayStyle={{
+												width: "230px",
+												height: "341px",
+												margin: "auto",
+												position: "absolute",
+												top: 30
+											}}
+											closeOnDocumentClick={false}
+											contentStyle={{
+												marginTop: "10px",
+												padding: "2px",
+												maxHeight: "300px",
+												overflowY: "auto",
+												overflowX: "hidden",
+												width: "150px",
+												fontSize: "13px",
+												border: "1px solid black",
+												textAlign: "center",
+												padding: "15px",
+												borderRadius: "20px"
+											}}
+										>
+											Change your description:
+											<LineInput
+												style={
+													this.state.write
+														? {
+																visibility:
+																	"visible"
+														  }
+														: {
+																visibility:
+																	"hidden"
+														  }
+												}
+												type="text"
+												value={this.props.keyboardInput}
+												placeholder="Description..."
+												onClick={
+													this.props.keyboardToggle
+												}
+											/>
+											<br />
+											<button
+												onClick={() => {
+													this.closeDescription();
+													value.changeDescription(
+														this.props.item.id,
+														this.props.keyboardInput
+													);
+												}}
+											>
+												Confirm
+											</button>
+											<button
+												onClick={() =>
+													this.closeDescription()
+												}
+											>
+												Cancel
+											</button>
+										</Popup>
 									</EditText>
 								</div>
 							</ProfileWrapper>
@@ -180,6 +262,13 @@ export default class Profile extends Component {
 		);
 	}
 }
+
+const LineInput = styled.input`
+	width: 100%;
+	height: 20px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+`;
 
 const CloseButton = styled.div`
 	position: absolute;
@@ -245,6 +334,10 @@ const RemoveText = styled.p`
 	margin-top: 0;
 	margin-bottom: 0;
 	font-size: 90%;
+
+	button {
+		margin: 4px;
+	}
 `;
 
 const EditText = styled.p`

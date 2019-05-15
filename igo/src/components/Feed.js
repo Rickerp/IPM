@@ -14,6 +14,8 @@ export default function Feed(props) {
 							key={item.id}
 							item={item}
 							setBack={props.setBack}
+							keyboardInput={props.keyboardInput}
+							keyboardToggle={props.keyboardToggle}
 						/>
 					);
 				}

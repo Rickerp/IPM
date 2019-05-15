@@ -23,8 +23,13 @@ export default class User extends Component {
 		this.setState({ profile: !this.state.profile });
 	}
 
-	toggleDescription() {
-		this.setState({ write: !this.state.write });
+	openDescription() {
+		this.setState({ write: true });
+	}
+
+	closeDescription() {
+		this.props.keyboardToggle(false);
+		this.setState({ write: false });
 	}
 
 	render() {
@@ -105,7 +110,9 @@ export default class User extends Component {
 															fontSize: "13px",
 															border:
 																"1px solid black",
-															textAlign: "center"
+															textAlign: "center",
+															padding: "15px",
+															borderRadius: "20px"
 														}}
 													>
 														Are you sure you want to
@@ -115,14 +122,7 @@ export default class User extends Component {
 														<button
 															onClick={() => {
 																this.closeAdd();
-																this.toggleDescription();
-																/*value.addFriend(
-																	this.props
-																		.item
-																		.id,
-																	this.props
-																		.item
-																		.userId	*/
+																this.openDescription();
 															}}
 														>
 															Yes
@@ -147,12 +147,16 @@ export default class User extends Component {
 													this.props.item.userId
 												)
 											}
-											selfToggle={() =>
-												this.toggleProfile()
+											keyboardInput={
+												this.props.keyboardInput
 											}
+											keyboardToggle={
+												this.props.keyboardToggle
+											}
+											setInput={this.props.setInput}
 										/>
 										<Popup
-											open={this.state.openAdd}
+											open={this.state.write}
 											position="top center"
 											overlayStyle={{
 												width: "230px",
@@ -163,23 +167,45 @@ export default class User extends Component {
 											}}
 											closeOnDocumentClick={false}
 											contentStyle={{
+												marginTop: "10px",
 												padding: "2px",
 												maxHeight: "300px",
 												overflowY: "auto",
 												overflowX: "hidden",
-												maxWidth: "130px",
+												width: "150px",
 												fontSize: "13px",
 												border: "1px solid black",
-												textAlign: "center"
+												textAlign: "center",
+												padding: "15px",
+												borderRadius: "20px"
 											}}
 										>
 											To identify your friend better, add
 											a description:
+											<LineInput
+												style={
+													this.state.write
+														? {
+																visibility:
+																	"visible"
+														  }
+														: {
+																visibility:
+																	"hidden"
+														  }
+												}
+												type="text"
+												value={this.props.keyboardInput}
+												placeholder="Description..."
+												onClick={
+													this.props.keyboardToggle
+												}
+											/>
 											<br />
 											<button
 												onClick={() => {
 													this.closeDescription();
-
+													this.props.onSuccess();
 													value.addFriend(
 														this.props.item.id,
 														this.props.item.userId,
@@ -190,21 +216,13 @@ export default class User extends Component {
 												Confirm
 											</button>
 											<button
-												onClick={() => this.closeAdd()}
+												onClick={() =>
+													this.closeDescription()
+												}
 											>
 												Cancel
 											</button>
 										</Popup>
-										<LineInput
-											style={
-												this.state.write
-													? { visibility: "visible" }
-													: { visibility: "hidden" }
-											}
-											type="text"
-											value={this.props.keyboardInput}
-											placeholder="Type something..."
-										/>
 									</>
 								)}
 							</AppConsumer>
@@ -219,6 +237,8 @@ export default class User extends Component {
 const LineInput = styled.input`
 	width: 100%;
 	height: 20px;
+	margin-top: 5px;
+	margin-bottom: 5px;
 `;
 
 const UserWrapper = styled.div`
@@ -231,6 +251,10 @@ const UserWrapper = styled.div`
 		"user-avatar user-name user-name user-options"
 		"user-avatar user-description user-description user-options"
 		". . . .";
+
+	button {
+		margin: 4px;
+	}
 `;
 
 const Avatar = styled.div`

@@ -45,7 +45,7 @@ class App extends Component {
 			width: "auto",
 			height: "auto",
 			position: "absolute",
-			zIndex: "11",
+			zIndex: "1000",
 			bottom: -5,
 			left: -9,
 			transform: "scale(0.915)",
@@ -196,6 +196,13 @@ class App extends Component {
 										path="/friends"
 										render={props => (
 											<FriendsList
+												keyboardInput={
+													this.state.keyboardInput
+												}
+												keyboardToggle={state =>
+													this.toggleKeyboard(state)
+												}
+												setInput={s => this.setInput(s)}
 												setBack={func =>
 													this.pushBack(func)
 												}
@@ -217,6 +224,9 @@ class App extends Component {
 												setBack={func =>
 													this.pushBack(func)
 												}
+												clearInput={() =>
+													this.setInput("")
+												}
 												{...props}
 											/>
 										)}
@@ -226,6 +236,13 @@ class App extends Component {
 										path="/"
 										render={props => (
 											<Feed
+												keyboardInput={
+													this.state.keyboardInput
+												}
+												keyboardToggle={state =>
+													this.toggleKeyboard(state)
+												}
+												setInput={s => this.setInput(s)}
 												setBack={func =>
 													this.pushBack(func)
 												}

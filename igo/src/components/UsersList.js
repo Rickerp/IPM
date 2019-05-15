@@ -4,9 +4,13 @@ import styled from "styled-components";
 import { AppConsumer } from "../context";
 
 export default class UsersLists extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {};
+	state = {
+		adding: false
+	};
+
+	handleSuccess() {
+		this.setState({ adding: false });
+		this.props.clearInput();
 	}
 
 	render() {
@@ -18,7 +22,11 @@ export default class UsersLists extends Component {
 						<form>
 							<TextInput
 								type="text"
-								value={this.props.keyboardInput}
+								value={
+									this.state.adding
+										? ""
+										: this.props.keyboardInput
+								}
 								onClick={this.props.keyboardToggle}
 								placeholder="Search a user"
 							/>
@@ -35,13 +43,25 @@ export default class UsersLists extends Component {
 								!item.added &&
 								item.name
 									.toUpperCase()
-									.includes(this.props.keyboardInput)
+									.includes(
+										this.state.adding
+											? ""
+											: this.props.keyboardInput
+									)
 							) {
 								return (
 									<User
 										key={item.id}
 										item={item}
 										setBack={this.props.setBack}
+										keyboardInput={this.props.keyboardInput}
+										keyboardToggle={want => {
+											this.props.keyboardToggle(want);
+											if (want) {
+												this.setState({ adding: true });
+											}
+										}}
+										onSuccess={() => this.handleSuccess()}
 									/>
 								);
 							}

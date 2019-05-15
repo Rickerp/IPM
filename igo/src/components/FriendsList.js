@@ -22,6 +22,9 @@ export default function FriendsList(props) {
 								key={item.id}
 								item={item}
 								setBack={props.setBack}
+								keyboardInput={props.keyboardInput}
+								keyboardToggle={props.keyboardToggle}
+								setInput={props.setInput}
 							/>
 						</div>
 					);

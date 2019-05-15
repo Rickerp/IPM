@@ -27,6 +27,8 @@ export default class Activity extends Component {
 							item={this.props.item}
 							status={this.state.profile}
 							selfToggle={() => this.toggleProfile()}
+							keyboardInput={this.props.keyboardInput}
+							keyboardToggle={this.props.keyboardToggle}
 						/>
 
 						<ActivityWrapper onClick={() => this.toggleProfile()}>
