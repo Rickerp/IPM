@@ -7,7 +7,7 @@ export default function FriendsRoutes() {
 
     return (
         <>
-            <RoutesList header="Friends' Routes" routes={value.state.friendsRoutesData} friends={true}></RoutesList>
+            <RoutesList header="Friend's Routes" routes={value.state.friendsRoutesData} friends={true}></RoutesList>
         </>
     )
 }
