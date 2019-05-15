@@ -19,7 +19,10 @@ import UsersList from "./components/UsersList";
 import Sharoute from "./components/Sharoute";
 import LocationList from "./components/LocationList";
 import PopularRoutes from "./components/PopularRoutes";
+import MyRoutes from "./components/MyRoutes";
 import Maps from "./components/Maps";
+import RouteViewer from "./components/RouteViewer";
+import FriendsRoutes from "./components/FriendsRoutes";
 
 var history;
 var backAction;
@@ -172,6 +175,16 @@ class App extends Component {
 									/>
 									<Route
 										exact={true}
+										path="/myroutes"
+										component={MyRoutes}
+									/>
+									<Route
+										exact={true}
+										path="/friendsroutes"
+										component={FriendsRoutes}
+									/>
+									<Route
+										exact={true}
 										path="/location"
 										component={LocationList}
 									/>
@@ -224,7 +237,7 @@ class App extends Component {
 									/>
 									<Route
 										path="/:handle"
-										component={Profile}
+										component={RouteViewer}
 									/>
 								</Switch>
 							</div>

@@ -5,7 +5,7 @@ import langs from "./../lang/langs.json";
 import Word from "./Word";
 import meaning from "./../lang/meaning.json";
 import Popup from "reactjs-popup";
-import { Spring } from 'react-spring/renderprops';
+import { Spring } from "react-spring/renderprops";
 
 export default class Dictionary extends Component {
     constructor(props) {
@@ -131,7 +131,10 @@ export default class Dictionary extends Component {
                     }}
                     arrow={true}
                 >
-                    {this.readInfo()}
+                    In this menu you can consult the meaning of these words:
+                    exit, danger, help, price, thanks, far, close, store and
+                    supermarket in any language. you can select the language by
+                    click on the arrow.
                 </Popup>
                 <DictionaryWrapper>
                     <div className="main-header">
@@ -171,14 +174,16 @@ export default class Dictionary extends Component {
                             onOpen={() => this.toggleSortArrow()}
                             onClose={() => this.toggleSortArrow()}
                         >
-                          <Spring 
-                            from={{ opacity: 0, marginTop: -20 }}
-                            to={{ opacity: 1, marginTop: 5 }}
-                          >
-                            {props => <div style={props}>
-                            {this.renderLangs()}
-                            </div>}
-                          </Spring>
+                            <Spring
+                                from={{ opacity: 0, marginTop: -20 }}
+                                to={{ opacity: 1, marginTop: 5 }}
+                            >
+                                {props => (
+                                    <div style={props}>
+                                        {this.renderLangs()}
+                                    </div>
+                                )}
+                            </Spring>
                         </Popup>
                     </div>
                     <div className="word-input">

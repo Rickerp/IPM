@@ -54,7 +54,7 @@ export default class Menu extends Component {
                         to="/ar"
                     >
                         <MapsItem currentPath={window.location.pathname}>
-                            <i className="fas fa-map-marked-alt" /> &nbsp; MAPS
+                            <i class="fas fa-landmark" /> &nbsp; LANDMARKS
                         </MapsItem>
                     </Link>
 
@@ -82,7 +82,9 @@ export default class Menu extends Component {
                             className="menu-item"
                             to="/dictionary"
                         >
-                            <DictionaryItem currentPath={window.location.pathname}>
+                            <DictionaryItem
+                                currentPath={window.location.pathname}
+                            >
                                 <i className="fas fa-book" /> &nbsp; DICTIONARY
                             </DictionaryItem>
                         </Link>
@@ -99,7 +101,9 @@ export default class Menu extends Component {
                             className="menu-item"
                             to="/translator"
                         >
-                            <TranslatorItem currentPath={window.location.pathname}>
+                            <TranslatorItem
+                                currentPath={window.location.pathname}
+                            >
                                 <i className="fas fa-sign-language" /> &nbsp;
                                 TRANSLATOR
                             </TranslatorItem>
@@ -147,7 +151,7 @@ const SlideWrapper = styled.div`
         /* Our sidebar item styling */
         text-decoration: none;
         margin-bottom: 15px;
-        color: #C4BFC8;
+        color: #c4bfc8;
         transition: color 0.2s;
     }
 
@@ -231,30 +235,42 @@ const ProfileCard = styled.div`
 `;
 
 const MapsItem = styled.span`
-    color: ${props => props.currentPath === "/ar" ? "var(--mainWhite)" : "#C4BFC8"};
+    color: ${props =>
+        props.currentPath === "/ar" ? "var(--mainWhite)" : "#C4BFC8"};
 
     &:hover {
         color: var(--mainWhite);
     }
-`
+`;
 
 const LanguagesItem = styled(MapsItem)`
-    color: ${props => (props.currentPath === "/dictionary" || props.currentPath === "/translator" || props.currentPath === "/translatorar") ? 
-    "var(--mainWhite)" : "#C4BFC8"};
-`
+    color: ${props =>
+        props.currentPath === "/dictionary" ||
+        props.currentPath === "/translator" ||
+        props.currentPath === "/translatorar"
+            ? "var(--mainWhite)"
+            : "#C4BFC8"};
+`;
 
 const DictionaryItem = styled(MapsItem)`
-    color: ${props => props.currentPath === "/dictionary" ? "var(--mainWhite)" : "#C4BFC8"};
-`
+    color: ${props =>
+        props.currentPath === "/dictionary" ? "var(--mainWhite)" : "#C4BFC8"};
+`;
 
 const TranslatorItem = styled(MapsItem)`
-    color: ${props => (props.currentPath === "/translator" || props.currentPath === "/translatorar") ? "var(--mainWhite)" : "#C4BFC8"};
-`
+    color: ${props =>
+        props.currentPath === "/translator" ||
+        props.currentPath === "/translatorar"
+            ? "var(--mainWhite)"
+            : "#C4BFC8"};
+`;
 
 const SharouteItem = styled(MapsItem)`
-    color: ${props => (props.currentPath === "/sharoute") ? "var(--mainWhite)" : "#C4BFC8"};
-`
+    color: ${props =>
+        props.currentPath === "/sharoute" ? "var(--mainWhite)" : "#C4BFC8"};
+`;
 
 const FriendsItem = styled(MapsItem)`
-    color: ${props => (props.currentPath === "/friends") ? "var(--mainWhite)" : "#C4BFC8"};
-`
+    color: ${props =>
+        props.currentPath === "/friends" ? "var(--mainWhite)" : "#C4BFC8"};
+`;

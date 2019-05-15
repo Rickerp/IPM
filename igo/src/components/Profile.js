@@ -220,7 +220,7 @@ const StatusText = styled.p`
 		position: relative;
 		top: -1px;
 		font-size: 50%;
-		color: var(--mainGreen);
+		color: ${props => props.online ? "var(--mainGreen)" : "var(--mainRed)"};
 	}
 	margin-top: 0;
 	margin-bottom: 0;

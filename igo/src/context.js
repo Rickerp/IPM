@@ -3,43 +3,51 @@ import FeedData from "./FeedData";
 import UsersData from "./UsersData";
 import LocationsData from "./LocationsData";
 import RoutesInfo from "./RoutesInfo";
+import MyRoutesData from "./MyRoutesData";
+import PopularRoutesData from "./PopularRoutesData";
+import FriendsRoutesData from "./FriendsRoutesData";
 
 const AppContext = React.createContext();
 
 class AppProvider extends Component {
-	state = {
-		feedData: FeedData,
-		usersData: UsersData,
-		locationsData: LocationsData,
-		routesData: RoutesInfo,
-		valueDictionary: "Search a word",
-		langDictionary: "0",
-		backAction: null
-	};
+    state = {
+        feedData: FeedData,
+        usersData: UsersData,
+        locationsData: LocationsData,
+        routesData: RoutesInfo,
+        popularRoutesData: PopularRoutesData,
+        friendsRoutesData: FriendsRoutesData,
+        myRoutesData: MyRoutesData,
+        valueDictionary: "Search a word",
+        langDictionary: "0",
+        blind: false,
+        location: "Rome",
+        currentRoute: 0
+    };
 
-	increaseLikes = idSearch => {
-		let feedData = this.state.feedData;
-		let activity = this.state.feedData.find(item => item.id === idSearch);
-		activity.likes = activity.likes + 1;
-		activity.liked = true;
+    increaseLikes = idSearch => {
+        let feedData = this.state.feedData;
+        let activity = this.state.feedData.find(item => item.id === idSearch);
+        activity.likes = activity.likes + 1;
+        activity.liked = true;
 
-		feedData[idSearch - 1] = activity;
-		this.setState({
-			feedData: feedData
-		});
-	};
+        feedData[idSearch - 1] = activity;
+        this.setState({
+            feedData: feedData
+        });
+    };
 
-	decreaseLikes = idSearch => {
-		let feedData = this.state.feedData;
-		let activity = this.state.feedData.find(item => item.id === idSearch);
-		activity.likes = activity.likes - 1;
-		activity.liked = false;
+    decreaseLikes = idSearch => {
+        let feedData = this.state.feedData;
+        let activity = this.state.feedData.find(item => item.id === idSearch);
+        activity.likes = activity.likes - 1;
+        activity.liked = false;
 
-		feedData[idSearch - 1] = activity;
-		this.setState({
-			feedData: feedData
-		});
-	};
+        feedData[idSearch - 1] = activity;
+        this.setState({
+            feedData: feedData
+        });
+    };
 
 	removeFriend = (idSearch, userId) => {
 		let usersData = this.state.usersData;
@@ -52,83 +60,140 @@ class AppProvider extends Component {
 		user.added = false;
 		user.description = "";
 
-		usersData[idSearch - 1] = user;
-		activities.forEach(activity => {
-			newActivity = activity;
-			newActivity.display = false;
-			feedData[newActivity.id - 1] = newActivity;
-		});
-		this.setState({
-			feedData: feedData,
-			usersData: usersData
-		});
-	};
+        usersData[idSearch - 1] = user;
+        activities.forEach(activity => {
+            newActivity = activity;
+            newActivity.display = false;
+            feedData[newActivity.id - 1] = newActivity;
+        });
+        this.setState({
+            feedData: feedData,
+            usersData: usersData
+        });
+    };
 
-	addFriend = (idSearch, userId) => {
-		let usersData = this.state.usersData;
-		let feedData = this.state.feedData;
-		let user = this.state.usersData.find(item => item.id === idSearch);
-		let activities = this.state.feedData.filter(
-			activity => activity.userId === userId
-		);
-		let newActivity;
-		user.added = true;
+    addFriend = (idSearch, userId) => {
+        let usersData = this.state.usersData;
+        let feedData = this.state.feedData;
+        let user = this.state.usersData.find(item => item.id === idSearch);
+        let activities = this.state.feedData.filter(
+            activity => activity.userId === userId
+        );
+        let newActivity;
+        user.added = true;
 
-		usersData[idSearch - 1] = user;
-		activities.forEach(activity => {
-			newActivity = activity;
-			newActivity.display = true;
-			feedData[newActivity.id - 1] = newActivity;
-		});
-		this.setState({
-			feedData: feedData,
-			usersData: usersData
-		});
-	};
+        usersData[idSearch - 1] = user;
+        activities.forEach(activity => {
+            newActivity = activity;
+            newActivity.display = true;
+            feedData[newActivity.id - 1] = newActivity;
+        });
+        this.setState({
+            feedData: feedData,
+            usersData: usersData
+        });
+    };
 
-	updateValueDictionary = newValue => {
-		this.setState({
-			valueDictionary: newValue
-		});
-	};
+    updateValueDictionary = newValue => {
+        this.setState({
+            valueDictionary: newValue
+        });
+    };
 
-	changeLangDictionary = newLang => {
-		this.setState({
-			langDictionary: newLang
-		});
-	};
+    changeLangDictionary = newLang => {
+        this.setState({
+            langDictionary: newLang
+        });
+    };
 
-	getProfileBg = userId => {
-		let user = this.state.usersData.find(item => item.userId === userId);
+    toggleBlind = () => {
+        this.setState({
+            blind: !this.state.blind
+        });
+    };
 
-		return user.profileBg;
-	};
+    changeRoute = () => {
+        let routes = this.state.routesData.find(
+            activity => activity.city === this.state.location
+        );
 
-	getStatus = userId => {
-		let user = this.state.usersData.find(item => item.userId === userId);
+        this.setState({
+            currentRoute:
+                routes.routes[Math.floor(Math.random() * routes.routes.length)]
+        });
+    };
 
-		return user.online;
-	};
+    changeLocation = newLocation => {
+        console.log(newLocation);
+        this.setState({
+            location: newLocation,
+            currentRoute: 0
+        });
+    };
 
-	render() {
-		return (
-			<AppContext.Provider
-				value={{
-					state: this.state,
-					increaseLikes: this.increaseLikes,
-					decreaseLikes: this.decreaseLikes,
-					removeFriend: this.removeFriend,
-					addFriend: this.addFriend,
-					updateValueDictionary: this.updateValueDictionary,
-					changeLangDictionary: this.changeLangDictionary,
-					getProfileBg: this.getProfileBg,
-					getStatus: this.getStatus
-				}}
-			>
-				{this.props.children}
-			</AppContext.Provider>
-		);
-	}
+    getProfileBg = userId => {
+        let user = this.state.usersData.find(item => item.userId === userId);
+
+        return user.banner;
+    };
+
+    getStatus = userId => {
+        let user = this.state.usersData.find(item => item.userId === userId);
+
+        return user.online;
+    };
+
+    saveRoute = route => {
+        let myRoutesData = this.state.myRoutesData;
+        let newRoute = {
+            id: myRoutesData[myRoutesData.length - 1].id + 1,
+            userId: 0,
+            avatar: "img/Rita60.png",
+            name: "Rita",
+            lenght: 10,
+            routeName: "Zé",
+            route: route
+        };
+
+        myRoutesData.push(newRoute);
+        this.setState({
+            myRoutesData: myRoutesData
+        });
+    };
+
+    isAdded = userId => {
+        if (userId === 0) {
+            return false;
+        }
+        let user = this.state.usersData.find(item => item.userId === userId);
+
+        return user.added;
+    };
+
+    render() {
+        return (
+            <AppContext.Provider
+                value={{
+                    state: this.state,
+                    increaseLikes: this.increaseLikes,
+                    decreaseLikes: this.decreaseLikes,
+                    removeFriend: this.removeFriend,
+                    addFriend: this.addFriend,
+                    updateValueDictionary: this.updateValueDictionary,
+                    changeLangDictionary: this.changeLangDictionary,
+                    getProfileBg: this.getProfileBg,
+                    getStatus: this.getStatus,
+                    toggleBlind: this.toggleBlind,
+                    changeRoute: this.changeRoute,
+                    changeLocation: this.changeLocation,
+                    saveRoute: this.saveRoute,
+                    isAdded: this.isAdded
+                }}
+            >
+                {this.props.children}
+            </AppContext.Provider>
+        );
+    }
 }
 
 const AppConsumer = AppContext.Consumer;

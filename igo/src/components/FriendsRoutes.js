@@ -2,12 +2,12 @@ import React, { useContext } from 'react'
 import { AppContext } from "../context"
 import RoutesList from './RoutesList';
 
-export default function PopularRoutes() {
+export default function FriendsRoutes() {
     const value = useContext(AppContext);
 
     return (
         <>
-            <RoutesList header="Popular Routes" routes={value.state.popularRoutesData} friends={false}></RoutesList>
+            <RoutesList header="Friend's Routes" routes={value.state.friendsRoutesData} friends={true}></RoutesList>
         </>
     )
 }
