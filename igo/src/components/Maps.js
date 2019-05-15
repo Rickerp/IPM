@@ -121,19 +121,25 @@ export default class Maps extends Component {
                                 closeOnDocumentClick={false}
                                 contentStyle={{
                                     margin: "auto",
-                                    padding: "2px",
+                                    padding: "10px",
                                     maxHeight: "300px",
                                     overflowY: "auto",
                                     overflowX: "hidden",
                                     maxWidth: "230px",
                                     fontSize: "13px",
                                     border: "1px solid black",
+                                    borderRadius: "20px",
                                     width: "200px",
                                     textAlign: "center"
                                 }}
                             >
                                 <i
-                                    style={{ cursor: "pointer" }}
+                                    style={{
+                                        cursor: "pointer",
+                                        position: "absolute",
+                                        left: "195px",
+                                        margin: "2px"
+                                    }}
                                     onClick={() => this.closeSavePopup()}
                                     class="fas fa-times"
                                 />
