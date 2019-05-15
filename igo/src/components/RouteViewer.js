@@ -11,14 +11,8 @@ export default function RouteViewer(props) {
                 <div className="maps-image">
                     {value.state.blind ? <img src={props.location.state.route + "_blind.png"} alt="F4"></img> : <img src={props.location.state.route + ".png"} alt="F4"></img>}
                 </div>
-                <div className="maps-marker">
-                    <i class="fas fa-map-marker" onClick={() => value.changeRoute()}></i>
-                </div>
                 <div className="maps-blind">
                     <i class="far fa-eye" onClick={() => value.toggleBlind()}></i>
-                </div>
-                <div className="maps-save">
-                    <i class="far fa-save"></i>
                 </div>
                 <div className="maps-share">
                     <i class="fas fa-share-alt"></i>
@@ -36,5 +30,5 @@ const MapsWrapper = styled.div`
     grid-template-rows: 1fr 30px;
     grid-template-areas: 
         "maps-image maps-image maps-image maps-image"
-        "maps-marker maps-blind maps-save maps-share";
+        "maps-blind maps-blind maps-share maps-share";
 `

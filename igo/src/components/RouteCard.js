@@ -40,6 +40,7 @@ const RouteCardWrapper = styled.div`
     grid-template-areas: 
         ". route-avatar route-inside .";
     text-decoration: none;
+    margin-bottom: 15px;
 `
 
 const InsideWrapper = styled.div`

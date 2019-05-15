@@ -32,59 +32,68 @@ export default class Profile extends Component {
 			<div style={this.getStatus()}>
 				<div style={this.styles.background}>
 					<ProfileWrapper>
-						<ProfileBanner
-							style={{ backgroundColor: this.props.item.banner }}
-						/>
-						<div
-							className="profile-avatar"
-							style={this.styles.avatar}
-						>
-							<img
-								style={{
-									maxWidth: "96%",
-									maxHeight: "96%",
-									borderRadius: "50%",
-									border: "2px solid black"
-								}}
-								src={this.props.item.avatar}
-								alt="Person"
-							/>
-						</div>
-						<div className="profile-status">
-							<StatusText>
-								Online <i class="fas fa-circle" />
-							</StatusText>
-						</div>
-						<div className="profile-name">
-							<NameText>{this.props.item.name}</NameText>
-						</div>
-						<div className="profile-description">
-							<DescriptionText>
-								{this.props.item.description}
-							</DescriptionText>
-						</div>
-						<div className="profile-routes">
-							<RoutesText>
-								Routes <i class="fas fa-route" />
-							</RoutesText>
-							<RoutesCounterText>10</RoutesCounterText>
-						</div>
-						<div className="profile-posts">
-							<PostsText>
-								Posts <br /> <i class="far fa-comments" />
-							</PostsText>
-							<PostsCounterText>10</PostsCounterText>
-						</div>
-						<div className="profile-remove">
-							<RemoveText>
-								<i class="fas fa-user-times" />
-							</RemoveText>
-						</div>
-						<div className="profile-edit">
-							<EditText>
-								<i class="fas fa-pencil-alt" />
-							</EditText>
-						</div>
+						<AppConsumer>
+							{value => (
+								<ProfileBanner
+									style={{ backgroundColor: value.getProfileBg(this.props.item.userId) }}
+								/>
+							)}
+						</AppConsumer>
+							<div
+								className="profile-avatar"
+								style={this.styles.avatar}
+							>
+								<img
+									style={{
+										maxWidth: "96%",
+										maxHeight: "96%",
+										borderRadius: "50%",
+										border: "2px solid black"
+									}}
+									src={this.props.item.avatar}
+									alt="Person"
+								/>
+							</div>
+							<AppConsumer>
+								{value => (
+									<div className="profile-status">
+										<StatusText online={value.getStatus(this.props.item.userId)}>
+											{value.getStatus(this.props.item.userId) ? "Online" : "Offline"} <i class="fas fa-circle" />
+										</StatusText>
+									</div>
+								)}
+							</AppConsumer>
+
+							<div className="profile-name">
+								<NameText>{this.props.item.name}</NameText>
+							</div>
+							<div className="profile-description">
+								<DescriptionText>
+									{this.props.item.description}
+								</DescriptionText>
+							</div>
+							<div className="profile-routes">
+								<RoutesText>
+									Routes <i class="fas fa-route" />
+								</RoutesText>
+								<RoutesCounterText>10</RoutesCounterText>
+							</div>
+							<div className="profile-posts">
+								<PostsText>
+									Posts <br /> <i class="far fa-comments" />
+								</PostsText>
+								<PostsCounterText>10</PostsCounterText>
+							</div>
+							<div className="profile-remove">
+								<RemoveText>
+									<i class="fas fa-user-times" />
+								</RemoveText>
+							</div>
+							<div className="profile-edit">
+								<EditText>
+									<i class="fas fa-pencil-alt" />
+								</EditText>
+							</div>
 					</ProfileWrapper>
 				</div>
 			</div>
@@ -160,7 +169,7 @@ const StatusText = styled.p`
 		position: relative;
 		top: -1px;
 		font-size: 50%;
-		color: var(--mainGreen);
+		color: ${props => props.online ? "var(--mainGreen)" : "var(--mainRed)"};
 	}
 	margin-top: 0;
 	margin-bottom: 0;

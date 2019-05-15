@@ -5,7 +5,7 @@ const UsersData = [
 		avatar: "img/Zequinha.png",
 		name: "Zequinha",
 		description: "Avô",
-		banner: "#eeeeee",
+		banner: "#5E96AE",
 		profileBg: "img/ZequinhaProfile.png",
 		online: true,
 		added: true
@@ -16,9 +16,9 @@ const UsersData = [
 		avatar: "img/Sandra.png",
 		name: "Maria dos Santos",
 		description: "BFF 🥰🥰",
-		banner: "#eeeeee",
+		banner: "#70ae98",
 		profileBg: "img/SandraProfile.png",
-		online: true,
+		online: false,
 		added: true
 	},
 	{
@@ -27,9 +27,9 @@ const UsersData = [
 		avatar: "img/Susana.png",
 		name: "Susana Sá",
 		description: "Colega de Bioquímica",
-		banner: "#eeeeee",
+		banner: "#EEAABB",
 		profileBg: "img/SusanaProfile.png",
-		online: true,
+		online: false,
 		added: true
 	},
 	{
@@ -38,7 +38,7 @@ const UsersData = [
 		avatar: "img/Artur.png",
 		name: "Artur Dias",
 		description: "Vizinho do 6º C",
-		banner: "#eeeeee",
+		banner: "#eab159",
 		profileBg: "img/ArturProfile.png",
 		online: true,
 		added: true
@@ -49,7 +49,7 @@ const UsersData = [
 		avatar: "img/Jose.png",
 		name: "Jose Martins",
 		description: "",
-		banner: "#eeeeee",
+		banner: "#eab159",
 		online: true,
 		added: false
 	}

@@ -116,8 +116,21 @@ class AppProvider extends Component {
     changeLocation = (newLocation) => {
         console.log(newLocation)
         this.setState({
-            location: newLocation
+			location: newLocation,
+			currentRoute: 0
         })
+	}
+	
+	getProfileBg = (userId) => {
+        let user = this.state.usersData.find(item => item.userId === userId)
+
+        return user.banner
+	}
+	
+	getStatus = (userId) => {
+        let user = this.state.usersData.find(item => item.userId === userId)
+
+        return user.online
     }
 
     render() {
