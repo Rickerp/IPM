@@ -1,8 +1,12 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { AppConsumer } from "../context";
+import Popup from "reactjs-popup";
 
 export default class Profile extends Component {
+	state = {
+		openRemove: false
+	};
+
 	styles = {
 		background: {
 			backgroundColor: "rgba(0, 0, 0, 0.5)",
@@ -21,6 +25,19 @@ export default class Profile extends Component {
 			zIndex: 30
 		}
 	};
+
+	openRemove() {
+		this.setState({ openRemove: true });
+	}
+
+	closeRemove() {
+		this.setState({ openRemove: false });
+	}
+
+	handleRemove() {
+		this.props.selfToggle();
+		this.props.onRemove();
+	}
 
 	getStatus() {
 		if (this.props.status) return { visibility: "visible" };
@@ -77,12 +94,55 @@ export default class Profile extends Component {
 						</div>
 						<div className="profile-remove">
 							<RemoveText>
-								<i class="fas fa-user-times" />
+								<i
+									style={{ cursor: "pointer" }}
+									onClick={() => this.openRemove()}
+									class="fas fa-user-times"
+								/>
+								<Popup
+									open={this.state.openRemove}
+									position="top center"
+									overlayStyle={{
+										width: "230px",
+										height: "341px",
+										margin: "auto",
+										position: "absolute",
+										top: "0"
+									}}
+									closeOnDocumentClick={false}
+									contentStyle={{
+										padding: "2px",
+										maxHeight: "300px",
+										overflowY: "auto",
+										overflowX: "hidden",
+										maxWidth: "130px",
+										fontSize: "13px",
+										border: "1px solid black",
+										textAlign: "center"
+									}}
+								>
+									Are you sure you want to remove this friend?
+									<br />
+									<button
+										onClick={() => {
+											this.closeRemove();
+											this.handleRemove();
+										}}
+									>
+										Yes
+									</button>
+									<button onClick={() => this.closeRemove()}>
+										No
+									</button>
+								</Popup>
 							</RemoveText>
 						</div>
 						<div className="profile-edit">
 							<EditText>
-								<i class="fas fa-pencil-alt" />
+								<i
+									style={{ cursor: "pointer" }}
+									class="fas fa-pencil-alt"
+								/>
 							</EditText>
 						</div>
 					</ProfileWrapper>

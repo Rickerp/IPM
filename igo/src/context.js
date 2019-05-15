@@ -50,6 +50,7 @@ class AppProvider extends Component {
 		);
 		let newActivity;
 		user.added = false;
+		user.description = "";
 
 		usersData[idSearch - 1] = user;
 		activities.forEach(activity => {
