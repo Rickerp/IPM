@@ -21,7 +21,7 @@ export default class User extends Component {
 
 	toggleProfile() {
 		this.setState({ profile: !this.state.profile });
-		if (!this.state.profile) this.props.setBack(() => this.toggleProfile());
+		if (this.state.profile) this.props.setBack(() => this.toggleProfile());
 	}
 
 	render() {

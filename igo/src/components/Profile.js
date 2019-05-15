@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import Popup from "reactjs-popup";
+import { AppConsumer } from "../context";
 
 export default class Profile extends Component {
 	state = {
@@ -48,104 +49,126 @@ export default class Profile extends Component {
 		return (
 			<div style={this.getStatus()}>
 				<div style={this.styles.background}>
-					<ProfileWrapper>
-						<ProfileBanner
-							style={{ backgroundColor: this.props.item.banner }}
-						/>
-						<div
-							className="profile-avatar"
-							style={this.styles.avatar}
-						>
-							<img
-								style={{
-									maxWidth: "96%",
-									maxHeight: "96%",
-									borderRadius: "50%",
-									border: "2px solid black"
-								}}
-								src={this.props.item.avatar}
-								alt="Person"
-							/>
-						</div>
-						<div className="profile-status">
-							<StatusText>
-								Online <i class="fas fa-circle" />
-							</StatusText>
-						</div>
-						<div className="profile-name">
-							<NameText>{this.props.item.name}</NameText>
-						</div>
-						<div className="profile-description">
-							<DescriptionText>
-								{this.props.item.description}
-							</DescriptionText>
-						</div>
-						<div className="profile-routes">
-							<RoutesText>
-								Routes <i class="fas fa-route" />
-							</RoutesText>
-							<RoutesCounterText>10</RoutesCounterText>
-						</div>
-						<div className="profile-posts">
-							<PostsText>
-								Posts <br /> <i class="far fa-comments" />
-							</PostsText>
-							<PostsCounterText>10</PostsCounterText>
-						</div>
-						<div className="profile-remove">
-							<RemoveText>
-								<i
-									style={{ cursor: "pointer" }}
-									onClick={() => this.openRemove()}
-									class="fas fa-user-times"
+					<AppConsumer>
+						{value => (
+							<ProfileWrapper>
+								<ProfileBanner
+									style={{
+										backgroundColor: value.getProfileBg(
+											this.props.item.userId
+										)
+									}}
 								/>
-								<Popup
-									open={this.state.openRemove}
-									position="top center"
-									overlayStyle={{
-										width: "230px",
-										height: "341px",
-										margin: "auto",
-										position: "absolute",
-										top: "0"
-									}}
-									closeOnDocumentClick={false}
-									contentStyle={{
-										padding: "2px",
-										maxHeight: "300px",
-										overflowY: "auto",
-										overflowX: "hidden",
-										maxWidth: "130px",
-										fontSize: "13px",
-										border: "1px solid black",
-										textAlign: "center"
-									}}
+								<div
+									className="profile-avatar"
+									style={this.styles.avatar}
 								>
-									Are you sure you want to remove this friend?
-									<br />
-									<button
-										onClick={() => {
-											this.closeRemove();
-											this.handleRemove();
+									<img
+										style={{
+											maxWidth: "96%",
+											maxHeight: "96%",
+											borderRadius: "50%",
+											border: "2px solid black"
 										}}
+										src={this.props.item.avatar}
+										alt="Person"
+									/>
+								</div>
+								<div className="profile-status">
+									<StatusText
+										online={value.getStatus(
+											this.props.item.userId
+										)}
 									>
-										Yes
-									</button>
-									<button onClick={() => this.closeRemove()}>
-										No
-									</button>
-								</Popup>
-							</RemoveText>
-						</div>
-						<div className="profile-edit">
-							<EditText>
-								<i
-									style={{ cursor: "pointer" }}
-									class="fas fa-pencil-alt"
-								/>
-							</EditText>
-						</div>
-					</ProfileWrapper>
+										{value.getStatus(this.props.item.userId)
+											? "Online"
+											: "Offline"}
+										{"  "}
+										<i class="fas fa-circle" />
+									</StatusText>
+								</div>
+								<div className="profile-name">
+									<NameText>{this.props.item.name}</NameText>
+								</div>
+								<div className="profile-description">
+									<DescriptionText>
+										{this.props.item.description}
+									</DescriptionText>
+								</div>
+								<div className="profile-routes">
+									<RoutesText>
+										Routes <i class="fas fa-route" />
+									</RoutesText>
+									<RoutesCounterText>10</RoutesCounterText>
+								</div>
+								<div className="profile-posts">
+									<PostsText>
+										Posts <br />{" "}
+										<i class="far fa-comments" />
+									</PostsText>
+									<PostsCounterText>10</PostsCounterText>
+								</div>
+								<div className="profile-remove">
+									<RemoveText>
+										<i
+											style={{ cursor: "pointer" }}
+											onClick={() => this.openRemove()}
+											class="fas fa-user-times"
+										/>
+										<Popup
+											open={this.state.openRemove}
+											position="top center"
+											overlayStyle={{
+												width: "230px",
+												height: "341px",
+												margin: "auto",
+												position: "absolute",
+												top: "0"
+											}}
+											closeOnDocumentClick={false}
+											contentStyle={{
+												padding: "2px",
+												maxHeight: "300px",
+												overflowY: "auto",
+												overflowX: "hidden",
+												maxWidth: "130px",
+												fontSize: "13px",
+												border: "1px solid black",
+												textAlign: "center"
+											}}
+										>
+											Are you sure you want to remove this
+											friend?
+											<br />
+											<button
+												onClick={() => {
+													this.closeRemove();
+													this.handleRemove();
+												}}
+											>
+												Yes
+											</button>
+											<button
+												onClick={() =>
+													this.closeRemove()
+												}
+											>
+												No
+											</button>
+										</Popup>
+									</RemoveText>
+								</div>
+								<div className="profile-edit">
+									<EditText>
+										<i
+											style={{ cursor: "pointer" }}
+											class="fas fa-pencil-alt"
+										/>
+									</EditText>
+								</div>
+							</ProfileWrapper>
+						)}
+					</AppConsumer>
 				</div>
 			</div>
 		);
@@ -220,7 +243,8 @@ const StatusText = styled.p`
 		position: relative;
 		top: -1px;
 		font-size: 50%;
-		color: ${props => props.online ? "var(--mainGreen)" : "var(--mainRed)"};
+		color: ${props =>
+			props.online ? "var(--mainGreen)" : "var(--mainRed)"};
 	}
 	margin-top: 0;
 	margin-bottom: 0;

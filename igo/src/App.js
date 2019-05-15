@@ -60,10 +60,12 @@ class App extends Component {
 
 	pushBack(func) {
 		backAction.push(func);
+		console.log("PUSH ", backAction);
 	}
 
 	popBack() {
 		backAction.pop();
+		console.log("POP ", backAction);
 	}
 
 	handleBack() {
