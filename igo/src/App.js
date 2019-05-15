@@ -31,7 +31,7 @@ class App extends Component {
     constructor() {
         super();
         history = createBrowserHistory();
-        backAction = [];
+        backAction = null;
     }
 
     state = {
