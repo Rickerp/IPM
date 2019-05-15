@@ -6,47 +6,51 @@ import { Spring } from "react-spring/renderprops";
 export default function RouteCard(props) {
     return (
         <Spring
-        from={{ opacity: 0, marginTop: -20 }}
-        to={{ opacity: 1, marginTop: 0 }}
-        config={{ duration: 500 }}
+            from={{ opacity: 0, marginTop: -20 }}
+            to={{ opacity: 1, marginTop: 0 }}
+            config={{ duration: 500 }}
         >
-            {springProps => <div style={springProps}>
-                <Link
-                    to={{
-                        pathname: props.item.routeName,
-                        state: {
-                            route: props.item.route,
-                            name: props.item.routeName
-                        }
-                    }}
-                    style={{ textDecoration: "none", color: "black" }}
-                >
-                    <RouteCardWrapper>
-                        <Avatar className="route-avatar">
-                            <AvatarImg src={props.item.avatar} alt="Rita" />
-                        </Avatar>
-                        <InsideWrapper className="route-inside">
-                            <div className="route-author">
-                                <RouteAuthor>{props.item.name}</RouteAuthor>
-                            </div>
-                            <div className="route-rating">
-                                <RouteRating>
-                                    <i class="fas fa-star" /> <i class="fas fa-star" />{" "}
-                                    <i class="fas fa-star" /> <i class="fas fa-star" />{" "}
-                                    <i class="fas fa-star" />
-                                </RouteRating>
-                            </div>
-                            <div className="route-details">
-                                <RouteName>
-                                    {props.item.routeName} &nbsp;
-                                    <i class="fas fa-circle" />
-                                    &nbsp; {props.item.lenght}KM
-                                </RouteName>
-                            </div>
-                        </InsideWrapper>
-                    </RouteCardWrapper>
-                </Link>
-            </div>}
+            {springProps => (
+                <div style={springProps}>
+                    <Link
+                        to={{
+                            pathname: props.item.routeName,
+                            state: {
+                                route: props.item.route,
+                                name: props.item.routeName
+                            }
+                        }}
+                        style={{ textDecoration: "none", color: "black" }}
+                    >
+                        <RouteCardWrapper>
+                            <Avatar className="route-avatar">
+                                <AvatarImg src={props.item.avatar} alt="Rita" />
+                            </Avatar>
+                            <InsideWrapper className="route-inside">
+                                <div className="route-author">
+                                    <RouteAuthor>{props.item.name}</RouteAuthor>
+                                </div>
+                                <div className="route-rating">
+                                    <RouteRating>
+                                        <i class="fas fa-star" />{" "}
+                                        <i class="fas fa-star" />{" "}
+                                        <i class="fas fa-star" />{" "}
+                                        <i class="fas fa-star" />{" "}
+                                        <i class="fas fa-star" />
+                                    </RouteRating>
+                                </div>
+                                <div className="route-details">
+                                    <RouteName>
+                                        {props.item.routeName} &nbsp;
+                                        <i class="fas fa-circle" />
+                                        &nbsp; {props.item.lenght}KM
+                                    </RouteName>
+                                </div>
+                            </InsideWrapper>
+                        </RouteCardWrapper>
+                    </Link>
+                </div>
+            )}
         </Spring>
     );
 }
@@ -96,6 +100,7 @@ const RouteRating = styled.p`
 const RouteName = styled.p`
     font-size: 80%;
     margin-top: -1px;
+    text-transform: capitalize;
 
     i {
         position: relative;
