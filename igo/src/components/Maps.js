@@ -1,76 +1,84 @@
-import React, { useContext } from "react";
-import { AppContext } from "../context";
+import React, { Component } from "react";
+import { AppConsumer } from "../context";
 import styled from "styled-components";
 import { Spring } from "react-spring/renderprops";
 
-export default function Maps() {
-    const value = useContext(AppContext);
-
-    return (
-        <>
-        	<Spring
-				from={{ opacity: 0 }}
-				to={{ opacity: 1 }}
-				config={{ delay: 100, duration: 900 }}
-			>
-                {styledProps => <MapsWrapper style={styledProps}>
-                    <div className="maps-image">
-                        {value.state.currentRoute === 0 ? (
-                            value.state.routesData.map(item => {
-                                if (item.city === value.state.location) {
-                                    return value.state.blind ? (
-                                        <img
-                                            src={item.default + "_blind.png"}
-                                            alt="Mapa"
-                                            draggable="false"
-                                        />
-                                    ) : (
-                                        <img
-                                            src={item.default + ".png"}
-                                            alt="Mapa"
-                                            draggable="false"
-                                        />
-                                    );
-                                }
-                            })
-                        ) : value.state.blind ? (
-                            <img
-                                src={value.state.currentRoute + "_blind.png"}
-                                alt="Mapa"
-                                draggable="false"
-                            />
-                        ) : (
-                            <img
-                                src={value.state.currentRoute + ".png"}
-                                alt="Mapa"
-                                draggable="false"
-                            />
-                        )}
-                    </div>
-                    <div className="maps-marker">
-                        <i
-                            class="fas fa-map-marker"
-                            onClick={() => value.changeRoute()}
-                        />
-                    </div>
-                    <div className="maps-blind">
-                        <i class="far fa-eye" onClick={() => value.toggleBlind()} />
-                    </div>
-                    <div className="maps-save">
-                        <i
-                            class="far fa-save"
-                            onClick={() =>
-                                value.saveRoute(value.state.currentRoute)
-                            }
-                        />
-                    </div>
-                    <div className="maps-share">
-                        <i class="fas fa-share-alt" />
-                    </div>
-                </MapsWrapper>}
-            </Spring>
-        </>
-    );
+export default class Maps extends Component {
+    render() {
+        return (
+            <>
+                <Spring
+                    from={{ opacity: 0 }}
+                    to={{ opacity: 1 }}
+                    config={{ delay: 100, duration: 900 }}
+                >
+                    {styledProps => <MapsWrapper style={styledProps}>
+                        <AppConsumer>
+                            {value => <div className="maps-image">
+                                {value.state.currentRoute === 0 ? (
+                                    value.state.routesData.map(item => {
+                                        if (item.city === value.state.location) {
+                                            return value.state.blind ? (
+                                                <img
+                                                    src={item.default + "_blind.png"}
+                                                    alt="Mapa"
+                                                    draggable="false"
+                                                />
+                                            ) : (
+                                                <img
+                                                    src={item.default + ".png"}
+                                                    alt="Mapa"
+                                                    draggable="false"
+                                                />
+                                            );
+                                        }
+                                    })
+                                ) : value.state.blind ? (
+                                    <img
+                                        src={value.state.currentRoute + "_blind.png"}
+                                        alt="Mapa"
+                                        draggable="false"
+                                    />
+                                ) : (
+                                    <img
+                                        src={value.state.currentRoute + ".png"}
+                                        alt="Mapa"
+                                        draggable="false"
+                                    />
+                                )}
+                            </div>}
+                        </AppConsumer>
+                        <AppConsumer>
+                            {value => <div className="maps-marker">
+                                <i
+                                    class="fas fa-map-marker"
+                                    onClick={() => value.changeRoute()}
+                                />
+                            </div>}
+                        </AppConsumer>
+                        <AppConsumer>
+                            {value => <div className="maps-blind">
+                                <i class="far fa-eye" onClick={() => value.toggleBlind()} />
+                            </div>}
+                        </AppConsumer>
+                        <AppConsumer>
+                            {value => <div className="maps-save">
+                                <i
+                                    class="far fa-save"
+                                    onClick={() =>
+                                        value.saveRoute(value.state.currentRoute)
+                                    }
+                                />
+                            </div>}
+                        </AppConsumer>
+                        <div className="maps-share">
+                            <i class="fas fa-share-alt" />
+                        </div>
+                    </MapsWrapper>}
+                </Spring>
+            </>
+        );
+    }
 }
 
 const MapsWrapper = styled.div`
