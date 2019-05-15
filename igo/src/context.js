@@ -170,7 +170,7 @@ class AppProvider extends Component {
             userId: 0,
             avatar: "img/Rita60.png",
             name: "Rita",
-            lenght: 10,
+            lenght: Math.floor(Math.random() * 20),
             routeName:
                 routeCapitalized.charAt(0).toUpperCase() +
                 routeCapitalized.slice(1).toLowerCase(),
