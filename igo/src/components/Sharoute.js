@@ -7,6 +7,8 @@ import { Spring } from "react-spring/renderprops";
 import styled from "styled-components";
 
 export default function Sharoute() {
+    const value = useContext(AppContext)
+
     return (
         <React.Fragment>
             <Popup
@@ -51,7 +53,8 @@ export default function Sharoute() {
                 {styledProps => <SharouteWrapper style={styledProps}>
                     <div className="sharoute-header">
                         <SharouteHeader>
-                            Sharoute
+                            Sharoute <br/>
+                            <span>current location: {value.state.location}</span>
                             <Link to="/location" style={{ textDecoration: "none" }}>
                                 <i class="fas fa-ellipsis-v" />
                             </Link>
@@ -126,8 +129,14 @@ const SharouteHeader = styled.h3`
 
     i {
         position: relative;
-        left: 30px;
+        left: 20px;
+        top: -23px;
         font-size: 14px;
+    }
+
+    span {
+        font-size: 12px;
+        font-weight: 400;
     }
 `;
 
