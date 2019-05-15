@@ -160,21 +160,21 @@ export default class Profile extends Component {
 											Are you sure you want to remove this
 											friend?
 											<br />
-											<button
+											<ButtonBetter
 												onClick={() => {
 													this.closeRemove();
 													this.handleRemove();
 												}}
 											>
 												Yes
-											</button>
-											<button
+											</ButtonBetter>
+											<ButtonBetter
 												onClick={() =>
 													this.closeRemove()
 												}
 											>
 												No
-											</button>
+											</ButtonBetter>
 										</Popup>
 									</RemoveText>
 								</div>
@@ -233,7 +233,7 @@ export default class Profile extends Component {
 												}
 											/>
 											<br />
-											<button
+											<ButtonBetter
 												onClick={() => {
 													this.closeDescription();
 													value.changeDescription(
@@ -243,14 +243,14 @@ export default class Profile extends Component {
 												}}
 											>
 												Confirm
-											</button>
-											<button
+											</ButtonBetter>
+											<ButtonBetter
 												onClick={() =>
 													this.closeDescription()
 												}
 											>
 												Cancel
-											</button>
+											</ButtonBetter>
 										</Popup>
 									</EditText>
 								</div>
@@ -392,4 +392,12 @@ const PostsCounterText = styled.p`
 	text-align: center;
 	margin-top: 0px;
 	margin-bottom: 0px;
+`;
+
+const ButtonBetter = styled.button`
+    font-family: "Montserrat";
+    font-size: 12px;
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 10px;
 `;

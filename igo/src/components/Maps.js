@@ -163,7 +163,7 @@ export default class Maps extends Component {
                                 <br />
                                 <AppConsumer>
                                     {value => (
-                                        <button
+                                        <ButtonBetter
                                             onClick={() => {
                                                 value.saveRoute(
                                                     value.state.currentRoute,
@@ -173,7 +173,7 @@ export default class Maps extends Component {
                                             }}
                                         >
                                             CONFIRM
-                                        </button>
+                                        </ButtonBetter>
                                     )}
                                 </AppConsumer>
                             </Popup>
@@ -210,13 +210,13 @@ export default class Maps extends Component {
                                 Shared successfully
                                 <br />
                                 <br />
-                                <button
+                                <ButtonBetter
                                     onClick={() => {
                                         this.closeSharePopup();
                                     }}
                                 >
                                     OK
-                                </button>
+                                </ButtonBetter>
                             </Popup>
                             <div className="maps-share">
                                 <i
@@ -270,4 +270,12 @@ const TextInput = styled.input`
     &:focus {
         outline: none;
     }
+`;
+
+const ButtonBetter = styled.button`
+    font-family: "Montserrat";
+    font-size: 12px;
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 10px;
 `;
