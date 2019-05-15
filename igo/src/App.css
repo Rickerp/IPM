@@ -1,378 +1,404 @@
 :root {
-  --mainBlack: #000000;
-  --mainWhite: #ffffff;
-  --mainRed: #ee4238;
-  --mainGreen: #76ff03;
+	--mainBlack: #000000;
+	--mainWhite: #ffffff;
+	--mainRed: #ee4238;
+	--mainGreen: #76ff03;
 }
 
 body {
-  font-family: "Montserrat";
-  overflow-y: hidden;
+	font-family: "Montserrat";
+	overflow-y: hidden;
 }
 
 ::-webkit-scrollbar {
-  width: 0px;
-  background: transparent; /* make scrollbar transparent */
+	width: 0px;
+	background: transparent; /* make scrollbar transparent */
 }
 
 .simple-keyboard {
-  font-family: "Montserrat"!important;
+	font-family: "Montserrat" !important;
 }
 
 .simple-keyboard .hg-button {
-  min-width: 21px;
-  max-width: 21px;
+	min-width: 21px;
+	max-width: 21px;
 }
 
 .simple-keyboard .hg-button-whitesp {
-  min-width: 21px;
-  max-width: 21px;
-  cursor: default!important;
-  background: transparent!important;
-  border: none!important;
-  box-shadow: none!important;
+	min-width: 21px;
+	max-width: 21px;
+	cursor: default !important;
+	background: transparent !important;
+	border: none !important;
+	box-shadow: none !important;
 }
 
 .simple-keyboard .hg-button-space {
-  max-width: none;
+	max-width: none;
 }
 
 /* The device with borders */
 .band {
-  position: relative;
-  width: 230px;
-  height: 371px;
-  margin-left: auto; /* -3px */
-  margin-right: auto;
-  border: 10px var(--mainBlack) solid;
-  border-top-width: 20px;
-  border-bottom-width: 20px;
-  border-radius: 16px;
+	position: relative;
+	width: 230px;
+	height: 371px;
+	margin-left: auto; /* -3px */
+	margin-right: auto;
+	border: 10px var(--mainBlack) solid;
+	border-top-width: 20px;
+	border-bottom-width: 20px;
+	border-radius: 16px;
 }
 
 /* The horizontal line on the top of the device */
 .band:before {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 5px;
-  position: absolute;
-  top: -30px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #333;
-  border-radius: 10px;
+	content: "";
+	display: block;
+	width: 60px;
+	height: 5px;
+	position: absolute;
+	top: -30px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #333;
+	border-radius: 10px;
 }
 
 /* The screen (or content) of the device */
 .band .content {
-  width: 230px;
-  height: 371px;
-  background: var(--mainWhite);
+	width: 230px;
+	height: 371px;
+	background: var(--mainWhite);
 }
 
 #App {
-  height: 100vh;
+	height: 100vh;
 }
 
 #page-wrap {
-  overflow: auto;
+	overflow: auto;
 }
 
 #page-component {
-  margin-top: 40px;
+	margin-top: 40px;
 }
 
 .menu-down {
-  position: absolute;
-  zoom: 70%;
-  top: 240px;
-  left: 225px;
+	position: absolute;
+	zoom: 70%;
+	top: 240px;
+	left: 225px;
 }
 
 .menu-up {
-  position: absolute;
-  zoom: 70%;
-  top: 245px;
-  left: 225px;
+	position: absolute;
+	zoom: 70%;
+	top: 245px;
+	left: 225px;
 }
 
 .fa-bars {
-  margin-left: 5px;
-  zoom: 60%;
+	margin-left: 5px;
+	zoom: 60%;
 }
 
 .clock-hours {
-  font-weight: 500;
-  font-size: 70%;
-  margin-left: 5px;
-  padding: 0;
+	font-weight: 500;
+	font-size: 70%;
+	margin-left: 5px;
+	padding: 0;
 }
 
 .clock {
-  font-size: 0.6em;
-  font-size: 70%;
-  margin-left: 5px;
-  padding: 0;
+	font-size: 0.6em;
+	font-size: 70%;
+	margin-left: 5px;
+	padding: 0;
 }
 
 .clock-div {
-  grid-area: clock-div;
-  margin-left: 15px;
-  margin-top: 2px;
+	grid-area: clock-div;
+	margin-left: 15px;
+	margin-top: 2px;
 }
 
 .battery {
-  grid-area: battery;
-  font-size: 70%;
-  text-align: right;
-  margin-top: 6px;
+	grid-area: battery;
+	font-size: 70%;
+	text-align: right;
+	margin-top: 6px;
 }
 
 .fa-battery-quarter {
-  color: #ee4238;
-  margin-right: 2px;
+	color: #ee4238;
+	margin-right: 2px;
 }
 
 .card-name {
-  color: var(--mainWhite);
-  grid-area: card-name;
-  margin-left: 30px;
-  margin-top: 10px;
-  font-size: 16px;
+	color: var(--mainWhite);
+	grid-area: card-name;
+	margin-left: 30px;
+	margin-top: 10px;
+	font-size: 16px;
 }
 
 .card-avatar {
-  grid-area: card-avatar;
+	grid-area: card-avatar;
 }
 
 .avatar {
-  grid-area: avatar;
+	grid-area: avatar;
 }
 
 .name {
-  grid-area: name;
+	grid-area: name;
 }
 
 .activity {
-  grid-area: activity;
+	grid-area: activity;
 }
 
 .timestamp {
-  grid-area: timestamp;
+	grid-area: timestamp;
 }
 
 .comments {
-  grid-area: comments;
-  margin-top: -5px;
+	grid-area: comments;
+	margin-top: -5px;
 }
 
 .likes {
-  grid-area: likes;
-  margin-top: -5px;
+	grid-area: likes;
+	margin-top: -5px;
 }
 
 .heart-filled {
-  color: red;
+	color: red;
 }
 
 /* Ar */
 
 .fa-arrow-right {
-  color: var(--mainBlack);
+	color: var(--mainBlack);
 }
 
 button:focus {
-  outline: none;
+	outline: none;
 }
 
 /* Dictionary */
 
 .main-header {
-  grid-area: main-header;
+	grid-area: main-header;
 }
 
 .language-input {
-  grid-area: language-input;
+	grid-area: language-input;
 }
 
 .word-input {
-  grid-area: word-input;
+	grid-area: word-input;
 }
 
 .line-left {
-  grid-area: line-left;
+	grid-area: line-left;
 }
 
 .side-header {
-  grid-area: side-header;
+	grid-area: side-header;
 }
 
 .line-right {
-  grid-area: line-right;
+	grid-area: line-right;
 }
 
 .word-results {
-  grid-area: word-results;
+	grid-area: word-results;
 }
 
 /* Word */
 
 .word {
-  grid-area: word;
+	grid-area: word;
 }
 
 .meaning {
-  grid-area: meaning;
+	grid-area: meaning;
 }
 
 /* Translator */
 
 .main-tr-header {
-  grid-area: main-tr-header;
+	grid-area: main-tr-header;
 }
 
 .in-language-input {
-  grid-area: in-language-input;
+	grid-area: in-language-input;
 }
 
 .extra-buttons {
-  grid-area: extra-buttons;
+	grid-area: extra-buttons;
 }
 
 .arrow {
-  grid-area: arrow;
+	grid-area: arrow;
 }
 
 .fa-arrow-circle-right {
-  position: absolute;
-  display: block;
-  text-align: center;
-  margin-left: 15px;
+	position: absolute;
+	display: block;
+	text-align: center;
+	margin-left: 15px;
 }
 
 .fa-camera {
-  color: black;
+	color: black;
 }
 
 .word-tr-input {
-  grid-area: word-tr-input;
+	grid-area: word-tr-input;
 }
 
 .out-language-input {
-  grid-area: out-language-input;
+	grid-area: out-language-input;
 }
 
 .word-tr-output {
-  grid-area: word-tr-output;
+	grid-area: word-tr-output;
 }
 
 .menu {
-  width: 200px;
-  display: flex;
-  flex-direction: column;
-  background: #ffffff;
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+	background: #ffffff;
 }
 .in-language-item {
-  cursor: pointer;
-  padding: 5px;
-  height: 28px;
-  border-bottom: 1px solid rgb(187, 187, 187);
+	cursor: pointer;
+	padding: 5px;
+	height: 28px;
+	border-bottom: 1px solid rgb(187, 187, 187);
 }
 .in-language-item:hover {
-  color: #2980b9;
+	color: #2980b9;
 }
 
 /* Profile */
 
 .profile-avatar {
-  grid-area: profile-avatar;
-}
-
-.profile-name {
-  grid-area: profile-name;
+	grid-area: profile-avatar;
 }
 
 .profile-status {
-  grid-area: profile-status;
+	grid-area: profile-status;
+}
+
+.profile-name {
+	grid-area: profile-name;
+}
+
+.profile-description {
+	grid-area: profile-description;
 }
 
 .profile-routes {
-  grid-area: profile-routes;
+	grid-area: profile-routes;
 }
 
 .profile-posts {
-  grid-area: profile-posts;
+	grid-area: profile-posts;
 }
 
 .profile-remove {
-  grid-area: profile-remove;
+	grid-area: profile-remove;
+}
+
+.profile-edit {
+	grid-area: profile-edit;
 }
 
 /* User */
 
 .user-avatar {
-  grid-area: user-avatar;
+	grid-area: user-avatar;
 }
 
 .user-name {
-  grid-area: user-name;
+	grid-area: user-name;
 }
 
 .user-description {
-  grid-area: user-description;
+	grid-area: user-description;
 }
 
 .user-options {
-  grid-area: user-options;
+	grid-area: user-options;
+}
+
+/* User */
+
+.user-avatar {
+	grid-area: user-avatar;
+}
+
+.user-name {
+	grid-area: user-name;
+}
+
+.user-description {
+	grid-area: user-description;
+}
+
+.user-options {
+	grid-area: user-options;
 }
 
 /* Sharoute */
 
 .sharoute-header {
-  grid-area: sharoute-header;
+	grid-area: sharoute-header;
 }
 
 .sharoute-popular {
-  grid-area: sharoute-popular;
+	grid-area: sharoute-popular;
 }
 
 .sharoute-build {
-  grid-area: sharoute-build;
+	grid-area: sharoute-build;
 }
 
 .sharoute-mine {
-  grid-area: sharoute-mine;
+	grid-area: sharoute-mine;
 }
 
 .sharoute-friends {
-  grid-area: sharoute-friends;
+	grid-area: sharoute-friends;
 }
 
 .location {
-  grid-area: location;
+	grid-area: location;
 }
 
 /* Route Card */
 
 .route-avatar {
-  grid-area: route-avatar;
+	grid-area: route-avatar;
 }
 
 .route-inside {
-  grid-area: route-inside;
+	grid-area: route-inside;
 }
 
 .route-author {
-  grid-area: route-author;
+	grid-area: route-author;
 }
 
 .route-rating {
-  grid-area: route-rating;
+	grid-area: route-rating;
 }
 
 .route-details {
-  grid-area: route-details;
+	grid-area: route-details;
 }
 
 /* Maps */

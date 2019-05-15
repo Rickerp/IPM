@@ -18,7 +18,11 @@ export default function FriendsList(props) {
 								borderBottom: "1px solid black"
 							}}
 						>
-							<User key={item.id} item={item} />
+							<User
+								key={item.id}
+								item={item}
+								setBack={props.setBack}
+							/>
 						</div>
 					);
 				}

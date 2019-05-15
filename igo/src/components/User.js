@@ -1,58 +1,85 @@
-import React, { useContext } from "react";
-import { AppContext } from "../context";
+import React, { Component } from "react";
+import { AppContext, AppConsumer } from "../context";
 import styled from "styled-components";
 import { Spring } from "react-spring/renderprops";
+import Profile from "./Profile";
 
-export default function User(props) {
-	const value = useContext(AppContext);
+export default class User extends Component {
+	state = {
+		profile: false
+	};
 
-	return (
-		<Spring
-			from={{ opacity: 0, marginTop: -20 }}
-			to={{ opacity: 1, marginTop: 0 }}
-		>
-			{springProps => (
-				<div style={springProps}>
-					<UserWrapper>
-						<Avatar className="user-avatar">
-							<img src={props.item.avatar} alt="User" />
-						</Avatar>
-						<div className="user-name">
-							<NameText>{props.item.name}</NameText>
-						</div>
-						<div className="user-description">
-							<DescriptionText>
-								{props.item.description}
-							</DescriptionText>
-						</div>
-						<UserOptions className="user-options">
-							{props.item.added ? (
-								<i
-									className="fas fa-minus-circle"
-									onClick={() =>
-										value.removeFriend(
-											props.item.id,
-											props.item.userId
-										)
-									}
+	toggleProfile() {
+		this.setState({ profile: !this.state.profile });
+		this.props.setBack(() => this.toggleProfile());
+	}
+
+	render() {
+		return (
+			<Spring
+				from={{ opacity: 0, marginTop: -20 }}
+				to={{ opacity: 1, marginTop: 0 }}
+			>
+				{springProps => (
+					<div style={springProps}>
+						<UserWrapper>
+							<Avatar className="user-avatar">
+								<img
+									style={{
+										maxWidth: "100%",
+										maxHeight: "100%",
+										borderRadius: "50%"
+									}}
+									src={this.props.item.avatar}
+									alt="User"
 								/>
-							) : (
-								<i
-									className="fas fa-plus-circle"
-									onClick={() =>
-										value.addFriend(
-											props.item.id,
-											props.item.userId
-										)
-									}
-								/>
-							)}
-						</UserOptions>
-					</UserWrapper>
-				</div>
-			)}
-		</Spring>
-	);
+							</Avatar>
+							<div className="user-name">
+								<NameText>{this.props.item.name}</NameText>
+							</div>
+							<div className="user-description">
+								<DescriptionText>
+									{this.props.item.description}
+								</DescriptionText>
+							</div>
+							<AppConsumer>
+								{value => (
+									<UserOptions className="user-options">
+										{this.props.item.added ? (
+											<i
+												className="fas fa-cog"
+												onClick={() => {
+													/*value.removeFriend(
+														this.props.item.id,
+														this.props.item.userId
+													)*/
+													this.toggleProfile();
+												}}
+											/>
+										) : (
+											<i
+												className="fas fa-plus-circle"
+												onClick={() =>
+													value.addFriend(
+														this.props.item.id,
+														this.props.item.userId
+													)
+												}
+											/>
+										)}
+									</UserOptions>
+								)}
+							</AppConsumer>
+						</UserWrapper>
+						<Profile
+							item={this.props.item}
+							status={this.state.profile}
+						/>
+					</div>
+				)}
+			</Spring>
+		);
+	}
 }
 
 const UserWrapper = styled.div`
@@ -68,7 +95,6 @@ const UserWrapper = styled.div`
 `;
 
 const Avatar = styled.div`
-	display: block;
 	margin-right: auto;
 	margin-left: 10px;
 	margin-top: auto;

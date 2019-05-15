@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useContext } from "react";
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
 import Ar from "./components/Ar";
@@ -55,6 +55,10 @@ class App extends Component {
 			transform: "scale(0)"
 		}
 	};
+
+	setBack(func) {
+		backAction = func;
+	}
 
 	handleBack() {
 		if (backAction === null) {
@@ -176,7 +180,14 @@ class App extends Component {
 									<Route
 										exact={true}
 										path="/friends"
-										component={FriendsList}
+										render={props => (
+											<FriendsList
+												setBack={func =>
+													this.setBack(func)
+												}
+												{...props}
+											/>
+										)}
 									/>
 									<Route
 										exact={true}
@@ -189,6 +200,9 @@ class App extends Component {
 												keyboardToggle={state =>
 													this.toggleKeyboard(state)
 												}
+												setBack={func =>
+													this.setBack(func)
+												}
 												{...props}
 											/>
 										)}
@@ -196,7 +210,14 @@ class App extends Component {
 									<Route
 										exact={true}
 										path="/"
-										component={Feed}
+										render={props => (
+											<Feed
+												setBack={func =>
+													this.setBack(func)
+												}
+												{...props}
+											/>
+										)}
 									/>
 									<Route
 										path="/:handle"
