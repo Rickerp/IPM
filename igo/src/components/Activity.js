@@ -23,13 +23,17 @@ export default class Activity extends Component {
 			>
 				{props => (
 					<div style={props}>
+					<AppConsumer>{ value =>
+
 						<Profile
 							item={this.props.item}
 							status={this.state.profile}
 							selfToggle={() => this.toggleProfile()}
 							keyboardInput={this.props.keyboardInput}
 							keyboardToggle={this.props.keyboardToggle}
-						/>
+							onRemove={() => value.removeFriend(this.props.item.id, this.props.item.userId)}
+						/>}
+					</AppConsumer>
 
 						<ActivityWrapper onClick={() => this.toggleProfile()}>
 							<Avatar className="avatar">
