@@ -131,7 +131,11 @@ class AppProvider extends Component {
         let user = this.state.usersData.find(item => item.userId === userId)
 
         return user.online
-    }
+	}
+	
+	saveRoute = () => {
+		
+	}
 
     render() {
         return (
