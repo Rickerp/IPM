@@ -11,6 +11,7 @@ export default class User extends Component {
 
 	toggleProfile() {
 		this.setState({ profile: !this.state.profile });
+		this.props.setBack(() => this.toggleProfile());
 	}
 
 	render() {
@@ -20,10 +21,7 @@ export default class User extends Component {
 				to={{ opacity: 1, marginTop: 0 }}
 			>
 				{springProps => (
-					<div
-						style={springProps}
-						onClick={() => this.toggleProfile()}
-					>
+					<div style={springProps}>
 						<UserWrapper>
 							<Avatar className="user-avatar">
 								<img

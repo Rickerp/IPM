@@ -32,7 +32,9 @@ export default class Profile extends Component {
 			<div style={this.getStatus()}>
 				<div style={this.styles.background}>
 					<ProfileWrapper>
-						<ProfileBanner style={{ backgroundColor: "#FFBFA3" }} />
+						<ProfileBanner
+							style={{ backgroundColor: this.props.item.banner }}
+						/>
 						<div
 							className="profile-avatar"
 							style={this.styles.avatar}

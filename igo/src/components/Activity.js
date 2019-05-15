@@ -12,6 +12,7 @@ export default class Activity extends Component {
 
 	toggleProfile() {
 		this.setState({ profile: !this.state.profile });
+		this.props.setBack(() => this.toggleProfile());
 	}
 
 	render() {
