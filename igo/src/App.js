@@ -63,7 +63,7 @@ class App extends Component {
 	}
 
 	handleBack() {
-		if (backAction.length == 0) {
+		if (backAction == null) {
 			this.setInput("");
 			history.goBack();
 		} else {

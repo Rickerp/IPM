@@ -153,7 +153,11 @@ export default class User extends Component {
 											}
 										/>
 										<LineInput
-											style={this.state.write}
+											style={
+												this.state.write
+													? { visibility: "visible" }
+													: { visibility: "hidden" }
+											}
 											type="text"
 											value={this.props.keyboardInput}
 											placeholder="Type something..."
