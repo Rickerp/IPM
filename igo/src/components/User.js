@@ -24,6 +24,10 @@ export default class User extends Component {
 		if (this.state.profile) this.props.setBack(() => this.toggleProfile());
 	}
 
+	toggleDescription() {
+		this.setState({ write: !this.state.write });
+	}
+
 	render() {
 		return (
 			<Spring
@@ -112,14 +116,14 @@ export default class User extends Component {
 														<button
 															onClick={() => {
 																this.closeAdd();
-																value.addFriend(
+																this.toggleDescription();
+																/*value.addFriend(
 																	this.props
 																		.item
 																		.id,
 																	this.props
 																		.item
-																		.userId
-																);
+																		.userId	*/
 															}}
 														>
 															Yes
@@ -148,6 +152,12 @@ export default class User extends Component {
 												this.toggleProfile()
 											}
 										/>
+										<LineInput
+											style={this.state.write}
+											type="text"
+											value={this.props.keyboardInput}
+											placeholder="Type something..."
+										/>
 									</>
 								)}
 							</AppConsumer>
@@ -158,6 +168,11 @@ export default class User extends Component {
 		);
 	}
 }
+
+const LineInput = styled.input`
+	width: 100%;
+	height: 20px;
+`;
 
 const UserWrapper = styled.div`
 	display: grid;

@@ -58,14 +58,8 @@ class App extends Component {
 		}
 	};
 
-	pushBack(func) {
-		backAction.push(func);
-		console.log("PUSH ", backAction);
-	}
-
-	popBack() {
-		backAction.pop();
-		console.log("POP ", backAction);
+	setBack(func) {
+		backAction = func;
 	}
 
 	handleBack() {
@@ -73,8 +67,8 @@ class App extends Component {
 			this.setInput("");
 			history.goBack();
 		} else {
-			const tmp = () => backAction.pop();
-			tmp();
+			backAction();
+			backAction = null;
 		}
 	}
 
