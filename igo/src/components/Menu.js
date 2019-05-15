@@ -267,7 +267,7 @@ const TranslatorItem = styled(MapsItem)`
 
 const SharouteItem = styled(MapsItem)`
     color: ${props =>
-        props.currentPath === "/sharoute" ? "var(--mainWhite)" : "#C4BFC8"};
+        props.currentPath === "/sharoute" || props.currentPath === "/popularroutes" || props.currentPath === "/myroutes" || props.currentPath === "/friendsroutes" || props.currentPath === "/maps" ? "var(--mainWhite)" : "#C4BFC8"};
 `;
 
 const FriendsItem = styled(MapsItem)`
