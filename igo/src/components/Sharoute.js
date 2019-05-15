@@ -29,14 +29,18 @@ export default function Sharoute() {
                 </Link>
             </div>
             <div className="sharoute-mine">
-                <Box>
-                    <AddButton><i class="far fa-address-book"></i> My Routes</AddButton>
-                </Box>
+                <Link to="/myroutes" style={{ textDecoration: 'none' }}>                
+                    <Box>
+                        <AddButton><i class="far fa-address-book"></i> My Routes</AddButton>
+                    </Box>
+                </Link>
             </div>
             <div className="sharoute-friends">
-                <Box>
-                    <AddButton><i class="fas fa-user-friends"></i> Friends' Routes</AddButton>
-                </Box>
+                <Link to="/friendsroutes" style={{ textDecoration: 'none' }}>     
+                    <Box>
+                        <AddButton><i class="fas fa-user-friends"></i> Friends' Routes</AddButton>
+                    </Box>
+                </Link>
             </div>
         </SharouteWrapper>
     )

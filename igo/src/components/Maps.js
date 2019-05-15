@@ -23,7 +23,7 @@ export default function Maps() {
                     <i class="far fa-eye" onClick={() => value.toggleBlind()}></i>
                 </div>
                 <div className="maps-save">
-                    <i class="far fa-save"> onClick={() => value.saveRoute()}</i>
+                    <i class="far fa-save" onClick={() => value.saveRoute(value.state.currentRoute)}></i>
                 </div>
                 <div className="maps-share">
                     <i class="fas fa-share-alt"></i>

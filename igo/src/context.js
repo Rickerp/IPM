@@ -3,6 +3,9 @@ import FeedData from "./FeedData";
 import UsersData from "./UsersData";
 import LocationsData from "./LocationsData";
 import RoutesInfo from "./RoutesInfo";
+import MyRoutesData from "./MyRoutesData";
+import PopularRoutesData from "./PopularRoutesData";
+import FriendsRoutesData from "./FriendsRoutesData";
 
 const AppContext = React.createContext();
 
@@ -11,7 +14,10 @@ class AppProvider extends Component {
         feedData: FeedData,
         usersData: UsersData,
         locationsData: LocationsData,
-        routesData: RoutesInfo,
+		routesData: RoutesInfo,
+		popularRoutesData: PopularRoutesData,
+		friendsRoutesData: FriendsRoutesData,
+		myRoutesData: MyRoutesData,
         valueDictionary: "Search a word",
         langDictionary: "0",
         blind: false,
@@ -133,8 +139,31 @@ class AppProvider extends Component {
         return user.online
 	}
 	
-	saveRoute = () => {
-		
+	saveRoute = (route) => {
+		let myRoutesData = this.state.myRoutesData
+		let newRoute = {
+			id: myRoutesData[myRoutesData.length - 1].id + 1,
+			userId: 0,
+			avatar: "img/Rita60.png",
+			name: "Rita",
+			lenght: 10,
+			routeName: "Zé",
+			route: route
+		}
+
+		myRoutesData.push(newRoute)
+		this.setState({
+			myRoutesData: myRoutesData
+        })
+	}
+
+	isAdded = (userId) => {
+		if (userId === 0) {
+			return false
+		}
+		let user = this.state.usersData.find(item => item.userId === userId)
+
+        return user.added
 	}
 
     render() {
@@ -151,7 +180,9 @@ class AppProvider extends Component {
                 getStatus: this.getStatus,
                 toggleBlind: this.toggleBlind,
                 changeRoute: this.changeRoute,
-                changeLocation: this.changeLocation
+				changeLocation: this.changeLocation,
+				saveRoute: this.saveRoute,
+				isAdded: this.isAdded
             }}>
                 {this.props.children}
             </AppContext.Provider>
