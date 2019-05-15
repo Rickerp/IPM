@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { AppContext } from "../context"
 import { Link } from "react-router-dom"
 import styled from "styled-components"
 
@@ -6,19 +7,26 @@ export default function Sharoute() {
     return (
         <SharouteWrapper>
             <div className="sharoute-header">
-                <SharouteHeader>Sharoute</SharouteHeader>
+                <SharouteHeader>
+                    Sharoute
+                    <Link to="/location" style={{ textDecoration: 'none' }}> 
+                        <i class="fas fa-ellipsis-v"></i>
+                    </Link> 
+                </SharouteHeader>
             </div>
             <div className="sharoute-popular">
-                <Link to="/popularroutes">
+                <Link to="/popularroutes" style={{ textDecoration: 'none' }}>
                     <Box>
                         <AddButton><i class="far fa-star"></i> Popular Routes</AddButton>
                     </Box>
                 </Link>
             </div>
             <div className="sharoute-build">
-                <Box>
-                    <AddButton><i class="fas fa-hammer"></i> Build a Route</AddButton>
-                </Box>
+                <Link to="/maps" style={{ textDecoration: 'none' }}>
+                    <Box>
+                        <AddButton><i class="fas fa-hammer"></i> Build a Route</AddButton>
+                    </Box>
+                </Link>
             </div>
             <div className="sharoute-mine">
                 <Box>
@@ -51,6 +59,12 @@ const SharouteHeader = styled.h3`
     position: relative;
     top: -15px;
     text-align: center;
+
+    i {
+        position: relative;
+        left: 30px;
+        font-size: 14px;
+    }
 `
 
 const Box = styled.div`

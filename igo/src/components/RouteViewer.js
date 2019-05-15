@@ -2,19 +2,14 @@ import React, { useContext } from 'react'
 import { AppContext } from "../context"
 import styled from "styled-components"
 
-export default function Maps() {
+export default function RouteViewer(props) {
     const value = useContext(AppContext)
 
     return (
         <>
             <MapsWrapper>
                 <div className="maps-image">
-                    {value.state.currentRoute === 0  ? value.state.routesData.map(item => {
-                        if (item.city === value.state.location) {
-                            return value.state.blind ? <img src={item.default + "_blind.png"} alt="F4"></img> : <img src={item.default + ".png"} alt="F4"></img>
-                        }
-                        }) : value.state.blind ? <img src={value.state.currentRoute + "_blind.png"} alt="F4"></img> : <img src={value.state.currentRoute + ".png"} alt="F4"></img>
-                    }
+                    {value.state.blind ? <img src={props.location.state.route + "_blind.png"} alt="F4"></img> : <img src={props.location.state.route + ".png"} alt="F4"></img>}
                 </div>
                 <div className="maps-marker">
                     <i class="fas fa-map-marker" onClick={() => value.changeRoute()}></i>

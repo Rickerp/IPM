@@ -13,7 +13,10 @@ class AppProvider extends Component {
         locationsData: LocationsData,
         routesData: RoutesInfo,
         valueDictionary: "Search a word",
-        langDictionary: "0"
+        langDictionary: "0",
+        blind: false,
+        location: "Rome",
+        currentRoute: 0
     }
 
     increaseLikes = (idSearch) => {
@@ -104,6 +107,27 @@ class AppProvider extends Component {
         return user.online
     }
 
+    toggleBlind = () => {
+        this.setState({
+            blind: !this.state.blind
+        })
+    }
+
+    changeRoute = () => {
+        let routes = this.state.routesData.find(activity => activity.city === this.state.location);
+
+        this.setState({
+            currentRoute: routes.routes[Math.floor(Math.random() * routes.routes.length)]
+        })
+    }
+
+    changeLocation = (newLocation) => {
+        console.log(newLocation)
+        this.setState({
+            location: newLocation
+        })
+    }
+
     render() {
         return (
             <AppContext.Provider value={{
@@ -115,7 +139,10 @@ class AppProvider extends Component {
                 updateValueDictionary: this.updateValueDictionary,
                 changeLangDictionary: this.changeLangDictionary,
                 getProfileBg: this.getProfileBg,
-                getStatus: this.getStatus
+                getStatus: this.getStatus,
+                toggleBlind: this.toggleBlind,
+                changeRoute: this.changeRoute,
+                changeLocation: this.changeLocation
             }}>
                 {this.props.children}
             </AppContext.Provider>

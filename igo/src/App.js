@@ -20,6 +20,7 @@ import Sharoute from "./components/Sharoute";
 import LocationList from "./components/LocationList";
 import PopularRoutes from "./components/PopularRoutes";
 import Maps from "./components/Maps";
+import RouteViewer from "./components/RouteViewer";
 
 var history;
 var backAction;
@@ -199,7 +200,7 @@ class App extends Component {
 									/>
 									<Route
 										path="/:handle"
-										component={Profile}
+										component={RouteViewer}
 									/>
 								</Switch>
 							</div>

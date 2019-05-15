@@ -1,27 +1,34 @@
 import React from 'react'
 import styled from "styled-components"
-import rita from "../Ellipse.png"
+import { Link } from "react-router-dom"
 
-export default function RouteCard() {
+export default function RouteCard(props) {
     return (
-        <RouteCardWrapper>
-            <Avatar className="route-avatar">
-                <AvatarImg className="cona" src={rita} alt="Rita"></AvatarImg>
-            </Avatar>
-            <InsideWrapper className="route-inside">
-                <div className="route-author">
-                    <RouteAuthor>Artur</RouteAuthor>
-                </div>
-                <div className="route-rating">
-                    <RouteRating>
-                        <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
-                    </RouteRating>
-                </div>
-                <div className="route-details">
-                    <RouteName>Porto Tour &nbsp;<i class="fas fa-circle"></i>&nbsp; 5KM</RouteName>
-                </div>
-            </InsideWrapper>
-        </RouteCardWrapper>
+        <Link to={{
+            pathname: props.item.routeName,
+            state: {
+                route: props.item.route
+            }
+            }} style={{ textDecoration: 'none', color: "black" }}>
+            <RouteCardWrapper>
+                <Avatar className="route-avatar">
+                    <AvatarImg src={props.item.avatar} alt="Rita"></AvatarImg>
+                </Avatar>
+                <InsideWrapper className="route-inside">
+                    <div className="route-author">
+                        <RouteAuthor>{props.item.name}</RouteAuthor>
+                    </div>
+                    <div className="route-rating">
+                        <RouteRating>
+                            <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                        </RouteRating>
+                    </div>
+                    <div className="route-details">
+                        <RouteName>{props.item.routeName} &nbsp;<i class="fas fa-circle"></i>&nbsp; {props.item.lenght}KM</RouteName>
+                    </div>
+                </InsideWrapper>
+            </RouteCardWrapper>
+        </Link>
     )
 }
 
@@ -32,6 +39,7 @@ const RouteCardWrapper = styled.div`
     grid-template-rows: 59px;
     grid-template-areas: 
         ". route-avatar route-inside .";
+    text-decoration: none;
 `
 
 const InsideWrapper = styled.div`

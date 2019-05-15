@@ -6,7 +6,10 @@ export default function RoutesList(props) {
     return (
         <>
             <RoutesListHeader>{props.header}</RoutesListHeader>
-            <RouteCard></RouteCard>
+            {props.routes.map(item => {
+                    return <RouteCard key={item.id} item={item} />
+                })
+            }
         </>
     )
 }

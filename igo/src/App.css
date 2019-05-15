@@ -374,3 +374,33 @@ button:focus {
 .route-details {
   grid-area: route-details;
 }
+
+/* Maps */
+
+.maps-image {
+  grid-area: maps-image;
+}
+
+.maps-marker {
+  grid-area: maps-marker;
+  text-align: center;
+  font-size: 20px;
+}
+
+.maps-blind {
+  grid-area: maps-blind;
+  text-align: center;
+  font-size: 20px;
+}
+
+.maps-save {
+  grid-area: maps-save;
+  text-align: center;
+  font-size: 20px;
+}
+
+.maps-share {
+  grid-area: maps-share;
+  text-align: center;
+  font-size: 20px;
+}
