@@ -88,7 +88,7 @@ export default function Sharoute() {
                     >
                         <Box>
                             <AddButton>
-                                <i class="fas fa-user-friends" /> Friends'
+                                <i class="fas fa-user-friends" /> Friend's
                                 Routes
                             </AddButton>
                         </Box>
