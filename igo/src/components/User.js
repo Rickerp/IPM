@@ -119,21 +119,21 @@ export default class User extends Component {
                                                         add this person to your
                                                         friends' list?
                                                         <br />
-                                                        <button
+                                                        <ButtonBetter
                                                             onClick={() => {
                                                                 this.closeAdd();
                                                                 this.openDescription();
                                                             }}
                                                         >
                                                             Yes
-                                                        </button>
-                                                        <button
+                                                        </ButtonBetter>
+                                                        <ButtonBetter
                                                             onClick={() =>
                                                                 this.closeAdd()
                                                             }
                                                         >
                                                             No
-                                                        </button>
+                                                        </ButtonBetter>
                                                     </Popup>
                                                 </>
                                             )}
@@ -205,7 +205,7 @@ export default class User extends Component {
                                                 }
                                             />
                                             <br />
-                                            <button
+                                            <ButtonBetter
                                                 onClick={() => {
                                                     this.closeDescription();
                                                     this.props.onSuccess();
@@ -217,14 +217,14 @@ export default class User extends Component {
                                                 }}
                                             >
                                                 Confirm
-                                            </button>
-                                            <button
+                                            </ButtonBetter>
+                                            <ButtonBetter
                                                 onClick={() =>
                                                     this.closeDescription()
                                                 }
                                             >
                                                 Cancel
-                                            </button>
+                                            </ButtonBetter>
                                         </Popup>
                                     </>
                                 )}
@@ -291,4 +291,12 @@ const UserOptions = styled.div`
     margin-top: auto;
     margin-bottom: auto;
     font-size: 90%;
+`;
+
+const ButtonBetter = styled.button`
+    font-family: "Montserrat";
+    font-size: 12px;
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 10px;
 `;
