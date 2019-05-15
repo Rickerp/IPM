@@ -12,7 +12,6 @@ export default class Activity extends Component {
 
 	toggleProfile() {
 		this.setState({ profile: !this.state.profile });
-		this.props.setBack(() => this.toggleProfile());
 	}
 
 	render() {
@@ -27,6 +26,7 @@ export default class Activity extends Component {
 						<Profile
 							item={this.props.item}
 							status={this.state.profile}
+							selfToggle={() => this.toggleProfile()}
 						/>
 
 						<ActivityWrapper onClick={() => this.toggleProfile()}>

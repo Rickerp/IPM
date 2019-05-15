@@ -21,7 +21,6 @@ export default class User extends Component {
 
 	toggleProfile() {
 		this.setState({ profile: !this.state.profile });
-		if (this.state.profile) this.props.setBack(() => this.toggleProfile());
 	}
 
 	toggleDescription() {
@@ -152,6 +151,50 @@ export default class User extends Component {
 												this.toggleProfile()
 											}
 										/>
+										<Popup
+											open={this.state.openAdd}
+											position="top center"
+											overlayStyle={{
+												width: "230px",
+												height: "341px",
+												margin: "auto",
+												position: "absolute",
+												top: 30
+											}}
+											closeOnDocumentClick={false}
+											contentStyle={{
+												padding: "2px",
+												maxHeight: "300px",
+												overflowY: "auto",
+												overflowX: "hidden",
+												maxWidth: "130px",
+												fontSize: "13px",
+												border: "1px solid black",
+												textAlign: "center"
+											}}
+										>
+											To identify your friend better, add
+											a description:
+											<br />
+											<button
+												onClick={() => {
+													this.closeDescription();
+
+													value.addFriend(
+														this.props.item.id,
+														this.props.item.userId,
+														this.props.keyboardInput
+													);
+												}}
+											>
+												Confirm
+											</button>
+											<button
+												onClick={() => this.closeAdd()}
+											>
+												Cancel
+											</button>
+										</Popup>
 										<LineInput
 											style={
 												this.state.write

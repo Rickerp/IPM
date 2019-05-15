@@ -49,6 +49,12 @@ export default class Profile extends Component {
 		return (
 			<div style={this.getStatus()}>
 				<div style={this.styles.background}>
+					<CloseButton>
+						<i
+							onClick={() => this.props.selfToggle()}
+							class="far fa-times-circle"
+						/>
+					</CloseButton>
 					<AppConsumer>
 						{value => (
 							<ProfileWrapper>
@@ -174,6 +180,19 @@ export default class Profile extends Component {
 		);
 	}
 }
+
+const CloseButton = styled.div`
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	z-index: 30;
+	color: white;
+	background-color: black;
+	font-size: 20px;
+	border-radius: 50%;
+	height: 20px;
+	cursor: pointer;
+`;
 
 const ProfileWrapper = styled.div`
 	display: grid;

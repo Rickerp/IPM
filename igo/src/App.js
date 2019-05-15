@@ -60,9 +60,11 @@ class App extends Component {
 
 	setBack(func) {
 		backAction = func;
+		console.log("back : ", backAction);
 	}
 
 	handleBack() {
+		console.log("handeling", backAction);
 		if (backAction == null) {
 			this.setInput("");
 			history.goBack();
