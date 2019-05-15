@@ -49,16 +49,16 @@ class AppProvider extends Component {
         });
     };
 
-	removeFriend = (idSearch, userId) => {
-		let usersData = this.state.usersData;
-		let feedData = this.state.feedData;
-		let user = this.state.usersData.find(user => user.id === idSearch);
-		let activities = this.state.feedData.filter(
-			activity => activity.userId === userId
-		);
-		let newActivity;
-		user.added = false;
-		user.description = "";
+    removeFriend = (idSearch, userId) => {
+        let usersData = this.state.usersData;
+        let feedData = this.state.feedData;
+        let user = this.state.usersData.find(user => user.id === idSearch);
+        let activities = this.state.feedData.filter(
+            activity => activity.userId === userId
+        );
+        let newActivity;
+        user.added = false;
+        user.description = "";
 
         usersData[idSearch - 1] = user;
         activities.forEach(activity => {
@@ -143,7 +143,7 @@ class AppProvider extends Component {
         return user.online;
     };
 
-    saveRoute = route => {
+    saveRoute = (route, routeName) => {
         let myRoutesData = this.state.myRoutesData;
         let newRoute = {
             id: myRoutesData[myRoutesData.length - 1].id + 1,
@@ -151,7 +151,7 @@ class AppProvider extends Component {
             avatar: "img/Rita60.png",
             name: "Rita",
             lenght: 10,
-            routeName: "Zé",
+            routeName: routeName,
             route: route
         };
 
@@ -159,6 +159,7 @@ class AppProvider extends Component {
         this.setState({
             myRoutesData: myRoutesData
         });
+        console.log(route);
     };
 
     isAdded = userId => {
