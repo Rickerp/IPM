@@ -37,7 +37,13 @@ export default class UsersLists extends Component {
 									.toUpperCase()
 									.includes(this.props.keyboardInput)
 							) {
-								return <User key={item.id} item={item} />;
+								return (
+									<User
+										key={item.id}
+										item={item}
+										setBack={this.props.setBack}
+									/>
+								);
 							}
 						});
 					}}

@@ -31,7 +31,7 @@ class App extends Component {
 	constructor() {
 		super();
 		history = createBrowserHistory();
-		backAction = null;
+		backAction = [];
 	}
 
 	state = {
@@ -58,17 +58,21 @@ class App extends Component {
 		}
 	};
 
-	setBack(func) {
-		backAction = func;
+	pushBack(func) {
+		backAction.push(func);
+	}
+
+	popBack() {
+		backAction.pop();
 	}
 
 	handleBack() {
-		if (backAction === null) {
+		if (backAction.length == 0) {
 			this.setInput("");
 			history.goBack();
 		} else {
-			backAction();
-			backAction = null;
+			const tmp = () => backAction.pop();
+			tmp();
 		}
 	}
 
@@ -195,7 +199,7 @@ class App extends Component {
 										render={props => (
 											<FriendsList
 												setBack={func =>
-													this.setBack(func)
+													this.pushBack(func)
 												}
 												{...props}
 											/>
@@ -213,7 +217,7 @@ class App extends Component {
 													this.toggleKeyboard(state)
 												}
 												setBack={func =>
-													this.setBack(func)
+													this.pushBack(func)
 												}
 												{...props}
 											/>
@@ -225,7 +229,7 @@ class App extends Component {
 										render={props => (
 											<Feed
 												setBack={func =>
-													this.setBack(func)
+													this.pushBack(func)
 												}
 												{...props}
 											/>

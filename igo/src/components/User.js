@@ -3,15 +3,25 @@ import { AppContext, AppConsumer } from "../context";
 import styled from "styled-components";
 import { Spring } from "react-spring/renderprops";
 import Profile from "./Profile";
+import Popup from "reactjs-popup";
 
 export default class User extends Component {
 	state = {
-		profile: false
+		profile: false,
+		openAdd: false
 	};
+
+	openAdd() {
+		this.setState({ openAdd: true });
+	}
+
+	closeAdd() {
+		this.setState({ openAdd: false });
+	}
 
 	toggleProfile() {
 		this.setState({ profile: !this.state.profile });
-		this.props.setBack(() => this.toggleProfile());
+		if (!this.state.profile) this.props.setBack(() => this.toggleProfile());
 	}
 
 	render() {
@@ -44,37 +54,104 @@ export default class User extends Component {
 							</div>
 							<AppConsumer>
 								{value => (
-									<UserOptions className="user-options">
-										{this.props.item.added ? (
-											<i
-												className="fas fa-cog"
-												onClick={() => {
-													/*value.removeFriend(
-														this.props.item.id,
-														this.props.item.userId
-													)*/
-													this.toggleProfile();
-												}}
-											/>
-										) : (
-											<i
-												className="fas fa-plus-circle"
-												onClick={() =>
-													value.addFriend(
-														this.props.item.id,
-														this.props.item.userId
-													)
-												}
-											/>
-										)}
-									</UserOptions>
+									<>
+										<UserOptions className="user-options">
+											{this.props.item.added ? (
+												<i
+													style={{
+														cursor: "pointer"
+													}}
+													className="fas fa-cog"
+													onClick={() => {
+														this.toggleProfile();
+													}}
+												/>
+											) : (
+												<>
+													<i
+														style={{
+															cursor: "pointer"
+														}}
+														className="fas fa-plus-circle"
+														onClick={() => {
+															this.openAdd();
+														}}
+													/>
+													<Popup
+														open={
+															this.state.openAdd
+														}
+														position="top center"
+														overlayStyle={{
+															width: "230px",
+															height: "341px",
+															margin: "auto",
+															position:
+																"absolute",
+															top: 30
+														}}
+														closeOnDocumentClick={
+															false
+														}
+														contentStyle={{
+															padding: "2px",
+															maxHeight: "300px",
+															overflowY: "auto",
+															overflowX: "hidden",
+															maxWidth: "130px",
+															fontSize: "13px",
+															border:
+																"1px solid black",
+															textAlign: "center"
+														}}
+													>
+														Are you sure you want to
+														add this person to your
+														friends' list?
+														<br />
+														<button
+															onClick={() => {
+																this.closeAdd();
+																value.addFriend(
+																	this.props
+																		.item
+																		.id,
+																	this.props
+																		.item
+																		.userId
+																);
+															}}
+														>
+															Yes
+														</button>
+														<button
+															onClick={() =>
+																this.closeAdd()
+															}
+														>
+															No
+														</button>
+													</Popup>
+												</>
+											)}
+										</UserOptions>
+										<Profile
+											item={this.props.item}
+											status={this.state.profile}
+											onRemove={() =>
+												value.removeFriend(
+													this.props.item.id,
+													this.props.item.userId
+												)
+											}
+											selfToggle={() =>
+												this.toggleProfile()
+											}
+										/>
+									</>
 								)}
 							</AppConsumer>
 						</UserWrapper>
-						<Profile
-							item={this.props.item}
-							status={this.state.profile}
-						/>
 					</div>
 				)}
 			</Spring>

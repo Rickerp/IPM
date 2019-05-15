@@ -15,7 +15,7 @@ export default function Sharoute() {
                         style={{
                             position: "absolute",
                             right: "40px",
-                            top: "5px"
+                            top: "6px"
                         }}
                     />
                 }
@@ -25,6 +25,7 @@ export default function Sharoute() {
                 mouseLeaveDelay={300}
                 mouseEnterDelay={0}
                 contentStyle={{
+                    marginTop: "3px",
                     padding: "2px",
                     maxHeight: "300px",
                     overflowY: "auto",

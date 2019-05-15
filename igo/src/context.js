@@ -49,15 +49,16 @@ class AppProvider extends Component {
         });
     };
 
-    removeFriend = (idSearch, userId) => {
-        let usersData = this.state.usersData;
-        let feedData = this.state.feedData;
-        let user = this.state.usersData.find(user => user.id === idSearch);
-        let activities = this.state.feedData.filter(
-            activity => activity.userId === userId
-        );
-        let newActivity;
-        user.added = false;
+	removeFriend = (idSearch, userId) => {
+		let usersData = this.state.usersData;
+		let feedData = this.state.feedData;
+		let user = this.state.usersData.find(user => user.id === idSearch);
+		let activities = this.state.feedData.filter(
+			activity => activity.userId === userId
+		);
+		let newActivity;
+		user.added = false;
+		user.description = "";
 
         usersData[idSearch - 1] = user;
         activities.forEach(activity => {
