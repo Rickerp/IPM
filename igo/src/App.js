@@ -40,23 +40,23 @@ class App extends Component {
         infoPopup: null
     };
 
-	styles = {
-		keyboardOn: {
-			width: "auto",
-			height: "auto",
-			position: "absolute",
-			zIndex: "1000",
-			bottom: -5,
-			left: -9,
-			transform: "scale(0.915)",
-			backgroundColor: "#eeeeee"
-		},
-		keyboardOff: {
-			width: "auto",
-			height: "auto",
-			transform: "scale(0)"
-		}
-	};
+    styles = {
+        keyboardOn: {
+            width: "auto",
+            height: "auto",
+            position: "absolute",
+            zIndex: "1000",
+            bottom: -5,
+            left: -9,
+            transform: "scale(0.915)",
+            backgroundColor: "#eeeeee"
+        },
+        keyboardOff: {
+            width: "auto",
+            height: "auto",
+            transform: "scale(0)"
+        }
+    };
 
     setBack(func) {
         backAction = func;
@@ -105,190 +105,200 @@ class App extends Component {
         this.setState({ keyboardInput: input });
     }
 
-	render() {
-		return (
-			<AppProvider>
-				<div className="band">
-					<div id="App">
-						{this.state.infoPopup}
-						<Sidebar
-							disableAutoFocus
-							pageWrapId={"page-wrap"}
-							outerContainerId={"App"}
-							keyboardToggle={state => this.toggleKeyboard(state)}
-						/>
-						<div className="content" id="page-wrap">
-							<Navbar history={history} />
-							<div id="page-component">
-								<Switch>
-									<Route
-										exact={true}
-										path="/ar"
-										component={Ar}
-									/>
-									<Route
-										exact={true}
-										path="/dictionary"
-										render={props => (
-											<Dictionary
-												keyboardInput={
-													this.state.keyboardInput
-												}
-												keyboardToggle={state =>
-													this.toggleKeyboard(state)
-												}
-												{...props}
-											/>
-										)}
-									/>
-									<Route
-										exact={true}
-										path="/translator"
-										render={props => (
-											<Translator
-												keyboardInput={
-													this.state.keyboardInput
-												}
-												keyboardToggle={state =>
-													this.toggleKeyboard(state)
-												}
-												{...props}
-											/>
-										)}
-									/>
-									<Route
-										exact={true}
-										path="/translatorar"
-										component={TranslatorAr}
-									/>
-									<Route
-										exact={true}
-										path="/sharoute"
-										component={Sharoute}
-									/>
-									<Route
-										exact={true}
-										path="/popularroutes"
-										component={PopularRoutes}
-									/>
-									<Route
-										exact={true}
-										path="/myroutes"
-										component={MyRoutes}
-									/>
-									<Route
-										exact={true}
-										path="/friendsroutes"
-										component={FriendsRoutes}
-									/>
-									<Route
-										exact={true}
-										path="/location"
-										component={LocationList}
-									/>
-									<Route
-										exact={true}
-										path="/maps"
-										component={Maps}
-									/>
-									<Route
-										exact={true}
-										path="/friends"
-										render={props => (
-											<FriendsList
-												keyboardInput={
-													this.state.keyboardInput
-												}
-												keyboardToggle={state =>
-													this.toggleKeyboard(state)
-												}
-												setInput={s => this.setInput(s)}
-												setBack={func =>
-													this.pushBack(func)
-												}
-												{...props}
-											/>
-										)}
-									/>
-									<Route
-										exact={true}
-										path="/users"
-										render={props => (
-											<UsersList
-												keyboardInput={
-													this.state.keyboardInput
-												}
-												keyboardToggle={state =>
-													this.toggleKeyboard(state)
-												}
-												setBack={func =>
-													this.pushBack(func)
-												}
-												clearInput={() =>
-													this.setInput("")
-												}
-												{...props}
-											/>
-										)}
-									/>
-									<Route
-										exact={true}
-										path="/"
-										render={props => (
-											<Feed
-												keyboardInput={
-													this.state.keyboardInput
-												}
-												keyboardToggle={state =>
-													this.toggleKeyboard(state)
-												}
-												setInput={s => this.setInput(s)}
-												setBack={func =>
-													this.pushBack(func)
-												}
-												{...props}
-											/>
-										)}
-									/>
-									<Route
-										path="/:handle"
-										component={RouteViewer}
-									/>
-								</Switch>
-							</div>
-						</div>
-						<div style={this.getKeyboardStyle()}>
-							<Keyboard
-								onChange={input => this.setInput(input)}
-								layout={{
-									default: [
-										"Q W E R T Y U I O P {bksp}",
-										"{whitesp} A S D F G H J K L {whitesp}",
-										"{whitesp} {whitesp} Z X C V B N M {whitesp} {whitesp}",
-										"{space}"
-									]
-								}}
-								display={{
-									"{bksp}": "⬅",
-									"{enter}": "↵",
-									"{whitesp}": " ",
-									"{space}": "______"
-								}}
-							/>
-						</div>
-					</div>
-					<ButtonHome
-						onClick={() => this.handleHome()}
-						history={history}
-					/>
-					<ButtonBack
-						onClick={() => this.handleBack()}
-						history={history}
-					/>
-				</div>
-			</AppProvider>
-		);
-	}
+    render() {
+        return (
+            <AppProvider>
+                <div className="band">
+                    <div id="App">
+                        {this.state.infoPopup}
+                        <Sidebar
+                            disableAutoFocus
+                            pageWrapId={"page-wrap"}
+                            outerContainerId={"App"}
+                            keyboardToggle={state => this.toggleKeyboard(state)}
+                        />
+                        <div className="content" id="page-wrap">
+                            <Navbar history={history} />
+                            <div id="page-component">
+                                <Switch>
+                                    <Route
+                                        exact={true}
+                                        path="/ar"
+                                        component={Ar}
+                                    />
+                                    <Route
+                                        exact={true}
+                                        path="/dictionary"
+                                        render={props => (
+                                            <Dictionary
+                                                keyboardInput={
+                                                    this.state.keyboardInput
+                                                }
+                                                keyboardToggle={state =>
+                                                    this.toggleKeyboard(state)
+                                                }
+                                                {...props}
+                                            />
+                                        )}
+                                    />
+                                    <Route
+                                        exact={true}
+                                        path="/translator"
+                                        render={props => (
+                                            <Translator
+                                                keyboardInput={
+                                                    this.state.keyboardInput
+                                                }
+                                                keyboardToggle={state =>
+                                                    this.toggleKeyboard(state)
+                                                }
+                                                {...props}
+                                            />
+                                        )}
+                                    />
+                                    <Route
+                                        exact={true}
+                                        path="/translatorar"
+                                        component={TranslatorAr}
+                                    />
+                                    <Route
+                                        exact={true}
+                                        path="/sharoute"
+                                        component={Sharoute}
+                                    />
+                                    <Route
+                                        exact={true}
+                                        path="/popularroutes"
+                                        component={PopularRoutes}
+                                    />
+                                    <Route
+                                        exact={true}
+                                        path="/myroutes"
+                                        component={MyRoutes}
+                                    />
+                                    <Route
+                                        exact={true}
+                                        path="/friendsroutes"
+                                        component={FriendsRoutes}
+                                    />
+                                    <Route
+                                        exact={true}
+                                        path="/location"
+                                        component={LocationList}
+                                    />
+                                    <Route
+                                        exact={true}
+                                        path="/maps"
+                                        render={props => (
+                                            <Maps
+                                                keyboardInput={
+                                                    this.state.keyboardInput
+                                                }
+                                                keyboardToggle={state =>
+                                                    this.toggleKeyboard(state)
+                                                }
+                                                {...props}
+                                            />
+                                        )}
+                                    />
+                                    <Route
+                                        exact={true}
+                                        path="/friends"
+                                        render={props => (
+                                            <FriendsList
+                                                keyboardInput={
+                                                    this.state.keyboardInput
+                                                }
+                                                keyboardToggle={state =>
+                                                    this.toggleKeyboard(state)
+                                                }
+                                                setInput={s => this.setInput(s)}
+                                                setBack={func =>
+                                                    this.pushBack(func)
+                                                }
+                                                {...props}
+                                            />
+                                        )}
+                                    />
+                                    <Route
+                                        exact={true}
+                                        path="/users"
+                                        render={props => (
+                                            <UsersList
+                                                keyboardInput={
+                                                    this.state.keyboardInput
+                                                }
+                                                keyboardToggle={state =>
+                                                    this.toggleKeyboard(state)
+                                                }
+                                                setBack={func =>
+                                                    this.pushBack(func)
+                                                }
+                                                clearInput={() =>
+                                                    this.setInput("")
+                                                }
+                                                {...props}
+                                            />
+                                        )}
+                                    />
+                                    <Route
+                                        exact={true}
+                                        path="/"
+                                        render={props => (
+                                            <Feed
+                                                keyboardInput={
+                                                    this.state.keyboardInput
+                                                }
+                                                keyboardToggle={state =>
+                                                    this.toggleKeyboard(state)
+                                                }
+                                                setInput={s => this.setInput(s)}
+                                                setBack={func =>
+                                                    this.pushBack(func)
+                                                }
+                                                {...props}
+                                            />
+                                        )}
+                                    />
+                                    <Route
+                                        path="/:handle"
+                                        component={RouteViewer}
+                                    />
+                                </Switch>
+                            </div>
+                        </div>
+                        <div style={this.getKeyboardStyle()}>
+                            <Keyboard
+                                onChange={input => this.setInput(input)}
+                                layout={{
+                                    default: [
+                                        "Q W E R T Y U I O P {bksp}",
+                                        "{whitesp} A S D F G H J K L {whitesp}",
+                                        "{whitesp} {whitesp} Z X C V B N M {whitesp} {whitesp}",
+                                        "{space}"
+                                    ]
+                                }}
+                                display={{
+                                    "{bksp}": "⬅",
+                                    "{enter}": "↵",
+                                    "{whitesp}": " ",
+                                    "{space}": "______"
+                                }}
+                            />
+                        </div>
+                    </div>
+                    <ButtonHome
+                        onClick={() => this.handleHome()}
+                        history={history}
+                    />
+                    <ButtonBack
+                        onClick={() => this.handleBack()}
+                        history={history}
+                    />
+                </div>
+            </AppProvider>
+        );
+    }
 }
 //<Button history={history} profile="home" />
 export default App;
