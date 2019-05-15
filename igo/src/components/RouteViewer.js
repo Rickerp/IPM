@@ -9,33 +9,38 @@ export default function RouteViewer(props) {
     return (
         <>
             <Spring
-				from={{ opacity: 0 }}
-				to={{ opacity: 1 }}
-				config={{ delay: 100, duration: 900 }}
-			>
-                {styledProps => <MapsWrapper style={styledProps}>
-                    <div className="maps-image">
-                        {value.state.blind ? (
-                            <img
-                                src={props.location.state.route + "_blind.png"}
-                                alt={props.location.state.name}
-                                draggable="false"
+                from={{ opacity: 0 }}
+                to={{ opacity: 1 }}
+                config={{ delay: 100, duration: 900 }}
+            >
+                {styledProps => (
+                    <MapsWrapper style={styledProps}>
+                        <div className="maps-image">
+                            {value.state.blind ? (
+                                <img
+                                    src={
+                                        props.location.state.route +
+                                        "_blind.png"
+                                    }
+                                    alt={props.location.state.name}
+                                    draggable="false"
+                                />
+                            ) : (
+                                <img
+                                    src={props.location.state.route + ".png"}
+                                    alt={props.location.state.name}
+                                    draggable="false"
+                                />
+                            )}
+                        </div>
+                        <div className="maps-blind">
+                            <i
+                                class="far fa-eye"
+                                onClick={() => value.toggleBlind()}
                             />
-                        ) : (
-                            <img
-                                src={props.location.state.route + ".png"}
-                                alt={props.location.state.name}
-                                draggable="false"
-                            />
-                        )}
-                    </div>
-                    <div className="maps-blind">
-                        <i class="far fa-eye" onClick={() => value.toggleBlind()} />
-                    </div>
-                    <div className="maps-share">
-                        <i class="fas fa-share-alt" />
-                    </div>
-                </MapsWrapper>}
+                        </div>
+                    </MapsWrapper>
+                )}
             </Spring>
         </>
     );
@@ -49,5 +54,5 @@ const MapsWrapper = styled.div`
     grid-template-rows: 1fr 30px;
     grid-template-areas:
         "maps-image maps-image maps-image maps-image"
-        "maps-blind maps-blind maps-share maps-share";
+        "maps-blind maps-blind maps-blind maps-blind";
 `;
