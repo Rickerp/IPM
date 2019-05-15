@@ -1,27 +1,30 @@
 const RoutesInfo = [
     {
         city: "Lisbon",
-        route1: "img/lisbon_route1.svg",
-        route2: "img/lisbon_route2.svg",
-        route3: "img/lisbon_route3.svg",
-        route4: "img/lisbon_route4.svg"
+        default: "img/lisboa.png",
+        route1: "img/lisboa_rota1",
+        route2: "img/lisboa_rota2",
+        route3: "img/lisboa_rota3"
     },
     {
         city: "Porto",
-        route1: "img/porto_route1.svg",
-        route2: "img/porto_route2.svg",
-        route3: "img/porto_route3.svg"
+        default: "img/porto.png",
+        route1: "img/porto_rota1",
+        route2: "img/porto_rota2",
+        route3: "img/porto_rota3",
+        route4: "img/porto_rota4"
     },
     {
         city: "Rome",
-        route1: "img/rome_route1.svg",
-        route2: "img/rome_route2.svg"
+        default: "img/roma.png",
+        route1: "img/roma_rota1",
+        route2: "img/roma_rota2"
     },
     {
         city: "Barcelona",
-        route1: "img/barcelona_route1.svg",
-        route2: "img/barcelona_route2.svg",
-        route3: "img/barcelona_route3.svg"
+        default: "img/barcelona",
+        route1: "img/barcelona_rota1",
+        route2: "img/barcelona_rota2"
     }
 ];
 

@@ -6,7 +6,7 @@ export default function RouteCard() {
     return (
         <RouteCardWrapper>
             <Avatar className="route-avatar">
-                <img src={rita} alt="Rita"></img>
+                <AvatarImg className="cona" src={rita} alt="Rita"></AvatarImg>
             </Avatar>
             <InsideWrapper className="route-inside">
                 <div className="route-author">
@@ -75,4 +75,9 @@ const RouteName = styled.p`
         top: -1px;
         font-size: 5%;
     }
+`
+
+const AvatarImg = styled.img`
+    border: 1px solid var(--mainBlack);
+    border-radius: 100%;
 `
