@@ -28,17 +28,17 @@ var history;
 var backAction;
 
 class App extends Component {
-	constructor() {
-		super();
-		history = createBrowserHistory();
-		backAction = [];
-	}
+    constructor() {
+        super();
+        history = createBrowserHistory();
+        backAction = [];
+    }
 
-	state = {
-		keyboard: false,
-		keyboardInput: "",
-		infoPopup: null
-	};
+    state = {
+        keyboard: false,
+        keyboardInput: "",
+        infoPopup: null
+    };
 
 	styles = {
 		keyboardOn: {
@@ -58,52 +58,52 @@ class App extends Component {
 		}
 	};
 
-	setBack(func) {
-		backAction = func;
-		console.log("back : ", backAction);
-	}
+    setBack(func) {
+        backAction = func;
+        console.log("back : ", backAction);
+    }
 
-	handleBack() {
-		console.log("handeling", backAction);
-		if (backAction == null) {
-			this.setInput("");
-			history.goBack();
-		} else {
-			backAction();
-			backAction = null;
-		}
-	}
+    handleBack() {
+        console.log("handeling", backAction);
+        if (backAction == null) {
+            this.setInput("");
+            history.goBack();
+        } else {
+            backAction();
+            backAction = null;
+        }
+    }
 
-	handleHome() {
-		this.toggleKeyboard(false);
-		this.setInput("");
-		history.push("/");
-		history.push("/");
-		history.goBack();
-	}
+    handleHome() {
+        this.toggleKeyboard(false);
+        this.setInput("");
+        history.push("/");
+        history.push("/");
+        history.goBack();
+    }
 
-	toggleKeyboard(state) {
-		if (state === undefined) state = !this.state.keyboard;
-		if (state !== this.state.keyboard) {
-			if (!this.state.keyboard) {
-				backAction = () => this.toggleKeyboard(false);
-				this.setState({ keyboard: true });
-			} else {
-				backAction = null;
-				this.setState({ keyboard: false });
-			}
-		}
-	}
+    toggleKeyboard(state) {
+        if (state === undefined) state = !this.state.keyboard;
+        if (state !== this.state.keyboard) {
+            if (!this.state.keyboard) {
+                backAction = () => this.toggleKeyboard(false);
+                this.setState({ keyboard: true });
+            } else {
+                backAction = null;
+                this.setState({ keyboard: false });
+            }
+        }
+    }
 
-	getKeyboardStyle() {
-		return this.state.keyboard
-			? this.styles.keyboardOn
-			: this.styles.keyboardOff;
-	}
+    getKeyboardStyle() {
+        return this.state.keyboard
+            ? this.styles.keyboardOn
+            : this.styles.keyboardOff;
+    }
 
-	setInput(input) {
-		this.setState({ keyboardInput: input });
-	}
+    setInput(input) {
+        this.setState({ keyboardInput: input });
+    }
 
 	render() {
 		return (

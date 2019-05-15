@@ -109,7 +109,7 @@ export default class Maps extends Component {
 
                             <Popup
                                 open={this.state.savePopupOpen}
-                                position="top center"
+                                position="top"
                                 overlayStyle={{
                                     width: "230px",
                                     height: "341px",
@@ -120,6 +120,7 @@ export default class Maps extends Component {
                                 }}
                                 closeOnDocumentClick={false}
                                 contentStyle={{
+                                    margin: "auto",
                                     padding: "2px",
                                     maxHeight: "300px",
                                     overflowY: "auto",
@@ -131,6 +132,11 @@ export default class Maps extends Component {
                                     textAlign: "center"
                                 }}
                             >
+                                <i
+                                    style={{ cursor: "pointer" }}
+                                    onClick={() => this.closeSavePopup()}
+                                    class="fas fa-times"
+                                />
                                 <div className="word-input">
                                     <Box
                                         invalidInput={this.state.invalidInput}
@@ -143,11 +149,12 @@ export default class Maps extends Component {
                                                 onClick={
                                                     this.props.keyboardToggle
                                                 }
-                                                placeholder="Search a word"
+                                                placeholder="Route name"
                                             />
                                         </form>
                                     </Box>
                                 </div>
+                                <br />
                                 <AppConsumer>
                                     {value => (
                                         <button
