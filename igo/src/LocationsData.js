@@ -5,15 +5,15 @@ const LocationsData = [
     },
     {
       id: 2,
-      image: "img/Lisboa.png"
+      image: "img/LisboaLocation.png"
     },
     {
       id: 3,
-      image: "img/Porto.png"
+      image: "img/PortoLocation.png"
     },
     {
       id: 4,
-      image: "img/Barcelona.png"
+      image: "img/BarcelonaLocation.png"
     }
 ];
   
