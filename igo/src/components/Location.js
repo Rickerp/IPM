@@ -1,16 +1,23 @@
 import React, { useContext } from 'react'
 import { AppContext } from "../context"
 import styled from "styled-components"
+import { Spring } from "react-spring/renderprops"
 
 export default function Location(props) {
     const value = useContext(AppContext);
 
     return (
-        <LocationWrapper>
-            <div className="location" onClick={() => value.changeLocation(props.item.name)}>
-                <img src={props.item.image} alt={props.item.name}></img>
-            </div>
-        </LocationWrapper>
+        <Spring
+        from={{ opacity: 0, marginTop: -10 }}
+        to={{ opacity: 1, marginTop: 0 }}
+        config={{ duration: 600 }}
+        >
+            {styledProps => <LocationWrapper style={styledProps}>
+                <div className="location" onClick={() => value.changeLocation(props.item.name)}>
+                    <img src={props.item.image} alt={props.item.name}></img>
+                </div>
+            </LocationWrapper>}
+        </Spring>
     )
 }
 

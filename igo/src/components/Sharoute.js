@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { AppContext } from "../context";
 import { Link } from "react-router-dom";
 import Popup from "reactjs-popup";
+import { Spring } from "react-spring/renderprops";
 
 import styled from "styled-components";
 
@@ -42,59 +43,65 @@ export default function Sharoute() {
                 <i class="fas fa-ellipsis-v" /> &nbsp; you will be able to
                 select the location of your maps.
             </Popup>
-            <SharouteWrapper>
-                <div className="sharoute-header">
-                    <SharouteHeader>
-                        Sharoute
-                        <Link to="/location" style={{ textDecoration: "none" }}>
-                            <i class="fas fa-ellipsis-v" />
+            <Spring
+            from={{ opacity: 0, marginLeft: -80 }}
+            to={{ opacity: 1, marginLeft: 0 }}
+            config={{ duration: 600 }}
+            >
+                {styledProps => <SharouteWrapper style={styledProps}>
+                    <div className="sharoute-header">
+                        <SharouteHeader>
+                            Sharoute
+                            <Link to="/location" style={{ textDecoration: "none" }}>
+                                <i class="fas fa-ellipsis-v" />
+                            </Link>
+                        </SharouteHeader>
+                    </div>
+                    <div className="sharoute-popular">
+                        <Link
+                            to="/popularroutes"
+                            style={{ textDecoration: "none" }}
+                        >
+                            <Box>
+                                <AddButton>
+                                    <i class="far fa-star" /> Popular Routes
+                                </AddButton>
+                            </Box>
                         </Link>
-                    </SharouteHeader>
-                </div>
-                <div className="sharoute-popular">
-                    <Link
-                        to="/popularroutes"
-                        style={{ textDecoration: "none" }}
-                    >
-                        <Box>
-                            <AddButton>
-                                <i class="far fa-star" /> Popular Routes
-                            </AddButton>
-                        </Box>
-                    </Link>
-                </div>
-                <div className="sharoute-build">
-                    <Link to="/maps" style={{ textDecoration: "none" }}>
-                        <Box>
-                            <AddButton>
-                                <i class="fas fa-hammer" /> Build a Route
-                            </AddButton>
-                        </Box>
-                    </Link>
-                </div>
-                <div className="sharoute-mine">
-                    <Link to="/myroutes" style={{ textDecoration: "none" }}>
-                        <Box>
-                            <AddButton>
-                                <i class="far fa-address-book" /> My Routes
-                            </AddButton>
-                        </Box>
-                    </Link>
-                </div>
-                <div className="sharoute-friends">
-                    <Link
-                        to="/friendsroutes"
-                        style={{ textDecoration: "none" }}
-                    >
-                        <Box>
-                            <AddButton>
-                                <i class="fas fa-user-friends" /> Friend's
-                                Routes
-                            </AddButton>
-                        </Box>
-                    </Link>
-                </div>
-            </SharouteWrapper>
+                    </div>
+                    <div className="sharoute-build">
+                        <Link to="/maps" style={{ textDecoration: "none" }}>
+                            <Box>
+                                <AddButton>
+                                    <i class="fas fa-hammer" /> Build a Route
+                                </AddButton>
+                            </Box>
+                        </Link>
+                    </div>
+                    <div className="sharoute-mine">
+                        <Link to="/myroutes" style={{ textDecoration: "none" }}>
+                            <Box>
+                                <AddButton>
+                                    <i class="far fa-address-book" /> My Routes
+                                </AddButton>
+                            </Box>
+                        </Link>
+                    </div>
+                    <div className="sharoute-friends">
+                        <Link
+                            to="/friendsroutes"
+                            style={{ textDecoration: "none" }}
+                        >
+                            <Box>
+                                <AddButton>
+                                    <i class="fas fa-user-friends" /> Friend's
+                                    Routes
+                                </AddButton>
+                            </Box>
+                        </Link>
+                    </div>
+                </SharouteWrapper>}
+            </Spring>
         </React.Fragment>
     );
 }
