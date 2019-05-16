@@ -9,15 +9,17 @@ export default class Maps extends Component {
         sharePopupOpen: false,
         savePopupOpen: false
     };
-    openSharePopup() {
-        this.setState({ sharePopupOpen: true });
+    openSharePopup(routeName) {
+        if (routeName)
+            this.setState({ sharePopupOpen: true });
     }
 
     closeSharePopup() {
         this.setState({ sharePopupOpen: false });
     }
-    openSavePopup() {
-        this.setState({ savePopupOpen: true });
+    openSavePopup(routeName) {
+        if (routeName)
+            this.setState({ savePopupOpen: true });
     }
 
     closeSavePopup() {
@@ -33,9 +35,9 @@ export default class Maps extends Component {
                     config={{ delay: 100, duration: 900 }}
                 >
                     {styledProps => (
-                        <MapsWrapper style={styledProps}>
-                            <AppConsumer>
-                                {value => (
+                        <AppConsumer>
+                            {value => (               
+                                <MapsWrapper style={styledProps}>
                                     <div className="maps-image">
                                         {value.state.currentRoute === 0 ? (
                                             value.state.routesData.map(item => {
@@ -84,148 +86,135 @@ export default class Maps extends Component {
                                             />
                                         )}
                                     </div>
-                                )}
-                            </AppConsumer>
-                            <AppConsumer>
-                                {value => (
                                     <div className="maps-marker">
                                         <i
                                             class="fas fa-map-marker"
                                             onClick={() => value.changeRoute()}
                                         />
                                     </div>
-                                )}
-                            </AppConsumer>
-                            <AppConsumer>
-                                {value => (
                                     <div className="maps-blind">
                                         <i
                                             class="far fa-eye"
                                             onClick={() => value.toggleBlind()}
                                         />
                                     </div>
-                                )}
-                            </AppConsumer>
 
-                            <Popup
-                                open={this.state.savePopupOpen}
-                                position="top"
-                                overlayStyle={{
-                                    width: "230px",
-                                    height: "341px",
-                                    margin: "auto",
-                                    marginTop: "-1",
-                                    position: "absolute",
-                                    top: "0"
-                                }}
-                                closeOnDocumentClick={false}
-                                contentStyle={{
-                                    margin: "auto",
-                                    padding: "10px",
-                                    maxHeight: "300px",
-                                    overflowY: "auto",
-                                    overflowX: "hidden",
-                                    maxWidth: "230px",
-                                    fontSize: "13px",
-                                    border: "1px solid black",
-                                    borderRadius: "20px",
-                                    width: "200px",
-                                    textAlign: "center"
-                                }}
-                            >
-                                <i
-                                    style={{
-                                        cursor: "pointer",
+                                <Popup
+                                    open={this.state.savePopupOpen}
+                                    position="top"
+                                    overlayStyle={{
+                                        width: "230px",
+                                        height: "341px",
+                                        margin: "auto",
+                                        marginTop: "-1",
                                         position: "absolute",
-                                        left: "195px",
-                                        margin: "2px"
+                                        top: "0"
                                     }}
-                                    onClick={() => this.closeSavePopup()}
-                                    class="fas fa-times"
-                                />
-                                <div className="word-input">
-                                    <Box
-                                        invalidInput={this.state.invalidInput}
-                                        success={this.state.success}
-                                    >
-                                        <form>
-                                            <TextInput
-                                                type="text"
-                                                value={this.props.keyboardInput}
-                                                onClick={
-                                                    this.props.keyboardToggle
-                                                }
-                                                placeholder="Route name"
-                                            />
-                                        </form>
-                                    </Box>
-                                </div>
-                                <br />
-                                <AppConsumer>
-                                    {value => (
-                                        <ButtonBetter
-                                            onClick={() => {
-                                                value.saveRoute(
-                                                    value.state.currentRoute,
-                                                    this.props.keyboardInput
-                                                );
-                                                this.closeSavePopup();
-                                            }}
-                                        >
-                                            CONFIRM
-                                        </ButtonBetter>
-                                    )}
-                                </AppConsumer>
-                            </Popup>
-                            <div className="maps-save">
-                                <i
-                                    class="far fa-save"
-                                    onClick={() => this.openSavePopup()}
-                                />
-                            </div>
-
-                            <Popup
-                                open={this.state.sharePopupOpen}
-                                position="top center"
-                                overlayStyle={{
-                                    width: "230px",
-                                    height: "341px",
-                                    margin: "auto",
-                                    marginTop: "-1",
-                                    position: "absolute",
-                                    top: "0"
-                                }}
-                                closeOnDocumentClick={false}
-                                contentStyle={{
-                                    padding: "2px",
-                                    maxHeight: "300px",
-                                    overflowY: "auto",
-                                    overflowX: "hidden",
-                                    maxWidth: "130px",
-                                    fontSize: "13px",
-                                    border: "1px solid black",
-                                    textAlign: "center"
-                                }}
-                            >
-                                Shared successfully
-                                <br />
-                                <br />
-                                <ButtonBetter
-                                    onClick={() => {
-                                        this.closeSharePopup();
+                                    closeOnDocumentClick={false}
+                                    contentStyle={{
+                                        margin: "auto",
+                                        padding: "10px",
+                                        maxHeight: "300px",
+                                        overflowY: "auto",
+                                        overflowX: "hidden",
+                                        maxWidth: "230px",
+                                        fontSize: "13px",
+                                        border: "1px solid black",
+                                        borderRadius: "20px",
+                                        width: "200px",
+                                        textAlign: "center"
                                     }}
                                 >
-                                    OK
-                                </ButtonBetter>
-                            </Popup>
-                            <div className="maps-share">
-                                <i
-                                    class="fas fa-share-alt"
-                                    onClick={() => this.openSharePopup()}
-                                />
-                            </div>
-                        </MapsWrapper>
-                    )}
+                                    <i
+                                        style={{
+                                            cursor: "pointer",
+                                            position: "absolute",
+                                            left: "195px",
+                                            margin: "2px"
+                                        }}
+                                        onClick={() => this.closeSavePopup()}
+                                        class="fas fa-times"
+                                    />
+                                    <div className="word-input">
+                                        <Box
+                                            invalidInput={this.state.invalidInput}
+                                            success={this.state.success}
+                                        >
+                                            <form>
+                                                <TextInput
+                                                    type="text"
+                                                    value={this.props.keyboardInput}
+                                                    onClick={
+                                                        this.props.keyboardToggle
+                                                    }
+                                                    placeholder="Route name"
+                                                />
+                                            </form>
+                                        </Box>
+                                    </div>
+                                    <br />
+                                    <ButtonBetter
+                                        onClick={() => {
+                                            value.saveRoute(
+                                                value.state.currentRoute,
+                                                this.props.keyboardInput
+                                            );
+                                            this.closeSavePopup();
+                                        }}
+                                    >
+                                        CONFIRM
+                                    </ButtonBetter>
+                                </Popup>
+                                <MapsOptions className="maps-save" currentRoute={value.state.currentRoute}>
+                                    <i
+                                        class="far fa-save"
+                                        onClick={() => this.openSavePopup(value.state.currentRoute)}
+                                    />
+                                </MapsOptions>
+
+                                <Popup
+                                    open={this.state.sharePopupOpen}
+                                    position="top center"
+                                    overlayStyle={{
+                                        width: "230px",
+                                        height: "341px",
+                                        margin: "auto",
+                                        marginTop: "-1",
+                                        position: "absolute",
+                                        top: "0"
+                                    }}
+                                    closeOnDocumentClick={false}
+                                    contentStyle={{
+                                        padding: "2px",
+                                        maxHeight: "300px",
+                                        overflowY: "auto",
+                                        overflowX: "hidden",
+                                        maxWidth: "130px",
+                                        fontSize: "13px",
+                                        border: "1px solid black",
+                                        textAlign: "center"
+                                    }}
+                                >
+                                    Shared successfully
+                                    <br />
+                                    <br />
+                                    <ButtonBetter
+                                        onClick={() => {
+                                            this.closeSharePopup();
+                                        }}
+                                    >
+                                        OK
+                                    </ButtonBetter>
+                                </Popup>
+                                <MapsOptions className="maps-share" currentRoute={value.state.currentRoute}>
+                                    <i
+                                        class="fas fa-share-alt"
+                                        onClick={() => this.openSharePopup(value.state.currentRoute)}
+                                    />
+                                </MapsOptions>
+                            </MapsWrapper>
+                            )}
+                        </AppConsumer>)}
                 </Spring>
             </>
         );
@@ -278,4 +267,10 @@ const ButtonBetter = styled.button`
     background: transparent;
     border: 1px solid black;
     border-radius: 10px;
+`;
+
+const MapsOptions = styled.div`
+    i {
+        color: ${props => (props.currentRoute ? "var(--mainBlack)" : "grey")};
+    }
 `;

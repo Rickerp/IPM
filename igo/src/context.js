@@ -177,12 +177,10 @@ class AppProvider extends Component {
             route: route
         };
 
-        console.log(newRoute.routeName);
         myRoutesData.push(newRoute);
         this.setState({
             myRoutesData: myRoutesData
         });
-        console.log(route);
     };
 
     isAdded = userId => {
