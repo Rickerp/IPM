@@ -5,7 +5,7 @@ import langs from "./../lang/langs.json";
 import Popup from "reactjs-popup";
 import Speech from "speak-tts";
 import { Link } from "react-router-dom";
-import { Spring } from "react-spring/renderprops";
+import { Spring } from 'react-spring/renderprops';
 
 export default class Translator extends Component {
     constructor(props) {
@@ -43,7 +43,7 @@ export default class Translator extends Component {
     }
 
     renderFromLang(code, language) {
-        if (code !== "0") {
+        if (code != "0") {
             return (
                 <div
                     className="in-language-item"
@@ -62,7 +62,7 @@ export default class Translator extends Component {
     }
 
     renderToLang(code, language) {
-        if (code !== "0") {
+        if (code != "0") {
             return (
                 <div
                     className="in-language-item"
@@ -86,7 +86,7 @@ export default class Translator extends Component {
         );
 
         if (/^[a-zA-Z\u00C0-\u00ff]+$/.test(input) || input === "") {
-            if (code !== null) {
+            if (code != null) {
                 this.setState({
                     result: langs[this.state.toLang][code].toUpperCase(),
                     success: true,
@@ -205,12 +205,7 @@ export default class Translator extends Component {
                     }}
                     arrow={true}
                 >
-                    In this menu you can consult the translation of these words:
-                    exit, danger, help, price, hello, thanks, far, close, no,
-                    yes, yesterday, tomorrow, shop, market, supermarket, police,
-                    hospital and restaurant in any language. you can select the
-                    language by clicking on the language button from each side
-                    of the menu.
+                    {this.readInfo()}
                 </Popup>
                 <div className="main-tr-header">
                     <MainHeader>Translator</MainHeader>
@@ -240,16 +235,14 @@ export default class Translator extends Component {
                         }}
                         arrow={true}
                     >
-                        <Spring
-                            from={{ opacity: 0, marginTop: -20 }}
-                            to={{ opacity: 1, marginTop: 5 }}
-                        >
-                            {props => (
-                                <div style={props}>
-                                    {this.renderFromLangs()}
-                                </div>
-                            )}
-                        </Spring>
+                      <Spring 
+                        from={{ opacity: 0, marginTop: -20 }}
+                        to={{ opacity: 1, marginTop: 5 }}
+                      >
+                        {props => <div style={props}>
+                          {this.renderFromLangs()}
+                        </div>}
+                      </Spring>
                     </Popup>
                 </div>
                 <div className="arrow">
@@ -279,52 +272,50 @@ export default class Translator extends Component {
                         }}
                         arrow={true}
                     >
-                        <Spring
-                            from={{ opacity: 0, marginTop: -20 }}
-                            to={{ opacity: 1, marginTop: 5 }}
-                        >
-                            {props => (
-                                <div style={props}>{this.renderToLangs()}</div>
-                            )}
-                        </Spring>
+                      <Spring 
+                        from={{ opacity: 0, marginTop: -20 }}
+                        to={{ opacity: 1, marginTop: 5 }}
+                      >
+                        {props => <div style={props}>
+                        {this.renderToLangs()}
+                        </div>}
+                      </Spring>
                     </Popup>
                 </div>
                 <div className="word-tr-input">
-                    <Spring from={{ opacity: 0 }} to={{ opacity: 1 }}>
-                        {props => (
-                            <Box
-                                style={props}
-                                invalidInput={this.state.invalidInput}
-                                success={this.state.success}
-                            >
-                                <TextInput
-                                    type="text"
-                                    value={this.props.keyboardInput}
-                                    onClick={this.props.keyboardToggle}
-                                    placeholder="Type something..."
-                                />
-                                <i
-                                    onClick={() => this.speechInput()}
-                                    className="fas fa-volume-up"
-                                    style={this.styles.audioButton}
-                                />
-                                <Line />
-                                <TextInput
-                                    type="text"
-                                    value={this.state.result}
-                                />
-                                <i
-                                    onClick={() => this.speechOutput()}
-                                    className="fas fa-volume-up"
-                                    style={this.styles.audioButton}
-                                />
-                            </Box>
-                        )}
-                    </Spring>
+                  <Spring 
+                    from={{ opacity: 0}}
+                    to={{ opacity: 1}}
+                  >
+                    {props => <Box
+                        style={props}
+                        invalidInput={this.state.invalidInput}
+                        success={this.state.success}
+                    >
+                        <TextInput
+                            type="text"
+                            value={this.props.keyboardInput}
+                            onClick={this.props.keyboardToggle}
+                            placeholder="Type something..."
+                        />
+                        <i
+                            onClick={() => this.speechInput()}
+                            className="fas fa-volume-up"
+                            style={this.styles.audioButton}
+                        />
+                        <Line />
+                        <TextInput type="text" value={this.state.result} />
+                        <i
+                            onClick={() => this.speechOutput()}
+                            className="fas fa-volume-up"
+                            style={this.styles.audioButton}
+                        />
+                    </Box>}
+                  </Spring>
                 </div>
                 <ExtraButtons className="extra-buttons">
                     <Link to={"/translatorar"}>
-                        <i className="fas fa-camera" />
+                      <i className="fas fa-camera" />
                     </Link>
                 </ExtraButtons>
             </TranslatorWrapper>
@@ -381,24 +372,23 @@ const TextInput = styled.input`
     width: 190px;
     border: none;
     margin-left: 5px;
-
     &:focus {
         outline: none;
     }
 `;
 
-/*const SearchButton = styled.button`
-	font-family: "Montserrat";
-	font-size: 16px;
-	position: relative;
-	background-color: transparent;
-	border: 1px solid black;
-	border-radius: 10px;
-	top: 130px;
-	left: 40px;
-	width: 115px;
-	height: 27px;
-`;*/
+const SearchButton = styled.button`
+    font-family: "Montserrat";
+    font-size: 16px;
+    position: relative;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 10px;
+    top: 130px;
+    left: 40px;
+    width: 115px;
+    height: 27px;
+`;
 
 const Box = styled.div`
     border-radius: 5px;
@@ -411,7 +401,6 @@ const Box = styled.div`
     height: 100px;
     width: 200px;
     box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.3);
-
     .fa-search {
         color: black;
     }
