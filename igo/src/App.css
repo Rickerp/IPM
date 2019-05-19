@@ -65,10 +65,14 @@ body {
 }
 
 /* The screen (or content) of the device */
-.band .content {
+.band {
 	width: 230px;
 	height: 371px;
-	background: var(--mainWhite);
+}
+
+.content {
+	width: 230px;
+	height: 371px;
 }
 
 #App {
@@ -429,4 +433,14 @@ button:focus {
   grid-area: maps-share;
   text-align: center;
   font-size: 20px;
+}
+
+/* Location List */
+
+.location-list-locations {
+	grid-area: location-list-locations;
+}
+
+.location-list-header {
+	grid-area: location-list-header;
 }

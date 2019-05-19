@@ -14,7 +14,8 @@ export default function Location(props) {
         >
             {styledProps => <LocationWrapper style={styledProps}>
                 <div className="location" onClick={() => value.changeLocation(props.item.name)}>
-                    <img src={props.item.image} alt={props.item.name}></img>
+                    {props.item.name === props.currentLocation ? <img src={props.item.selected} alt={props.item.name}></img> : 
+                    <img src={props.item.image} alt={props.item.name}></img>}
                 </div>
             </LocationWrapper>}
         </Spring>
@@ -22,6 +23,7 @@ export default function Location(props) {
 }
 
 const LocationWrapper = styled.div`
+    cursor: pointer;
     display: grid;
     grid-gap: 3px;
     grid-template-columns: 1fr;

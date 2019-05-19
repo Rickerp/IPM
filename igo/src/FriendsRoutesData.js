@@ -6,7 +6,8 @@ const FriendsRoutesInfo = [
         name: "Zequinha",
         lenght: 5,
         routeName: "Lisboa",
-        route: "img/lisboa_rota1"
+        route: "img/lisboa_rota1",
+        rating: 5
     },
     {
         id: 2,
@@ -15,7 +16,8 @@ const FriendsRoutesInfo = [
         name: "Artur",
         lenght: 5,
         routeName: "Ronda Lisboa",
-        route: "img/lisboa_rota3"
+        route: "img/lisboa_rota3",
+        rating: 3
     },
     {
         id: 3,
@@ -24,7 +26,8 @@ const FriendsRoutesInfo = [
         name: "Susana",
         lenght: 10,
         routeName: "Porto Frankie",
-        route: "img/porto_rota4"
+        route: "img/porto_rota4",
+        rating: 4
     },
     {
         id: 4,
@@ -33,7 +36,8 @@ const FriendsRoutesInfo = [
         name: "Maria",
         lenght: 12,
         routeName: "Barça",
-        route: "img/barcelona_rota1"
+        route: "img/barcelona_rota1",
+        rating: 3
     }
 ];
 

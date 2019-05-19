@@ -41,8 +41,7 @@ export default function Sharoute() {
             >
                 In this menu you will be able to check the most popular routes,
                 build your very own route, check your own routes, or your
-                friend's routes. By clicking on the &nbsp;
-                <i class="fas fa-ellipsis-v" /> &nbsp; you will be able to
+                friend's routes. By clicking on the current location button you will be able to
                 select the location of your maps.
             </Popup>
             <Spring
@@ -54,9 +53,8 @@ export default function Sharoute() {
                     <div className="sharoute-header">
                         <SharouteHeader>
                             Sharoute <br/>
-                            <span>current location: {value.state.location}</span>
                             <Link to="/location" style={{ textDecoration: "none" }}>
-                                <i class="fas fa-ellipsis-v" />
+                                <span>current location: <ButtonBetter currentLocation={value.state.location}>{value.state.location}</ButtonBetter></span>
                             </Link>
                         </SharouteHeader>
                     </div>
@@ -136,6 +134,7 @@ const SharouteHeader = styled.h3`
 
     span {
         font-size: 12px;
+        color: black;
         font-weight: 400;
     }
 `;
@@ -175,4 +174,17 @@ const AddButton = styled.button`
         top: -2px;
         font-size: 10px;
     }
+`;
+
+const ButtonBetter = styled.button`
+    cursor: pointer;
+    font-weight: 700;
+    color: white;
+    font-family: "Montserrat";
+    font-size: 12px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: ${props => props.currentLocation === "Rome" ? "linear-gradient(90deg, #FFB347 0%, #FFCC33 100%)" : 
+    props.currentLocation === "Lisbon" ? "linear-gradient(90deg, #E100FF 0%, #7F00FF 100%)" : 
+    props.currentLocation === "Porto" ? "linear-gradient(90deg, #56CCF2 0%, #2F80ED 100%)" : "linear-gradient(90deg, #56AB2F 0%, #A8E063 100%)" };
 `;

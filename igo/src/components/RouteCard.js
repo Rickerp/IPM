@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { Spring } from "react-spring/renderprops";
+import Rating from "./Rating";
 
 export default function RouteCard(props) {
     return (
@@ -32,17 +33,15 @@ export default function RouteCard(props) {
                                 </div>
                                 <div className="route-rating">
                                     <RouteRating>
-                                        <i class="fas fa-star" />{" "}
-                                        <i class="fas fa-star" />{" "}
-                                        <i class="fas fa-star" />{" "}
-                                        <i class="fas fa-star" />{" "}
-                                        <i class="fas fa-star" />
+                                        <Rating rating={props.item.rating}></Rating>
                                     </RouteRating>
                                 </div>
                                 <div className="route-details">
                                     <RouteName>
                                         {props.item.routeName} &nbsp;
-                                        <i class="fas fa-circle" />
+                                        <svg height="6" width="6">
+                                            <circle cx="3" cy="3" r="2"/>
+                                        </svg>
                                         &nbsp; {props.item.lenght}KM
                                     </RouteName>
                                 </div>
@@ -102,10 +101,8 @@ const RouteName = styled.p`
     margin-top: -1px;
     text-transform: capitalize;
 
-    i {
-        position: relative;
-        top: -1px;
-        font-size: 5%;
+    circle {
+        color: black;
     }
 `;
 
