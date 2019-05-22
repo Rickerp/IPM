@@ -1,7 +1,9 @@
 import React, { useContext } from 'react'
 import { AppContext } from "../context"
+import { Link } from "react-router-dom"
 import styled from "styled-components"
 import { Spring } from "react-spring/renderprops"
+import AnimatedImage from "./AnimatedImage"
 
 export default function Location(props) {
     const value = useContext(AppContext);
@@ -13,10 +15,12 @@ export default function Location(props) {
         config={{ duration: 600 }}
         >
             {styledProps => <LocationWrapper style={styledProps}>
-                <div className="location" onClick={() => value.changeLocation(props.item.name)}>
-                    {props.item.name === props.currentLocation ? <img src={props.item.selected} alt={props.item.name}></img> : 
-                    <img src={props.item.image} alt={props.item.name}></img>}
-                </div>
+                <Link to="/maps">
+                    <div className="location" onClick={() => value.changeLocation(props.item.name)}>
+                        {props.item.name === props.currentLocation ? <AnimatedImage image={props.item.selected} name={props.item.name}></AnimatedImage> : 
+                        <AnimatedImage image={props.item.image} name={props.item.name}></AnimatedImage>}
+                    </div>
+                </Link>
             </LocationWrapper>}
         </Spring>
     )

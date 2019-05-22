@@ -53,9 +53,7 @@ export default function Sharoute() {
                     <div className="sharoute-header">
                         <SharouteHeader>
                             Sharoute <br/>
-                            <Link to="/location" style={{ textDecoration: "none" }}>
-                                <span>current location: <ButtonBetter currentLocation={value.state.location}>{value.state.location}</ButtonBetter></span>
-                            </Link>
+                            <span>current location: <ButtonBetter currentLocation={value.state.location}>{value.state.location}</ButtonBetter></span>
                         </SharouteHeader>
                     </div>
                     <div className="sharoute-popular">
@@ -71,7 +69,7 @@ export default function Sharoute() {
                         </Link>
                     </div>
                     <div className="sharoute-build">
-                        <Link to="/maps" style={{ textDecoration: "none" }}>
+                        <Link to="/location" style={{ textDecoration: "none" }}>
                             <Box>
                                 <AddButton>
                                     <i class="fas fa-hammer" /> Build a Route
