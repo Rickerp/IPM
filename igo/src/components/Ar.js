@@ -10,40 +10,33 @@ export default class Ar extends Component {
       imgArray: ArData,
       currentImg: 0
     };
-    this.icon = "img/aricon.png";
-    this.nextImage = this.nextImage.bind(this);
-    this.prevImage = this.prevImage.bind(this);
   }
 
   nextImage() {
-    this.setState(prevState => {
-      let currentIndex = prevState.currentImg;
+    let currentIndex = this.state.currentImg;
 
-      if (currentIndex === prevState.imgArray.length - 1) {
-        currentIndex = 0;
-      } else {
-        currentIndex++;
-      }
-      return {
-        imgArray: prevState.imgArray,
-        currentImg: currentIndex
-      };
+    if (currentIndex === this.state.imgArray.length - 1) {
+      currentIndex = 0;
+    } else {
+      currentIndex++;
+    }
+
+    this.setState({
+      currentImg: currentIndex
     });
   }
 
   prevImage() {
-    this.setState(prevState => {
-      let currentIndex = prevState.currentImg;
+    let currentIndex = this.state.currentImg;
 
-      if (currentIndex === 0) {
-        currentIndex = prevState.imgArray.length - 1;
-      } else {
-        currentIndex--;
-      }
-      return {
-        imgArray: prevState.imgArray,
-        currentImg: currentIndex
-      };
+    if (currentIndex === 0) {
+      currentIndex = this.state.imgArray.length - 1;
+    } else {
+      currentIndex--;
+    }
+    
+    this.setState({
+      currentImg: currentIndex
     });
   }
 
@@ -55,26 +48,15 @@ export default class Ar extends Component {
         config={{ delay: 100, duration: 1000 }}
       >
         {(props) => <div style={props}>
-          <img
-            style={{
-              position: "absolute",
-              float: "right",
-              right: "5px",
-              width: "50px",
-              zoom: "70%"
-            }}
-            src={this.icon}
-            alt=""
-          />
           <Image
             style={{ zoom: "70%", overflowX: "hidden" }}
             src={this.state.imgArray[this.state.currentImg]}
             alt=""
           />
-          <PreviousButton onClick={this.prevImage}>
+          <PreviousButton onClick={() => this.prevImage()}>
             <i className="fas fa-arrow-left" />
           </PreviousButton>
-          <NextButton onClick={this.nextImage}>
+          <NextButton onClick={() => this.nextImage()}>
             <i className="fas fa-arrow-right" />
           </NextButton>
         </div>}
