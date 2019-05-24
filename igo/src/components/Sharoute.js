@@ -52,8 +52,7 @@ export default function Sharoute() {
                 {styledProps => <SharouteWrapper style={styledProps}>
                     <div className="sharoute-header">
                         <SharouteHeader>
-                            Sharoute <br/>
-                            <span>current location: <ButtonBetter currentLocation={value.state.location}>{value.state.location}</ButtonBetter></span>
+                            Sharoute
                         </SharouteHeader>
                     </div>
                     <div className="sharoute-popular">
@@ -109,7 +108,7 @@ const SharouteWrapper = styled.div`
     display: grid;
     grid-gap: 10px;
     grid-template-columns: 10px 1fr 10px;
-    grid-template-rows: repeat(5, 40px);
+    grid-template-rows: 28px repeat(4, 40px);
     grid-template-areas:
         "sharoute-header sharoute-header sharoute-header"
         ". sharoute-popular ."

@@ -14,7 +14,9 @@ export default class Translator extends Component {
             result: "",
             success: false,
             fromLang: "pt",
-            toLang: "en"
+            toLang: "en",
+            fromLangPop: false,
+            toLangPop: false
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -80,6 +82,14 @@ export default class Translator extends Component {
         );
     }
 
+    toggleFromLangPop() {
+        this.setState({ fromLangPop: !this.state.fromLangPop });
+    }
+
+    toggleToLangPop() {
+        this.setState({ toLangPop: !this.state.toLangPop });
+    }
+
     handleChange(input) {
         const code = Object.keys(langs[this.state.fromLang]).find(
             key => langs[this.state.fromLang][key] === input
@@ -109,11 +119,17 @@ export default class Translator extends Component {
     }
 
     changeFromLang(newLang) {
-        this.setState({ fromLang: newLang });
+        this.setState({ 
+            fromLang: newLang,
+            fromLangPop: false
+        });
     }
 
     changeToLang(newLang) {
-        this.setState({ toLang: newLang });
+        this.setState({ 
+            toLang: newLang,
+            toLangPop: false 
+        });
     }
 
     speechInput() {
@@ -214,24 +230,32 @@ export default class Translator extends Component {
                     className="in-language-input"
                     onClick={() => this.props.keyboardToggle(false)}
                 >
+                    <InputLanguage onClick={() => this.toggleFromLangPop()}>
+                        {" "}
+                        {codes[this.state.fromLang]}{" "}
+                    </InputLanguage>
                     <Popup
-                        trigger={
-                            <InputLanguage>
-                                {" "}
-                                {codes[this.state.fromLang]}{" "}
-                            </InputLanguage>
-                        }
+                        open={this.state.fromLangPop}
                         position="bottom left"
                         on="click"
                         closeOnDocumentClick
+                        onRequestClose={() => this.toggleFromLangPop()}
                         mouseLeaveDelay={300}
                         mouseEnterDelay={0}
+                        overlayStyle={{
+                            backgroundColor: "transparent"
+                        }}
                         contentStyle={{
+                            marginTop: "135px",
                             padding: "0px",
-                            maxHeight: "60%",
+                            maxHeight: "200px",
                             overflowY: "auto",
                             overflowX: "hidden",
-                            border: "1px solid black"
+                            width: "150px",
+                            fontSize: "16px",
+                            border: "1px solid black",
+                            right: "8px",
+                            padding: "15px"
                         }}
                         arrow={true}
                     >
@@ -252,23 +276,31 @@ export default class Translator extends Component {
                     className="out-language-input"
                     onClick={() => this.props.keyboardToggle(false)}
                 >
+                    <InputLanguage onClick={() => this.toggleToLangPop()}>
+                        {" "}
+                        {codes[this.state.toLang]}{" "}
+                    </InputLanguage>
                     <Popup
-                        trigger={
-                            <InputLanguage>
-                                {" "}
-                                {codes[this.state.toLang]}{" "}
-                            </InputLanguage>
-                        }
+                        open={this.state.toLangPop}
                         position="bottom right"
                         on="click"
                         closeOnDocumentClick
+                        onRequestClose={() => this.toggleToLangPop()}
                         mouseLeaveDelay={300}
                         mouseEnterDelay={0}
+                        overlayStyle={{
+                            backgroundColor: "transparent"
+                        }}
                         contentStyle={{
-                            padding: "0px",
-                            maxHeight: "60%",
+                            marginTop: "135px",
+                            maxHeight: "200px",
                             overflowY: "auto",
-                            border: "1px solid black"
+                            overflowX: "hidden",
+                            width: "150px",
+                            fontSize: "16px",
+                            border: "1px solid black",
+                            left: "12px",
+                            padding: "15px"
                         }}
                         arrow={true}
                     >
