@@ -1,14 +1,14 @@
 const ArData = [
-  "img/camp_nou.svg",
-  "img/pav_rosa_mota.svg",
-  "img/sagrada_familia.svg",
-  "img/basilica.svg",
-  "img/oceanario.svg",
-  "img/mosteiro.svg",
-  "img/torre_de_belem.svg",
-  "img/casa_da_musica.svg",
-  "img/coliseu.svg",
-  "img/ponte_d_luis.svg"
+  "img/camp_nou.png",
+  "img/pav_rosa_mota.png",
+  "img/sagrada_familia.png",
+  "img/basilica.png",
+  "img/oceanario.png",
+  "img/mosteiro.png",
+  "img/torre_de_belem.png",
+  "img/casa_da_musica.png",
+  "img/coliseu.png",
+  "img/ponte_d_luis.png"
 ];
 
 export default ArData;

@@ -121,7 +121,7 @@ export default class Profile extends Component {
 								</div>
 								<div className="profile-posts">
 									<PostsText>
-										Posts <br />{" "}
+										Posts {" "}
 										<i class="far fa-comments" />
 									</PostsText>
 									<PostsCounterText>10</PostsCounterText>
@@ -286,8 +286,8 @@ const CloseButton = styled.div`
 const ProfileWrapper = styled.div`
 	display: grid;
 	grid-gap: 3px;
-	grid-template-columns: 5px 1fr 10px 1fr 5px;
-	grid-template-rows: 119px 20px 15px 27px 65px 20px;
+	grid-template-columns: 5px 1fr 5px 1fr 5px;
+	grid-template-rows: 110px 20px 15px 27px 65px 20px;
 	grid-template-areas:
 		"profile-avatar profile-avatar profile-avatar profile-avatar profile-avatar"
 		"profile-name profile-name profile-name profile-name profile-name"
@@ -368,6 +368,10 @@ const RoutesText = styled.p`
 	text-align: center;
 	margin-top: 0px;
 	margin-bottom: 0px;
+
+	i {
+		font-size: 70%;
+	}
 `;
 
 const RoutesCounterText = styled.p`
@@ -384,6 +388,10 @@ const PostsText = styled.p`
 	text-align: center;
 	margin-top: 0px;
 	margin-bottom: 0px;
+
+	i {
+		font-size: 70%;
+	}
 `;
 
 const PostsCounterText = styled.p`
