@@ -45,8 +45,8 @@ export default class Activity extends Component {
                             <Avatar className="avatar">
                                 <img
                                     style={{
-                                        maxWidth: "100%",
-                                        maxHeight: "100%",
+                                        maxWidth: "120%",
+                                        maxHeight: "120%",
                                         borderRadius: "50%"
                                     }}
                                     src={this.props.item.avatar}
@@ -124,7 +124,7 @@ const ActivityWrapper = styled.div`
 const AddedWrapper = styled.div`
     display: grid;
     grid-gap: 3px;
-    grid-template-columns: 40px 1fr 1fr;
+    grid-template-columns: 50px 1fr 1fr;
     grid-template-rows: 15px;
     grid-template-areas: "comments likes .";
     box-shadow: 2px 3px 2px 1px rgba(0, 0, 0, 0.2);
@@ -139,7 +139,7 @@ const Avatar = styled.div`
 `;
 
 const NameText = styled.p`
-    font-size: 95%;
+    font-size: 100%;
     font-weight: 700;
     margin-left: 10px;
     margin-top: 5px;
@@ -148,7 +148,7 @@ const NameText = styled.p`
 `;
 
 const ActivityText = styled.p`
-    font-size: 80%;
+    font-size: 85%;
     font-weight: 500;
     margin-left: 10px;
     margin-top: 5px;
@@ -157,7 +157,7 @@ const ActivityText = styled.p`
 `;
 
 const TimeText = styled.p`
-    font-size: 70%;
+    font-size: 75%;
     margin-left: 10px;
     margin-top: -9px;
     color: black;
@@ -165,7 +165,7 @@ const TimeText = styled.p`
 `;
 
 const Added = styled.span`
-    font-size: 12px;
+    font-size: 14px;
     margin-left: 12px;
     top: 10px;
 `;

@@ -40,9 +40,8 @@ export default function Sharoute() {
                 arrow={true}
             >
                 In this menu you will be able to check the most popular routes,
-                build your very own route, check your own routes, or your
-                friend's routes. By clicking on the current location button you will be able to
-                select the location of your maps.
+                build your very own route, check your own routes or your
+                friend's routes.
             </Popup>
             <Spring
             from={{ opacity: 0, marginLeft: -80 }}

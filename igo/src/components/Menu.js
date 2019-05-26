@@ -167,8 +167,8 @@ const SlideWrapper = styled.div`
     /* Position and sizing of burger button */
     .bm-burger-button {
         position: absolute;
-        width: 13px;
-        height: 9px;
+        width: 18px;
+        height: 14px;
         top: 8px;
         left: 3px;
     }
