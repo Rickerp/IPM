@@ -9,6 +9,7 @@ const Counter = () => {
         <CounterWrapper className="counter">
             <h3>Counter</h3>
             <p>{value.state.counter}</p>
+            
         </CounterWrapper>
     )
 }
