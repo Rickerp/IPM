@@ -89,13 +89,19 @@ export default class Maps extends Component {
                                     <div className="maps-marker">
                                         <i
                                             class="fas fa-map-marker"
-                                            onClick={() => value.changeRoute()}
+                                            onClick={() => {
+                                                value.changeRoute()
+                                                value.increaseCounter()
+                                            }}
                                         />
                                     </div>
                                     <div className="maps-blind">
                                         <i
                                             class="far fa-eye"
-                                            onClick={() => value.toggleBlind()}
+                                            onClick={() => {
+                                                value.toggleBlind()
+                                                value.increaseCounter()
+                                            }}
                                         />
                                     </div>
 
@@ -132,7 +138,10 @@ export default class Maps extends Component {
                                             left: "195px",
                                             margin: "2px"
                                         }}
-                                        onClick={() => this.closeSavePopup()}
+                                        onClick={() => {
+                                            this.closeSavePopup()
+                                            value.increaseCounter()
+                                        }}
                                         class="fas fa-times"
                                     />
                                     <div className="word-input">
@@ -144,9 +153,7 @@ export default class Maps extends Component {
                                                 <TextInput
                                                     type="text"
                                                     value={this.props.keyboardInput}
-                                                    onClick={
-                                                        this.props.keyboardToggle
-                                                    }
+                                                    onClick={this.props.keyboardToggle}
                                                     placeholder="Route name"
                                                 />
                                             </form>
@@ -160,6 +167,7 @@ export default class Maps extends Component {
                                                 this.props.keyboardInput
                                             );
                                             this.closeSavePopup();
+                                            value.increaseCounter();
                                         }}
                                     >
                                         CONFIRM
@@ -168,7 +176,10 @@ export default class Maps extends Component {
                                 <MapsOptions className="maps-save" currentRoute={value.state.currentRoute}>
                                     <i
                                         class="far fa-save"
-                                        onClick={() => this.openSavePopup(value.state.currentRoute)}
+                                        onClick={() => {
+                                            this.openSavePopup(value.state.currentRoute)
+                                            value.increaseCounter()
+                                        }}
                                     />
                                 </MapsOptions>
 
@@ -201,6 +212,7 @@ export default class Maps extends Component {
                                     <ButtonBetter
                                         onClick={() => {
                                             this.closeSharePopup();
+                                            value.increaseCounter()
                                         }}
                                     >
                                         OK
@@ -209,7 +221,10 @@ export default class Maps extends Component {
                                 <MapsOptions className="maps-share" currentRoute={value.state.currentRoute}>
                                     <i
                                         class="fas fa-share-alt"
-                                        onClick={() => this.openSharePopup(value.state.currentRoute)}
+                                        onClick={() => {
+                                            this.openSharePopup(value.state.currentRoute)
+                                            value.increaseCounter()
+                                        }}
                                     />
                                 </MapsOptions>
                             </MapsWrapper>

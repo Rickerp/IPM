@@ -22,8 +22,18 @@ class AppProvider extends Component {
         langDictionary: "0",
         blind: false,
         location: "Rome",
+        counter: 0,
         currentRoute: 0
     };
+
+    increaseCounter = () => {
+        let counter = this.state.counter
+        counter++
+
+        this.setState({
+            counter: counter
+        });
+    }
 
     increaseLikes = idSearch => {
         let feedData = this.state.feedData;
@@ -211,7 +221,8 @@ class AppProvider extends Component {
                     changeLocation: this.changeLocation,
                     changeDescription: this.changeDescription,
                     saveRoute: this.saveRoute,
-                    isAdded: this.isAdded
+                    isAdded: this.isAdded,
+                    increaseCounter: this.increaseCounter
                 }}
             >
                 {this.props.children}

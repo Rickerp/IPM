@@ -67,7 +67,7 @@ export default function Sharoute() {
                         </Link>
                     </div>
                     <div className="sharoute-build">
-                        <Link to="/location" style={{ textDecoration: "none" }}>
+                        <Link to="/location" style={{ textDecoration: "none" }} onClick={() => value.increaseCounter()}>
                             <Box>
                                 <AddButton>
                                     <i class="fas fa-hammer" /> Build a Route
@@ -88,6 +88,7 @@ export default function Sharoute() {
                         <Link
                             to="/friendsroutes"
                             style={{ textDecoration: "none" }}
+                            onClick={() => value.increaseCounter()}
                         >
                             <Box>
                                 <AddButton>

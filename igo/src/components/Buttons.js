@@ -1,34 +1,38 @@
-import React, { Component } from "react";
+import React, { useContext } from "react"
+import { AppContext } from "../context"
 
-class Button extends Component {
-    render() {
-        return (
-            <div style={this.props.buttonStyle} onClick={this.props.onClick}>
-                <svg
-                    style={{
-                        zIndex: "0",
-                        left: "0",
-                        top: "0"
-                    }}
-                    height="30"
-                    width="30"
-                >
-                    <circle
-                        cx="15"
-                        cy="15"
-                        r="13"
-                        stroke="white"
-                        strokeWidth="2"
-                    />
-                </svg>
-                <i style={this.props.iconStyle} className={this.props.icon} />
-            </div>
-        );
-    }
+const Button = (props) => {
+    const value = useContext(AppContext)
+
+    return (
+        <div style={props.buttonStyle} onClick={() => {
+            props.onClick()
+            value.increaseCounter()
+            }}>
+            <svg
+                style={{
+                    zIndex: "0",
+                    left: "0",
+                    top: "0"
+                }}
+                height="30"
+                width="30"
+            >
+                <circle
+                    cx="15"
+                    cy="15"
+                    r="13"
+                    stroke="white"
+                    strokeWidth="2"
+                />
+            </svg>
+            <i style={props.iconStyle} className={props.icon} />
+        </div>
+    );
 }
 
-class ButtonBack extends Component {
-    styles = {
+const ButtonBack = (props) => {
+    const styles = {
         button: {
             color: "white",
             position: "absolute",
@@ -47,22 +51,20 @@ class ButtonBack extends Component {
         }
     };
 
-    render() {
-        return (
-            <Button
-                buttonStyle={this.styles.button}
-                onClick={() => this.props.onClick()}
-                icon="fas fa-chevron-left"
-                iconStyle={this.styles.icon}
-            />
-        );
-    }
+    return (
+        <Button
+            buttonStyle={styles.button}
+            onClick={() => props.onClick()}
+            icon="fas fa-chevron-left"
+            iconStyle={styles.icon}
+        />
+    );
 }
 
 export { ButtonBack };
 
-class ButtonHome extends Component {
-    styles = {
+const ButtonHome = (props) => {
+    const styles = {
         button: {
             color: "white",
             position: "absolute",
@@ -81,16 +83,14 @@ class ButtonHome extends Component {
         }
     };
 
-    render() {
-        return (
-            <Button
-                buttonStyle={this.styles.button}
-                onClick={() => this.props.onClick()}
-                icon="fas fa-home"
-                iconStyle={this.styles.icon}
-            />
-        );
-    }
+    return (
+        <Button
+            buttonStyle={styles.button}
+            onClick={() => props.onClick()}
+            icon="fas fa-home"
+            iconStyle={styles.icon}
+        />
+    );
 }
 
 export { ButtonHome };

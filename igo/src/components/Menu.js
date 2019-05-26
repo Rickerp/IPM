@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { slide as Slide } from "react-burger-menu";
 import rita from "../Rita.png";
 import styled from "styled-components";
+import { AppConsumer } from "../context";
 
 export default class Menu extends Component {
     constructor(props) {
@@ -34,111 +35,120 @@ export default class Menu extends Component {
 
     render() {
         return (
-            <SlideWrapper isOpen={this.state.menuOpen}>
-                <Slide
-                    isOpen={this.state.menuOpen}
-                    onStateChange={state => this.handleStateChange(state)}
-                    width={"180px"}
-                >
-                    <ProfileCard>
-                        <p className="card-name">Rita Sousa</p>
-                        <img className="card-avatar" src={rita} alt="Avatar" />
-                    </ProfileCard>
-
-                    <Link
-                        onClick={() => {
-                            this.closeMenu();
-                            this.props.keyboardToggle(false);
-                        }}
-                        className="menu-item"
-                        to="/ar"
+            <AppConsumer>
+                {value => 
+                    <SlideWrapper isOpen={this.state.menuOpen}>
+                    <Slide
+                        isOpen={this.state.menuOpen}
+                        onStateChange={state => {
+                            this.handleStateChange(state)
+                            value.increaseCounter()}}
+                        width={"180px"}
                     >
-                        <MapsItem currentPath={window.location.pathname}>
-                            <i class="fas fa-landmark" /> &nbsp; LANDMARKS
-                        </MapsItem>
-                    </Link>
+                        <ProfileCard>
+                            <p className="card-name">Rita Sousa</p>
+                            <img className="card-avatar" src={rita} alt="Avatar" />
+                        </ProfileCard>
 
-                    <a
-                        className="menu-item"
-                        href="#"
-                        onClick={() => this.toggleLanguages()}
-                    >
-                        <LanguagesItem currentPath={window.location.pathname}>
-                            <i className="fas fa-language" /> &nbsp; LANGUAGES{" "}
-                            {this.state.languagesOpen ? (
-                                <i className="fas fa-sort-up menu-up" />
-                            ) : (
-                                <i className="fas fa-sort-down menu-down" />
-                            )}
-                        </LanguagesItem>
-                    </a>
-
-                    {this.state.languagesOpen ? (
                         <Link
                             onClick={() => {
                                 this.closeMenu();
                                 this.props.keyboardToggle(false);
                             }}
                             className="menu-item"
-                            to="/dictionary"
+                            to="/ar"
                         >
-                            <DictionaryItem
-                                currentPath={window.location.pathname}
-                            >
-                                <i className="fas fa-book" /> &nbsp; DICTIONARY
-                            </DictionaryItem>
+                            <MapsItem currentPath={window.location.pathname}>
+                                <i class="fas fa-landmark" /> &nbsp; LANDMARKS
+                            </MapsItem>
                         </Link>
-                    ) : (
-                        <span />
-                    )}
 
-                    {this.state.languagesOpen ? (
+                        <a
+                            className="menu-item"
+                            href="#"
+                            onClick={() => {
+                                this.toggleLanguages()
+                                value.increaseCounter();}}
+                        >
+                            <LanguagesItem currentPath={window.location.pathname}>
+                                <i className="fas fa-language" /> &nbsp; LANGUAGES{" "}
+                                {this.state.languagesOpen ? (
+                                    <i className="fas fa-sort-up menu-up" />
+                                ) : (
+                                    <i className="fas fa-sort-down menu-down" />
+                                )}
+                            </LanguagesItem>
+                        </a>
+
+                        {this.state.languagesOpen ? (
+                            <Link
+                                onClick={() => {
+                                    this.closeMenu();
+                                    this.props.keyboardToggle(false);
+                                }}
+                                className="menu-item"
+                                to="/dictionary"
+                            >
+                                <DictionaryItem
+                                    currentPath={window.location.pathname}
+                                >
+                                    <i className="fas fa-book" /> &nbsp; DICTIONARY
+                                </DictionaryItem>
+                            </Link>
+                        ) : (
+                            <span />
+                        )}
+
+                        {this.state.languagesOpen ? (
+                            <Link
+                                onClick={() => {
+                                    this.closeMenu();
+                                    this.props.keyboardToggle(false);
+                                }}
+                                className="menu-item"
+                                to="/translator"
+                            >
+                                <TranslatorItem
+                                    currentPath={window.location.pathname}
+                                >
+                                    <i className="fas fa-sign-language" /> &nbsp;
+                                    TRANSLATOR
+                                </TranslatorItem>
+                            </Link>
+                        ) : (
+                            <span />
+                        )}
+
                         <Link
                             onClick={() => {
                                 this.closeMenu();
                                 this.props.keyboardToggle(false);
                             }}
                             className="menu-item"
-                            to="/translator"
+                            to="/sharoute"
                         >
-                            <TranslatorItem
-                                currentPath={window.location.pathname}
-                            >
-                                <i className="fas fa-sign-language" /> &nbsp;
-                                TRANSLATOR
-                            </TranslatorItem>
+                            <SharouteItem currentPath={window.location.pathname}>
+                                <i className="fas fa-route" /> &nbsp; SHAROUTE
+                            </SharouteItem>
                         </Link>
-                    ) : (
-                        <span />
-                    )}
 
-                    <Link
-                        onClick={() => {
-                            this.closeMenu();
-                            this.props.keyboardToggle(false);
-                        }}
-                        className="menu-item"
-                        to="/sharoute"
-                    >
-                        <SharouteItem currentPath={window.location.pathname}>
-                            <i className="fas fa-route" /> &nbsp; SHAROUTE
-                        </SharouteItem>
-                    </Link>
+                        <Link
+                            onClick={() => {
+                                this.closeMenu();
+                                this.props.keyboardToggle(false);
+                            }}
+                            className="menu-item"
+                            to="/friends"
+                        >
+                            <FriendsItem currentPath={window.location.pathname}>
+                                <i className="fas fa-user-friends" /> &nbsp; FRIENDS
+                            </FriendsItem>
+                        </Link>
+                    </Slide>
+                </SlideWrapper>
+                }
+            </AppConsumer>
 
-                    <Link
-                        onClick={() => {
-                            this.closeMenu();
-                            this.props.keyboardToggle(false);
-                        }}
-                        className="menu-item"
-                        to="/friends"
-                    >
-                        <FriendsItem currentPath={window.location.pathname}>
-                            <i className="fas fa-user-friends" /> &nbsp; FRIENDS
-                        </FriendsItem>
-                    </Link>
-                </Slide>
-            </SlideWrapper>
         );
     }
 }

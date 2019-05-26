@@ -16,7 +16,10 @@ export default function Location(props) {
         >
             {styledProps => <LocationWrapper style={styledProps}>
                 <Link to="/maps">
-                    <div className="location" onClick={() => value.changeLocation(props.item.name)}>
+                    <div className="location" onClick={() => {
+                        value.changeLocation(props.item.name)
+                        value.increaseCounter()
+                        }}>
                         {props.item.name === props.currentLocation ? <AnimatedImage image={props.item.selected} name={props.item.name}></AnimatedImage> : 
                         <AnimatedImage image={props.item.image} name={props.item.name}></AnimatedImage>}
                     </div>

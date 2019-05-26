@@ -6,6 +6,7 @@ import Popup from "reactjs-popup";
 import Speech from "speak-tts";
 import { Link } from "react-router-dom";
 import { Spring } from 'react-spring/renderprops';
+import { AppConsumer } from "../context.js";
 
 export default class Translator extends Component {
     constructor(props) {
@@ -41,18 +42,25 @@ export default class Translator extends Component {
     componentWillUpdate(nextState) {
         if (this.props.keyboardInput !== nextState.keyboardInput) {
             this.handleChange(nextState.keyboardInput.toLowerCase());
+            this.props.value.increaseCounter();
         }
     }
 
     renderFromLang(code, language) {
         if (code != "0") {
             return (
-                <div
-                    className="in-language-item"
-                    onClick={() => this.changeFromLang(code)}
-                >
-                    {language}
-                </div>
+                <AppConsumer>
+                    {value => 
+                        <div
+                            className="in-language-item"
+                            onClick={() => {
+                                this.changeFromLang(code)
+                                value.increaseCounter()}}
+                        >
+                            {language}
+                        </div>
+                    }
+                </AppConsumer>
             );
         }
     }
@@ -66,12 +74,18 @@ export default class Translator extends Component {
     renderToLang(code, language) {
         if (code != "0") {
             return (
-                <div
-                    className="in-language-item"
-                    onClick={() => this.changeToLang(code)}
-                >
-                    {language}
-                </div>
+                <AppConsumer>
+                    {value => 
+                        <div
+                            className="in-language-item"
+                            onClick={() => {
+                                this.changeToLang(code)
+                                value.increaseCounter()}}
+                        >
+                            {language}
+                        </div>
+                    }
+                </AppConsumer>
             );
         }
     }
@@ -195,162 +209,174 @@ export default class Translator extends Component {
 
     render() {
         return (
-            <TranslatorWrapper>
-                <Popup
-                    trigger={
-                        <div
-                            style={this.styles.info}
-                            onClick={this.props.showInfo}
-                        >
-                            <i class="fas fa-info-circle" />
-                        </div>
-                    }
-                    position="bottom right"
-                    on="click"
-                    closeOnDocumentClick
-                    mouseLeaveDelay={300}
-                    mouseEnterDelay={0}
-                    contentStyle={{
-                        padding: "2px",
-                        maxHeight: "300px",
-                        overflowY: "auto",
-                        overflowX: "hidden",
-                        maxWidth: "150px",
-                        fontSize: "13px",
-                        border: "1px solid black"
-                    }}
-                    arrow={true}
-                >
-                    {this.readInfo()}
-                </Popup>
-                <div className="main-tr-header">
-                    <MainHeader>Translator</MainHeader>
-                </div>
-                <div
-                    className="in-language-input"
-                    onClick={() => this.props.keyboardToggle(false)}
-                >
-                    <InputLanguage onClick={() => this.toggleFromLangPop()}>
-                        {" "}
-                        {codes[this.state.fromLang]}{" "}
-                    </InputLanguage>
+            <AppConsumer>
+                {value => 
+                <TranslatorWrapper>
                     <Popup
-                        open={this.state.fromLangPop}
-                        position="bottom left"
-                        on="click"
-                        closeOnDocumentClick
-                        onRequestClose={() => this.toggleFromLangPop()}
-                        mouseLeaveDelay={300}
-                        mouseEnterDelay={0}
-                        overlayStyle={{
-                            backgroundColor: "transparent"
-                        }}
-                        contentStyle={{
-                            marginTop: "135px",
-                            padding: "0px",
-                            maxHeight: "200px",
-                            overflowY: "auto",
-                            overflowX: "hidden",
-                            width: "150px",
-                            fontSize: "16px",
-                            border: "1px solid black",
-                            right: "8px",
-                            padding: "15px"
-                        }}
-                        arrow={true}
-                    >
-                      <Spring 
-                        from={{ opacity: 0, marginTop: -20 }}
-                        to={{ opacity: 1, marginTop: 5 }}
-                      >
-                        {props => <div style={props}>
-                          {this.renderFromLangs()}
-                        </div>}
-                      </Spring>
-                    </Popup>
-                </div>
-                <div className="arrow">
-                    <i className="fas fa-arrow-circle-right" />
-                </div>
-                <div
-                    className="out-language-input"
-                    onClick={() => this.props.keyboardToggle(false)}
-                >
-                    <InputLanguage onClick={() => this.toggleToLangPop()}>
-                        {" "}
-                        {codes[this.state.toLang]}{" "}
-                    </InputLanguage>
-                    <Popup
-                        open={this.state.toLangPop}
+                        trigger={
+                            <div
+                                style={this.styles.info}
+                                onClick={this.props.showInfo}
+                            >
+                                <i class="fas fa-info-circle" />
+                            </div>
+                        }
                         position="bottom right"
                         on="click"
                         closeOnDocumentClick
-                        onRequestClose={() => this.toggleToLangPop()}
                         mouseLeaveDelay={300}
                         mouseEnterDelay={0}
-                        overlayStyle={{
-                            backgroundColor: "transparent"
-                        }}
                         contentStyle={{
-                            marginTop: "135px",
-                            maxHeight: "200px",
+                            padding: "2px",
+                            maxHeight: "300px",
                             overflowY: "auto",
                             overflowX: "hidden",
-                            width: "150px",
-                            fontSize: "16px",
-                            border: "1px solid black",
-                            left: "12px",
-                            padding: "15px"
+                            maxWidth: "150px",
+                            fontSize: "13px",
+                            border: "1px solid black"
                         }}
                         arrow={true}
                     >
-                      <Spring 
-                        from={{ opacity: 0, marginTop: -20 }}
-                        to={{ opacity: 1, marginTop: 5 }}
-                      >
-                        {props => <div style={props}>
-                        {this.renderToLangs()}
-                        </div>}
-                      </Spring>
+                        {this.readInfo()}
                     </Popup>
-                </div>
-                <div className="word-tr-input">
-                  <Spring 
-                    from={{ opacity: 0}}
-                    to={{ opacity: 1}}
-                  >
-                    {props => <Box
-                        style={props}
-                        invalidInput={this.state.invalidInput}
-                        success={this.state.success}
+                    <div className="main-tr-header">
+                        <MainHeader>Translator</MainHeader>
+                    </div>
+                    <div
+                        className="in-language-input"
+                        onClick={() => this.props.keyboardToggle(false)}
                     >
-                        <TextInput
-                            type="text"
-                            value={this.props.keyboardInput}
-                            onClick={this.props.keyboardToggle}
-                            placeholder="Type something..."
-                        />
-                        <i
-                            onClick={() => this.speechInput()}
-                            className="fas fa-volume-up"
-                            style={this.styles.audioButton}
-                        />
-                        <Line />
-                        <TextInput type="text" value={this.state.result} />
-                        <i
-                            onClick={() => this.speechOutput()}
-                            className="fas fa-volume-up"
-                            style={this.styles.audioButton}
-                        />
-                    </Box>}
-                  </Spring>
-                </div>
-                <ExtraButtons className="extra-buttons">
-                    <Link to={"/translatorar"}>
-                      <i className="fas fa-camera" />
-                    </Link>
-                </ExtraButtons>
-            </TranslatorWrapper>
+                        <InputLanguage onClick={() => {
+                            this.toggleFromLangPop()
+                            value.increaseCounter()}}>
+                            {" "}
+                            {codes[this.state.fromLang]}{" "}
+                        </InputLanguage>
+                        <Popup
+                            open={this.state.fromLangPop}
+                            position="bottom left"
+                            on="click"
+                            closeOnDocumentClick
+                            onRequestClose={() => this.toggleFromLangPop()}
+                            mouseLeaveDelay={300}
+                            mouseEnterDelay={0}
+                            overlayStyle={{
+                                backgroundColor: "transparent"
+                            }}
+                            contentStyle={{
+                                marginTop: "135px",
+                                padding: "0px",
+                                maxHeight: "200px",
+                                overflowY: "auto",
+                                overflowX: "hidden",
+                                width: "150px",
+                                fontSize: "16px",
+                                border: "1px solid black",
+                                right: "8px",
+                                padding: "15px"
+                            }}
+                            arrow={true}
+                        >
+                            <Spring 
+                            from={{ opacity: 0, marginTop: -20 }}
+                            to={{ opacity: 1, marginTop: 5 }}
+                            >
+                            {props => <div style={props}>
+                                {this.renderFromLangs()}
+                            </div>}
+                            </Spring>
+                        </Popup>
+                    </div>
+                    <div className="arrow">
+                        <i className="fas fa-arrow-circle-right" />
+                    </div>
+                    <div
+                        className="out-language-input"
+                        onClick={() => this.props.keyboardToggle(false)}
+                    >
+                        <InputLanguage onClick={() => {
+                            this.toggleToLangPop()
+                            value.increaseCounter()}}>
+                            {" "}
+                            {codes[this.state.toLang]}{" "}
+                        </InputLanguage>
+                        <Popup
+                            open={this.state.toLangPop}
+                            position="bottom right"
+                            on="click"
+                            closeOnDocumentClick
+                            onRequestClose={() => this.toggleToLangPop()}
+                            mouseLeaveDelay={300}
+                            mouseEnterDelay={0}
+                            overlayStyle={{
+                                backgroundColor: "transparent"
+                            }}
+                            contentStyle={{
+                                marginTop: "135px",
+                                maxHeight: "200px",
+                                overflowY: "auto",
+                                overflowX: "hidden",
+                                width: "150px",
+                                fontSize: "16px",
+                                border: "1px solid black",
+                                left: "12px",
+                                padding: "15px"
+                            }}
+                            arrow={true}
+                        >
+                            <Spring 
+                            from={{ opacity: 0, marginTop: -20 }}
+                            to={{ opacity: 1, marginTop: 5 }}
+                            >
+                            {props => <div style={props}>
+                            {this.renderToLangs()}
+                            </div>}
+                            </Spring>
+                        </Popup>
+                    </div>
+                    <div className="word-tr-input">
+                        <Spring 
+                        from={{ opacity: 0}}
+                        to={{ opacity: 1}}
+                        >
+                        {props => <Box
+                            style={props}
+                            invalidInput={this.state.invalidInput}
+                            success={this.state.success}
+                        >
+                            <TextInput
+                                type="text"
+                                value={this.props.keyboardInput}
+                                onClick={this.props.keyboardToggle}
+                                placeholder="Type something..."
+                            />
+                            <i
+                                onClick={() => {
+                                    this.speechInput()
+                                    value.increaseCounter()}}
+                                className="fas fa-volume-up"
+                                style={this.styles.audioButton}
+                            />
+                            <Line />
+                            <TextInput type="text" value={this.state.result} />
+                            <i
+                                onClick={() => {
+                                    this.speechOutput()
+                                    value.increaseCounter()}}
+                                className="fas fa-volume-up"
+                                style={this.styles.audioButton}
+                            />
+                        </Box>}
+                        </Spring>
+                    </div>
+                    <ExtraButtons className="extra-buttons">
+                        <Link to={"/translatorar"}>
+                            <i className="fas fa-camera" />
+                        </Link>
+                    </ExtraButtons>
+                </TranslatorWrapper>
+                }
+            </AppConsumer>
         );
     }
 }
