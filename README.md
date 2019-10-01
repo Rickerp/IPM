@@ -1,4 +1,4 @@
-# [IPM] Interface Pessoa Máquina - Project
+# [IPM] Human-Computer Interaction - Project
 
 Made by:  
 Lucas Vicente - github.com/WARSKELETON  
@@ -6,7 +6,7 @@ Francisco Silva - github.com/franciscoguedes
 Ricardo Fernandes - github.com/rickerp  
 
 ### Description
-This repository contains the project made for 'Interface Pessoa Máquina' (Interface Person Machine) course.  
+This repository contains the project made for 'Interface Pessoa Máquina' (Human-Computer Interaction) course.  
 It is basically a smart-watch prototype made with **React** with some interesting functionalities like:  
   * **Feed** for community events and activity. Includes **Friends** functionality  
   * **SHAROUTE** - A platform where you can make routes and share them. You can also see the popular zone tourist routes, etc...  
