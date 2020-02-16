@@ -1,10 +1,5 @@
 # [IPM] Human-Computer Interaction - Project
 
-Made by:  
-Lucas Vicente - github.com/WARSKELETON  
-Francisco Silva - github.com/franciscoguedes  
-Ricardo Fernandes - github.com/rickerp  
-
 ### Description
 This repository contains the project made for 'Interface Pessoa Máquina' (Human-Computer Interaction) course.  
 It is basically a smart-watch prototype made with **React** with some interesting functionalities like:  
@@ -23,3 +18,10 @@ See more in README.md in `igo/`
 ### Test it
 Go to https://igo-20-prototipo.netlify.com/ 
 (Thanks @netlify)
+
+## Authors 
+| Name | University | More info |
+| ---- | ---- | ---- |
+| Francisco Guedes | Instituto Superior Técnico | [<img src="https://i.ibb.co/brG8fnX/mail-6.png" width="17">](guedes.silva.francisco@gmail.com "guedes.silva.francisco@gmail.com") [<img src="https://github.githubassets.com/favicon.ico" width="17">](https://github.com/franciscoguedes "franciscoguedes") |
+| Lucas Vicente | Instituto Superior Técnico | [<img src="https://i.ibb.co/brG8fnX/mail-6.png" width="17">](mailto:lucasdhvicente@gmail.com "lucasdhvicente@gmail.com") [<img src="https://github.githubassets.com/favicon.ico" width="17">](https://github.com/WARSKELETON "WARSKELETON") [<img src="https://i.ibb.co/TvQPw7N/linkedin-logo.png" width="17">](https://www.linkedin.com/in/lucas-vicente-a91819184/ "lucas-vicente-a91819184") |
+| Ricardo Fernandes | Instituto Superior Técnico | [<img src="https://i.ibb.co/brG8fnX/mail-6.png" width="17">](mailto:ricardo.s.fernandes@tecnico.ulisboa.pt "ricardo.s.fernandes@tecnico.ulisboa.pt") [<img src="https://github.githubassets.com/favicon.ico" width="17">](https://github.com/rickerp "rickerp") [<img src="https://i.ibb.co/TvQPw7N/linkedin-logo.png" width="17">](https://www.linkedin.com/in/rickerp/ "rickerp") |
